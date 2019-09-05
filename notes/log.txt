@@ -1,9 +1,15 @@
 5/09/2019
 // General
-Project created
+Project created: V 0.0.1
 
 // BluStryx8
-> added shooting mechanics, need changes
+Player
+> Added base player and movement mechanics
+> Added cursor dot and camera following
+> Added a lot of blank sprites and objects for later use
+
+Options
+> Added icons and stuff to options. not completely done yet atm
 
 // yaboi
 says hi

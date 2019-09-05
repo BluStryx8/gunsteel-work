@@ -10,5 +10,20 @@ if keyboard_check(global.p_right) h_move += 1;
 if keyboard_check(global.p_up) v_move -= 1;
 if keyboard_check(global.p_down) v_move += 1;
 
-hspeed = h_move * move_speed
-vspeed = v_move * move_speed
+x += h_move * move_speed
+y += v_move * move_speed
+
+// Camera (Temp)
+camera_set_view_pos(view_camera[0], x - camera_width / 2, y - camera_height / 2);
+if mouse_check_button(mb_right)
+{
+	if camera_pan > 2 camera_pan -= camera_pan / 2;
+}
+else if camera_pan < 1024 camera_pan += camera_pan;
+
+if camera_pan < 1024
+{
+		camera_set_view_pos(view_camera[0],
+	((camera_pan - 1) * x / camera_pan + mouse_x / camera_pan) - camera_width / 2,
+	((camera_pan - 1) * y / camera_pan + mouse_y / camera_pan) - camera_height / 2);
+}
