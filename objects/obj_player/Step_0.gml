@@ -1,8 +1,14 @@
 /// @description Movement
 
 // Keyboard Movements
-// NEED CHANGES!
-if keyboard_check(global.left) x -= 1;
-if keyboard_check(global.right) x += 1;
-if keyboard_check(global.up) y -= 1;
-if keyboard_check(global.down) y += 1;
+
+h_move = 0
+v_move = 0
+
+if keyboard_check(global.p_left) h_move -= 1;
+if keyboard_check(global.p_right) h_move += 1;
+if keyboard_check(global.p_up) v_move -= 1;
+if keyboard_check(global.p_down) v_move += 1;
+
+hspeed = h_move * move_speed
+vspeed = v_move * move_speed
