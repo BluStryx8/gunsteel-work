@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "22409be5-e88a-4d83-9df0-1db81785679a",
+            "Value": {
+                "id": "41313324-71ac-479c-adf1-f98712b3e58c",
+                "resourcePath": "sprites\\spr_filler\\spr_filler.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2736e31f-a8cb-4736-be29-b2e4b14d80d9",
             "Value": {
                 "id": "602f6781-d705-4eb2-8d8c-384424304766",
@@ -84,6 +92,14 @@
                 "id": "3c55982b-4186-4f73-8a0c-6e606854a3d9",
                 "resourcePath": "sprites\\spr_player_hand\\spr_player_hand.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "47665ea5-a27a-48c7-8252-74a85d1d3c8d",
+            "Value": {
+                "id": "c7ad30de-c383-47c6-ba16-20d33a2becea",
+                "resourcePath": "objects\\obj_filler\\obj_filler.yy",
+                "resourceType": "GMObject"
             }
         },
         {
