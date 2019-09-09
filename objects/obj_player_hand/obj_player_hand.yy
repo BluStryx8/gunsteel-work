@@ -4,7 +4,26 @@
     "mvc": "1.0",
     "name": "obj_player_hand",
     "eventList": [
-        
+        {
+            "id": "ea364bc1-373a-4f41-9514-b6ed173ec774",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "f3287b12-2dca-4f01-a7b1-f95c90bc710a"
+        },
+        {
+            "id": "4da61f94-02c0-4792-8801-82b18aba170c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "f3287b12-2dca-4f01-a7b1-f95c90bc710a"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -24,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "20adaa57-55d6-4bda-a0f6-abf52dbd8427",
     "visible": true
 }

@@ -21,3 +21,4 @@ view_camera[0] = camera_create_view(0, 0, camera_width, camera_height);
 
 // Create Cursor (Temp)
 instance_create_layer(x, y, "HUD", obj_cursor);
+instance_create_layer(x, y, "HUD", obj_player_hand);
