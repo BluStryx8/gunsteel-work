@@ -26,3 +26,4 @@ Other
 
 //yetizombie
 > added a couple catagories of global variables
+> added some folders for sprites

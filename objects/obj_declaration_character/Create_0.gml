@@ -1,0 +1,1 @@
+/// @description Global variables which relate to the character
