@@ -1,3 +1,5 @@
+Current version v 0.0.2
+
 5/09/2019
 // General
 Project created: V 0.0.1
@@ -27,3 +29,5 @@ Other
 //yetizombie
 > added a couple catagories of global variables
 > added some folders for sprites
+> backed up on drive
+
