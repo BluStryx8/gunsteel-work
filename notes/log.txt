@@ -23,3 +23,6 @@ Player
 
 Other
 > Added a filler sprite as a reference point
+
+//yetizombie
+> added a couple catagories of global variables
