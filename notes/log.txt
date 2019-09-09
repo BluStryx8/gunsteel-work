@@ -13,3 +13,13 @@ Options
 
 // yaboi
 says hi
+
+9/09/2019
+// BluStryx8
+Player
+> Made all player parts draw individually
+> Separated right hand from player
+> Modified camera and movement
+
+Other
+> Added a filler sprite as a reference point
