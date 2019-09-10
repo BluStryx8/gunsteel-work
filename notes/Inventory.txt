@@ -1,0 +1,39 @@
+// Inventory slots
+
+h0 h1 h2 h3 h4	// Hotbar
+a0 a1 a2 a3 a4	// Bag Row 1
+b0 b1 b2 b3 b4	// Bag Row 2
+m0				// Mouse slot
+
+Mouse click on a slot swaps contents of mouse and that slot
+if we can later on, an item in mouse slot (that is not defined as none) acts as selected
+if an item is on the mouse slot when inventory is closed it is dropped
+
+---
+
+Properties:
+
+sprite
+name
+amount
+type
+subproperties
+stats
+use_left
+use_right
+
+
+for firearms:
+type = firearm
+subproperties [part1, part2, part3, part4]
+stats [accuracy, stability, ...] 
+
+for ammo:
+type = ammo
+subproperties [forweapon]
+stats [damage, velocity, screenshake, ...]
+
+for potion:
+type = potion
+subproperties [material]
+stats [number]

@@ -27,3 +27,10 @@ Other
 //yetizombie
 > added a couple catagories of global variables
 > added some folders for sprites
+
+10/09/2019
+// BluStryx8
+Player
+> Made collision with filler objects
+> Made arm draw a filler gun
+> Arm and gun point towards mouse
