@@ -13,8 +13,10 @@ Player
 Options
 > Added icons and stuff to options. not completely done yet atm
 
-// yaboi
+// yetizombie
 says hi
+
+---
 
 9/09/2019
 // BluStryx8
@@ -31,9 +33,13 @@ Other
 > added some folders for sprites
 > backed up on drive
 
+---
+
 10/09/2019
 // BluStryx8
 Player
 > Made collision with filler objects
 > Made arm draw a filler gun
 > Arm and gun point towards mouse
+> Edited player sprite: sprite now works with modifiable colour variables
+> Made gun 0.5x size. Will later need to be reworked with half-res.
