@@ -1,20 +1,21 @@
-Current version v 0.0.2
+Gunsteel Update Log
+Current Version: v 0.0.2
 
-5/09/2019
-// General
-Project created: V 0.0.1
+Updates ordered in order of most recent
++ signifies additions
+- signifies removals
+> signifies changes
 
+---
+
+10/09/2019
 // BluStryx8
 Player
-> Added base player and movement mechanics
-> Added cursor dot and camera following
-> Added a lot of blank sprites and objects for later use
-
-Options
-> Added icons and stuff to options. not completely done yet atm
-
-// yetizombie
-says hi
++ Made collision with filler objects
++ Made arm draw a filler gun
+> Arm and gun point towards mouse
+> Edited player sprite: sprite now works with modifiable colour variables
+> Made gun 0.5x size. Will later need to be reworked with half-res
 
 ---
 
@@ -26,20 +27,27 @@ Player
 > Modified camera and movement
 
 Other
-> Added a filler sprite as a reference point
++ Added a filler sprite as a reference point
 
-//yetizombie
-> added a couple catagories of global variables
-> added some folders for sprites
+// yetizombie
++ added a couple catagories of global variables
++ added some folders for sprites
 > backed up on drive
 
 ---
 
-10/09/2019
+5/09/2019
+// General
+Project created: v 0.0.1
+
 // BluStryx8
 Player
-> Made collision with filler objects
-> Made arm draw a filler gun
-> Arm and gun point towards mouse
-> Edited player sprite: sprite now works with modifiable colour variables
-> Made gun 0.5x size. Will later need to be reworked with half-res.
++ Added base player and movement mechanics
++ Added cursor dot and camera following
++ Added a lot of blank sprites and objects for later use
+
+Options
++ Added icons and stuff to options. not completely done yet atm
+
+// yetizombie
+says hi
