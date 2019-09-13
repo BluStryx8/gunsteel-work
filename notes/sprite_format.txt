@@ -1,0 +1,15 @@
+Sprite Formatting:
+
+// STANDARD RULES
+1. Have sprite origin at top left.
+2. Where the width/height is odd, make it aligned more towards bottom right.
+
+
+General Items: 32x32
+Tiles: 32x32
+
+Weapons (One Hand): 32x32
+Weapons (Two Hand): 64x64
+
+Player: 64x64
+Enemies: 64x64

@@ -11,6 +11,8 @@ Updates ordered in order of most recent
 13/09/2019
 // BluStryx8
 Player
++ Added some bullets.
++ Added sprite format note, for further reference.
 > Filler gun has been changed to 0.75x size. May rework guns completely so it can render at 1x instead
 > Changed global declaration into a script rather than objects. You don't need objects to just run one script, it's less effecient.
 - Removed some unnecessary sprites/objects/folders lying around

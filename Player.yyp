@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "36c85f46-f08c-4b2e-b23e-f6ce0211b52f",
+            "Value": {
+                "id": "f19d0ce7-8625-4508-a446-469b23296eee",
+                "resourcePath": "notes\\sprite_format.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "42c1b8c6-ae8f-413e-8b2f-37275b8b6094",
             "Value": {
                 "id": "4fcb5722-0ca4-457b-9c7f-5c1d7471af8b",
@@ -196,6 +204,14 @@
                 "id": "048560c6-1353-476a-aec8-5f121a3e4d6e",
                 "resourcePath": "views\\612d7f0b-58f2-4be0-a4da-5f9923d38a7f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "661c7073-23cc-41e5-8aef-dd45d808833f",
+            "Value": {
+                "id": "0ba041b4-a26f-42de-9d29-ffbc3d9e78da",
+                "resourcePath": "sprites\\spr_ammo_pistolbullet\\spr_ammo_pistolbullet.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
