@@ -1,1 +1,0 @@
-/// @description Variables that relate to crafting tools
