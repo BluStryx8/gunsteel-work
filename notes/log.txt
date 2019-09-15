@@ -6,6 +6,14 @@ Updates ordered in order of most recent
 - signifies removals
 > signifies changes
 
+15/09/2019
+// jeff
+Inventory
++ Added the start of inventory 
++ Added a basic enum system for items
++ Added a script to add items to the array
++ Added a couple more notes stuff
+
 ---
 
 13/09/2019

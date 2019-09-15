@@ -231,6 +231,30 @@
             }
         },
         {
+            "Key": "7317aff7-00c4-46b0-b806-d86515eb7146",
+            "Value": {
+                "id": "290e1471-e80d-430d-8ede-1ac6b6379634",
+                "resourcePath": "objects\\obj_inventory\\obj_inventory.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7add4456-12b9-4686-a38b-681549a7b391",
+            "Value": {
+                "id": "a11eba7b-23b4-4663-b939-0f1d9011944f",
+                "resourcePath": "views\\7add4456-12b9-4686-a38b-681549a7b391.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "800cb52f-6313-4c6d-a676-81810d89b049",
+            "Value": {
+                "id": "004aee35-4394-4ba4-9fc5-c625d424f14f",
+                "resourcePath": "notes\\Unfinished things.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "83eb6f4c-5119-49ec-a230-751f8032bb2e",
             "Value": {
                 "id": "32211c45-99e9-4b1c-a109-63fd00e16d01",
@@ -367,6 +391,14 @@
             }
         },
         {
+            "Key": "c2f6bebb-4ffa-4acf-99cf-a119f10e0f33",
+            "Value": {
+                "id": "c497190b-3040-4725-b615-7e8b933f4491",
+                "resourcePath": "notes\\Useful Links.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "c5d799c8-05a2-4987-be93-2da61aee74c7",
             "Value": {
                 "id": "6cb2612c-84df-4c1b-a960-336789791acf",
@@ -380,6 +412,14 @@
                 "id": "e1dadc9c-86f6-44cd-9d44-09dd7699477a",
                 "resourcePath": "views\\c8420272-e07b-4e5b-8b76-bfcb5f8717e8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c9973d9b-6bd8-4e75-957b-dbbc4159b54e",
+            "Value": {
+                "id": "485e1142-412e-41cd-91c8-44a0d6314d4d",
+                "resourcePath": "scripts\\scr_add_weapon\\scr_add_weapon.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -528,7 +568,8 @@
         }
     ],
     "script_order": [
-        "08fa98c5-6ca2-4760-a811-f2d3d0ce32bb"
+        "08fa98c5-6ca2-4760-a811-f2d3d0ce32bb",
+        "c9973d9b-6bd8-4e75-957b-dbbc4159b54e"
     ],
     "tutorial": ""
 }
