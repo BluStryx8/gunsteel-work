@@ -7,6 +7,13 @@ move_speed = global.p_speed;
 h_move = 0;
 v_move = 0;
 
+// Animation
+anim = 0;
+anim_frame = 0;
+frame = 0;
+anim_x = 0;
+anim_y = 0;
+
 // Camera
 camera_pan = 1024
 camera_width = 540
