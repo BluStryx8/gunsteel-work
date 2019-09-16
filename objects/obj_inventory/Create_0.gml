@@ -2,10 +2,7 @@
 enum item
 {
 	none,   //0
-	
-	
-	
-	
+	total
 }
 
 
@@ -20,8 +17,7 @@ enum item_stat
 	range,
 	weapontype,
 	ammo, 
-	
-	
+	total	
 } 
 
 
@@ -31,8 +27,7 @@ enum item_type
 	weapon,
 	armour,
 	crafting,
-	
-	
+	total
 }
 
 enum weapon_type
@@ -43,6 +38,7 @@ enum weapon_type
 	sniper,
 	assault_rifle,
 	special,
+	total
 }
 
 
@@ -50,4 +46,4 @@ enum weapon_type
 /// creates ds_grid
 
 global.item_index = ds_grid_create(item.total, item_stat.total);
-ds_grid_clear(global.item_index, 0); 
+ds_grid_clear(global.item_index, 0);

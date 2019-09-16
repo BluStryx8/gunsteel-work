@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "19793463-d624-424b-8af6-0edbb7d96213",
+            "Value": {
+                "id": "267b2e15-9481-43db-a8f1-7c13110a162a",
+                "resourcePath": "sprites\\spr_player_legs\\spr_player_legs.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1b760e2b-7605-46d6-a35f-e232d3c99689",
             "Value": {
                 "id": "12690fc8-e0d7-4791-a1b5-fe712e9aaf8d",
