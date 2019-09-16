@@ -47,3 +47,7 @@ enum weapon_type
 
 global.item_index = ds_grid_create(item.total, item_stat.total);
 ds_grid_clear(global.item_index, 0);
+
+//Creates visual inventry array
+global.inventory = ds_grid_create(5, 3);
+ds_grid_clear(global.inventory, 0)
