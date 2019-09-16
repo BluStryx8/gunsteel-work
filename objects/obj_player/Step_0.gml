@@ -17,6 +17,7 @@ if v_move < 0 v_move += 1
 if v_move > move_speed v_move = move_speed
 if v_move < -move_speed v_move = -move_speed
 
+// Collision for x
 while place_meeting(x + h_move, y, obj_filler)
 {
 	if h_move > 0 h_move -= 1
@@ -25,6 +26,7 @@ while place_meeting(x + h_move, y, obj_filler)
 x += h_move
 anim += abs(h_move)
 
+// Collision for y
 while place_meeting(x, y + v_move, obj_filler)
 {
 	if v_move > 0 v_move -= 1
@@ -33,6 +35,7 @@ while place_meeting(x, y + v_move, obj_filler)
 y += v_move
 anim += abs(v_move)
 
+// If not moving
 if h_move == 0 and v_move == 0
 {
 	anim = 0;
@@ -40,23 +43,27 @@ if h_move == 0 and v_move == 0
 	frame = 0;
 }
 
+// If moved far enough
 if anim >= 5
 {
 	anim = 0
 	anim_frame += 1;
 }
 
+// Frametime
 if anim_frame > room_speed / 6
 {
 	anim_frame = 0;
 	frame += 1;
 }
 
+// Animation
 switch(frame)
 {
 	case 0:
 	anim_x = 0;
 	anim_y = 0;
+	still = 1;
 	break;
 	
 	case 1:
@@ -75,9 +82,14 @@ switch(frame)
 	break;
 	
 	case 4:
-	frame = 0;
 	anim_x = 0;
 	anim_y = 0;
+	break;
+	
+	case 5:
+	frame = 1;
+	anim_x = 0;
+	anim_y = -1;
 	break;
 }
 
