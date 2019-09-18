@@ -9,6 +9,7 @@ var amount = argument1;
 var slot = 0
 var inventory_width = ds_grid_width(global.inventory);
 
-while (slot< inventory_width)
+while (slot < inventory_width)
 {
 	
+}

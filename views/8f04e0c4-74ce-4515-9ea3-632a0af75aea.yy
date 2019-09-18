@@ -7,7 +7,7 @@
         
     ],
     "filterType": "GMSprite",
-    "folderName": "Weapons",
+    "folderName": "Held",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
