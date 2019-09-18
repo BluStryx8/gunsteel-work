@@ -24,10 +24,10 @@ while (slot < inventory_width)
 slot = 0;
 while (slot < inventory_width)
 {
-	if global.inventory[# slot, 0] == item.none)     /// if item does not exist
+	if global.inventory[# slot, 0] == item.none     /// if item does not exist
 	{
 		global.inventory[# slot, 0] = iid;
-		global.inventory[# slot, 1] = += amount;
+		global.inventory[# slot, 1] += amount;
 		return true;
 		exit;
 	}

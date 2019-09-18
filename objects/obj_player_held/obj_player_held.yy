@@ -2,7 +2,7 @@
     "id": "f3287b12-2dca-4f01-a7b1-f95c90bc710a",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_player_hand",
+    "name": "obj_player_held",
     "eventList": [
         {
             "id": "ea364bc1-373a-4f41-9514-b6ed173ec774",
