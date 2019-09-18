@@ -4,7 +4,7 @@ var _dir = point_direction(x, y, mouse_x, mouse_y)
 if _dir <= 90 or _dir >= 270
 {
 	draw_sprite_ext(spr_player_feet, 0, x + 4 + anim_x, y + 15 + anim_y, 1, 1, 0, global.p_skin_colour, 1)
-	draw_sprite_ext(spr_player_feet, 0, x - 4 - anim_x, y + 14 - anim_y + still, 1, 1, 0, global.p_skin_colour, 1)
+	draw_sprite_ext(spr_player_feet, 0, x - 4 - anim_x, y + 13 - anim_y + still, 1, 1, 0, global.p_skin_colour, 1)
 	draw_sprite_ext(spr_player_pants, 0, x, y, 1, 1, 0, global.p_pants_colour, 1)
 	draw_sprite_ext(spr_player_legs, 0, x + 4 + anim_x, y + 11 + anim_y, 1, 1, 0, global.p_pants_colour, 1)
 	draw_sprite_ext(spr_player_legs, 0, x - 4 - anim_x, y + 10 - anim_y + still, 1, 1, 0, global.p_pants_colour, 1)
