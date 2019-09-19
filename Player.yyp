@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "58b02e35-8b1e-4381-a56d-a0ff78e11f38",
+            "Value": {
+                "id": "663f432c-29a7-4223-9b84-65579304710e",
+                "resourcePath": "sprites\\spr_calibur_i\\spr_calibur_i.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5e95334e-ecf7-4c31-b11e-9ae4c8eec8a7",
             "Value": {
                 "id": "7e3a044d-c0c7-4006-a308-4e85e3d9766b",
