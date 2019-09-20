@@ -1,4 +1,6 @@
 /// @description Movement
+// Reset Variables
+fire = 0;
 
 // Keyboard Movements
 if keyboard_check(global.p_left) h_move -= 2;

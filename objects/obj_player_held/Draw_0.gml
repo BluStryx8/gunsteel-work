@@ -3,11 +3,11 @@ var _dir = point_direction(x, y, mouse_x, mouse_y)
 
 if _dir <= 90 or _dir >= 270
 {
-	draw_sprite_ext(spr_calibur_i, 0, x - 7, y + 7, 0.75, 0.75, _dir, c_white, 1)
+	draw_sprite_ext(sprite, 0, x - 7, y + 7, 0.75, 0.75, _dir, c_white, 1)
 	draw_sprite_ext(spr_player_hand, 0, x - 7, y + 7, 1, 1, _dir, global.p_skin_colour, 1)
 }
 else
 {
-	draw_sprite_ext(spr_calibur_i, 0, x - 10, y + 7, 0.75, -0.75, _dir, c_white, 1)
+	draw_sprite_ext(sprite, 0, x - 10, y + 7, 0.75, -0.75, _dir, c_white, 1)
 	draw_sprite_ext(spr_player_hand, 0, x - 10, y + 7, 1, -1, _dir, global.p_skin_colour, 1)
 }
