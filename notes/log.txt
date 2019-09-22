@@ -6,6 +6,27 @@ Updates ordered in order of most recent
 - signifies removals
 > signifies changes
 
+22/09/2019
+// BluStryx8
+Player
+> Fixed an issue relating to weapon cooldown and inaccuracy
+> Made all weapons now render smaller when dropped if they were not originally 64x64.
+  They do have bigger hitbox as an interesting side effect.
+> Weapons now render in hand at a 1x size. This means some sprites need to be resized.
+  Also, two handed weapons still need catering for.
+> Added notes missing from Friday's changes.
+
+---
+
+20/09/2019
+// BluStryx8
+Player
+> Overhauled/completed the base inventory system
++ Added a few filler items
++ Added weapon stats and stuff, binded to char
+
+---
+
 15/09/2019
 // jeff
 Inventory

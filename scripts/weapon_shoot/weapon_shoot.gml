@@ -5,14 +5,7 @@ with obj_player
 	{
 		fire = 1;
 		fire_cooldown = reload;
-	}
-	else if fire_cooldown > 0 fire_cooldown -= 1;
-	if fire_cooldown <= 0
-	{
-		fire_cooldown = 0;
-		if accuracy > base_accuracy accuracy -= 0.1;
-	}
-	
+	}	
 	// Calculate Fire
 	if fire = 1
 	{

@@ -135,6 +135,14 @@ switch(frame)
 	break;
 }
 
+// Attack Cooldown
+if fire_cooldown > 0 fire_cooldown -= 1;
+if fire_cooldown <= 0
+{
+	fire_cooldown = 0;
+	if accuracy > base_accuracy accuracy -= 0.1;
+}
+
 // Camera (Temp)
 camera_set_view_pos(view_camera[0], x - h_move - camera_width / 2, y - v_move - camera_height / 2);
 if mouse_check_button(mb_right)
