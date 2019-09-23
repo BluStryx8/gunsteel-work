@@ -20,7 +20,7 @@ if v_move > move_speed v_move = move_speed
 if v_move < -move_speed v_move = -move_speed
 
 // Collision for x
-while place_meeting(x + h_move, y, obj_filler)
+while place_meeting(x + h_move, y, obj_filler_wall)
 {
 	if h_move > 0 h_move -= 1
 	if h_move < 0 h_move += 1
@@ -39,7 +39,7 @@ else
 }
 
 // Collision for y
-while place_meeting(x, y + v_move, obj_filler)
+while place_meeting(x, y + v_move, obj_filler_wall)
 {
 	if v_move > 0 v_move -= 1
 	if v_move < 0 v_move += 1
