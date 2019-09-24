@@ -1,38 +1,38 @@
 {
-    "id": "bc01bd1e-d573-4100-95c9-d1f7d58e6f80",
+    "id": "79d6b4fd-cba9-4c0b-959d-39e9c439f22b",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_player_bullet",
+    "name": "obj_testing_dummy",
     "eventList": [
         {
-            "id": "2a8c1a42-c842-4a5d-806a-bcd80f538f59",
+            "id": "b57a4e93-aec3-4c18-9f1d-4388a791c3b7",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "bc01bd1e-d573-4100-95c9-d1f7d58e6f80"
+            "m_owner": "79d6b4fd-cba9-4c0b-959d-39e9c439f22b"
         },
         {
-            "id": "0e933aa7-d893-41e6-8304-46ccb18a57f5",
+            "id": "3f8f7685-1b22-4539-b9f1-8cc747e2636d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "bc01bd1e-d573-4100-95c9-d1f7d58e6f80"
+            "m_owner": "79d6b4fd-cba9-4c0b-959d-39e9c439f22b"
         },
         {
-            "id": "a7b66154-2e05-4061-8c67-f8d2bbb700e5",
+            "id": "51590fa1-8b20-4886-9a9b-b5f7170b04c6",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "79d6b4fd-cba9-4c0b-959d-39e9c439f22b",
+            "collisionObjectId": "bc01bd1e-d573-4100-95c9-d1f7d58e6f80",
             "enumb": 0,
             "eventtype": 4,
-            "m_owner": "bc01bd1e-d573-4100-95c9-d1f7d58e6f80"
+            "m_owner": "79d6b4fd-cba9-4c0b-959d-39e9c439f22b"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -53,6 +53,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "5c46e3b0-b712-4707-8024-2eb075416b39",
+    "spriteId": "dba63fa5-ef95-48e8-acaf-0714cafd618b",
     "visible": true
 }
