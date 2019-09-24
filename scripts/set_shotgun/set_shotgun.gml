@@ -9,9 +9,9 @@ if obj_player.weapon != "shotgun"
 		decay = 1;
 		reload = 45;
 		burst = 6;
-		base_accuracy = 30;
-		recoil = 10;
-		max_recoil = 50;
-		shake_dur = 5;
+		base_accuracy = 15;
+		recoil = 5;
+		max_recoil = 30;
+		shake_dur = 12;
 	}
 }

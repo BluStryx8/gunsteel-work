@@ -9,9 +9,9 @@ if obj_player.weapon != "pistol"
 		decay = 3;
 		reload = 15;
 		burst = 1;
-		base_accuracy = 5;
-		recoil = 2;
-		max_recoil = 15;
+		base_accuracy = 2;
+		recoil = 1;
+		max_recoil = 7;
 		shake_dur = 5;
 	}
 }

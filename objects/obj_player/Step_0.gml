@@ -153,8 +153,21 @@ if fire_cooldown <= 0
 	if accuracy > base_accuracy accuracy -= 0.1;
 }
 
+// Shake
+if shake > 0
+{
+	shake -= 1;
+	shake_x = irandom_range(-shake, shake);
+	shake_y = irandom_range(-shake, shake);
+}
+else
+{
+	shake_x = 0
+	shake_y = 0
+}
+
 // Camera (Temp)
-camera_set_view_pos(view_camera[0], x - h_move - camera_width / 2, y - v_move - camera_height / 2);
+camera_set_view_pos(view_camera[0], x - h_move - camera_width / 2 + shake_x, y - v_move - camera_height / 2 + shake_y);
 if mouse_check_button(mb_right)
 {
 	if camera_pan > 2 camera_pan -= camera_pan / 2;
@@ -164,6 +177,6 @@ else if camera_pan < 1024 camera_pan += camera_pan;
 if camera_pan < 1024
 {
 	camera_set_view_pos(view_camera[0],
-	((camera_pan - 1) * x / camera_pan + mouse_x / camera_pan) - camera_width / 2,
-	((camera_pan - 1) * y / camera_pan + mouse_y / camera_pan) - camera_height / 2);
+	((camera_pan - 1) * x / camera_pan + mouse_x / camera_pan) - camera_width / 2 + shake_x,
+	((camera_pan - 1) * y / camera_pan + mouse_y / camera_pan) - camera_height / 2 + shake_y);
 }

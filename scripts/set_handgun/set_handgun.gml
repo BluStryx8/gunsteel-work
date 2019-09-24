@@ -10,8 +10,8 @@ if obj_player.weapon != "handgun"
 		reload = 10;
 		burst = 1;
 		base_accuracy = 3;
-		recoil = 3;
-		max_recoil = 18;
-		shake_dur = 5;
+		recoil = 1;
+		max_recoil = 9;
+		shake_dur = 4;
 	}
 }

@@ -21,15 +21,4 @@ with obj_player
 		if accuracy > max_recoil accuracy = max_recoil
 		shake = shake_dur;
 	}
-	if shake > 0
-	{
-		shake -= 1;
-		shake_x = irandom_range(-shake, shake);
-		shake_y = irandom_range(-shake, shake);
-	}
-	else
-	{
-		shake_x = 0
-		shake_y = 0
-	}
 }
