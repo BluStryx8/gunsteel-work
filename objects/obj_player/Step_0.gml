@@ -19,12 +19,18 @@ if v_move < 0 v_move += 1
 if v_move > move_speed v_move = move_speed
 if v_move < -move_speed v_move = -move_speed
 
-// Collision for x
-while place_meeting(x + h_move, y, obj_filler_wall)
+// Horizontal Colision
+var _bbox_side;
+
+if h_move > 0 _bbox_side = bbox_right else _bbox_side = bbox_left;
+if (tilemap_get_at_pixel(global.tilemap, _bbox_side + h_move, bbox_top) != 0) ||
+	(tilemap_get_at_pixel(global.tilemap, _bbox_side + h_move, bbox_bottom) != 0 )
 {
-	if h_move > 0 h_move -= 1
-	if h_move < 0 h_move += 1
+	if h_move > 0 x = x - (x mod 32) + 31 - (bbox_right - x);
+	else x = x - (x mod 32) - (bbox_left - x);
+	h_move = 0;
 }
+
 x += h_move
 
 // Animation for x
@@ -38,12 +44,16 @@ else
 	anim -= h_move
 }
 
-// Collision for y
-while place_meeting(x, y + v_move, obj_filler_wall)
+// Vertical Colision
+if v_move > 0 _bbox_side = bbox_bottom else _bbox_side = bbox_top;
+if (tilemap_get_at_pixel(global.tilemap, bbox_left, _bbox_side + v_move) != 0) ||
+	(tilemap_get_at_pixel(global.tilemap, bbox_right, _bbox_side + v_move) != 0 )
 {
-	if v_move > 0 v_move -= 1
-	if v_move < 0 v_move += 1
+	if v_move > 0 y = y - (y mod 32) + 31 - (bbox_bottom - y);
+	else y = y - (y mod 32) - (bbox_top - y);
+	v_move = 0;
 }
+
 y += v_move
 
 // Animation for y

@@ -16,3 +16,6 @@ global.p_down = ord("S");
 
 // Move Speed (Temporary)
 global.p_speed = 5;
+
+// Tileset
+global.tilemap = layer_tilemap_get_id("collision");
