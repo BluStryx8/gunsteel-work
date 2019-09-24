@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "599aad28-f04d-4dab-8b43-428bf5627bdd",
+            "Value": {
+                "id": "e7368283-b8a4-4f41-8588-ad9319ebecb0",
+                "resourcePath": "sprites\\spr_t_brick_blue\\spr_t_brick_blue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5a36136f-2866-42c7-b62a-399baa6341d3",
             "Value": {
                 "id": "a6d0ecd7-1a3f-4b74-975e-d666271e72c4",
@@ -363,6 +371,14 @@
             "Value": {
                 "id": "048560c6-1353-476a-aec8-5f121a3e4d6e",
                 "resourcePath": "views\\612d7f0b-58f2-4be0-a4da-5f9923d38a7f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "61ce77d4-320b-400b-9d58-2861c5910fa0",
+            "Value": {
+                "id": "bcf4c248-22de-47b3-8fa6-dd8507ad997b",
+                "resourcePath": "views\\61ce77d4-320b-400b-9d58-2861c5910fa0.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -751,6 +767,14 @@
             }
         },
         {
+            "Key": "cdd1d8e1-278f-4b28-b98d-c7764d829cdf",
+            "Value": {
+                "id": "e65ca2c2-52d6-4e52-9b0b-42dbe3cbeb26",
+                "resourcePath": "tilesets\\tile_brick_blue\\tile_brick_blue.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "d0289eba-4ee7-4728-b641-cd8e1b2a99fc",
             "Value": {
                 "id": "08ef8101-9d54-430b-af9c-1b4a80c80c22",
@@ -812,6 +836,14 @@
                 "id": "ead30c8f-5f5f-418f-a66d-690615b1aaca",
                 "resourcePath": "objects\\obj_filler_up\\obj_filler_up.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "de8a04e4-b2d5-4119-8eaf-ef1061cf2f52",
+            "Value": {
+                "id": "15ba6cae-f586-444b-8adc-0de6d9ccd9a8",
+                "resourcePath": "views\\de8a04e4-b2d5-4119-8eaf-ef1061cf2f52.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
