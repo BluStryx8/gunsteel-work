@@ -40,8 +40,8 @@ accuracy = base_accuracy;
 // Camera
 focus = 0;
 camera_pan = 1024;
-camera_width = 720;
-camera_height = 480;
+camera_width = 540;
+camera_height = 360;
 view_camera[0] = camera_create_view(0, 0, camera_width, camera_height);
 
 // Create Others (Temp)
