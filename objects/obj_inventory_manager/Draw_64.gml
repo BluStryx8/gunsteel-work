@@ -18,10 +18,13 @@ for (var _inv = 0; _inv < HOTBAR; _inv++)
 		draw_sprite(item_definitions[item_define_index, item_properties.sprite_gui], -1,
 				   (gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 32,
 				   (gui_holder_pos_y + gui_holder_pad));
-		draw_set_halign(fa_right);
-		draw_set_font(fnt_inventory);
-		draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 57,
-				  (gui_holder_pos_y + gui_holder_pad) + 10,
-				  string(item_definitions[item_define_index, item_properties.amount]));
+		if obj_inventory_manager.item_definitions[item_define_index, item_properties.type] != "firearm"
+		{
+			draw_set_halign(fa_right);
+			draw_set_font(fnt_inventory);
+			draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 57,
+					  (gui_holder_pos_y + gui_holder_pad) + 10,
+					  string(item_definitions[item_define_index, item_properties.amount]));
+		}
 	}
 }

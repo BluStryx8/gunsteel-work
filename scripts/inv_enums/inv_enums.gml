@@ -7,7 +7,7 @@ enum item_type
 	pistol,
 	handgun,
 	shotgun,
-	machine_gun,
+	bar_iron,
 	
 	// Length enum for reference
 	length

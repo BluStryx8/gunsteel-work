@@ -1,0 +1,23 @@
+Movement check
+
+
+// Step 1: Choose random direction and check
+
+var _tries = 0
+repeat
+{
+	_tries += 1;					// Increase try count, up to 5 tries
+	direction = irandomrange(1, 8); // Choose a random direction: up, down, left, right or diagonals
+	
+	// Check the maximum distance it can move before colliding with wall.
+	// Reduce that maximum distance by an amount so it does not hug the wall.
+	// If this maximum distance is too small, retry the check.
+	// Once a direction has been decided, choose a distance to move between min and max
+	// Then set _tries = 6 once a direction is set.
+	
+}
+until _tries >= 5
+if _tries == 6
+{
+	do movement
+}
