@@ -4,7 +4,8 @@
     "mvc": "1.1",
     "name": "d5000cb7-3650-496e-98a6-f55c744c4554",
     "children": [
-        "fa2a4e23-96e3-4de1-997d-4e8406da8329"
+        "fa2a4e23-96e3-4de1-997d-4e8406da8329",
+        "e63a22e7-3060-4c04-9b1e-385f8a3fb7fa"
     ],
     "filterType": "GMObject",
     "folderName": "Main Menu",

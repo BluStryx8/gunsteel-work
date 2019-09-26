@@ -647,6 +647,14 @@
             }
         },
         {
+            "Key": "98eb5ad7-31dc-4603-9ccd-f2e851576606",
+            "Value": {
+                "id": "46167083-46ee-446d-9d8c-aeb0837d35c2",
+                "resourcePath": "sprites\\spr_main_menu_buttons\\spr_main_menu_buttons.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "99f4187a-cd74-4c9c-9bdc-6c71df17d53a",
             "Value": {
                 "id": "c22c6c5c-3199-42a1-966f-8896b510ecd1",
@@ -943,6 +951,14 @@
             }
         },
         {
+            "Key": "db761b5e-365e-48af-ae74-ae4f98a15474",
+            "Value": {
+                "id": "81dd0929-3b1b-4e2e-8a9b-cb54b67e941d",
+                "resourcePath": "views\\db761b5e-365e-48af-ae74-ae4f98a15474.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "dba63fa5-ef95-48e8-acaf-0714cafd618b",
             "Value": {
                 "id": "650fca2d-3112-4140-ad1b-23281961b724",
@@ -1004,6 +1020,14 @@
                 "id": "da4ab6ce-e8bd-4155-9a5c-ee60da11ae65",
                 "resourcePath": "sprites\\spr_gui_empty\\spr_gui_empty.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e63a22e7-3060-4c04-9b1e-385f8a3fb7fa",
+            "Value": {
+                "id": "453e5a23-1cd1-4305-bb56-3b9bd22b1bf7",
+                "resourcePath": "objects\\obj_menu_buttons\\obj_menu_buttons.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1074,7 +1098,7 @@
             "Key": "fa2a4e23-96e3-4de1-997d-4e8406da8329",
             "Value": {
                 "id": "92e43151-58f6-4f45-8e81-e208ed7016dd",
-                "resourcePath": "objects\\obj_menudraw\\obj_menudraw.yy",
+                "resourcePath": "objects\\obj_menu_draw\\obj_menu_draw.yy",
                 "resourceType": "GMObject"
             }
         },
