@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "2ba97db1-ce6a-496a-b8e9-007846dc8642",
+            "Value": {
+                "id": "105108aa-03e4-4cc0-b10a-4b41c99f7ab4",
+                "resourcePath": "objects\\obj_camera_location\\obj_camera_location.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2cb8096a-60df-4a5b-9322-237715b41737",
             "Value": {
                 "id": "5ff1a29d-e974-408d-becd-8f3169c44429",
@@ -583,6 +591,14 @@
             }
         },
         {
+            "Key": "815d0ed2-13f8-4a0c-aa04-c043f4b08264",
+            "Value": {
+                "id": "c343b0de-8713-45be-8d10-8ae0124cabea",
+                "resourcePath": "objects\\obj_fade_in\\obj_fade_in.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "824d5581-6b15-406d-9f97-27ab08e6dcfc",
             "Value": {
                 "id": "3f83b5c5-f707-480f-8be5-2fa6f78c8f5f",
@@ -628,6 +644,14 @@
                 "id": "21788748-25d9-4bd1-baff-b021c26564d0",
                 "resourcePath": "views\\8f04e0c4-74ce-4515-9ea3-632a0af75aea.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8ffd8aac-d61a-4e38-be92-7291b3e68591",
+            "Value": {
+                "id": "59f053ad-7a7c-400a-b634-ef449955c44c",
+                "resourcePath": "objects\\obj_camera_follow\\obj_camera_follow.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -740,6 +764,14 @@
                 "id": "90d05169-234b-4599-b123-8f77223fdfe9",
                 "resourcePath": "views\\a5c9cbed-19ab-4409-bc49-e9f88ed20e96.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a606da20-62a6-4596-a3e5-8e35f4174294",
+            "Value": {
+                "id": "482b965e-488f-4723-9d00-f6e5939c362e",
+                "resourcePath": "objects\\obj_fade_out\\obj_fade_out.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -3,13 +3,18 @@ switch image_index
 {
 	case 0:
 		// Start
-		room_goto(rm_game);
+		global.menu_follow = 3
 		break;
 	case 1:
 		// Options
+		global.menu_follow = 1
 		break;
 	case 2:
 		// Quit
 		game_end();
 		break;
+	case 3:
+		//continue (Fades out them goes to rm_game)
+		instance_create_layer(0,0,"menu",obj_fade_out)
+	
 }
