@@ -17,8 +17,8 @@ if _movement == "x"
 	if (tilemap_get_at_pixel(global.tilemap, _bbox_side + _speed, bbox_top) != 0) ||
 	   (tilemap_get_at_pixel(global.tilemap, _bbox_side + _speed, bbox_bottom) != 0 )
 	{
-		if _speed > 0 x = x - (x mod 32) + 31 - (bbox_right - x);
-		else x = x - (x mod 32) - (bbox_left - x);
+		if _speed > 0 x = x - (x mod 16) + 15 - ((bbox_right - x) mod 16);
+		else x = x - (x mod 16) - ((bbox_left - x) mod 16);
 		_speed = 0;
 		_collision = 1;
 	}
@@ -36,8 +36,12 @@ if _movement == "y"
 	if (tilemap_get_at_pixel(global.tilemap, bbox_left, _bbox_side + _speed) != 0) ||
 	   (tilemap_get_at_pixel(global.tilemap, bbox_right, _bbox_side + _speed) != 0 )
 	{
-		if _speed > 0 y = y - (y mod 32) + 31 - (bbox_bottom - y);
-		else y = y - (y mod 32) - (bbox_top - y);
+		if _speed > 0 y = y - (y mod 16) + 15 - ((bbox_bottom - y)) mod 16;
+		else
+		{
+			if (y mod 16) <= 8 y -= 16;
+			y = y - (y mod 16) - ((bbox_top - y) mod 16);
+		}
 		_speed = 0;
 		_collision = 1;
 	}
