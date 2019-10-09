@@ -5,12 +5,13 @@
     "name": "tile_grass",
     "auto_tile_sets": [
         {
-            "id": "513e1579-6551-4a12-a1a3-4c5421b89c07",
+            "id": "51a7d095-d1da-46b0-93e7-750b061e263e",
             "modelName": "GMAutoTileSet",
             "mvc": "1.0",
             "closed_edge": false,
-            "name": "grass",
+            "name": "path",
             "tiles": [
+                8,
                 1,
                 2,
                 3,
@@ -18,15 +19,39 @@
                 5,
                 6,
                 7,
-                8,
+                9,
                 10,
                 11,
                 12,
                 13,
                 14,
                 15,
+                24
+            ]
+        },
+        {
+            "id": "e9defea5-96e1-4b50-af88-66a46f887f6a",
+            "modelName": "GMAutoTileSet",
+            "mvc": "1.0",
+            "closed_edge": false,
+            "name": "grass",
+            "tiles": [
                 16,
-                17
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                24
             ]
         }
     ],
@@ -38,7 +63,7 @@
             
         ]
     },
-    "out_columns": 4,
+    "out_columns": 6,
     "out_tilehborder": 2,
     "out_tilevborder": 2,
     "spriteId": "e792cee5-2d5c-431b-a26f-e0ae9f86734f",
@@ -64,7 +89,21 @@
             14,
             15,
             16,
-            17
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
         ],
         "SerialiseFrameCount": 1
     },
@@ -72,7 +111,7 @@
         
     ],
     "tile_animation_speed": 15,
-    "tile_count": 18,
+    "tile_count": 32,
     "tileheight": 32,
     "tilehsep": 0,
     "tilevsep": 0,
