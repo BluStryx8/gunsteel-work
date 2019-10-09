@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "11e0fa76-28c2-4eb1-bf71-1feb28ba4732",
+            "Value": {
+                "id": "8889f06b-b881-419f-b3ff-188f677042c7",
+                "resourcePath": "objects\\obj_filler_house_2\\obj_filler_house_2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "122d565f-f4fc-4b62-b328-bf6830039c0d",
             "Value": {
                 "id": "00e896ae-aa63-4af9-8f17-ccd0ce357de6",
@@ -139,6 +147,14 @@
             "Value": {
                 "id": "bf68085f-5576-4155-b529-2f2ae042d4cb",
                 "resourcePath": "objects\\obj_inventory_manager\\obj_inventory_manager.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "194b2dc1-eae2-477a-ba23-9226983be4c3",
+            "Value": {
+                "id": "4a832079-e5d2-4312-976b-bd7c2e2702ec",
+                "resourcePath": "objects\\obj_filler_house_1\\obj_filler_house_1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -276,14 +292,6 @@
                 "id": "e3410115-698f-4334-80a1-11f6d6ebb1bb",
                 "resourcePath": "views\\45147dcf-4ff6-40bd-8824-62700cd89d06.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "47665ea5-a27a-48c7-8252-74a85d1d3c8d",
-            "Value": {
-                "id": "c7ad30de-c383-47c6-ba16-20d33a2becea",
-                "resourcePath": "objects\\obj_filler\\obj_filler.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -711,6 +719,14 @@
             }
         },
         {
+            "Key": "a113cc80-554b-4aae-acf1-2aaae6b36bc9",
+            "Value": {
+                "id": "77c6e8b0-9c24-4668-9936-5077cc997649",
+                "resourcePath": "sprites\\spr_house_1\\spr_house_1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a585f426-6a1e-476b-aeeb-f3f455f00b6d",
             "Value": {
                 "id": "b85ac159-ed9e-45d3-820f-e835e3af8520",
@@ -999,14 +1015,6 @@
             }
         },
         {
-            "Key": "dd0b834e-edbd-4667-9209-50417351b55a",
-            "Value": {
-                "id": "ead30c8f-5f5f-418f-a66d-690615b1aaca",
-                "resourcePath": "objects\\obj_filler_up\\obj_filler_up.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "de8a04e4-b2d5-4119-8eaf-ef1061cf2f52",
             "Value": {
                 "id": "15ba6cae-f586-444b-8adc-0de6d9ccd9a8",
@@ -1063,6 +1071,14 @@
             }
         },
         {
+            "Key": "e792cee5-2d5c-431b-a26f-e0ae9f86734f",
+            "Value": {
+                "id": "fbb456c8-d5e1-4c40-b395-dd4378e841c2",
+                "resourcePath": "sprites\\spr_t_grass\\spr_t_grass.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "eab65fe6-a7f3-4e2a-be51-ab59854c5ccc",
             "Value": {
                 "id": "3ac282fe-45f0-4833-a821-8d10c99828ff",
@@ -1103,6 +1119,14 @@
             }
         },
         {
+            "Key": "f2b2fa56-f583-4d91-bc3f-55b19797e6d0",
+            "Value": {
+                "id": "7cdb5658-249e-4379-b78a-4b5b30da05ab",
+                "resourcePath": "sprites\\spr_house_2\\spr_house_2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f3287b12-2dca-4f01-a7b1-f95c90bc710a",
             "Value": {
                 "id": "e90da44a-d32b-4fe4-bcec-b647275bdc03",
@@ -1124,6 +1148,14 @@
                 "id": "a9589065-b58c-4c49-aa45-09a0773d272e",
                 "resourcePath": "views\\f65b2483-5c56-45d5-bec1-7ed83bcd277d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f8434fef-4de3-43bf-8ca8-8d2d80088274",
+            "Value": {
+                "id": "d26a30b6-731d-4234-86fe-b36cea69b54d",
+                "resourcePath": "tilesets\\tile_grass\\tile_grass.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
