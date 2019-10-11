@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "331516ce-2853-425b-8713-e3cfc201ab58",
+            "Value": {
+                "id": "c9016c61-de06-4d60-b1ff-79ffab1d0a89",
+                "resourcePath": "objects\\obj_item_pickup_p90\\obj_item_pickup_p90.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "351fd844-303c-4916-96b4-16ed3936a932",
             "Value": {
                 "id": "dd04414b-02f3-477d-a7d1-f43278e46cda",
@@ -359,6 +367,14 @@
             }
         },
         {
+            "Key": "4feb1ae3-9b63-454b-8189-070e133f1a52",
+            "Value": {
+                "id": "182cb148-194c-458a-9ead-250856c7f8ab",
+                "resourcePath": "scripts\\set_p90\\set_p90.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "518ba1b6-1628-40e6-9564-8704e1732cd1",
             "Value": {
                 "id": "f10b1209-ad43-437c-8143-575d0fdcf459",
@@ -380,6 +396,22 @@
                 "id": "57c0d12e-fa3d-470c-9df6-e419126d0055",
                 "resourcePath": "notes\\Inventory.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "54fb6ad3-6dc3-4aea-bf17-e0194913c4ba",
+            "Value": {
+                "id": "1ea257ad-bdd0-4d29-bcff-597db989967b",
+                "resourcePath": "sprites\\spr_gui_m4\\spr_gui_m4.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "55843485-5e82-4480-8595-8a33858c3ca8",
+            "Value": {
+                "id": "2bb7e7bb-519f-46be-a242-f9c75aa7bdae",
+                "resourcePath": "scripts\\set_m4\\set_m4.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -583,6 +615,14 @@
             }
         },
         {
+            "Key": "7a7defb6-9338-4b72-ad19-06d7e18babbe",
+            "Value": {
+                "id": "6520751f-963f-4e19-8713-6481cf93f45f",
+                "resourcePath": "sprites\\spr_gui_p90\\spr_gui_p90.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7add4456-12b9-4686-a38b-681549a7b391",
             "Value": {
                 "id": "a11eba7b-23b4-4663-b939-0f1d9011944f",
@@ -743,6 +783,14 @@
             }
         },
         {
+            "Key": "a0ae34be-f589-4fc7-a55e-1920b6f2b97e",
+            "Value": {
+                "id": "48943b32-9b5b-481b-87eb-d2508e8380aa",
+                "resourcePath": "sprites\\spr_held_m4\\spr_held_m4.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a113cc80-554b-4aae-acf1-2aaae6b36bc9",
             "Value": {
                 "id": "77c6e8b0-9c24-4668-9936-5077cc997649",
@@ -836,6 +884,14 @@
                 "id": "d11e9448-ff58-450a-9fb0-724263a2970d",
                 "resourcePath": "sprites\\spr_player_bodyupper\\spr_player_bodyupper.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b660319c-5370-48cf-bc0e-ef1163312b11",
+            "Value": {
+                "id": "a07ceb9f-c98d-4825-b69f-0025f2302f30",
+                "resourcePath": "objects\\obj_item_pickup_m4\\obj_item_pickup_m4.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1111,6 +1167,14 @@
             }
         },
         {
+            "Key": "e84d7722-1f11-4f1a-8e75-e0455c046b14",
+            "Value": {
+                "id": "cc471e8c-d8f7-4ff2-a278-fcf34ee3ab1a",
+                "resourcePath": "sprites\\spr_held_p90\\spr_held_p90.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "eab65fe6-a7f3-4e2a-be51-ab59854c5ccc",
             "Value": {
                 "id": "3ac282fe-45f0-4833-a821-8d10c99828ff",
@@ -1218,6 +1282,8 @@
         "88f0ba57-75bf-4852-8eaa-99c9e036923f",
         "a945515e-7b8b-4292-ae7e-803372589e1c",
         "9904e012-f23c-4ae1-b916-2d0f7436eff1",
+        "55843485-5e82-4480-8595-8a33858c3ca8",
+        "4feb1ae3-9b63-454b-8189-070e133f1a52",
         "824d5581-6b15-406d-9f97-27ab08e6dcfc",
         "5a36136f-2866-42c7-b62a-399baa6341d3",
         "e50f02f2-72fd-4c2e-845f-9e7d3a696c0a",

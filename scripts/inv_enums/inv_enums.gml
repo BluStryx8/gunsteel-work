@@ -4,10 +4,16 @@
 enum item_type
 {
 	none,
+	
+	// Weapons
 	pistol,
 	handgun,
 	shotgun,
 	ak47,
+	m4,
+	p90,
+	
+	// Bars
 	bar_iron,
 	
 	// Length enum for reference

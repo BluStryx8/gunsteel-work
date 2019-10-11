@@ -14,4 +14,4 @@ if (array_find_index(obj_inventory_manager.inventory, _type) == -1)
 if (_index_added_at != -1)
 	obj_inventory_manager.item_definitions[_type, item_properties.amount] += 1;
 
-return (_index_added_at != 1);
+return (_index_added_at != -1);
