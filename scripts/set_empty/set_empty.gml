@@ -17,5 +17,7 @@ if obj_player.weapon != "none"
 		recoil_mult = 0;
 		accuracy = max_recoil;
 		shake_dur = 0;
+		max_ammo = 0;
+		ammo = max_ammo;
 	}
 }

@@ -17,5 +17,7 @@ if obj_player.weapon != "glock_17"
 		recoil_mult = 1.5;
 		accuracy = max_recoil;
 		shake_dur = 7;
+		max_ammo = 17;
+		ammo = max_ammo;
 	}
 }

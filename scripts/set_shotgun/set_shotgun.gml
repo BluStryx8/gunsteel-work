@@ -17,5 +17,7 @@ if obj_player.weapon != "shotgun"
 		recoil_mult = 0.5;
 		accuracy = max_recoil;
 		shake_dur = 16;
+		max_ammo = 5;
+		ammo = max_ammo;
 	}
 }

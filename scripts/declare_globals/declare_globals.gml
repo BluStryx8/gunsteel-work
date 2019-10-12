@@ -14,6 +14,14 @@ global.p_right = ord("D");
 global.p_up = ord("W");
 global.p_down = ord("S");
 
+global.p_reload = ord("R");
+
+global.p_inv_1 = ord("1");
+global.p_inv_2 = ord("2");
+global.p_inv_3 = ord("3");
+global.p_inv_4 = ord("4");
+global.p_inv_5 = ord("5");
+
 // Move Speed (Temporary)
 global.p_speed = 5;
 

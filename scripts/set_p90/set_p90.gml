@@ -17,5 +17,7 @@ if obj_player.weapon != "P90"
 		recoil_mult = 0.75;
 		accuracy = max_recoil;
 		shake_dur = 3;
+		max_ammo = 50;
+		ammo = max_ammo;
 	}
 }

@@ -17,5 +17,7 @@ if obj_player.weapon != "1911"
 		recoil_mult = 3;
 		accuracy = max_recoil;
 		shake_dur = 8;
+		max_ammo = 7;
+		ammo = max_ammo;
 	}
 }

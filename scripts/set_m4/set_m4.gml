@@ -17,5 +17,7 @@ if obj_player.weapon != "M4"
 		recoil_mult = 0.75;
 		accuracy = max_recoil;
 		shake_dur = 4;
+		max_ammo = 30;
+		ammo = max_ammo;
 	}
 }

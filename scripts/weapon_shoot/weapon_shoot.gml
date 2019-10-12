@@ -10,16 +10,26 @@ with obj_player
 	// Calculate Fire
 	if fire = 1
 	{
-		if accuracy < base_accuracy accuracy = base_accuracy
-		burst_count = 0;
-		if burst != 0 do
+		// Check Ammo
+		if ammo > 0
 		{
-			instance_create_layer(x, y, "bullets", obj_player_bullet);
-			burst_count += 1;
+			if accuracy < base_accuracy accuracy = base_accuracy;
+			burst_count = 0;
+			if burst != 0 do
+			{
+				instance_create_layer(x, y, "bullets", obj_player_bullet);
+				burst_count += 1;
+			}
+			until burst_count >= burst;
+			audio_play_sound(snd_fire, 1, false);
+			accuracy += recoil;
+			if accuracy > max_recoil accuracy = max_recoil;
+			shake = shake_dur;
+			ammo -= 1;
 		}
-		until burst_count >= burst;
-		accuracy += recoil
-		if accuracy > max_recoil accuracy = max_recoil
-		shake = shake_dur;
+		else
+		{
+			audio_play_sound(snd_dry_fire, 1, false);
+		}
 	}
 }
