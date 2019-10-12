@@ -6,8 +6,8 @@ enum item_type
 	none,
 	
 	// Weapons
-	pistol,
-	handgun,
+	pistol_1911,
+	glock_17,
 	shotgun,
 	ak47,
 	m4,

@@ -1,8 +1,8 @@
-if obj_player.weapon != "handgun"
+if obj_player.weapon != "glock_17"
 {
 	with obj_player
 	{
-		weapon = "handgun"
+		weapon = "glock_17"
 		atk_type = "semi_auto"
 		min_damage = 18;
 		max_damage = 22;

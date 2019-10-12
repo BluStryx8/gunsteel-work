@@ -122,7 +122,7 @@
             "Key": "122d565f-f4fc-4b62-b328-bf6830039c0d",
             "Value": {
                 "id": "00e896ae-aa63-4af9-8f17-ccd0ce357de6",
-                "resourcePath": "sprites\\spr_held_handgun\\spr_held_handgun.yy",
+                "resourcePath": "sprites\\spr_held_glock_17\\spr_held_glock_17.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -226,7 +226,7 @@
             "Key": "2678f27c-187a-4242-9cea-5f8c746de657",
             "Value": {
                 "id": "8cc5f26e-d778-43af-9199-dfc3d6e2f4f0",
-                "resourcePath": "objects\\obj_item_pickup_pistol\\obj_item_pickup_pistol.yy",
+                "resourcePath": "objects\\obj_item_pickup_1911\\obj_item_pickup_1911.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -562,7 +562,7 @@
             "Key": "6bf627a4-22f0-4bee-bfbe-f49aaa5f6b36",
             "Value": {
                 "id": "9fab2e54-c326-4a31-93e0-2ec18a9633b0",
-                "resourcePath": "sprites\\spr_gui_pistol\\spr_gui_pistol.yy",
+                "resourcePath": "sprites\\spr_gui_1911\\spr_gui_1911.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -602,7 +602,7 @@
             "Key": "6db67246-2eed-4975-a19c-eb59fb5e72d9",
             "Value": {
                 "id": "f601d5a4-2df1-4afd-ab63-cb36210c65b3",
-                "resourcePath": "objects\\obj_item_pickup_handgun\\obj_item_pickup_handgun.yy",
+                "resourcePath": "objects\\obj_item_pickup_glock_17\\obj_item_pickup_glock_17.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -618,7 +618,7 @@
             "Key": "6fff315c-7d99-47dc-b30d-240e002c97bf",
             "Value": {
                 "id": "30d3bf98-1f4f-4add-a02c-1230beb84fe0",
-                "resourcePath": "scripts\\set_pistol\\set_pistol.yy",
+                "resourcePath": "scripts\\set_1911\\set_1911.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -706,7 +706,7 @@
             "Key": "88f0ba57-75bf-4852-8eaa-99c9e036923f",
             "Value": {
                 "id": "8b189ac2-d5c1-477a-8aca-528cd4bd3516",
-                "resourcePath": "scripts\\set_handgun\\set_handgun.yy",
+                "resourcePath": "scripts\\set_glock_17\\set_glock_17.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -938,7 +938,7 @@
             "Key": "b7dc90f9-846e-4d0b-b97f-b88d286a2dd9",
             "Value": {
                 "id": "5bb10716-f432-45c9-8cef-b4fc2bca1c7b",
-                "resourcePath": "sprites\\spr_held_pistol\\spr_held_pistol.yy",
+                "resourcePath": "sprites\\spr_held_1911\\spr_held_1911.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1090,7 +1090,7 @@
             "Key": "d0acc4ec-40dd-45ab-ac30-58fe7ecbc1a2",
             "Value": {
                 "id": "ccaa3c4e-3e55-40ff-b29d-7a6ce5ee4d22",
-                "resourcePath": "sprites\\spr_gui_handgun\\spr_gui_handgun.yy",
+                "resourcePath": "sprites\\spr_gui_glock_17\\spr_gui_glock_17.yy",
                 "resourceType": "GMSprite"
             }
         },
