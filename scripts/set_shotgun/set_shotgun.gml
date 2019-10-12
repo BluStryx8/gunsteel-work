@@ -3,15 +3,19 @@ if obj_player.weapon != "shotgun"
 	with obj_player
 	{
 		weapon = "shotgun"
-		damage = 20;
-		bullet_speed = 12;
+		atk_type = "semi_auto"
+		min_damage = 15;
+		max_damage = 35;
+		bullet_speed = 24;
 		bullet_speed_var = 2;
-		decay = 1;
-		reload = 45;
-		burst = 6;
-		base_accuracy = 15;
-		recoil = 5;
-		max_recoil = 30;
-		shake_dur = 12;
+		decay = 0.5;
+		reload = 30;
+		burst = 12;
+		base_accuracy = 10;
+		recoil = 3;
+		max_recoil = 16;
+		recoil_mult = 0.5;
+		accuracy = max_recoil;
+		shake_dur = 16;
 	}
 }

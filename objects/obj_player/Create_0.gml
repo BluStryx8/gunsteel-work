@@ -16,17 +16,8 @@ anim_x = 0;
 anim_y = 0;
 
 // Weapon Constants
-weapon = "none";
-damage = 0;
-bullet_speed = 0;
-bullet_speed_var = 0;
-decay = 0;
-reload = 0;
-burst = 0;
-base_accuracy = 0;
-recoil = 0;
-max_recoil = 0;
-shake_dur = 0;
+weapon = "na";
+set_empty();
 
 // Weapon Vars
 fire = 0;
@@ -46,6 +37,11 @@ view_camera[0] = camera_create_view(0, 0, camera_width, camera_height);
 
 // Create Others (Temp)
 instance_create_layer(x, y, "HUD", obj_cursor);
+left = instance_create_layer(x, y, "HUD", obj_cursor_bracket);
+left.image_index = 0;
+right = instance_create_layer(x, y, "HUD", obj_cursor_bracket);
+right.image_index = 1;
+
 instance_create_layer(x, y, "player_hand", obj_player_held);
 instance_create_layer(x, y, "player", obj_player_collision);
 instance_create_layer(x, y, "HUD", obj_inventory_manager);

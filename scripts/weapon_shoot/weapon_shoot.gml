@@ -1,7 +1,8 @@
 with obj_player
 {
 	// Check Firing
-	if mouse_check_button(mb_left) == true and fire_cooldown == 0
+	if (atk_type == "auto" and mouse_check_button(mb_left) and fire_cooldown == 0)
+		or (atk_type == "semi_auto" and mouse_check_button_pressed(mb_left) and fire_cooldown == 0)
 	{
 		fire = 1;
 		fire_cooldown = reload;
