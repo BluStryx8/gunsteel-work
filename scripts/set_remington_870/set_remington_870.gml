@@ -4,6 +4,9 @@ if obj_player.weapon != "remington_870"
 	{
 		weapon = "remington_870"
 		atk_type = "semi_auto"
+		hands = 2;
+		hand_two = [17, 0];
+		hand_offset = 0;
 		min_damage = 15;
 		max_damage = 35;
 		bullet_speed = 24;

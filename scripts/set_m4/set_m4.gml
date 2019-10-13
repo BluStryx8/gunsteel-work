@@ -4,6 +4,9 @@ if obj_player.weapon != "M4"
 	{
 		weapon = "M4"
 		atk_type = "auto"
+		hands = 2;
+		hand_two = [17, -2];
+		hand_offset = 0;
 		min_damage = 14;
 		max_damage = 22;
 		bullet_speed = 24;

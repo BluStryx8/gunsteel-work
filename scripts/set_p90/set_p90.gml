@@ -4,6 +4,9 @@ if obj_player.weapon != "P90"
 	{
 		weapon = "P90"
 		atk_type = "auto";
+		hands = 2;
+		hand_two = [8, 0];
+		hand_offset = 9;
 		min_damage = 13;
 		max_damage = 20;
 		bullet_speed = 25;

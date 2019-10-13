@@ -4,6 +4,9 @@ if obj_player.weapon != "1911"
 	{
 		weapon = "1911"
 		atk_type = "semi_auto"
+		hands = 1;
+		hand_two = [0, 0];
+		hand_offset = 0;
 		min_damage = 48;
 		max_damage = 52;
 		bullet_speed = 20;

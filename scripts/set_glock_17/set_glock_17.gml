@@ -4,6 +4,9 @@ if obj_player.weapon != "glock_17"
 	{
 		weapon = "glock_17"
 		atk_type = "semi_auto"
+		hands = 1;
+		hand_two = [0, 0];
+		hand_offset = 0;
 		min_damage = 18;
 		max_damage = 22;
 		bullet_speed = 21;
