@@ -399,6 +399,14 @@
             }
         },
         {
+            "Key": "4fae2ab8-3c88-4beb-bcf4-bfbcd89162b3",
+            "Value": {
+                "id": "f3661c0e-0edd-42c7-8596-6085d03a1cd2",
+                "resourcePath": "scripts\\set_uzi\\set_uzi.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4feb1ae3-9b63-454b-8189-070e133f1a52",
             "Value": {
                 "id": "182cb148-194c-458a-9ead-250856c7f8ab",
@@ -554,7 +562,15 @@
             "Key": "670ab45d-43fb-4e07-a4bc-a65f380b8bdb",
             "Value": {
                 "id": "6a29fde1-24f1-48c7-b4a2-cc16d29c5872",
-                "resourcePath": "sprites\\spr_held_shotgun\\spr_held_shotgun.yy",
+                "resourcePath": "sprites\\spr_held_remington_870\\spr_held_remington_870.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6882e18f-0508-4c25-b0ea-4d0f59c9f506",
+            "Value": {
+                "id": "4799c7d1-6514-47be-abdb-8304db00cab4",
+                "resourcePath": "sprites\\spr_gui_uzi\\spr_gui_uzi.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -658,7 +674,7 @@
             "Key": "781c537f-1688-4957-9a3b-26f8695a2152",
             "Value": {
                 "id": "21e7e7e8-49ed-459d-b482-25298b285d6f",
-                "resourcePath": "sprites\\spr_gui_shotgun\\spr_gui_shotgun.yy",
+                "resourcePath": "sprites\\spr_gui_remington_870\\spr_gui_remington_870.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -735,6 +751,14 @@
             }
         },
         {
+            "Key": "8e9bda43-3080-4058-8444-9d67475710d9",
+            "Value": {
+                "id": "853d619b-6b3b-482e-92b2-99797283c3bd",
+                "resourcePath": "objects\\obj_item_pickup_uzi\\obj_item_pickup_uzi.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8f04e0c4-74ce-4515-9ea3-632a0af75aea",
             "Value": {
                 "id": "21788748-25d9-4bd1-baff-b021c26564d0",
@@ -763,6 +787,14 @@
             "Value": {
                 "id": "8e417dc1-b8c8-403a-9723-d71fbf0cf1b2",
                 "resourcePath": "sprites\\spr_player_body\\spr_player_body.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9347cac7-296e-411f-a459-4124859531b2",
+            "Value": {
+                "id": "2d86bd30-24b8-4020-a92d-6419f7714d93",
+                "resourcePath": "sprites\\spr_held_uzi\\spr_held_uzi.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -914,7 +946,7 @@
             "Key": "a945515e-7b8b-4292-ae7e-803372589e1c",
             "Value": {
                 "id": "f5c07dca-db2e-4de2-81ef-ea32bb29f246",
-                "resourcePath": "scripts\\set_shotgun\\set_shotgun.yy",
+                "resourcePath": "scripts\\set_remington_870\\set_remington_870.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1266,7 +1298,7 @@
             "Key": "eabd4fe3-c410-45ae-bfcc-38125d8c9cf7",
             "Value": {
                 "id": "5bc334e5-2a88-4460-8850-38d5d377684b",
-                "resourcePath": "objects\\obj_item_pickup_shotgun\\obj_item_pickup_shotgun.yy",
+                "resourcePath": "objects\\obj_item_pickup_remington_870\\obj_item_pickup_remington_870.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1368,10 +1400,11 @@
         "3c378dda-d103-42a9-8d9f-905e92710fe8",
         "6fff315c-7d99-47dc-b30d-240e002c97bf",
         "88f0ba57-75bf-4852-8eaa-99c9e036923f",
-        "a945515e-7b8b-4292-ae7e-803372589e1c",
+        "4fae2ab8-3c88-4beb-bcf4-bfbcd89162b3",
         "9904e012-f23c-4ae1-b916-2d0f7436eff1",
         "55843485-5e82-4480-8595-8a33858c3ca8",
         "4feb1ae3-9b63-454b-8189-070e133f1a52",
+        "a945515e-7b8b-4292-ae7e-803372589e1c",
         "824d5581-6b15-406d-9f97-27ab08e6dcfc",
         "5a36136f-2866-42c7-b62a-399baa6341d3",
         "e50f02f2-72fd-4c2e-845f-9e7d3a696c0a",

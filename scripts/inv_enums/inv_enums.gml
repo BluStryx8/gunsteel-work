@@ -8,11 +8,11 @@ enum item_type
 	// Weapons
 	pistol_1911,
 	glock_17,
-	shotgun,
+	uzi,
 	ak47,
 	m4,
 	p90,
-	
+	remington_870,
 	// Bars
 	bar_iron,
 	

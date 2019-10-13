@@ -1,20 +1,20 @@
 {
-    "id": "eabd4fe3-c410-45ae-bfcc-38125d8c9cf7",
+    "id": "8e9bda43-3080-4058-8444-9d67475710d9",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_item_pickup_shotgun",
+    "name": "obj_item_pickup_uzi",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "763f39b8-d27e-444a-81c8-ff8dab98f972",
+            "id": "5882f123-0925-4561-a618-23b3ae5f3a49",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "6d0b600f-acc8-4a48-8fb9-0022235c3fde",
             "propertyId": "1af200f7-6fcb-4df8-8ca0-a77812ecf574",
-            "value": "item_type.shotgun"
+            "value": "item_type.uzi"
         }
     ],
     "parentObjectId": "6d0b600f-acc8-4a48-8fb9-0022235c3fde",
@@ -33,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "781c537f-1688-4957-9a3b-26f8695a2152",
+    "spriteId": "6882e18f-0508-4c25-b0ea-4d0f59c9f506",
     "visible": true
 }
