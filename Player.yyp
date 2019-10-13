@@ -578,7 +578,7 @@
             "Key": "6ae15008-3705-49a5-8169-071e1d3c0e77",
             "Value": {
                 "id": "7ee22f2a-9d5b-4199-a4e0-015f12a0182a",
-                "resourcePath": "objects\\obj_slider_test\\obj_slider_test.yy",
+                "resourcePath": "objects\\obj_slider_sounds_volume\\obj_slider_sounds_volume.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1172,6 +1172,14 @@
                 "id": "29e19707-a3e1-48b9-8907-a72e915a26e7",
                 "resourcePath": "scripts\\collision\\collision.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d42f3c74-24cc-493c-a26d-449138a5cfb8",
+            "Value": {
+                "id": "bd5de8df-cb39-4ed4-b601-caa1ffe3d683",
+                "resourcePath": "objects\\obj_load_sound\\obj_load_sound.yy",
+                "resourceType": "GMObject"
             }
         },
         {
