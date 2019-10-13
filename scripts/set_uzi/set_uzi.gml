@@ -4,6 +4,9 @@ if obj_player.weapon != "Uzi"
 	{
 		weapon = "Uzi"
 		atk_type = "auto"
+		hands = 1;
+		hand_two = [0, 0];
+		hand_offset = 0;
 		min_damage = 19;
 		max_damage = 23;
 		bullet_speed = 23;

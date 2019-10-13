@@ -4,6 +4,9 @@ if obj_player.weapon != "none"
 	{
 		weapon = "none"
 		atk_type = "none"
+		hands = 0;
+		hand_two = [0, 0];
+		hand_offset = 0;
 		min_damage = 0;
 		max_damage = 0;
 		bullet_speed = 0;

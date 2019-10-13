@@ -4,6 +4,9 @@ if obj_player.weapon != "AK-47"
 	{
 		weapon = "AK-47"
 		atk_type = "auto"
+		hands = 2;
+		hand_two = [17, -3];
+		hand_offset = 0;
 		min_damage = 19;
 		max_damage = 25;
 		bullet_speed = 22;
