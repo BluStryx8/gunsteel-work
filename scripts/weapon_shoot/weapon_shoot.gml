@@ -14,18 +14,18 @@ with obj_player
 		if ammo > 0
 		{
 			if accuracy < base_accuracy accuracy = base_accuracy;
-			burst_count = 0;
-			if burst != 0 do
+			var _bullet_count = 0;
+			if bullets != 0 do
 			{
 				instance_create_layer(x, y, "bullets", obj_player_bullet);
-				burst_count += 1;
+				_bullet_count += 1;
 			}
-			until burst_count >= burst;
+			until _bullet_count >= bullets;
 			audio_group_set_gain(audiogrp_sounds,global.settings_sound_volume,0);
 			audio_play_sound(snd_fire, 1, false);
 			accuracy += recoil;
 			if accuracy > max_recoil accuracy = max_recoil;
-			shake = shake_dur;
+			shake = round(shake_dur * global.settings_shake);
 			ammo -= 1;
 		}
 		else

@@ -25,5 +25,8 @@ global.p_inv_5 = ord("5");
 // Move Speed (Temporary)
 global.p_speed = 5;
 
+// Shake (Temporary)
+global.settings_shake = 0.5;
+
 // Tileset
 global.tilemap = layer_tilemap_get_id("collision");
