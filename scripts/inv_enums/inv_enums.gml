@@ -7,7 +7,7 @@ enum item_type
 	
 	// Weapons
 	pistol_1911,
-	glock_17,
+	glock,
 	uzi,
 	ak47,
 	m4,

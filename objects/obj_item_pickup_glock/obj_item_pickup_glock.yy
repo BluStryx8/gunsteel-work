@@ -2,7 +2,7 @@
     "id": "6db67246-2eed-4975-a19c-eb59fb5e72d9",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_item_pickup_glock_17",
+    "name": "obj_item_pickup_glock",
     "eventList": [
         
     ],
@@ -14,7 +14,7 @@
             "mvc": "1.0",
             "objectId": "6d0b600f-acc8-4a48-8fb9-0022235c3fde",
             "propertyId": "1af200f7-6fcb-4df8-8ca0-a77812ecf574",
-            "value": "item_type.glock_17"
+            "value": "item_type.glock"
         }
     ],
     "parentObjectId": "6d0b600f-acc8-4a48-8fb9-0022235c3fde",

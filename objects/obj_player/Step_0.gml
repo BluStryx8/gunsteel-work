@@ -1,6 +1,4 @@
 /// @description Movement
-// Reset Variables
-fire = 0;
 
 // Keyboard Movements
 if keyboard_check(global.p_left) h_move -= 2;
@@ -122,6 +120,35 @@ switch(frame)
 	break;
 }
 
+// Calculate Fire
+if fire > 0 and fire_cooldown == 0
+{
+	fire_cooldown = reload;
+	fire -= 1;
+	// Check Ammo
+	if ammo > 0
+	{
+		if accuracy < base_accuracy accuracy = base_accuracy;
+		var _bullet_count = 0;
+		if bullets != 0 do
+		{
+			instance_create_layer(x, y, "bullets", obj_player_bullet);
+			_bullet_count += 1;
+		}
+		until _bullet_count >= bullets;
+		audio_group_set_gain(audiogrp_sounds,global.settings_sound_volume,0);
+		audio_play_sound(snd_fire, 1, false);
+		accuracy += recoil;
+		if accuracy > max_recoil accuracy = max_recoil;
+		shake = round(shake_dur * global.settings_shake);
+		ammo -= 1;
+	}
+	else
+	{
+		audio_play_sound(snd_dry_fire, 1, false);
+	}
+}
+
 // Attack Cooldown
 if fire_cooldown > 0 fire_cooldown -= 1;
 if fire_cooldown <= 0
@@ -149,7 +176,13 @@ if focus == 1
 {
 	if camera_pan > 2 camera_pan -= camera_pan / 2;
 }
-else if camera_pan < 1024 camera_pan += camera_pan;
+else if focus == 0
+{
+	if camera_pan > 8 camera_pan -= camera_pan / 2;
+	if camera_pan < 8 camera_pan += camera_pan;
+}
+// Reset camera pan
+// if camera_pan < 1024 camera_pan += camera_pan;
 
 if camera_pan < 1024
 {

@@ -13,6 +13,7 @@ if obj_player.weapon != "Uzi"
 		bullet_speed_var = 1;
 		decay = 1.5;
 		reload = 6;
+		burst = 1;
 		bullets = 1;
 		base_accuracy = 3;
 		recoil = 1;

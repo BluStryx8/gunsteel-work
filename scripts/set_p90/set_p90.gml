@@ -13,6 +13,7 @@ if obj_player.weapon != "P90"
 		bullet_speed_var = 1;
 		decay = 1;
 		reload = 4;
+		burst = 1;
 		bullets = 1;
 		base_accuracy = 2;
 		recoil = 0.2;

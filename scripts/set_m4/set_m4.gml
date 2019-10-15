@@ -13,6 +13,7 @@ if obj_player.weapon != "M4"
 		bullet_speed_var = 1;
 		decay = 3;
 		reload = 5;
+		burst = 1;
 		bullets = 1;
 		base_accuracy = 2.5;
 		recoil = 0.2;

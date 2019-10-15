@@ -2,8 +2,12 @@ if obj_player.weapon != "AK-47"
 {
 	with obj_player
 	{
-		weapon = "AK-47"
-		atk_type = "auto"
+		weapon = "AK-47";
+		if not variable_instance_exists(id, "mode_ak47")
+		{
+			mode_ak47 = "semi_auto";
+		}
+		atk_type = mode_ak47;
 		hands = 2;
 		hand_two = [17, -3];
 		hand_offset = 0;
@@ -13,6 +17,7 @@ if obj_player.weapon != "AK-47"
 		bullet_speed_var = 1;
 		decay = 3;
 		reload = 6;
+		burst = 1;
 		bullets = 1;
 		base_accuracy = 2;
 		recoil = 0.3;

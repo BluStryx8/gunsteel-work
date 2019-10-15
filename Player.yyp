@@ -122,7 +122,7 @@
             "Key": "122d565f-f4fc-4b62-b328-bf6830039c0d",
             "Value": {
                 "id": "00e896ae-aa63-4af9-8f17-ccd0ce357de6",
-                "resourcePath": "sprites\\spr_held_glock_17\\spr_held_glock_17.yy",
+                "resourcePath": "sprites\\spr_held_glock\\spr_held_glock.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -364,6 +364,14 @@
                 "id": "88ac5629-d4e0-48ef-82cf-f24dcc469e83",
                 "resourcePath": "views\\48951567-d3e5-4612-bd33-34fcc67407ce.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "49ecd22a-3e46-4698-bf2d-001a284f0b9c",
+            "Value": {
+                "id": "ee4c254a-8613-4e1b-a5d4-d3f6042c2314",
+                "resourcePath": "scripts\\alt_ak47\\alt_ak47.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -650,7 +658,7 @@
             "Key": "6db67246-2eed-4975-a19c-eb59fb5e72d9",
             "Value": {
                 "id": "f601d5a4-2df1-4afd-ab63-cb36210c65b3",
-                "resourcePath": "objects\\obj_item_pickup_glock_17\\obj_item_pickup_glock_17.yy",
+                "resourcePath": "objects\\obj_item_pickup_glock\\obj_item_pickup_glock.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1015,6 +1023,14 @@
             }
         },
         {
+            "Key": "baadaa62-8623-4201-9167-d51d33b42758",
+            "Value": {
+                "id": "ee86b71f-1163-4109-8f80-eead45b0217a",
+                "resourcePath": "scripts\\alt_glock\\alt_glock.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bc01bd1e-d573-4100-95c9-d1f7d58e6f80",
             "Value": {
                 "id": "cd27da91-43c0-4a18-95d8-c44c22e68122",
@@ -1170,7 +1186,7 @@
             "Key": "d0acc4ec-40dd-45ab-ac30-58fe7ecbc1a2",
             "Value": {
                 "id": "ccaa3c4e-3e55-40ff-b29d-7a6ce5ee4d22",
-                "resourcePath": "sprites\\spr_gui_glock_17\\spr_gui_glock_17.yy",
+                "resourcePath": "sprites\\spr_gui_glock\\spr_gui_glock.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1456,6 +1472,8 @@
         "824d5581-6b15-406d-9f97-27ab08e6dcfc",
         "5a36136f-2866-42c7-b62a-399baa6341d3",
         "336c5481-1a5b-4741-93a0-4d745b393b63",
+        "baadaa62-8623-4201-9167-d51d33b42758",
+        "49ecd22a-3e46-4698-bf2d-001a284f0b9c",
         "e50f02f2-72fd-4c2e-845f-9e7d3a696c0a",
         "d3649da0-e893-4bad-9041-675d0ac52e39",
         "c218e507-984a-4a88-a55c-2ab043e2042d",

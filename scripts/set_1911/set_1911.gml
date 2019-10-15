@@ -13,6 +13,7 @@ if obj_player.weapon != "1911"
 		bullet_speed_var = 1;
 		decay = 0.5;
 		reload = 10;
+		burst = 1;
 		bullets = 1;
 		base_accuracy = 2;
 		recoil = 2;

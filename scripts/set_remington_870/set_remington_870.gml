@@ -13,6 +13,7 @@ if obj_player.weapon != "remington_870"
 		bullet_speed_var = 2;
 		decay = 0.5;
 		reload = 30;
+		burst = 1;
 		bullets = 12;
 		base_accuracy = 10;
 		recoil = 3;

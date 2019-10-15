@@ -7,15 +7,17 @@ if keyboard_check(global.p_inv_3) active_item = 2;
 if keyboard_check(global.p_inv_4) active_item = 3;
 if keyboard_check(global.p_inv_5) active_item = 4;
 
-global.p_active = inventory[active_item]
+global.p_active = inventory[active_item];
 
 obj_player_held.sprite = inv_get_sprite(global.p_active);
 
 // Check for Change
 if active_item != change_check
 {
-	change_check = active_item
-	inv_use_script(global.p_active, "change")
+	change_check = active_item;
+	obj_player.fire = 0;
+	obj_player.focus = 0;
+	inv_use_script(global.p_active, "change");
 }
 
 // Click
