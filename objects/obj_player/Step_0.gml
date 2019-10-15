@@ -144,11 +144,6 @@ else
 }
 
 // Camera (Temp)
-if mouse_check_button_pressed(mb_right)
-{
-	if focus == 0 focus = 1 else focus = 0;
-}
-
 camera_set_view_pos(view_camera[0], x - h_move - camera_width / 2 + shake_x, y - v_move - camera_height / 2 + shake_y);
 if focus == 1
 {
