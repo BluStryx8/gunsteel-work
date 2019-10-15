@@ -735,6 +735,14 @@
             }
         },
         {
+            "Key": "82c5d697-dd71-4e91-b87c-cec546c6d1b5",
+            "Value": {
+                "id": "1a5a12e7-b12d-4aa3-bf09-904b01dc96fc",
+                "resourcePath": "objects\\obj_BYPASS\\obj_BYPASS.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "83eb6f4c-5119-49ec-a230-751f8032bb2e",
             "Value": {
                 "id": "32211c45-99e9-4b1c-a109-63fd00e16d01",
