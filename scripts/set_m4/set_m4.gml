@@ -3,7 +3,11 @@ if obj_player.weapon != "M4"
 	with obj_player
 	{
 		weapon = "M4"
-		atk_type = "auto"
+		if not variable_instance_exists(id, "mode_m4")
+		{
+			mode_m4 = "semi_auto";
+		}
+		atk_type = mode_m4;
 		hands = 2;
 		hand_two = [17, -2];
 		hand_offset = 0;
