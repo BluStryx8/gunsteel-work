@@ -1,4 +1,4 @@
-/// @description Declare all Globals
+///@desc Declare all Globals
 
 // Player Globals
 

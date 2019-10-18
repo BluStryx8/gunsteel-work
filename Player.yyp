@@ -1015,6 +1015,14 @@
             }
         },
         {
+            "Key": "b1d9168d-f049-45fe-a1de-f02f93e7f4cc",
+            "Value": {
+                "id": "ba78666c-243f-4770-85ed-b7eb61d82c29",
+                "resourcePath": "scripts\\declare_weapons\\declare_weapons.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b2f050f7-0bcc-4cd9-8a5b-9993e082f02b",
             "Value": {
                 "id": "d11e9448-ff58-450a-9fb0-724263a2970d",
@@ -1473,6 +1481,7 @@
     ],
     "script_order": [
         "08fa98c5-6ca2-4760-a811-f2d3d0ce32bb",
+        "b1d9168d-f049-45fe-a1de-f02f93e7f4cc",
         "738271f9-8793-4a7e-a6ca-3cda80542472",
         "bd5e98c3-b4be-4d2d-a1ba-59b6e322f25a",
         "4ba077b0-5b32-4903-8741-3bd96b98d3a9",
