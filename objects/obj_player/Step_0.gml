@@ -1,5 +1,7 @@
 /// @description Movement
 
+sprite = spr_gui_empty;
+
 // Keyboard Movements
 if keyboard_check(global.p_left) h_move -= 2;
 if keyboard_check(global.p_right) h_move += 2;

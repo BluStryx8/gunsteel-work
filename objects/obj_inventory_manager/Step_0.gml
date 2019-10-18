@@ -9,7 +9,7 @@ if keyboard_check(global.p_inv_5) active_item = 4;
 
 global.p_active = inventory[active_item];
 
-obj_player_held.sprite = inv_get_sprite(global.p_active);
+obj_player.sprite = inv_get_sprite(global.p_active);
 
 // Check for Change
 if active_item != change_check
