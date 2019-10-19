@@ -16,7 +16,7 @@ if _dir <= 90 or _dir >= 270
 	draw_sprite_ext(spr_player_shade, 0, x, y - anim_y, 1, 1, 0, global.p_skin_colour, 1)
 	draw_sprite_ext(spr_player_hair, 0, x, y - anim_y, 1, 1, 0, global.p_hair_colour, 1)
 	draw_sprite_ext(spr_player_hat, 0, x, y - anim_y, 1, 1, 0, c_white, 1)
-	draw_sprite_ext(sprite, 0, x + offset_x, y + offset_y, 1, 1, _dir, c_white, 1)
+	if hands >= 1 draw_sprite_ext(sprite, 0, x + offset_x, y + offset_y, 1, 1, _dir, c_white, 1)
 }
 else
 {
@@ -33,5 +33,6 @@ else
 	draw_sprite_ext(spr_player_shade, 0, x, y - anim_y, -1, 1, 0, global.p_skin_colour, 1)
 	draw_sprite_ext(spr_player_hair, 0, x, y - anim_y, -1, 1, 0, global.p_hair_colour, 1)
 	draw_sprite_ext(spr_player_hat, 0, x, y - anim_y, -1, 1, 0, c_white, 1)
-	draw_sprite_ext(sprite, 0, x - offset_x, y + offset_y, 1, -1, _dir, c_white, 1)
+	if hands == 2 draw_sprite_ext(sprite, 0, x - offset_x, y + offset_y, 1, -1, _dir, c_white, 1)
+	else if hands >= 1 draw_sprite_ext(sprite, 0, x + offset_x - 7, y + offset_y, 1, -1, _dir, c_white, 1)
 }
