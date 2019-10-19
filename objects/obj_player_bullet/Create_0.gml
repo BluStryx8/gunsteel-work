@@ -1,4 +1,5 @@
 /// @description Shoot
+draw_delay = obj_player.bullet_dd;
 decay = room_speed * obj_player.decay;
 speed = obj_player.bullet_speed + irandom_range(-obj_player.bullet_speed_var, obj_player.bullet_speed_var);
 damage = irandom_range(obj_player.min_damage, obj_player.max_damage);
@@ -20,6 +21,6 @@ else if obj_player.hands == 1
 {
 	var _dir = point_direction(x, y, mouse_x, mouse_y)
 	x += obj_player.offset[0];
-	if not (_dir <= 90 or _dir >= 270) x -= 7;
+	if not (_dir <= 90 or _dir >= 270) x += obj_player.offset[2];
 	y += obj_player.offset[1];
 }

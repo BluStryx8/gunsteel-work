@@ -1,5 +1,4 @@
 /// @description Cursor
-draw_self();
 x = obj_player.x;
 y = obj_player.y;
 
@@ -14,7 +13,7 @@ else if obj_player.hands == 1
 {
 	var _dir = point_direction(x, y, mouse_x, mouse_y)
 	x += obj_player.offset[0];
-	if not (_dir <= 90 or _dir >= 270) x -= 7;
+	if not (_dir <= 90 or _dir >= 270) x += obj_player.offset[2];
 	y += obj_player.offset[1];
 }
 

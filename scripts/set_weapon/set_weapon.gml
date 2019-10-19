@@ -4,6 +4,10 @@ var _w = weapon_find(global.weapons, "weapon", item_definitions[global.p_active,
 
 with obj_player
 {
+	// Save previous weapon ammo
+	ds_map_replace(global.weapons[prev_weap], "ammo", ammo);
+	prev_weap		 = _w;
+	// Load Stats
 	weapon			 = ds_map_find_value(global.weapons[_w], "weapon");
 	atk_type		 = ds_map_find_value(global.weapons[_w], "atk_type");
 	hands			 = ds_map_find_value(global.weapons[_w], "hands");
@@ -18,6 +22,7 @@ with obj_player
 	reload			 = ds_map_find_value(global.weapons[_w], "reload");
 	burst			 = ds_map_find_value(global.weapons[_w], "burst");
 	bullets			 = ds_map_find_value(global.weapons[_w], "bullets");
+	bullet_dd		 = ds_map_find_value(global.weapons[_w], "bullet_dd");
 	base_accuracy	 = ds_map_find_value(global.weapons[_w], "base_accuracy");
 	recoil			 = ds_map_find_value(global.weapons[_w], "recoil");
 	max_recoil		 = ds_map_find_value(global.weapons[_w], "max_recoil");

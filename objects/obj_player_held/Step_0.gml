@@ -3,13 +3,24 @@ x = obj_player.x;
 y = obj_player.y;
 dir = point_direction(x, y, mouse_x, mouse_y);
 
-// Two Hand Weapon
-if obj_player.hands == 2 and hand == 1
+// Two Handed Offset
+if obj_player.hands == 2
+{
+	if dir <= 90 or dir >= 270 x += obj_player.offset[0] else x -= obj_player.offset[0];
+	y += obj_player.offset[1];
+}
+// One Handed Offset
+else if obj_player.hands == 1
+{
+	x += obj_player.offset[0];
+	if not (dir <= 90 or dir >= 270) x += obj_player.offset[2];
+	y += obj_player.offset[1];
+}
+
+// Second Hand
+if hand == 1
 {
 	{
-		// Offset
-		if dir <= 90 or dir >= 270 x += obj_player.offset[0] else x -= obj_player.offset[0];
-		y += obj_player.offset[0];
 		// Rotation
 		if dir <= 90 or dir >= 270
 		{			
@@ -25,13 +36,9 @@ if obj_player.hands == 2 and hand == 1
 		speed = _pdist;
 	}
 }
-// One Hand Weapon
-else if obj_player.hands >= 1 and hand == 0
+// First Hand
+else if hand == 0
 {
-	// Offset
-	x += obj_player.offset[0];
-	if not (dir <= 90 or dir >= 270) x -= 7;
-	y += obj_player.offset[1];
 	// Rotation
 	if dir <= 90 or dir >= 270
 	{

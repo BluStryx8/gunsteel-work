@@ -16,6 +16,8 @@ anim_x = 0;
 anim_y = 0;
 
 // Weapon Constants
+prev_weap = 0;
+ammo = 0;
 weapon = "";
 set_empty();
 
