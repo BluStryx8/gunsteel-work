@@ -30,3 +30,6 @@ global.settings_shake = 0.5;
 
 // Tileset
 global.tilemap = layer_tilemap_get_id("collision");
+
+// Weapons
+declare_weapons();

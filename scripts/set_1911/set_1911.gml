@@ -2,13 +2,12 @@ if obj_player.weapon != "1911"
 {
 	with obj_player
 	{
-		weapon = "1911"
-		atk_type = "semi_auto"
-		hands = 1;
+		weapon = ds_map_find_value(global.weapons[1], "weapon");
+		atk_type = ds_map_find_value(global.weapons[1], "atk_type");
+		hands = ds_map_find_value(global.weapons[1], "hands");
 		hand_one = [-3, 7];
 		hand_two = [0, 0];
-		offset_x = -4;
-		offset_y = 0;
+		offset = [-4, 0];
 		min_damage = 48;
 		max_damage = 52;
 		bullet_speed = 20;

@@ -7,15 +7,15 @@ y = obj_player.y;
 if obj_player.hands == 2
 {
 	var _dir = point_direction(x, y, mouse_x, mouse_y)
-	if _dir <= 90 or _dir >= 270 x += obj_player.offset_x else x -= obj_player.offset_x;
-	y += obj_player.offset_y;
+	if _dir <= 90 or _dir >= 270 x += obj_player.offset[0] else x -= obj_player.offset[0];
+	y += obj_player.offset[1];
 }
 else if obj_player.hands == 1
 {
 	var _dir = point_direction(x, y, mouse_x, mouse_y)
-	x += obj_player.offset_x
+	x += obj_player.offset[0];
 	if not (_dir <= 90 or _dir >= 270) x -= 7;
-	y += obj_player.offset_y;
+	y += obj_player.offset[1];
 }
 
 // Rotation
