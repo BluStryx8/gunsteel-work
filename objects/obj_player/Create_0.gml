@@ -38,10 +38,12 @@ view_camera[0] = camera_create_view(0, 0, camera_width, camera_height);
 
 // Create Others (Temp)
 instance_create_layer(x, y, "HUD", obj_cursor);
+centre = instance_create_layer(x, y, "HUD", obj_cursor_bracket);
+centre.image_index = 0;
 left = instance_create_layer(x, y, "HUD", obj_cursor_bracket);
-left.image_index = 0;
+left.image_index = 1;
 right = instance_create_layer(x, y, "HUD", obj_cursor_bracket);
-right.image_index = 1;
+right.image_index = 2;
 
 lhand = instance_create_layer(x, y, "player_hand", obj_player_held);
 lhand.hand = 0;

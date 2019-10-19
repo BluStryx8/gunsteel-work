@@ -18,13 +18,14 @@ else if obj_player.hands == 1
 }
 
 // Rotation
-if image_index == 0
+direction = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y);
+if image_index == 1
 {
-	direction = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y) + obj_player.accuracy;
+	direction += obj_player.accuracy;
 }
-else if image_index == 1
+else if image_index == 2
 {
-	direction = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y) - obj_player.accuracy;
+	direction -= obj_player.accuracy;
 }
 image_angle = direction;
 speed = point_distance(x, y, mouse_x, mouse_y);
