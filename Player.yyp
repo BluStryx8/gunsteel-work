@@ -855,6 +855,14 @@
             }
         },
         {
+            "Key": "a08f776d-d837-4690-b45d-42862f33b43d",
+            "Value": {
+                "id": "ce61308d-3ac6-4c86-83ed-ca11ba159351",
+                "resourcePath": "sprites\\spr_player_shadow\\spr_player_shadow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a0ae34be-f589-4fc7-a55e-1920b6f2b97e",
             "Value": {
                 "id": "48943b32-9b5b-481b-87eb-d2508e8380aa",
