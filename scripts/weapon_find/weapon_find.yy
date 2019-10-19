@@ -1,8 +1,8 @@
 {
-    "id": "88f0ba57-75bf-4852-8eaa-99c9e036923f",
+    "id": "b14c48b6-f007-4398-a6bc-4d4563fd118d",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "set_glock_17",
+    "name": "weapon_find",
     "IsCompatibility": false,
     "IsDnD": false
 }

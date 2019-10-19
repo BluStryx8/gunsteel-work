@@ -16,7 +16,7 @@ anim_x = 0;
 anim_y = 0;
 
 // Weapon Constants
-weapon = "na";
+weapon = "";
 set_empty();
 
 // Weapon Vars

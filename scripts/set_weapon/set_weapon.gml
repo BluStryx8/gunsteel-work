@@ -1,11 +1,6 @@
 /// @desc Set weapon to one on the weapons map
 
-for (var _w = 0; _w < array_length_1d(global.weapons); _w++)
-{
-	if (ds_map_find_value(global.weapons[_w], "weapon") == item_definitions[global.p_active, item_properties.name])
-	break;
-}
-if _w >= array_length_1d(global.weapons) _w = 0;
+var _w = weapon_find(global.weapons, "weapon", item_definitions[global.p_active, item_properties.name]);
 
 with obj_player
 {
