@@ -1,14 +1,15 @@
-/// @description Checks if key is pressed then pauses everything
-if keyboard_check_pressed(vk_escape) {
-	if pause = false{
-		sprite = sprite_create_from_surface(application_surface,0,0,view_get_wport(0),view_get_hport(0), false,false,0,0)
-		pause = true
-		instance_deactivate_all(true)
-		
-	}
-	else {
-		pause = false
-		instance_activate_all();
-	}
+if(keyboard_check_pressed(vk_space)){
+    paused = !paused;
+    if(!sprite_exists(screenShot)){
+        screenShot = sprite_create_from_surface(application_surface,0,0,view_wport,view_hport,0,0,0,0);    
+    }
 }
 
+if(paused){
+    instance_deactivate_all(1);
+}else{
+    if(sprite_exists(screenShot)){
+        sprite_delete(screenShot);
+    }
+    instance_activate_all();
+}

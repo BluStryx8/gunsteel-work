@@ -1,2 +1,2 @@
-/// @description Decalre variables
-pause = false
+paused = false;
+screenShot = -1;

@@ -3,10 +3,12 @@
 sprite = spr_gui_empty;
 
 // Keyboard Movements
-if keyboard_check(global.p_left) h_move -= 2;
-if keyboard_check(global.p_right) h_move += 2;
-if keyboard_check(global.p_up) v_move -= 2;
-if keyboard_check(global.p_down) v_move += 2;
+if global.moveable = true{
+	if keyboard_check(global.p_left) h_move -= 2;
+	if keyboard_check(global.p_right) h_move += 2;
+	if keyboard_check(global.p_up) v_move -= 2;
+	if keyboard_check(global.p_down) v_move += 2;
+}
 
 // Decrease Speed
 if h_move > 0 h_move -= 1

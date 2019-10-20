@@ -1,6 +1,7 @@
 /// @description Set Global Controls
 declare_globals();
 
+global.moveable = true
 move_speed = global.p_speed;
 
 // Declare Variables
