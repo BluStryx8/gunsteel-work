@@ -41,6 +41,7 @@ switch (obj_player.type)
 		draw_text(view_get_wport(0) - 112, view_get_hport(0) - 48, string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 		break;
 	case "rifle":
+	case "shotgun":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) - 112, view_get_hport(0), 2, 2, 0, c_white, 1);
 		draw_text(view_get_wport(0) - 112, view_get_hport(0) - 48, string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 		break;
