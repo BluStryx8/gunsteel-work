@@ -1,14 +1,11 @@
 /// @description Collision
 /// @param direction Which way to detect collision for
 /// @param speed What is used for movement calculation
-/// @param action What action to take
 
 // Declare Variables
 var _bbox_side;
-var _collision = 0;
 var _movement  = argument0;
 var _speed     = argument1;
-var _action    = argument2;
 
 // Horizontal Colision
 if _movement == "x"
@@ -20,13 +17,9 @@ if _movement == "x"
 		if _speed > 0 x = x - (x mod 16) + 15 - ((bbox_right - x) mod 16);
 		else x = x - (x mod 16) - ((bbox_left - x) mod 16);
 		_speed = 0;
-		_collision = 1;
 	}
-	if _action == "move"
-	{
-		x += _speed;
-		return _speed;
-	}
+	x += _speed;
+	return _speed;
 }
 
 // Vertical Colision
@@ -39,17 +32,11 @@ if _movement == "y"
 		if _speed > 0 y = y - (y mod 16) + 15 - ((bbox_bottom - y)) mod 16;
 		else
 		{
-			if (y mod 16) <= 8 y -= 16;
+			if (y mod 16) <= 8 y += 16;
 			y = y - (y mod 16) - ((bbox_top - y) mod 16);
 		}
 		_speed = 0;
-		_collision = 1;
 	}
-	if _action == "move"
-	{
-		y += _speed;
-		return _speed;
-	}
+	y += _speed;
+	return _speed;
 }
-
-if _action == "destroy" return _collision;

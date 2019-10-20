@@ -138,7 +138,7 @@
             "Key": "13a2e249-dcf2-4cc6-878a-cff7b273664d",
             "Value": {
                 "id": "b0ec8dbf-b593-45da-b4e5-eb9979944570",
-                "resourcePath": "sprites\\spr_player_collision\\spr_player_collision.yy",
+                "resourcePath": "sprites\\spr_player_hitbox\\spr_player_hitbox.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -316,6 +316,14 @@
                 "id": "f19d0ce7-8625-4508-a446-469b23296eee",
                 "resourcePath": "notes\\sprite_format.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "3ab92209-917f-47c2-93ca-26175f394e84",
+            "Value": {
+                "id": "6f1e22a5-ed4f-41ca-bb19-6ccc070ba5c0",
+                "resourcePath": "scripts\\bullet_collision\\bullet_collision.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1475,7 +1483,8 @@
         "6cf3535a-55c9-463e-a8bd-83d3718ebf06",
         "c4cdfdc1-6bd8-4177-80c9-68a9ea7971ba",
         "235fed7c-8c6c-47f9-849b-cd14e2729802",
-        "d3b71c79-3876-4e2c-8ebb-37d238d6e5bc"
+        "d3b71c79-3876-4e2c-8ebb-37d238d6e5bc",
+        "3ab92209-917f-47c2-93ca-26175f394e84"
     ],
     "tutorial": ""
 }
