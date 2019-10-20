@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "4abd0b28-e71a-4cc0-afae-b56fad8cefd0",
+            "Value": {
+                "id": "49b80a9b-825a-47b3-b97a-d5229810111a",
+                "resourcePath": "rooms\\rm_game2\\rm_game2.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "4ba077b0-5b32-4903-8741-3bd96b98d3a9",
             "Value": {
                 "id": "7a178c71-4bdc-44dc-a92f-e75c51a629c5",
@@ -471,6 +479,14 @@
             }
         },
         {
+            "Key": "5872f950-8570-4f37-b406-54ccba62e424",
+            "Value": {
+                "id": "4744b6d2-69db-4c96-80ad-455cbb0b1f5a",
+                "resourcePath": "objects\\obj_fade_out_game\\obj_fade_out_game.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "58b02e35-8b1e-4381-a56d-a0ff78e11f38",
             "Value": {
                 "id": "663f432c-29a7-4223-9b84-65579304710e",
@@ -484,6 +500,14 @@
                 "id": "e7368283-b8a4-4f41-8588-ad9319ebecb0",
                 "resourcePath": "sprites\\spr_t_brick_blue\\spr_t_brick_blue.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5a274bfb-497f-4431-a814-a5ce620337d1",
+            "Value": {
+                "id": "5448f382-7f70-4404-8b6d-deda12467882",
+                "resourcePath": "objects\\obj_next_room_parent\\obj_next_room_parent.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -668,6 +692,14 @@
                 "id": "26c613cc-ba86-48c5-997e-2abb5ec27159",
                 "resourcePath": "scripts\\inv_enums\\inv_enums.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "751260fd-6f6c-47e9-aaeb-8199172b1b40",
+            "Value": {
+                "id": "cb6ed51b-969a-4e91-8520-2baedc4a19ab",
+                "resourcePath": "objects\\obj_movement_renable\\obj_movement_renable.yy",
+                "resourceType": "GMObject"
             }
         },
         {
