@@ -19,8 +19,8 @@ if v_move < 0 v_move += 1
 if v_move > move_speed v_move = move_speed
 if v_move < -move_speed v_move = -move_speed
 
-h_move = collision("x", h_move, "move");
-v_move = collision("y", v_move, "move");
+h_move = collision("x", h_move);
+v_move = collision("y", v_move);
 
 // Animation for x
 var _dir = point_direction(x, y, mouse_x, mouse_y)
