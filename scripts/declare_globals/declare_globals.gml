@@ -28,9 +28,5 @@ global.p_speed = 5;
 // Shake (Temporary)
 global.settings_shake = 0.5;
 
-// Tileset
-global.bulletmap = layer_tilemap_get_id("bullet_collision");
-global.tilemap = layer_tilemap_get_id("collision");
-
 // Weapons
 declare_weapons();

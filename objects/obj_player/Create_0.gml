@@ -30,13 +30,6 @@ shake_x = 0;
 shake_y = 0;
 accuracy = base_accuracy;
 
-// Camera
-focus = 0;
-camera_pan = 1024;
-camera_width = 540;
-camera_height = 360;
-view_camera[0] = camera_create_view(0, 0, camera_width, camera_height);
-
 // Create Others (Temp)
 instance_create_layer(x, y, "HUD", obj_cursor);
 centre = instance_create_layer(x, y, "HUD", obj_cursor_bracket);

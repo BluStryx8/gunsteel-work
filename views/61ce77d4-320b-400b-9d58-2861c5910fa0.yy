@@ -8,7 +8,9 @@
         "e792cee5-2d5c-431b-a26f-e0ae9f86734f",
         "0c385157-29ba-405c-b167-a8c4c25f4778",
         "a113cc80-554b-4aae-acf1-2aaae6b36bc9",
-        "f2b2fa56-f583-4d91-bc3f-55b19797e6d0"
+        "4b4576d4-1264-4424-8669-7296568bd1ca",
+        "f8874a9a-ab86-419f-905b-82d5e5b83b2b",
+        "34378749-1978-4e3b-9364-2416e0e43bcb"
     ],
     "filterType": "GMSprite",
     "folderName": "Tilesets",
