@@ -9,6 +9,7 @@ with obj_player
 	prev_weap		 = _w;
 	// Load Stats
 	weapon			 = ds_map_find_value(global.weapons[_w], "weapon");
+	type			 = ds_map_find_value(global.weapons[_w], "type");
 	atk_type		 = ds_map_find_value(global.weapons[_w], "atk_type");
 	hands			 = ds_map_find_value(global.weapons[_w], "hands");
 	hand_one		 = ds_map_find_value(global.weapons[_w], "hand_one");

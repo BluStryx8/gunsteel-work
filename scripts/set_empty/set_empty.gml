@@ -7,6 +7,7 @@ if obj_player.weapon != "none"
 		prev_weap		 = 0;
 		// Load blank
 		weapon			 = "none";
+		type			 = "none";
 		atk_type		 = "none";
 		hands			 = 0;
 		hand_one		 = [0, 0];

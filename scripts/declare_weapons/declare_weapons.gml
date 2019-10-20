@@ -3,6 +3,7 @@
 // Empty
 global.weapons[0] = ds_map_create();
 ds_map_add(global.weapons[0], "weapon", "none");		// Name of weapon
+ds_map_add(global.weapons[0], "type", "none");			// Type of weapon
 ds_map_add(global.weapons[0], "atk_type", "none");		// How gun functions when firing
 ds_map_add(global.weapons[0], "hands", 0);				// How many hands used
 ds_map_add(global.weapons[0], "hand_one", [0, 0]);		// Offset of main hand
@@ -28,6 +29,7 @@ ds_map_add(global.weapons[0], "ammo", 0);				// Current ammo
 // 1911
 global.weapons[1] = ds_map_create();
 ds_map_add(global.weapons[1], "weapon", "1911");
+ds_map_add(global.weapons[1], "type", "pistol");
 ds_map_add(global.weapons[1], "atk_type", "semi_auto");
 ds_map_add(global.weapons[1], "hands", 1);
 ds_map_add(global.weapons[1], "hand_one", [-1, 7]);
@@ -53,6 +55,7 @@ ds_map_add(global.weapons[1], "ammo", 7);
 // Glock 17
 global.weapons[2] = ds_map_create();
 ds_map_add(global.weapons[2], "weapon", "Glock 17");
+ds_map_add(global.weapons[2], "type", "pistol");
 ds_map_add(global.weapons[2], "atk_type", "semi_auto");
 ds_map_add(global.weapons[2], "hands", 1);
 ds_map_add(global.weapons[2], "hand_one", [0, 6]);
@@ -78,6 +81,7 @@ ds_map_add(global.weapons[2], "ammo", 17);
 // Uzi
 global.weapons[3] = ds_map_create();
 ds_map_add(global.weapons[3], "weapon", "Uzi");
+ds_map_add(global.weapons[3], "type", "pistol");
 ds_map_add(global.weapons[3], "atk_type", "auto");
 ds_map_add(global.weapons[3], "hands", 1);
 ds_map_add(global.weapons[3], "hand_one", [0, 4]);
@@ -103,6 +107,7 @@ ds_map_add(global.weapons[3], "ammo", 32);
 //Ak-47
 global.weapons[4] = ds_map_create();
 ds_map_add(global.weapons[4], "weapon", "AK-47");
+ds_map_add(global.weapons[4], "type", "rifle");
 ds_map_add(global.weapons[4], "atk_type", "semi_auto");
 ds_map_add(global.weapons[4], "hands", 2);
 ds_map_add(global.weapons[4], "hand_one", [0, 5]);
@@ -128,6 +133,7 @@ ds_map_add(global.weapons[4], "ammo", 30);
 //M4
 global.weapons[5] = ds_map_create();
 ds_map_add(global.weapons[5], "weapon", "M4");
+ds_map_add(global.weapons[5], "type", "rifle");
 ds_map_add(global.weapons[5], "atk_type", "semi_auto");
 ds_map_add(global.weapons[5], "hands", 2);
 ds_map_add(global.weapons[5], "hand_one", [0, 5]);
@@ -153,6 +159,7 @@ ds_map_add(global.weapons[5], "ammo", 30);
 //P90
 global.weapons[6] = ds_map_create();
 ds_map_add(global.weapons[6], "weapon", "P90");
+ds_map_add(global.weapons[6], "type", "rifle");
 ds_map_add(global.weapons[6], "atk_type", "semi_auto");
 ds_map_add(global.weapons[6], "hands", 2);
 ds_map_add(global.weapons[6], "hand_one", [4, 4]);
@@ -178,6 +185,7 @@ ds_map_add(global.weapons[6], "ammo", 50);
 //Remington 870
 global.weapons[7] = ds_map_create();
 ds_map_add(global.weapons[7], "weapon", "Remington 870");
+ds_map_add(global.weapons[7], "type", "shotgun");
 ds_map_add(global.weapons[7], "atk_type", "semi_auto");
 ds_map_add(global.weapons[7], "hands", 2);
 ds_map_add(global.weapons[7], "hand_one", [0, 2]);

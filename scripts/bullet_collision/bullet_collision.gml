@@ -17,12 +17,10 @@ if _movement == "x"
 	{
 		if _speed > 0
 		{
-			if ((x mod 16) >= 8 or (x mod 16) <= 6) x += 16;
 			x = x - (x mod 16) + 15 - ((bbox_right - x) mod 16);
 		}
 		else
 		{
-			if ((x mod 16) >= 8 or (x mod 16) <= 6) x -= 16;
 			x = x - (x mod 16) - ((bbox_left - x) mod 16);
 		}
 		_collision = 1;
@@ -38,12 +36,10 @@ if _movement == "y"
 	{
 		if _speed > 0
 		{
-			if ((y mod 16) >= 8 or (y mod 16) <= 6) y += 16;
 			y = y - (y mod 16) + 15 - ((bbox_bottom - y)) mod 16;
 		}
 		else
 		{
-			if ((y mod 16) >= 8 or (y mod 16) <= 6) y -= 16;
 			y = y - (y mod 16) - ((bbox_top - y) mod 16);
 		}
 		_collision = 1;
