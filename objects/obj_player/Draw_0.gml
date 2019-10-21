@@ -1,6 +1,12 @@
 /// @description Draw Player
-var _dir = point_direction(x, y, mouse_x, mouse_y)
-
+if global.moveable = true
+{
+	var _dir = point_direction(x, y, mouse_x, mouse_y)
+}else
+{
+	var _dir = 0
+} 
+	
 if _dir <= 90 or _dir >= 270
 {
 	draw_sprite_ext(spr_player_shadow, 0, x, y + 17, 1, 1, 0, c_white, 0.25);
@@ -18,6 +24,7 @@ if _dir <= 90 or _dir >= 270
 	draw_sprite_ext(spr_player_hair, 0, x, y - anim_y, 1, 1, 0, global.p_hair_colour, 1)
 	draw_sprite_ext(spr_player_hat, 0, x, y - anim_y, 1, 1, 0, c_white, 1)
 	if hands >= 1 draw_sprite_ext(sprite, 0, x + offset[0], y + offset[1], 1, 1, _dir, c_white, 1)
+	
 }
 else
 {
