@@ -3,7 +3,8 @@
 sprite = spr_gui_empty;
 
 // Keyboard Movements
-if global.moveable = true{
+if global.moveable = true
+{
 	if keyboard_check(global.p_left) h_move -= 2;
 	if keyboard_check(global.p_right) h_move += 2;
 	if keyboard_check(global.p_up) v_move -= 2;
@@ -13,13 +14,31 @@ if global.moveable = true{
 // Decrease Speed
 if h_move > 0 h_move -= 1
 if h_move < 0 h_move += 1
-if h_move > move_speed h_move = move_speed
-if h_move < -move_speed h_move = -move_speed
+if keyboard_check(vk_shift)
+{
+	if h_move > move_speed / 2 h_move = round(move_speed / 2)
+	if h_move < -move_speed / 2 h_move = round(-move_speed / 2)
+}
+else
+{
+	if h_move > move_speed h_move = move_speed
+	if h_move < -move_speed h_move = -move_speed
+}
+
 
 if v_move > 0 v_move -= 1
 if v_move < 0 v_move += 1
-if v_move > move_speed v_move = move_speed
-if v_move < -move_speed v_move = -move_speed
+if keyboard_check(vk_shift)
+{
+	if v_move > move_speed / 2 v_move = round(move_speed / 2)
+	if v_move < -move_speed / 2 v_move = round(-move_speed / 2)
+}
+else
+{
+	if v_move > move_speed v_move = move_speed
+	if v_move < -move_speed v_move = -move_speed
+}
+
 
 h_move = collision("x", h_move);
 v_move = collision("y", v_move);
@@ -36,14 +55,7 @@ else
 }
 
 // Animation for y
-if anim >= 0
-{
-	anim += abs(v_move)
-}
-else
-{
-	anim -= abs(v_move)
-}
+if h_move == 0 anim += abs(v_move);
 
 // If not moving
 if h_move == 0 and v_move == 0
@@ -57,27 +69,27 @@ if h_move == 0 and v_move == 0
 }
 
 // If moved far enough
-if anim >= 5
+while anim >= 3
 {
-	anim = 0
-	if anim_frame < 0 anim_frame = room_speed / 6; // Force animation
+	anim -= 3
+	if anim_frame < 0 anim_frame = room_speed / 4; // Force animation
 	anim_frame += 1;
 }
-if anim <= -5
+while anim <= -3
 {
-	anim = 0
-	if anim_frame > 0 anim_frame = -(room_speed / 6); // Force animation
+	anim += 3
+	if anim_frame > 0 anim_frame = -(room_speed / 4); // Force animation
 	anim_frame -= 1;
 }
 
 // Frametime
-if anim_frame > room_speed / 6 or (still = 1 and anim_frame > 0)
+if anim_frame > room_speed / 4 or (still = 1 and anim_frame > 0)
 {
 	anim_frame = 0;
 	frame += 1;
 	still = 0;
 }
-if anim_frame < -(room_speed / 6) or (still = 1 and anim_frame < 0)
+if anim_frame < -(room_speed / 4) or (still = 1 and anim_frame < 0)
 {
 	anim_frame = 0;
 	frame -= 1;
