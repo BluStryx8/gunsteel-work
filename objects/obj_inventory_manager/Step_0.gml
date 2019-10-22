@@ -23,6 +23,15 @@ else global.p_active = item_type.none;
 
 obj_player.sprite = inv_get_sprite(global.p_active);
 
+//Remove starting on inv slot -1 when entering new room
+if global.transitioning = true{
+	active_item_before = active_item;}
+	
+if global.just_entered_unholstered = true{
+	active_item = active_item_before}
+	
+
+
 // Check for Change
 if active_item != change_check
 {
