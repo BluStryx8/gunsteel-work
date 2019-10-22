@@ -1,7 +1,7 @@
 ///@desc Define constants
 inv_enums();
 
-#macro HOTBAR 5
+#macro HOTBAR 4
 #macro STACK 999
 
 inventory[HOTBAR] = item_type.none;

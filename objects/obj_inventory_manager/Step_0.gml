@@ -2,7 +2,8 @@
 if (global.paused) exit;
 
 // Active Item
-if global.holstered = false{
+if global.holstered = false
+{
 	if keyboard_check(global.p_inv_1) active_item = 0;
 	if keyboard_check(global.p_inv_2) active_item = 1;
 	if keyboard_check(global.p_inv_3) active_item = 2;
@@ -11,9 +12,14 @@ if global.holstered = false{
 }
 else
 {
-	active_item = 5}
+	active_item = -1;
+}
 
-global.p_active = inventory[active_item];
+if active_item != -1
+{
+	global.p_active = inventory[active_item];
+}
+else global.p_active = item_type.none;
 
 obj_player.sprite = inv_get_sprite(global.p_active);
 
