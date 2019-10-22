@@ -9,26 +9,25 @@ gui_holder_slot_offset_x = 64 + gui_holder_pad;
 
 draw_set_halign(fa_right);
 draw_set_font(fnt_inventory);
-draw_set_color(c_white);
-if global.paused = true{
-	draw_set_alpha(0.4);}
-else{
-	draw_set_alpha(1);} 
+if global.paused var _col = make_colour_hsv(0, 0, 150) else var _col = c_white;
+draw_set_color(_col);
+
 
 // Draw Hotbar
-draw_sprite(spr_hotbar, -1, gui_holder_pos_x, 0);
+draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, 0, 1, 1, 0, _col, 1);
 if global.holstered = false
 {
-	draw_sprite(spr_active, -1, gui_holder_pos_x + (gui_holder_slot_offset_x * active_item) + 38, gui_holder_pos_y + gui_holder_pad);
+	draw_sprite_ext(spr_active, -1, gui_holder_pos_x + (gui_holder_slot_offset_x * active_item) + 38,
+				gui_holder_pos_y + gui_holder_pad, 1, 1, 0, _col, 1);
 }
 for (var _inv = 0; _inv <= HOTBAR; _inv++)
 {
 	item_define_index = inventory[_inv];
 	if (item_define_index != item_type.none)
 	{
-		draw_sprite(item_definitions[item_define_index, item_properties.sprite_gui], -1,
+		draw_sprite_ext(item_definitions[item_define_index, item_properties.sprite_gui], -1,
 				   (gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 32,
-				   (gui_holder_pos_y + gui_holder_pad));
+				   (gui_holder_pos_y + gui_holder_pad), 1, 1, 0, _col, 1);
 		if obj_inventory_manager.item_definitions[item_define_index, item_properties.type] != "firearm"
 		{
 			draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 57,
@@ -45,12 +44,12 @@ var _sprite = obj_inventory_manager.item_definitions[inventory[active_item], ite
 switch (obj_player.type)
 {
 	case "pistol":
-		draw_sprite_ext(_sprite, -1, view_get_wport(0) - 48, view_get_hport(0) - 48, 1, 1, 0, c_white, 1);
+		draw_sprite_ext(_sprite, -1, view_get_wport(0) - 48, view_get_hport(0) - 48, 1, 1, 0, _col, 1);
 		draw_text(view_get_wport(0) - 48, view_get_hport(0) - 96, string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 		break;
 	case "rifle":
 	case "shotgun":
-		draw_sprite_ext(_sprite, -1, view_get_wport(0) - 48, view_get_hport(0) - 48, 2, 2, 0, c_white, 1);
+		draw_sprite_ext(_sprite, -1, view_get_wport(0) - 48, view_get_hport(0) - 48, 2, 2, 0, _col, 1);
 		draw_text(view_get_wport(0) - 48, view_get_hport(0) - 96, string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 		break;
 }
@@ -62,10 +61,10 @@ for (var _ammo = obj_player.ammo; _ammo > 0; _ammo--)
 	switch (obj_player.type)
 	{
 		case "pistol":
-			draw_sprite(spr_ammo_pistolbullet, -1, view_get_wport(0) + _x, view_get_hport(0) + _y);
+			draw_sprite_ext(spr_ammo_pistolbullet, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, 1);
 			break;
 		case "rifle":
-			draw_sprite(spr_ammo_riflebullet, -1, view_get_wport(0) + _x, view_get_hport(0) + _y);
+			draw_sprite_ext(spr_ammo_riflebullet, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, 1);
 	}
 	_y -= 16;
 	if (view_get_hport(0) + _y - 16) <= 0
