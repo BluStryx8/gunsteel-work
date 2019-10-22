@@ -1,4 +1,5 @@
 /// @description Draw sprite
+speed = 0;
 if dir <= 90 or dir >= 270
 {
 	if obj_player.hands == 2

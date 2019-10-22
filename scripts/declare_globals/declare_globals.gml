@@ -28,5 +28,8 @@ global.p_speed = 5;
 // Shake (Temporary)
 global.settings_shake = 0.5;
 
+// Pause
+global.paused = false;
+
 // Weapons
 declare_weapons();

@@ -1,4 +1,5 @@
 /// @description Collect Item
+if (global.paused) exit;
 
 if keyboard_check(ord("E"))
 {

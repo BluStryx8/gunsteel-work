@@ -1,4 +1,5 @@
 /// @description Finds the location of mouse pressed
+if (global.paused) exit;
 var mousex = mouse_x
 var mousey = mouse_y
 

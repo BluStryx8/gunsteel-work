@@ -1095,14 +1095,6 @@
             }
         },
         {
-            "Key": "bfb58033-bb14-4def-851d-8282340dbadc",
-            "Value": {
-                "id": "ff0dc57f-01f5-49f1-a7ce-38828cd94fe3",
-                "resourcePath": "objects\\obj_pause_control\\obj_pause_control.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "c0373fca-9068-422a-a152-1f6c259807ea",
             "Value": {
                 "id": "47b8a7e7-e640-4207-b3f5-c93fc442ca0b",

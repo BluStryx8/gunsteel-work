@@ -1,4 +1,9 @@
 /// @description Movement
+if (keyboard_check_pressed(vk_escape) and not room == rm_mainmenu)
+{
+	global.paused = !global.paused;
+}
+if (global.paused) exit;
 
 sprite = spr_gui_empty;
 

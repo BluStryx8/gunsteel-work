@@ -1,4 +1,5 @@
 /// @description Check for key input
+if (global.paused) exit;
 
 // Active Item
 if keyboard_check(global.p_inv_1) active_item = 0;

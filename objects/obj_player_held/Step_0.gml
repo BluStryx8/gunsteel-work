@@ -1,4 +1,6 @@
 /// @description Go to player
+if (global.paused) exit;
+
 x = obj_player.x;
 y = obj_player.y;
 dir = point_direction(x, y, mouse_x, mouse_y);

@@ -29,6 +29,7 @@ shake = 0;
 shake_x = 0;
 shake_y = 0;
 accuracy = base_accuracy;
+dir = 0;
 
 // Create Others (Temp)
 instance_create_layer(x, y, "HUD", obj_cursor);
