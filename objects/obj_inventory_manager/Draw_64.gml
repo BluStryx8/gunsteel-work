@@ -13,7 +13,8 @@ draw_set_color(c_white);
 
 // Draw Hotbar
 draw_sprite(spr_hotbar, -1, gui_holder_pos_x, 0);
-draw_sprite(spr_active, -1, gui_holder_pos_x + (gui_holder_slot_offset_x * active_item) + 38, gui_holder_pos_y + gui_holder_pad);
+if global.holstered = false{
+	draw_sprite(spr_active, -1, gui_holder_pos_x + (gui_holder_slot_offset_x * active_item) + 38, gui_holder_pos_y + gui_holder_pad);}
 for (var _inv = 0; _inv < HOTBAR; _inv++)
 {
 	item_define_index = inventory[_inv];

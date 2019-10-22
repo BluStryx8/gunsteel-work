@@ -2,11 +2,16 @@
 if (global.paused) exit;
 
 // Active Item
-if keyboard_check(global.p_inv_1) active_item = 0;
-if keyboard_check(global.p_inv_2) active_item = 1;
-if keyboard_check(global.p_inv_3) active_item = 2;
-if keyboard_check(global.p_inv_4) active_item = 3;
-if keyboard_check(global.p_inv_5) active_item = 4;
+if global.holstered = false{
+	if keyboard_check(global.p_inv_1) active_item = 0;
+	if keyboard_check(global.p_inv_2) active_item = 1;
+	if keyboard_check(global.p_inv_3) active_item = 2;
+	if keyboard_check(global.p_inv_4) active_item = 3;
+	if keyboard_check(global.p_inv_5) active_item = 4;
+}
+else
+{
+	active_item = 5}
 
 global.p_active = inventory[active_item];
 

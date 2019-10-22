@@ -49,16 +49,17 @@ h_move = collision("x", h_move);
 v_move = collision("y", v_move);
 
 // Animation for x
-var _dir = point_direction(x, y, mouse_x, mouse_y)
-if _dir <= 90 or _dir >= 270
-{
-	anim += h_move
-}
-else
-{
-	anim -= h_move
-}
-
+if global.moveable = true{
+	var _dir = point_direction(x, y, mouse_x, mouse_y)
+	if _dir <= 90 or _dir >= 270
+	{
+		anim += h_move
+	}
+	else
+	{
+		anim -= h_move
+	}
+} 
 // Animation for y
 if h_move == 0 anim += abs(v_move);
 
