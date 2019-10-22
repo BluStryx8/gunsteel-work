@@ -10,6 +10,10 @@ gui_holder_slot_offset_x = 64 + gui_holder_pad;
 draw_set_halign(fa_right);
 draw_set_font(fnt_inventory);
 draw_set_color(c_white);
+if global.paused = true{
+	draw_set_alpha(0.4);}
+else{
+	draw_set_alpha(1);} 
 
 // Draw Hotbar
 draw_sprite(spr_hotbar, -1, gui_holder_pos_x, 0);
