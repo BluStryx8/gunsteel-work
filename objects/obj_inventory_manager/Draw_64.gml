@@ -35,7 +35,7 @@ for (var _inv = 0; _inv <= HOTBAR; _inv++)
 }
 
 // Draw Weapon
-if global.holstered exit;
+if active_item == -1 exit;
 draw_set_halign(fa_center);
 var _sprite = obj_inventory_manager.item_definitions[inventory[active_item], item_properties.sprite_gui];
 switch (obj_player.type)
