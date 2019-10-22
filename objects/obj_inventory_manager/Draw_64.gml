@@ -15,7 +15,7 @@ draw_set_color(_col);
 
 // Draw Hotbar
 draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, 0, 1, 1, 0, _col, 1);
-if global.holstered = false
+if !global.holstered
 {
 	draw_sprite_ext(spr_active, -1, gui_holder_pos_x + (gui_holder_slot_offset_x * active_item) + 38,
 				gui_holder_pos_y + gui_holder_pad, 1, 1, 0, _col, 1);
@@ -38,7 +38,7 @@ for (var _inv = 0; _inv <= HOTBAR; _inv++)
 }
 
 // Draw Weapon
-if active_item == -1 exit;
+if global.holstered exit;
 draw_set_halign(fa_center);
 var _sprite = obj_inventory_manager.item_definitions[inventory[active_item], item_properties.sprite_gui];
 switch (obj_player.type)
