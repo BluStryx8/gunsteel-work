@@ -2,14 +2,11 @@
 if (global.paused) exit;
 
 // Active Item
-if !global.holstered
-{
-	if keyboard_check(global.p_inv_1) active_item = 0;
-	if keyboard_check(global.p_inv_2) active_item = 1;
-	if keyboard_check(global.p_inv_3) active_item = 2;
-	if keyboard_check(global.p_inv_4) active_item = 3;
-	if keyboard_check(global.p_inv_5) active_item = 4;
-}
+if keyboard_check(global.p_inv_1) active_item = 0;
+if keyboard_check(global.p_inv_2) active_item = 1;
+if keyboard_check(global.p_inv_3) active_item = 2;
+if keyboard_check(global.p_inv_4) active_item = 3;
+if keyboard_check(global.p_inv_5) active_item = 4;
 
 if !global.holstered
 {
@@ -20,14 +17,17 @@ else global.p_active = item_type.none;
 obj_player.sprite = inv_get_sprite(global.p_active);
 
 // Check for Change
-if active_item != change_check
+if !global.holstered
 {
-	change_check = active_item;
-	obj_player.fire = 0;
-	obj_player.focus = 0;
-	inv_use_script(global.p_active, "change");
+	if active_item != change_check
+	{
+		change_check = active_item;
+		obj_player.fire = 0;
+		obj_player.focus = 0;
+		inv_use_script(global.p_active, "change");
+	}
 }
-if global.holstered and change_check != -1
+else if change_check != -1
 {
 	change_check = -1;
 	obj_player.fire = 0;

@@ -16,4 +16,6 @@ if room == rm_game2
 {
 	x = 100;
 	y = 100;
+	global.holstered = true;
 }
+if room == rm_game global.holstered = false;

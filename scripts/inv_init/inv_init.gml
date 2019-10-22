@@ -2,7 +2,7 @@
 inv_enums();
 
 #macro HOTBAR 4
-#macro STACK 999
+#macro STACK 3
 
 inventory[HOTBAR] = item_type.none;
 
