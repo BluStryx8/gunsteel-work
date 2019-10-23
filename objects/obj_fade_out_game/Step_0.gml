@@ -2,6 +2,8 @@
 if global.rectangle_opacity_out > 1.01  {
 	room_goto(rm_game2)
 	instance_destroy()
+	global.player_setx = 125
+	global.player_sety = 146
 }
 else
 {

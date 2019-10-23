@@ -10,4 +10,4 @@ if clicked = false{
 		instance_create_layer(0,0,"fade",obj_fade_out_game_rm_game);	
 	}
 }
-	
+
