@@ -1,11 +1,13 @@
 /// @description Collision
 /// @param direction Which way to detect collision for
 /// @param speed What is used for movement calculation
+/// @param offset The offset of the origin from the centre of the bounding box
 
 // Declare Variables
 var _bbox_side;
 var _movement  = argument0;
 var _speed     = argument1;
+var _offset    = argument2;
 
 // Horizontal Colision
 if _movement == "x"
@@ -15,7 +17,11 @@ if _movement == "x"
 	   (tilemap_get_at_pixel(global.tilemap, _bbox_side + _speed, bbox_bottom) != 0 )
 	{
 		if _speed > 0 x = x - (x mod 16) + 15 - ((bbox_right - x) mod 16);
-		else x = x - (x mod 16) - ((bbox_left - x) mod 16);
+		else
+		{
+			x += _offset; // Offset
+			x = x - (x mod 16) - ((bbox_left - x) mod 16);
+		}
 		_speed = 0;
 	}
 	x += _speed;
@@ -32,7 +38,7 @@ if _movement == "y"
 		if _speed > 0 y = y - (y mod 16) + 15 - ((bbox_bottom - y)) mod 16;
 		else
 		{
-			if (y mod 16) <= 8 y += 16;
+			y += _offset; // Offset
 			y = y - (y mod 16) - ((bbox_top - y) mod 16);
 		}
 		_speed = 0;

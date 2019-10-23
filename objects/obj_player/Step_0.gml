@@ -15,7 +15,7 @@ if global.moveable = true
 	if keyboard_check(global.p_up) v_move -= 2;
 	if keyboard_check(global.p_down) v_move += 2;
 }
-if (keyboard_check_pressed(vk_space) and dodge <= 0 and not (h_move == 0 and v_move == 0))
+if (mouse_check_button_pressed(mb_middle) and dodge <= 0 and not (h_move == 0 and v_move == 0))
 {
 	h_dodge = h_move / 3;
 	v_dodge = v_move / 3;
@@ -30,11 +30,13 @@ if dodge <= 0
 	if h_move < 0 h_move += 1;
 	if keyboard_check(vk_shift)
 	{
+		// Slow Movement
 		if h_move > move_speed / 2 h_move = round(move_speed / 2);
 		if h_move < -move_speed / 2 h_move = round(-move_speed / 2);
 	}
 	else
 	{
+		// Standard Movement
 		if (h_move > move_speed) h_move = move_speed;
 		if (h_move < -move_speed) h_move = -move_speed;
 	}
@@ -43,11 +45,13 @@ if dodge <= 0
 	if v_move < 0 v_move += 1;
 	if keyboard_check(vk_shift)
 	{
+		// Slow Movement
 		if v_move > move_speed / 2 v_move = round(move_speed / 2);
 		if v_move < -move_speed / 2 v_move = round(-move_speed / 2);
 	}
 	else
 	{
+		// Standard Movement
 		if v_move > move_speed v_move = move_speed;
 		if v_move < -move_speed v_move = -move_speed;
 	}
@@ -60,11 +64,19 @@ else
 	v_move = round(v_dodge * dodge);
 }
 
-h_move = collision("x", h_move);
-v_move = collision("y", v_move);
+h_move = collision("x", h_move, 0);
+v_move = collision("y", v_move, 16);
+
+if dodge > 0
+{
+	if h_move == 0 h_dodge = 0;
+	if v_move == 0 v_dodge = 0;
+	if h_dodge == 0 and v_dodge == 0 and dodge > 2 dodge = 2;
+}
 
 // Animation for x
-if global.moveable = true{
+if global.moveable = true
+{
 	var _dir = point_direction(x, y, mouse_x, mouse_y)
 	if _dir <= 90 or _dir >= 270
 	{
@@ -74,7 +86,7 @@ if global.moveable = true{
 	{
 		anim -= h_move
 	}
-} 
+}
 // Animation for y
 if h_move == 0 anim += abs(v_move);
 
