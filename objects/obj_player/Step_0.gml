@@ -21,7 +21,7 @@ if global.moveable = true
 	if keyboard_check(global.p_right) h_move += 2;
 	if keyboard_check(global.p_up) v_move -= 2;
 	if keyboard_check(global.p_down) v_move += 2;
-	if (mouse_check_button_pressed(mb_middle) and dodge <= 0 and not (h_move == 0 and v_move == 0))
+	if ((mouse_check_button_pressed(mb_middle) or keyboard_check_pressed(vk_space)) and dodge <= 0 and not (h_move == 0 and v_move == 0))
 	{
 		h_dodge = h_move / 3;
 		v_dodge = v_move / 3;
