@@ -1,2 +1,2 @@
 /// @description Declares
-global.transitioning = false
+global.transitioning = false;

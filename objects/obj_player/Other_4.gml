@@ -14,8 +14,6 @@ global.tilemap = layer_tilemap_get_id("collision");
 // Temporary
 if room == rm_game2
 {
-	x = 100;
-	y = 100;
 	global.holstered = true;
 }
 if room == rm_game global.holstered = false;
@@ -23,5 +21,5 @@ if room == rm_game global.holstered = false;
 
 // Goes to the right place in room
 
-x = global.player_setx
-y = global.player_sety
+x = global.player_setx;
+y = global.player_sety;

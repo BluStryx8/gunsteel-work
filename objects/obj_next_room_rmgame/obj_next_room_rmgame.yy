@@ -4,29 +4,19 @@
     "mvc": "1.0",
     "name": "obj_next_room_rmgame",
     "eventList": [
-        {
-            "id": "2647cfc7-cad4-4e0b-9b9a-922b466468c5",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 69,
-            "eventtype": 9,
-            "m_owner": "7ae4d939-f5f3-462e-bf5a-ba404ebc471a"
-        },
-        {
-            "id": "d7b0c28e-2514-49a4-b2e3-1f093fc8e833",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "7ae4d939-f5f3-462e-bf5a-ba404ebc471a"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": null,
+    "overriddenProperties": [
+        {
+            "id": "6fce2f55-d694-4408-b742-522a1c922f18",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "5a274bfb-497f-4431-a814-a5ce620337d1",
+            "propertyId": "bbe71690-8004-4f40-8c5e-b60dc1eecd7f",
+            "value": "obj_fade_out_game_rm_game"
+        }
+    ],
     "parentObjectId": "5a274bfb-497f-4431-a814-a5ce620337d1",
     "persistent": false,
     "physicsAngularDamping": 0.1,

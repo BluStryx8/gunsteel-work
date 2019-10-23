@@ -5,16 +5,6 @@
     "name": "obj_pause",
     "eventList": [
         {
-            "id": "bcf62b8c-630f-41b6-908e-d897fe036eed",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "01a74c67-8dae-43e0-a756-b860990ba84e"
-        },
-        {
             "id": "890a2087-6c9b-497b-bdcc-8d2d03078139",
             "modelName": "GMEvent",
             "mvc": "1.0",

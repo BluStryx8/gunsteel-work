@@ -1,15 +1,23 @@
-/// @description Set Global Controls
+/// @description Set Variables
+// Global Controls
 declare_globals();
 
+// Movement
 global.moveable = true
 move_speed = global.p_speed;
-
-// Declare Variables
 h_move = 0;
 v_move = 0;
+
+// Dodge
 dodge = 0;
 h_dodge = 0;
 v_dodge = 0;
+xprev[0] = 0;
+xprev[1] = 0;
+xprev[2] = 0;
+yprev[0] = 0;
+yprev[1] = 0;
+yprev[2] = 0;
 
 // Animation
 anim = 0;

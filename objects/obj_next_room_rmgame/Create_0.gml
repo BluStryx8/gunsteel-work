@@ -1,2 +1,0 @@
-///@description delcaration
-clicked = false

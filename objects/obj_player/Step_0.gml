@@ -5,7 +5,14 @@ if (keyboard_check_pressed(vk_escape) and not room == rm_mainmenu)
 }
 if (global.paused) exit;
 
+// Update
 sprite = spr_gui_empty;
+xprev[2] = xprev[1];
+yprev[2] = yprev[1];
+xprev[1] = xprev[0];
+yprev[1] = yprev[0];
+xprev[0] = xprevious;
+yprev[0] = yprevious;
 
 // Keyboard Movements
 if global.moveable = true
@@ -14,12 +21,12 @@ if global.moveable = true
 	if keyboard_check(global.p_right) h_move += 2;
 	if keyboard_check(global.p_up) v_move -= 2;
 	if keyboard_check(global.p_down) v_move += 2;
-}
-if (mouse_check_button_pressed(mb_middle) and dodge <= 0 and not (h_move == 0 and v_move == 0))
-{
-	h_dodge = h_move / 3;
-	v_dodge = v_move / 3;
-	dodge = move_speed;
+	if (mouse_check_button_pressed(mb_middle) and dodge <= 0 and not (h_move == 0 and v_move == 0))
+	{
+		h_dodge = h_move / 3;
+		v_dodge = v_move / 3;
+		dodge = move_speed;
+	}
 }
 
 // Decrease Speed

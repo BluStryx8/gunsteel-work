@@ -1,2 +1,2 @@
 /// @description Declare variables
-clicked = false
+clicked = false;
