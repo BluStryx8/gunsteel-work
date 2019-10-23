@@ -7,6 +7,9 @@ move_speed = global.p_speed;
 // Declare Variables
 h_move = 0;
 v_move = 0;
+dodge = 0;
+h_dodge = 0;
+v_dodge = 0;
 
 // Animation
 anim = 0;

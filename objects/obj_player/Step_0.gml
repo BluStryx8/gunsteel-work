@@ -15,35 +15,50 @@ if global.moveable = true
 	if keyboard_check(global.p_up) v_move -= 2;
 	if keyboard_check(global.p_down) v_move += 2;
 }
+if (keyboard_check_pressed(vk_space) and dodge <= 0 and not (h_move == 0 and v_move == 0))
+{
+	h_dodge = h_move / 3;
+	v_dodge = v_move / 3;
+	dodge = move_speed;
+}
 
 // Decrease Speed
-if h_move > 0 h_move -= 1
-if h_move < 0 h_move += 1
-if keyboard_check(vk_shift)
+if dodge <= 0
 {
-	if h_move > move_speed / 2 h_move = round(move_speed / 2)
-	if h_move < -move_speed / 2 h_move = round(-move_speed / 2)
+	// Horizontal Movement
+	if h_move > 0 h_move -= 1;
+	if h_move < 0 h_move += 1;
+	if keyboard_check(vk_shift)
+	{
+		if h_move > move_speed / 2 h_move = round(move_speed / 2);
+		if h_move < -move_speed / 2 h_move = round(-move_speed / 2);
+	}
+	else
+	{
+		if (h_move > move_speed) h_move = move_speed;
+		if (h_move < -move_speed) h_move = -move_speed;
+	}
+	// Vertical Movement
+	if v_move > 0 v_move -= 1;
+	if v_move < 0 v_move += 1;
+	if keyboard_check(vk_shift)
+	{
+		if v_move > move_speed / 2 v_move = round(move_speed / 2);
+		if v_move < -move_speed / 2 v_move = round(-move_speed / 2);
+	}
+	else
+	{
+		if v_move > move_speed v_move = move_speed;
+		if v_move < -move_speed v_move = -move_speed;
+	}
 }
 else
 {
-	if h_move > move_speed h_move = move_speed
-	if h_move < -move_speed h_move = -move_speed
+	// Dodge Speed
+	dodge -= 0.25;
+	h_move = round(h_dodge * dodge);
+	v_move = round(v_dodge * dodge);
 }
-
-
-if v_move > 0 v_move -= 1
-if v_move < 0 v_move += 1
-if keyboard_check(vk_shift)
-{
-	if v_move > move_speed / 2 v_move = round(move_speed / 2)
-	if v_move < -move_speed / 2 v_move = round(-move_speed / 2)
-}
-else
-{
-	if v_move > move_speed v_move = move_speed
-	if v_move < -move_speed v_move = -move_speed
-}
-
 
 h_move = collision("x", h_move);
 v_move = collision("y", v_move);

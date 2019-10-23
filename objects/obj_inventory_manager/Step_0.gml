@@ -8,6 +8,15 @@ if keyboard_check(global.p_inv_3) active_item = 2;
 if keyboard_check(global.p_inv_4) active_item = 3;
 if keyboard_check(global.p_inv_5) active_item = 4;
 
+if mouse_wheel_up()
+{
+	if active_item <= 0 active_item = 4 else active_item -= 1;
+}
+if mouse_wheel_down()
+{
+	if active_item >= 4 active_item = 0 else active_item += 1;
+}
+
 if !global.holstered
 {
 	global.p_active = inventory[active_item];
