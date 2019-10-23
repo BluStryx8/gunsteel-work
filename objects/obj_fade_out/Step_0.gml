@@ -2,6 +2,7 @@
 if global.rectangle_opacity_out > 1.01  {
 	instance_destroy()
 	room_goto(rm_game)
+	
 }
 else
 {

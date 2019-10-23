@@ -22,6 +22,8 @@ global.p_inv_3 = ord("3");
 global.p_inv_4 = ord("4");
 global.p_inv_5 = ord("5");
 
+global.p_inv_open = ord("I");
+
 // Move Speed (Temporary)
 global.p_speed = 5;
 

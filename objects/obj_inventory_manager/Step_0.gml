@@ -53,3 +53,10 @@ if keyboard_check_pressed(global.p_reload)
 {
 	with obj_player ammo = max_ammo;
 }
+
+// Opens full inventory
+if keyboard_check(global.p_inv_open) = true{
+	global.moveable = false
+}
+
+
