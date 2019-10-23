@@ -59,5 +59,5 @@ rhand.hand = 1;
 instance_create_layer(x, y, "player", obj_player_collision);
 instance_create_layer(x, y, "HUD", obj_inventory_manager);
 
-global.player_setx = 0
-global.player_sety = 0
+global.player_setx = 270
+global.player_sety = 170

@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "3f9070e1-98d7-4f1a-9466-f9479521167b",
+            "Value": {
+                "id": "92113a43-2f97-4060-bd86-6c43e102ad66",
+                "resourcePath": "views\\3f9070e1-98d7-4f1a-9466-f9479521167b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "42c1b8c6-ae8f-413e-8b2f-37275b8b6094",
             "Value": {
                 "id": "4fcb5722-0ca4-457b-9c7f-5c1d7471af8b",
@@ -1139,6 +1147,14 @@
             "Value": {
                 "id": "cd27da91-43c0-4a18-95d8-c44c22e68122",
                 "resourcePath": "objects\\obj_player_bullet\\obj_player_bullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bc7c91a8-189c-40dd-a4c7-6ad81f990b09",
+            "Value": {
+                "id": "b4aec05a-d363-494f-9dd1-237d387d0bc9",
+                "resourcePath": "objects\\obj_crafting_bench\\obj_crafting_bench.yy",
                 "resourceType": "GMObject"
             }
         },
