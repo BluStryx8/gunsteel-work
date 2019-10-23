@@ -1447,6 +1447,14 @@
             }
         },
         {
+            "Key": "e99557e5-e041-4b32-8312-2420813efaa2",
+            "Value": {
+                "id": "49b2648c-de76-41cf-972f-43e10ec8ee11",
+                "resourcePath": "objects\\obj_dmg_number\\obj_dmg_number.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "eab65fe6-a7f3-4e2a-be51-ab59854c5ccc",
             "Value": {
                 "id": "3ac282fe-45f0-4833-a821-8d10c99828ff",

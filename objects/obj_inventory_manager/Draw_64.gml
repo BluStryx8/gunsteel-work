@@ -9,6 +9,7 @@ gui_holder_slot_offset_x = 64 + gui_holder_pad;
 
 draw_set_halign(fa_right);
 draw_set_font(fnt_inventory);
+draw_set_alpha(1);
 if global.paused var _col = make_colour_hsv(0, 0, 150) else var _col = c_white;
 draw_set_color(_col);
 

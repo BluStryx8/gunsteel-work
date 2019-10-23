@@ -217,8 +217,11 @@ if fire_cooldown <= 0
 if shake > 0
 {
 	shake -= 1;
+	var _dist = max((25 - point_distance(x, y, mouse_x, mouse_y)) / 2, 0);
 	shake_x = irandom_range(-shake, shake);
+	if shake_x > 0 shake_x = max(shake_x - _dist, 0) else shake_x = min(shake_x + _dist, 0)
 	shake_y = irandom_range(-shake, shake);
+	if shake_y > 0 shake_y = max(shake_y - _dist, 0) else shake_y = min(shake_y + _dist, 0)
 }
 else
 {
@@ -239,6 +242,7 @@ else if focus == 0
 }
 // Reset camera pan
 // if camera_pan < 1024 camera_pan += camera_pan;
+
 
 if camera_pan < 1024
 {
