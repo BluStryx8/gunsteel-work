@@ -1154,7 +1154,7 @@
             "Key": "bc7c91a8-189c-40dd-a4c7-6ad81f990b09",
             "Value": {
                 "id": "b4aec05a-d363-494f-9dd1-237d387d0bc9",
-                "resourcePath": "objects\\obj_crafting_bench\\obj_crafting_bench.yy",
+                "resourcePath": "objects\\obj_furnace\\obj_furnace.yy",
                 "resourceType": "GMObject"
             }
         },
