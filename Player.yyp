@@ -807,6 +807,14 @@
             }
         },
         {
+            "Key": "8c822d39-f29c-46f3-95aa-c501352900d6",
+            "Value": {
+                "id": "02e3db77-db80-4051-b656-c464502b4db5",
+                "resourcePath": "objects\\obj_room\\obj_room.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8d9775a1-4fe1-4b4f-968c-1e7f84dc16b4",
             "Value": {
                 "id": "ab6b67fb-f9aa-4270-9b71-4d128db854b8",
@@ -836,6 +844,14 @@
                 "id": "59f053ad-7a7c-400a-b634-ef449955c44c",
                 "resourcePath": "objects\\obj_camera_follow\\obj_camera_follow.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "900ba14e-93fe-42a0-9f42-1c75fa174bb7",
+            "Value": {
+                "id": "b13fd7a9-a501-4713-a86a-30f0b838dbd4",
+                "resourcePath": "views\\900ba14e-93fe-42a0-9f42-1c75fa174bb7.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1020,6 +1036,14 @@
                 "id": "ebce6404-802a-4f52-b372-be174fc00ee7",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "b0b7d49e-ef3e-461b-a797-2491ad204d78",
+            "Value": {
+                "id": "4415736b-7648-4671-a9dd-f678d0b923d6",
+                "resourcePath": "views\\b0b7d49e-ef3e-461b-a797-2491ad204d78.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1215,6 +1239,14 @@
             }
         },
         {
+            "Key": "cb8ab175-f640-4aa6-90a1-a2aa2352721f",
+            "Value": {
+                "id": "5cbbffb8-e6b0-4c18-847f-154015b820b3",
+                "resourcePath": "views\\cb8ab175-f640-4aa6-90a1-a2aa2352721f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "20132763-13a9-43cf-8dae-ce3732fc86ad",
@@ -1228,6 +1260,14 @@
                 "id": "e65ca2c2-52d6-4e52-9b0b-42dbe3cbeb26",
                 "resourcePath": "tilesets\\tile_brick_blue\\tile_brick_blue.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "cec6d508-062e-4976-895f-b1c33376b2ec",
+            "Value": {
+                "id": "1f1c4f21-9129-4e64-a421-7c783f0a48eb",
+                "resourcePath": "views\\cec6d508-062e-4976-895f-b1c33376b2ec.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
