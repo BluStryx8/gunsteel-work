@@ -1,5 +1,4 @@
 /// @description Set room constants
-
 // Camera
 focus = 0;
 camera_pan = 1024;
@@ -12,14 +11,13 @@ global.bulletmap = layer_tilemap_get_id("bullet_collision");
 global.tilemap = layer_tilemap_get_id("collision");
 
 // Temporary
-if room == rm_game2
+if (room == rm_game2)
 {
 	global.holstered = true;
 }
-if room == rm_game global.holstered = false;
+if (room == rm_game) global.holstered = false;
 
 
 // Goes to the right place in room
-
 x = global.player_setx;
 y = global.player_sety;

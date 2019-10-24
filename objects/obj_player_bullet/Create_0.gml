@@ -1,26 +1,30 @@
 /// @description Shoot
-draw_delay = obj_player.bullet_dd;
-decay = room_speed * obj_player.decay;
+// Declare Variables
+draw_delay = obj_player.bullet_dd;		// Delays drawing so the bullet is positioned properly
+decay = room_speed * obj_player.decay;	// Sets time before bullet eventually fades and deletes self
+
 speed = obj_player.bullet_speed + irandom_range(-obj_player.bullet_speed_var, obj_player.bullet_speed_var);
-spd = speed;
+spd = speed;							// Saves speed for later
+
 damage = irandom_range(obj_player.min_damage, obj_player.max_damage);
 damage -= round((obj_player.accuracy - obj_player.base_accuracy) * obj_player.recoil_mult);
+	// Decreases damage by the weapon's inaccuracy
 
 // Accuracy
 var _acc = obj_player.accuracy;
-direction = point_direction(x, y, mouse_x, mouse_y) + irandom_range(-_acc, _acc);
+direction = obj_player.dir + irandom_range(-_acc, _acc);
 image_angle = direction;
 
 // Offset
-if obj_player.hands == 2
+if (obj_player.hands == 2)
 {
-	var _dir = point_direction(x, y, mouse_x, mouse_y)
-	if _dir <= 90 or _dir >= 270 x += obj_player.offset[0] else x -= obj_player.offset[0];
+	var _dir = obj_player.dir;
+	if (_dir <= 90 or _dir >= 270) x += obj_player.offset[0] else x -= obj_player.offset[0];
 	y += obj_player.offset[1];
 }
-else if obj_player.hands == 1
+else if (obj_player.hands == 1)
 {
-	var _dir = point_direction(x, y, mouse_x, mouse_y)
+	var _dir = obj_player.dir;
 	x += obj_player.offset[0];
 	if not (_dir <= 90 or _dir >= 270) x += obj_player.offset[2];
 	y += obj_player.offset[1];

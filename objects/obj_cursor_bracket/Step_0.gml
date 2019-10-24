@@ -1,31 +1,27 @@
 /// @description Cursor
+// Go to player
 x = obj_player.x;
 y = obj_player.y;
+dir = obj_player.dir;
 
 // Offset
-if obj_player.hands == 2
+if (obj_player.hands == 2)
 {
-	var _dir = point_direction(x, y, mouse_x, mouse_y)
-	if _dir <= 90 or _dir >= 270 x += obj_player.offset[0] else x -= obj_player.offset[0];
+	// Two hand alignment
+	if (dir <= 90 or dir >= 270) x += obj_player.offset[0] else x -= obj_player.offset[0];
 	y += obj_player.offset[1];
 }
-else if obj_player.hands == 1
+else if (obj_player.hands == 1)
 {
-	var _dir = point_direction(x, y, mouse_x, mouse_y)
+	// One hand alignment
 	x += obj_player.offset[0];
-	if not (_dir <= 90 or _dir >= 270) x += obj_player.offset[2];
+	if not (dir <= 90 or dir >= 270) x += obj_player.offset[2];
 	y += obj_player.offset[1];
 }
 
 // Rotation
-direction = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y);
-if image_index == 1
-{
-	direction += obj_player.accuracy;
-}
-else if image_index == 2
-{
-	direction -= obj_player.accuracy;
-}
+direction = dir;
+if (image_index == 1) direction += obj_player.accuracy		// Left bracket
+else if image_index == 2 direction -= obj_player.accuracy;	// Right bracket
 image_angle = direction;
 speed = point_distance(x, y, mouse_x, mouse_y);

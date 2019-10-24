@@ -1,2 +1,3 @@
 /// @description Draw Delay
-if draw_delay <= 0 draw_self() else draw_delay -= 1;
+// Draws itself only after draw_delay is 0
+if (draw_delay <= 0) draw_self() else draw_delay -= 1;

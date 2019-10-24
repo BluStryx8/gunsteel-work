@@ -5,15 +5,18 @@ gui_holder_width = sprite_get_width(spr_hotbar);
 gui_holder_pos_x = (view_get_wport(0) / 2) - (gui_holder_width / 2);
 gui_holder_pad   = 6;
 gui_holder_slot_offset_x = 64 + gui_holder_pad;
-if global.in_inv = true{
-	hotbar_height = 540
-	gui_holder_pos_y = 32+540}
-else{
-	hotbar_height = 0
-	gui_holder_pos_y = 32}
-	
+if (global.in_inv)
+{
+	hotbar_height = 540;
+	gui_holder_pos_y = 32 + 540;
+}
+else
+{
+	hotbar_height = 0;
+	gui_holder_pos_y = 32;
+}
 
-
+// Declare Draw Constants
 draw_set_halign(fa_right);
 draw_set_font(fnt_inventory);
 draw_set_alpha(1);
@@ -22,11 +25,9 @@ draw_set_color(_col);
 
 
 // Draw Hotbar
-
 draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, hotbar_height, 1, 1, 0, _col, 1);
 draw_sprite_ext(spr_active, -1, gui_holder_pos_x + (gui_holder_slot_offset_x * active_item) + 38,
 				gui_holder_pos_y + gui_holder_pad, 1, 1, 0, _col, 1);
-
 for (var _inv = 0; _inv <= HOTBAR; _inv++)
 {
 	item_define_index = inventory[_inv];
@@ -45,14 +46,15 @@ for (var _inv = 0; _inv <= HOTBAR; _inv++)
 }
 
 //Draw extended inventory
-if global.in_inv = true{
+if (global.in_inv)
+{
 	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, 692, 1, 1, 0, _col, 1);
 	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, 616, 1, 1, 0, _col, 1);
 }
 
 
 // Draw Weapon
-if global.holstered exit;
+if (global.holstered) exit;
 draw_set_halign(fa_center);
 var _sprite = obj_inventory_manager.item_definitions[inventory[active_item], item_properties.sprite_gui];
 switch (obj_player.type)
@@ -81,12 +83,9 @@ for (var _ammo = obj_player.ammo; _ammo > 0; _ammo--)
 			draw_sprite_ext(spr_ammo_riflebullet, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, 1);
 	}
 	_y -= 16;
-	if (view_get_hport(0) + _y - 16) <= 0
+	if ((view_get_hport(0) + _y - 16) <= 0)
 	{
 		_x -= 32;
 		_y = -112;
 	}
 }
-
-
-
