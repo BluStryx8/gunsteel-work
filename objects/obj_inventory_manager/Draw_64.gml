@@ -3,9 +3,16 @@
 // Set Variables
 gui_holder_width = sprite_get_width(spr_hotbar);
 gui_holder_pos_x = (view_get_wport(0) / 2) - (gui_holder_width / 2);
-gui_holder_pos_y = 32;
 gui_holder_pad   = 6;
 gui_holder_slot_offset_x = 64 + gui_holder_pad;
+if global.in_inv = true{
+	hotbar_height = 540
+	gui_holder_pos_y = 32+540}
+else{
+	hotbar_height = 0
+	gui_holder_pos_y = 32}
+	
+
 
 draw_set_halign(fa_right);
 draw_set_font(fnt_inventory);
@@ -15,7 +22,8 @@ draw_set_color(_col);
 
 
 // Draw Hotbar
-draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, 0, 1, 1, 0, _col, 1);
+
+draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, hotbar_height, 1, 1, 0, _col, 1);
 draw_sprite_ext(spr_active, -1, gui_holder_pos_x + (gui_holder_slot_offset_x * active_item) + 38,
 				gui_holder_pos_y + gui_holder_pad, 1, 1, 0, _col, 1);
 
@@ -25,16 +33,23 @@ for (var _inv = 0; _inv <= HOTBAR; _inv++)
 	if (item_define_index != item_type.none)
 	{
 		draw_sprite_ext(item_definitions[item_define_index, item_properties.sprite_gui], -1,
-				   (gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 32,
-				   (gui_holder_pos_y + gui_holder_pad), 1, 1, 0, _col, 1);
+					(gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 32,
+					(gui_holder_pos_y + gui_holder_pad), 1, 1, 0, _col, 1);
 		if obj_inventory_manager.item_definitions[item_define_index, item_properties.type] != "firearm"
 		{
 			draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 57,
-					  (gui_holder_pos_y + gui_holder_pad) + 10,
-					  string(item_definitions[item_define_index, item_properties.amount]));
+						(gui_holder_pos_y + gui_holder_pad) + 10,
+						string(item_definitions[item_define_index, item_properties.amount]));
 		}
 	}
 }
+
+//Draw extended inventory
+if global.in_inv = true{
+	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, 692, 1, 1, 0, _col, 1);
+	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, 616, 1, 1, 0, _col, 1);
+}
+
 
 // Draw Weapon
 if global.holstered exit;
@@ -73,11 +88,5 @@ for (var _ammo = obj_player.ammo; _ammo > 0; _ammo--)
 	}
 }
 
-//Draw inventory rectangle
-if global.in_inv = true{
-	draw_set_colour(c_black);
-	draw_set_alpha(0.7);
-	draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
-	draw_set_alpha(1);
-}
+
 

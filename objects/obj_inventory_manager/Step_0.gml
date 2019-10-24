@@ -64,6 +64,8 @@ if keyboard_check_pressed(global.p_inv_open){
 		global.in_inv = false}
 }
 
+// at this point, the player cannot move or turn and the camera is locked
+
 
 
 
