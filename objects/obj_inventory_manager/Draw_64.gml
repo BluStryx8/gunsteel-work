@@ -5,9 +5,10 @@ gui_holder_width = sprite_get_width(spr_hotbar);
 gui_holder_pos_x = (view_get_wport(0) / 2) - (gui_holder_width / 2);
 gui_holder_pad   = 6;
 gui_holder_slot_offset_x = 64 + gui_holder_pad;
+sprite_hotbar_height = 76
 if (global.in_inv)
 {
-	hotbar_height = 540;
+	hotbar_height = view_get_hport(0) - sprite_hotbar_height * 3;
 	gui_holder_pos_y = 32 + 540;
 }
 else
@@ -48,8 +49,8 @@ for (var _inv = 0; _inv <= HOTBAR; _inv++)
 //Draw extended inventory
 if (global.in_inv)
 {
-	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, 692, 1, 1, 0, _col, 1);
-	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, 616, 1, 1, 0, _col, 1);
+	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, view_get_hport(0) - sprite_hotbar_height, 1, 1, 0, _col, 1);
+	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, view_get_hport(0) - sprite_hotbar_height * 2 , 1, 1, 0, _col, 1);
 }
 
 
