@@ -4,6 +4,7 @@ if (keyboard_check_pressed(vk_escape) and not room == rm_mainmenu)
 	global.paused = !global.paused;
 }
 if (global.paused) exit;
+if global.in_inv = true exit;
 
 
 // Update

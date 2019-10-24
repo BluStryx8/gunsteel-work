@@ -1,5 +1,6 @@
 /// @description Go to player
 if (global.paused) exit;
+if global.in_inv = true exit;
 
 x = obj_player.x;
 y = obj_player.y;

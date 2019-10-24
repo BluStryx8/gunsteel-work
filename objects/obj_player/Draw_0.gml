@@ -1,5 +1,6 @@
 /// @description Draw Player
-if (!global.paused) dir = point_direction(x, y, mouse_x, mouse_y)
+
+if (!global.paused) and (global.in_inv = false) dir = point_direction(x, y, mouse_x, mouse_y)
 
 
 if dir <= 90 or dir >= 270
