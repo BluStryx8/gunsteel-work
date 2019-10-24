@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "171a21b1-5b5d-46c5-8492-bb42d9cc8ad4",
+            "Value": {
+                "id": "91922892-db12-461c-a330-c04e48e85824",
+                "resourcePath": "sprites\\spr_ammo_shotgunbullet\\spr_ammo_shotgunbullet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "186a3c4f-5901-4ac0-ba1c-376240e0dd57",
             "Value": {
                 "id": "bf68085f-5576-4155-b529-2f2ae042d4cb",

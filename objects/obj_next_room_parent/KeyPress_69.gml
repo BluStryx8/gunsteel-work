@@ -5,7 +5,7 @@ var mousey = mouse_y;
 
 if (clicked = false)
 {
-	if ((distance_to_point(mousex, mousey) < 50) and obj_player.dodge <= 0 and !global.in_inv)
+	if ((distance_to_point(mousex, mousey) < 10) and obj_player.dodge <= 0 and !global.in_inv)
 	{
 		clicked = true;
 		global.moveable = false;

@@ -97,3 +97,57 @@ for (var _ammo = obj_player.ammo; _ammo > 0; _ammo--)
 		_y = _weap_offset_y - 80;
 	}
 }
+
+
+// Draw Fire Mode
+switch (obj_player.type)
+{
+	case "pistol":
+		if obj_player.atk_type == "semi_auto"
+		{
+			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -30, view_get_hport(0) - 20 ,1,1,270,_col,1);
+		}
+		if obj_player.atk_type == "auto"
+		{
+			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -30, view_get_hport(0) - 20 ,1,1,270,_col,1);
+			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -15, view_get_hport(0) - 20 ,1,1,270,_col,1);
+			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -45, view_get_hport(0) - 20 ,1,1,270,_col,1);
+		}
+		if obj_player.burst > 1
+		{
+			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -30, view_get_hport(0) - 20 ,1,1,270,_col,1);
+			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -45, view_get_hport(0) - 20 ,1,1,270,_col,1);
+		}
+		break;
+		
+	case "rifle":
+		if obj_player.atk_type == "semi_auto"
+		{
+			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -20, view_get_hport(0) - 20 ,1,1,270,_col,1);
+		}
+		if obj_player.atk_type == "auto"
+		{
+			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -20, view_get_hport(0) - 20 ,1,1,270,_col,1);
+			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -10, view_get_hport(0) - 20 ,1,1,270,_col,1);
+			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -30, view_get_hport(0) - 20 ,1,1,270,_col,1);
+		}
+		if obj_player.burst > 1
+		{
+			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -10, view_get_hport(0) - 20 ,1,1,270,_col,1);
+			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -20, view_get_hport(0) - 20 ,1,1,270,_col,1);
+		}
+		break;
+		
+	case "shotgun":
+		if obj_player.atk_type == "semi_auto"
+		{
+			draw_sprite_ext(spr_ammo_shotgunbullet,-1,view_get_wport(0) + -20, view_get_hport(0) - 20 ,1,1,0,_col,1);
+		}
+		if obj_player.atk_type == "auto"
+		{
+			draw_sprite_ext(spr_ammo_shotgunbullet,-1,view_get_wport(0) + -20, view_get_hport(0) - 20 ,1,1,0,_col,1);
+			draw_sprite_ext(spr_ammo_shotgunbullet,-1,view_get_wport(0) + -10, view_get_hport(0) - 20 ,1,1,0,_col,1);
+			draw_sprite_ext(spr_ammo_shotgunbullet,-1,view_get_wport(0) + -30, view_get_hport(0) - 20 ,1,1,0,_col,1);
+		}
+}
+	
