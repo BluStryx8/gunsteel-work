@@ -51,8 +51,41 @@ if (global.in_inv)
 {
 	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height, 1, 1, 0, _col, 1);
 	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height * 2, 1, 1, 0, _col, 1);
+	var _offset = gui_holder_height;
+	for (var _inv = HOTBAR + 1; _inv <= INVENTORY; _inv++)
+	{
+		item_define_index = inventory[_inv];
+		if (item_define_index != item_type.none)
+		{
+			if (_inv < (HOTBAR + 1) * 2)
+			{
+				_offset = gui_holder_height;
+				draw_sprite_ext(item_definitions[item_define_index, item_properties.sprite_gui], -1,
+							(gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * (_inv - 5)) + 32,
+							(gui_holder_pos_y + gui_holder_pad + _offset), 1, 1, 0, _col, 1);
+				if obj_inventory_manager.item_definitions[item_define_index, item_properties.type] != "firearm"
+				{
+					draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * (_inv - 5)) + 57,
+								(gui_holder_pos_y + gui_holder_pad + _offset) + 10,
+								string(item_definitions[item_define_index, item_properties.amount]));
+				}
+			}
+			else
+			{
+				_offset = 2 * gui_holder_height;
+				draw_sprite_ext(item_definitions[item_define_index, item_properties.sprite_gui], -1,
+							(gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * (_inv - 10)) + 32,
+							(gui_holder_pos_y + gui_holder_pad + _offset), 1, 1, 0, _col, 1);
+				if obj_inventory_manager.item_definitions[item_define_index, item_properties.type] != "firearm"
+				{
+					draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * (_inv - 10)) + 57,
+								(gui_holder_pos_y + gui_holder_pad + _offset) + 10,
+								string(item_definitions[item_define_index, item_properties.amount]));
+				}
+			}
+		}
+	}
 }
-
 
 // Draw Weapon
 var _weap_offset_x = -32;
