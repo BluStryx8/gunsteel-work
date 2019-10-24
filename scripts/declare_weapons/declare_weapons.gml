@@ -6,15 +6,15 @@ ds_map_add(global.weapons[0], "weapon", "none");		// Name of weapon
 ds_map_add(global.weapons[0], "type", "none");			// Type of weapon
 ds_map_add(global.weapons[0], "atk_type", "none");		// How gun functions when firing
 ds_map_add(global.weapons[0], "hands", 0);				// How many hands used
-ds_map_add(global.weapons[0], "hand_one", [0, 0]);		// Offset of main hand
-ds_map_add(global.weapons[0], "hand_two", [0, 0]);		// Offset of grip hand
-ds_map_add(global.weapons[0], "offset", [0, 0, 0]);		// Offset from body centre
+ds_map_add(global.weapons[0], "hand_one", [0, 0]);		// Offset of main hand		[x, y]
+ds_map_add(global.weapons[0], "hand_two", [0, 0]);		// Offset of grip hand		[x, y]
+ds_map_add(global.weapons[0], "offset", [0, 0, 0]);		// Offset from body centre:	[x, y, left_hand]
 ds_map_add(global.weapons[0], "min_damage", 0);			// Minimum damage
 ds_map_add(global.weapons[0], "max_damage", 0);			// Maximum damage
 ds_map_add(global.weapons[0], "bullet_speed", 0);		// Speed of bullet
 ds_map_add(global.weapons[0], "bullet_speed_var", 0);	// Variation of bullet speed
 ds_map_add(global.weapons[0], "decay", 0);				// Seconds before bullets disappear
-ds_map_add(global.weapons[0], "reload", 0);				// Time between atks
+ds_map_add(global.weapons[0], "reload", 0);				// Time between attacks
 ds_map_add(global.weapons[0], "burst", 0);				// How many times it fires
 ds_map_add(global.weapons[0], "bullets", 0);			// How many bullets it makes
 ds_map_add(global.weapons[0], "bullet_dd", 0);			// Frames before bullets are drawn

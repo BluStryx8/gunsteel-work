@@ -1,6 +1,7 @@
+/// @desc Resets stats to empty
 if obj_player.weapon != "none"
 {
-	with obj_player
+	with (obj_player)
 	{
 		// Save previous weapon ammo
 		ds_map_replace(global.weapons[prev_weap], "ammo", ammo);

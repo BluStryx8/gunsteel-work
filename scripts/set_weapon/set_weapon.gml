@@ -2,7 +2,7 @@
 
 var _w = weapon_find(global.weapons, "weapon", item_definitions[global.p_active, item_properties.name]);
 
-with obj_player
+with (obj_player)
 {
 	// Save previous weapon ammo
 	ds_map_replace(global.weapons[prev_weap], "ammo", ammo);
