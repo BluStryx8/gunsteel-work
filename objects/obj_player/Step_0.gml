@@ -5,6 +5,7 @@ if (keyboard_check_pressed(vk_escape) and not room == rm_mainmenu)
 }
 if (global.paused) exit;
 
+
 // Update
 sprite = spr_gui_empty;
 xprev[2] = xprev[1];
@@ -82,7 +83,7 @@ if dodge > 0
 }
 
 // Animation for x
-if global.moveable = true
+if global.moveable = true and global.in_inv = false
 {
 	var _dir = point_direction(x, y, mouse_x, mouse_y)
 	if _dir <= 90 or _dir >= 270
@@ -230,23 +231,27 @@ else
 }
 
 // Camera (Temp)
-camera_set_view_pos(view_camera[0], x - h_move - camera_width / 2 + shake_x, y - v_move - camera_height / 2 + shake_y);
-if focus == 1
-{
-	if camera_pan > 2 camera_pan -= camera_pan / 2;
+if global.in_inv = false{
+	camera_set_view_pos(view_camera[0], x - h_move - camera_width / 2 + shake_x, y - v_move - camera_height / 2 + shake_y);
+	if focus == 1
+	{
+		if camera_pan > 2 camera_pan -= camera_pan / 2;
+	}
+	else if focus == 0
+	{
+		if camera_pan > 8 camera_pan -= camera_pan / 2;
+		if camera_pan < 8 camera_pan += camera_pan;
+	}
 }
-else if focus == 0
-{
-	if camera_pan > 8 camera_pan -= camera_pan / 2;
-	if camera_pan < 8 camera_pan += camera_pan;
-}
+
 // Reset camera pan
 // if camera_pan < 1024 camera_pan += camera_pan;
 
-
+if global.in_inv = false{
 if camera_pan < 1024
 {
 	camera_set_view_pos(view_camera[0],
 	((camera_pan - 1) * x / camera_pan + mouse_x / camera_pan) - camera_width / 2 + shake_x,
 	((camera_pan - 1) * y / camera_pan + mouse_y / camera_pan) - camera_height / 2 + shake_y);
+}
 }

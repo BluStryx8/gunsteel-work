@@ -49,14 +49,22 @@ if mouse_check_button(mb_left) inv_use_script(global.p_active, "left");
 if mouse_check_button(mb_right) inv_use_script(global.p_active, "right");
 
 // Reload
-if keyboard_check_pressed(global.p_reload)
+if keyboard_check(global.p_reload)
 {
 	with obj_player ammo = max_ammo;
 }
 
 // Opens full inventory
-if keyboard_check(global.p_inv_open) = true{
-	global.moveable = false
+
+if keyboard_check_pressed(global.p_inv_open){
+	if global.in_inv = false{
+		global.moveable = false
+		global.in_inv = true}
+	else{global.moveable = true
+		global.in_inv = false}
 }
+
+
+
 
 

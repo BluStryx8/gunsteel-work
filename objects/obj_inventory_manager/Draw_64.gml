@@ -72,3 +72,12 @@ for (var _ammo = obj_player.ammo; _ammo > 0; _ammo--)
 		_y = -112;
 	}
 }
+
+//Draw inventory rectangle
+if global.in_inv = true{
+	draw_set_colour(c_black);
+	draw_set_alpha(0.7);
+	draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
+	draw_set_alpha(1);
+}
+
