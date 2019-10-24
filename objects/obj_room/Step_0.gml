@@ -1,5 +1,6 @@
 /// @description Sets the variable room to what ever the room is
-switch(room){
+switch(room)
+{
 	case rm_mainmenu:
 	global.room_ = "Main Menu"
 	break;

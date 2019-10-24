@@ -1,2 +1,2 @@
 /// @description Declaration
-global.room_ = 0
+global.room_ = 0;

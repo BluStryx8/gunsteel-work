@@ -1,7 +1,7 @@
 /// @description Increase Anim
 if (global.paused) exit;
 x += x_move;
-if anim_y < 7 anim_y += 0.2
+if (anim_y < 7) anim_y += 0.2
 else
 {
 	x_move = 0;
