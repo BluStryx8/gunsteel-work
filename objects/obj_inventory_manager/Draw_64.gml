@@ -88,8 +88,8 @@ if (global.in_inv)
 }
 
 // Draw Weapon
-var _weap_offset_x = -32;
-var _weap_offset_y = -32;
+var _weap_offset_x = -32;	// x offset from the bottom right hand corner
+var _weap_offset_y = -48;	// y offset from the bottom right hand corner
 
 if (global.holstered) exit;
 draw_set_halign(fa_center);
@@ -110,77 +110,53 @@ switch (obj_player.type)
 					string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 		break;
 }
+
 // Draw Ammo
-var _x = _weap_offset_x;
-var _y = _weap_offset_y - 80;
+var _x = _weap_offset_x;		// x offset from the bottom right hand corner
+var _y = _weap_offset_y - 80;	// y offset from the bottom right hand corner plus 80 above the weapon
+var _top_pad = 80;				// Height from top when to move to next row
+
+// Set which bullet to draw
+var _draw = spr_gui_empty;
+switch (obj_player.type)
+{
+	case "pistol":
+		_draw = spr_ammo_pistolbullet;
+		break;
+	case "rifle":
+		_draw = spr_ammo_riflebullet;
+		break;
+	case "shotgun":
+		_draw = spr_ammo_shotgunbullet;
+		break;
+}
+// Draw bullets
 for (var _ammo = obj_player.ammo; _ammo > 0; _ammo--)
 {
-	switch (obj_player.type)
-	{
-		case "pistol":
-			draw_sprite_ext(spr_ammo_pistolbullet, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, 1);
-			break;
-		case "rifle":
-			draw_sprite_ext(spr_ammo_riflebullet, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, 1);
-	}
+	draw_sprite_ext(_draw, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, 1);
 	_y -= 16;
-	if ((view_get_hport(0) + _y - 16) <= 0)
+	if ((view_get_hport(0) + _y - _top_pad) <= 0)
 	{
 		_x += _weap_offset_x;
 		_y = _weap_offset_y - 80;
 	}
 }
 
-
 // Draw Fire Mode
-switch (obj_player.type)
+var _mode_x_offset = -15; // x offset of bullets to draw
+var _mode_y_offset = -20; // y offset of bullets to draw
+
+// Bullets to draw representative of atk modes
+var _bullets = 1;
+if (obj_player.atk_type == "semi_auto" and obj_player.burst > 1) _bullets = 2;
+if (obj_player.atk_type == "auto") _bullets = 3;
+
+if (_draw != spr_gui_empty)
 {
-	case "pistol":
-		if obj_player.atk_type == "semi_auto"
-		{
-			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -30, view_get_hport(0) - 20 ,1,1,270,_col,1);
-		}
-		if obj_player.atk_type == "auto"
-		{
-			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -30, view_get_hport(0) - 20 ,1,1,270,_col,1);
-			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -15, view_get_hport(0) - 20 ,1,1,270,_col,1);
-			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -45, view_get_hport(0) - 20 ,1,1,270,_col,1);
-		}
-		if obj_player.burst > 1
-		{
-			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -30, view_get_hport(0) - 20 ,1,1,270,_col,1);
-			draw_sprite_ext(spr_ammo_pistolbullet,-1,view_get_wport(0) + -45, view_get_hport(0) - 20 ,1,1,270,_col,1);
-		}
-		break;
-		
-	case "rifle":
-		if obj_player.atk_type == "semi_auto"
-		{
-			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -20, view_get_hport(0) - 20 ,1,1,270,_col,1);
-		}
-		if obj_player.atk_type == "auto"
-		{
-			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -20, view_get_hport(0) - 20 ,1,1,270,_col,1);
-			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -10, view_get_hport(0) - 20 ,1,1,270,_col,1);
-			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -30, view_get_hport(0) - 20 ,1,1,270,_col,1);
-		}
-		if obj_player.burst > 1
-		{
-			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -10, view_get_hport(0) - 20 ,1,1,270,_col,1);
-			draw_sprite_ext(spr_ammo_riflebullet,-1,view_get_wport(0) + -20, view_get_hport(0) - 20 ,1,1,270,_col,1);
-		}
-		break;
-		
-	case "shotgun":
-		if obj_player.atk_type == "semi_auto"
-		{
-			draw_sprite_ext(spr_ammo_shotgunbullet,-1,view_get_wport(0) + -20, view_get_hport(0) - 20 ,1,1,0,_col,1);
-		}
-		if obj_player.atk_type == "auto"
-		{
-			draw_sprite_ext(spr_ammo_shotgunbullet,-1,view_get_wport(0) + -20, view_get_hport(0) - 20 ,1,1,0,_col,1);
-			draw_sprite_ext(spr_ammo_shotgunbullet,-1,view_get_wport(0) + -10, view_get_hport(0) - 20 ,1,1,0,_col,1);
-			draw_sprite_ext(spr_ammo_shotgunbullet,-1,view_get_wport(0) + -30, view_get_hport(0) - 20 ,1,1,0,_col,1);
-		}
+	draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 2,
+					view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
+	if (_bullets >= 2) draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset,
+									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
+	if (_bullets >= 3) draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 3,
+									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
 }
-	
