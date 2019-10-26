@@ -543,14 +543,6 @@
             }
         },
         {
-            "Key": "599aad28-f04d-4dab-8b43-428bf5627bdd",
-            "Value": {
-                "id": "e7368283-b8a4-4f41-8588-ad9319ebecb0",
-                "resourcePath": "sprites\\spr_t_brick_blue\\spr_t_brick_blue.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "5a274bfb-497f-4431-a814-a5ce620337d1",
             "Value": {
                 "id": "5448f382-7f70-4404-8b6d-deda12467882",

@@ -2,7 +2,7 @@
 // Go to player
 x = obj_player.x;
 y = obj_player.y;
-dir = obj_player.dir;
+dir = point_direction(x, y, mouse_x, mouse_y);
 
 // Offset
 if (obj_player.hands == 2)
