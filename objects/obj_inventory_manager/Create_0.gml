@@ -14,5 +14,7 @@ spr_hotbar_height = 76
 cell_width = 64
 divider_width = 6
 
-selected_cell = 0 
+selected_cell = 1
 pickup_item = -1
+in_hand = false
+reference_cell = 1

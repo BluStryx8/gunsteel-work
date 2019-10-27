@@ -171,3 +171,4 @@ if (pickup_item != -1)
 					mousex,mousey, 1, 1, 0, _col, 1);
 }
 
+

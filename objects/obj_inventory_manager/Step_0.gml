@@ -70,71 +70,79 @@ if (global.in_inv)
 	
 	mousex = device_mouse_x_to_gui(0)
 	mousey = device_mouse_y_to_gui(0)
+	
+	
+	
+		if mousey >= camera_get_view_height(0) - spr_hotbar_height
+		{
+			inv_row = 3
+		}
 		
+		if mousey >= camera_get_view_height(0) - spr_hotbar_height*2 and mousey < camera_get_view_height(0) - spr_hotbar_height
+		{
+			inv_row = 2
+		}
 		
-	if mousey >= camera_get_view_height(0) - spr_hotbar_height
-	{
-		inv_row = 3
-	}
+		if mousey >= camera_get_view_height(0) - spr_hotbar_height*3 and mousey < camera_get_view_height(0) - spr_hotbar_height*2
+		{
+			inv_row = 1
+		}
 		
-	if mousey >= camera_get_view_height(0) - spr_hotbar_height*2 and mousey < camera_get_view_height(0) - spr_hotbar_height
-	{
-		inv_row = 2
-	}
+		if mousex >= gui_holder_pos_x + divider_width and mousex < gui_holder_pos_x + divider_width + cell_width
+		{
+			inv_column = 1
+		}
 		
-	if mousey >= camera_get_view_height(0) - spr_hotbar_height*3 and mousey < camera_get_view_height(0) - spr_hotbar_height*2
-	{
-		inv_row = 1
-	}
+		if mousex >= gui_holder_pos_x + divider_width*2 + cell_width and mousex < gui_holder_pos_x + divider_width*2 + cell_width*2
+		{
+			inv_column = 2 
+		}
 		
-	if mousex >= gui_holder_pos_x + divider_width and mousex < gui_holder_pos_x + divider_width + cell_width
-	{
-		inv_column = 1
-	}
-		
-	if mousex >= gui_holder_pos_x + divider_width*2 + cell_width and mousex < gui_holder_pos_x + divider_width*2 + cell_width*2
-	{
-		inv_column = 2 
-	}
-		
-	if mousex >= gui_holder_pos_x + divider_width*3 + cell_width*2 and mousex < gui_holder_pos_x + divider_width*3 + cell_width*3
-	{
-		inv_column = 3
-	}
+		if mousex >= gui_holder_pos_x + divider_width*3 + cell_width*2 and mousex < gui_holder_pos_x + divider_width*3 + cell_width*3
+		{
+			inv_column = 3
+		}
 
-	if mousex >= gui_holder_pos_x + divider_width*4 + cell_width*3 and mousex < gui_holder_pos_x + divider_width*4 + cell_width*4
-	{
-		inv_column = 4
-	}
+		if mousex >= gui_holder_pos_x + divider_width*4 + cell_width*3 and mousex < gui_holder_pos_x + divider_width*4 + cell_width*4
+		{
+			inv_column = 4
+		}
 		
-	if mousex >= gui_holder_pos_x + divider_width*5 + cell_width*4 and mousex < gui_holder_pos_x + divider_width*5 + cell_width*5
-	{
-		inv_column = 5
-	}
-		
+		if mousex >= gui_holder_pos_x + divider_width*5 + cell_width*4 and mousex < gui_holder_pos_x + divider_width*5 + cell_width*5
+		{
+			inv_column = 5
+		}
+	
 	/// find selected cell
-	switch(inv_row)
-	{
-		case 1:
-			selected_cell = inv_column
-		break;
+	
+		switch(inv_row)
+		{
+			case 1:
+				selected_cell = inv_column -1
+			break;
 			
-		case 2:
-			selected_cell = inv_column + 5 
-		break;
+			case 2:
+				selected_cell = inv_column + 4
+			break;
 			
-		case 3:
-			selected_cell = inv_column + 10
-		break;
-	}
+			case 3:
+				selected_cell = inv_column + 9
+			break;
+		}
+
 
 	
-	var item = inventory[selected_cell]
+	
+	
+	var item = inventory[selected_cell] 
 		if (item != item_type.none)
 		{
 			if(mouse_check_button_pressed(mb_left))
 			{
 				pickup_item = selected_cell
+				in_hand = true
+				
+				
 				
 			}	
 		}
