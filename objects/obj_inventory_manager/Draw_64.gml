@@ -87,6 +87,8 @@ if (global.in_inv)
 	}
 }
 
+
+
 // Draw Weapon
 var _weap_offset_x = -32;	// x offset from the bottom right hand corner
 var _weap_offset_y = -48;	// y offset from the bottom right hand corner
@@ -110,6 +112,7 @@ switch (obj_player.type)
 					string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 		break;
 }
+
 
 // Draw Ammo
 var _x = _weap_offset_x;		// x offset from the bottom right hand corner
@@ -160,3 +163,11 @@ if (_draw != spr_gui_empty)
 	if (_bullets >= 3) draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 3,
 									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
 }
+
+if (pickup_item != -1)
+{
+	var draw_item = inventory[selected_cell]
+	draw_sprite_ext(item_definitions[inventory[draw_item], item_properties.sprite_gui], -1,
+					mousex,mousey, 1, 1, 0, _col, 1);
+}
+
