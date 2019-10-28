@@ -6,6 +6,7 @@ with (obj_player)
 {
 	// Save previous weapon ammo
 	ds_map_replace(global.weapons[prev_weap], "ammo", ammo);
+	ds_map_replace(global.weapons[prev_weap], "pump", pump);
 	prev_weap		 = _w;
 	// Load Stats
 	weapon			 = ds_map_find_value(global.weapons[_w], "weapon");
@@ -32,4 +33,10 @@ with (obj_player)
 	shake_dur		 = ds_map_find_value(global.weapons[_w], "shake_dur");
 	max_ammo		 = ds_map_find_value(global.weapons[_w], "max_ammo");
 	ammo			 = ds_map_find_value(global.weapons[_w], "ammo");
+	draw_time		 = ds_map_find_value(global.weapons[_w], "draw_time");
+	fire_cooldown	 = draw_time;
+	reloading		 = -1;
+	reload_time		 = ds_map_find_value(global.weapons[_w], "reload_time");
+	pump			 = ds_map_find_value(global.weapons[_w], "pump");
+	pump_time		 = ds_map_find_value(global.weapons[_w], "pump_time");
 }

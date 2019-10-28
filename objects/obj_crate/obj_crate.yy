@@ -5,7 +5,7 @@
     "name": "obj_crate",
     "eventList": [
         {
-            "id": "6d124dec-ff5e-494c-8ebe-37304a720551",
+            "id": "c172519a-eecd-4aef-a83c-71e08a890673",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

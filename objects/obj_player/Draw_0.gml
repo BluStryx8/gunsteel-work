@@ -6,9 +6,9 @@ if (dir <= 90 or dir >= 270)
 	if (dodge > 0)
 	{
 		// Dodge afterimages
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[0], yprev[0], 0.9, 0.9, 0, c_white, 0.4);
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[1], yprev[1], 0.8, 0.8, 0, c_white, 0.3);
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[2], yprev[2], 0.7, 0.7, 0, c_white, 0.2);
+		draw_sprite_ext(spr_player_hitbox, -1, xprev[0], yprev[0], 0.9, 0.9, 0, global.p_dash_colour, 0.4);
+		draw_sprite_ext(spr_player_hitbox, -1, xprev[1], yprev[1], 0.8, 0.8, 0, global.p_dash_colour, 0.3);
+		draw_sprite_ext(spr_player_hitbox, -1, xprev[2], yprev[2], 0.7, 0.7, 0, global.p_dash_colour, 0.2);
 	}
 	draw_sprite_ext(spr_player_shadow, 0, x, y + 17, 1, 1, 0, c_white, 0.25);
 	draw_sprite_ext(spr_player_feet, 0, x + 4 + anim_x, y + 15 + anim_y, 1, 1, 0, global.p_skin_colour, 1)
@@ -27,7 +27,7 @@ if (dir <= 90 or dir >= 270)
 	// Draw weapon
 	if (hands >= 1) draw_sprite_ext(sprite, 0, x + offset[0], y + offset[1], 1, 1, dir, c_white, 1)
 	// Dodge brighten
-	if (dodge > 0) draw_sprite_ext(spr_player_hitbox, -1, x, y, 1, 1, 0, c_white, 0.1);
+	if (dodge > 0) draw_sprite_ext(spr_player_hitbox, -1, x, y, 1, 1, 0, global.p_dash_colour, 0.1);
 }
 else
 {
@@ -35,9 +35,9 @@ else
 	if (dodge > 0)
 	{
 		// Dodge afterimages
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[0], yprev[0], -0.9, 0.9, 0, c_white, 0.4);
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[1], yprev[1], -0.8, 0.8, 0, c_white, 0.3);
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[2], yprev[2], -0.7, 0.7, 0, c_white, 0.2);
+		draw_sprite_ext(spr_player_hitbox, -1, xprev[0], yprev[0], -0.9, 0.9, 0, global.p_dash_colour, 0.4);
+		draw_sprite_ext(spr_player_hitbox, -1, xprev[1], yprev[1], -0.8, 0.8, 0, global.p_dash_colour, 0.3);
+		draw_sprite_ext(spr_player_hitbox, -1, xprev[2], yprev[2], -0.7, 0.7, 0, global.p_dash_colour, 0.2);
 	}
 	draw_sprite_ext(spr_player_shadow, 0, x, y + 17, 1, 1, 0, c_white, 0.25);
 	draw_sprite_ext(spr_player_feet, 0, x + 4 + anim_x, y + 14 - anim_y + still, 1, 1, 0, global.p_skin_colour, 1)
@@ -57,5 +57,5 @@ else
 	if (hands == 2) draw_sprite_ext(sprite, 0, x - offset[0], y + offset[1], 1, -1, dir, c_white, 1)
 	else if (hands >= 1) draw_sprite_ext(sprite, 0, x + offset[0] + offset[2], y + offset[1], 1, -1, dir, c_white, 1)
 	// Dodge brighten
-	if (dodge > 0) draw_sprite_ext(spr_player_hitbox, -1, x, y, -1, 1, 0, c_white, 0.1);
+	if (dodge > 0) draw_sprite_ext(spr_player_hitbox, -1, x, y, -1, 1, 0, global.p_dash_colour, 0.1);
 }

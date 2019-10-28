@@ -27,6 +27,7 @@ anim_y = 0;				// y offset for animating
 // Weapon Constants
 prev_weap = 0;			// Last selected weapon
 ammo = 0;				// Current weapon ammo
+pump = 0;				// (For pump-action) Checks if pump needed
 weapon = "";			// Current weapon selected
 set_empty();			// Declares all weapon variables
 
@@ -38,12 +39,14 @@ shake_x = 0;				// x offset for screenshake
 shake_y = 0;				// y offset for screenshake
 accuracy = base_accuracy;	// Inaccuracy of weapon
 dir = 0;					// Direction facing
+reloading = 0;				// Whether the player is reloading or not
 
 // Create Others (Temp)
 // Cursor
 window_set_cursor(cr_none);
 centre = instance_create_layer(x, y, "HUD", obj_cursor_bracket);		// Centre firing cursor
 centre.image_index = 0;
+centre.rotate = 0;
 left = instance_create_layer(x, y, "HUD", obj_cursor_bracket);			// Left firing cursor
 left.image_index = 1;
 right = instance_create_layer(x, y, "HUD", obj_cursor_bracket);			// Right firing cursor

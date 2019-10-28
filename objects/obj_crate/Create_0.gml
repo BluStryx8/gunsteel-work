@@ -1,2 +1,2 @@
-/// @description Set Stats (temp)
-crate_hp = 50;
+/// @description Create Crate
+hp = 50;

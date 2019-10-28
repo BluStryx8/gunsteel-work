@@ -5,6 +5,7 @@ if obj_player.weapon != "none"
 	{
 		// Save previous weapon ammo
 		ds_map_replace(global.weapons[prev_weap], "ammo", ammo);
+		ds_map_replace(global.weapons[prev_weap], "pump", pump);
 		prev_weap		 = 0;
 		// Load blank
 		weapon			 = "none";
@@ -31,5 +32,9 @@ if obj_player.weapon != "none"
 		shake_dur		 = 0;
 		max_ammo		 = 0;
 		ammo			 = max_ammo;
+		draw_time		 = 0;
+		reload_time		 = 0;
+		pump			 = 0;
+		pump_time		 = 0;
 	}
 }

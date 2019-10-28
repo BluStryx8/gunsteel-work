@@ -1,7 +1,7 @@
 /// @description Shoot
 // Declare Variables
 draw_delay = obj_player.bullet_dd;		// Delays drawing so the bullet is positioned properly
-decay = room_speed * obj_player.decay;	// Sets time before bullet eventually fades and deletes self
+decay = obj_player.decay;				// Sets time before bullet eventually fades and deletes self
 
 speed = obj_player.bullet_speed + irandom_range(-obj_player.bullet_speed_var, obj_player.bullet_speed_var);
 spd = speed;							// Saves speed for later

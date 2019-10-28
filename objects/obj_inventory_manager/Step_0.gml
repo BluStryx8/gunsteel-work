@@ -29,6 +29,8 @@ if (!global.holstered)
 		change_check = active_item;
 		obj_player.fire = 0;
 		obj_player.focus = 0;
+		obj_player.reloading = 0;
+		obj_cursor_bracket.rotate = 0;
 		inv_use_script(global.p_active, "change");
 	}
 }
@@ -38,6 +40,8 @@ else if (change_check != -1)
 	change_check = -1;
 	obj_player.fire = 0;
 	obj_player.focus = 0;
+	obj_player.reloading = 0;
+	obj_cursor_bracket.rotate = 0;
 	inv_use_script(global.p_active, "change");
 }
 
@@ -46,9 +50,6 @@ if (!global.in_inv)
 {
 	if (mouse_check_button(mb_left))  inv_use_script(global.p_active, "left");
 	if (mouse_check_button(mb_right)) inv_use_script(global.p_active, "right");
-	// Reload (Temp)
-	if (keyboard_check(global.p_reload))
-		with (obj_player) ammo = max_ammo;
 }
 
 // Opens full inventory
