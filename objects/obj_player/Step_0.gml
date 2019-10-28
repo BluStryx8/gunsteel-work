@@ -200,11 +200,8 @@ if (fire > 0 and fire_cooldown == 0)
 
 // Attack Cooldown
 if (fire_cooldown > 0) fire_cooldown -= 1;
-if (fire_cooldown <= 0)
-{
-	fire_cooldown = 0;
-	if (accuracy > base_accuracy) accuracy -= 0.1;	// Decrease inaccuracy back to base accuracy
-}
+if (fire_cooldown <= 0) fire_cooldown = 0;
+if (accuracy > base_accuracy) accuracy -= 0.1;	// Decrease inaccuracy back to base accuracy
 
 // Shake
 if (shake > 0)

@@ -41,7 +41,7 @@ dir = 0;					// Direction facing
 
 // Create Others (Temp)
 // Cursor
-instance_create_layer(x, y, "HUD", obj_cursor);
+window_set_cursor(cr_none);
 centre = instance_create_layer(x, y, "HUD", obj_cursor_bracket);		// Centre firing cursor
 centre.image_index = 0;
 left = instance_create_layer(x, y, "HUD", obj_cursor_bracket);			// Left firing cursor
