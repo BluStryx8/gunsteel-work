@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "0f2e6c3c-c0f7-4d4b-9c04-503de925fe6d",
+            "Value": {
+                "id": "416cec60-735d-4421-893a-0325fe8d1f15",
+                "resourcePath": "fonts\\fnt_damage\\fnt_damage.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "10900fb0-67ec-4e38-a372-dc409047d628",
             "Value": {
                 "id": "5e7410a9-db85-4853-8d35-0e9a000d5e0a",
