@@ -73,7 +73,7 @@ if (global.in_inv)
 	mousey = device_mouse_y_to_gui(0)
 	
 	
-	if mouse_check_button_pressed(mb_right){
+	
 		if mousey >= camera_get_view_height(0) - spr_hotbar_height and mousex > gui_holder_pos_x and mousex < gui_holder_pos_x + sprite_get_width(spr_hotbar)
 		{
 			inv_row = 3
@@ -113,7 +113,7 @@ if (global.in_inv)
 		{
 			inv_column = 5
 		}
-	}
+	
 	/// find selected cell
 	
 		switch(inv_row)
@@ -131,11 +131,31 @@ if (global.in_inv)
 			break;
 		}
 
-	if(mouse_check_button_pressed(mb_right))
+	if(mouse_check_button_pressed(mb_left))
 	{
 		if inventory[selected_cell] != item_type.none
 		{
 			pickup_item = selected_cell
+			item_in_hand = true
 		}
+		
+	else{
+			item_in_hand = false
 	}
+	
+	}
+	
+	if item_in_hand = true
+	{
+		if (mouse_check_button_pressed(mb_right))
+		{
+			if inventory[selected_cell] = item_type.none
+			{
+				array_replace_value(obj_inventory_manager.inventory, item_type.none, inventory[selected_cell])
+				inventory[pickup_item] = item_type.none
+			}
+		}
+		
+			
+}
 }
