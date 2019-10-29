@@ -89,27 +89,27 @@ if (global.in_inv)
 			inv_row = 1
 		}
 		
-		if mousex >= gui_holder_pos_x + divider_width and mousex < gui_holder_pos_x + divider_width + cell_width and mousey > room_height - spr_hotbar_height*3
+		if mousex >= (gui_holder_pos_x + divider_width) and mousex < (gui_holder_pos_x + divider_width + cell_width) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			inv_column = 1
 		}
 		
-		if mousex >= gui_holder_pos_x + divider_width*2 + cell_width and mousex < gui_holder_pos_x + divider_width*2 + cell_width*2 and mousey > room_height - spr_hotbar_height*3
+		if mousex >= (gui_holder_pos_x + divider_width*2 + cell_width) and mousex < (gui_holder_pos_x + divider_width*2 + cell_width*2) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			inv_column = 2 
 		}
 		
-		if mousex >= gui_holder_pos_x + divider_width*3 + cell_width*2 and mousex < gui_holder_pos_x + divider_width*3 + cell_width*3 and mousey > room_height - spr_hotbar_height*3
+		if mousex >= (gui_holder_pos_x + divider_width*3 + cell_width*2) and mousex < gui_holder_pos_x + (divider_width*3 + cell_width*3) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			inv_column = 3
 		}
 
-		if mousex >= gui_holder_pos_x + divider_width*4 + cell_width*3 and mousex < gui_holder_pos_x + divider_width*4 + cell_width*4 and mousey > room_height - spr_hotbar_height*3
+		if mousex >= (gui_holder_pos_x + divider_width*4 + cell_width*3) and mousex < gui_holder_pos_x + (divider_width*4 + cell_width*4) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			inv_column = 4
 		}
 		
-		if mousex >= gui_holder_pos_x + divider_width*5 + cell_width*4 and mousex < gui_holder_pos_x + divider_width*5 + cell_width*5
+		if mousex >= (gui_holder_pos_x + divider_width*5) + cell_width*4 and mousex < (gui_holder_pos_x + divider_width*5 + cell_width*5) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			inv_column = 5
 		}
@@ -131,23 +131,31 @@ if (global.in_inv)
 			break;
 		}
 
-	if(mouse_check_button_pressed(mb_right))
+	if(mouse_check_button_pressed(mb_left))
 	{
-		pickup_item = selected_cell
+		if inventory[selected_cell] != item_type.none
+		{
+			pickup_item = selected_cell
+			item_in_hand = true
+		}
+		
+	else{
+			item_in_hand = false
 	}
 	
+	}
 	
-	
-	var item = inventory[selected_cell] 
-		if (item != item_type.none)
+	if item_in_hand = true
+	{
+		if (mouse_check_button_pressed(mb_right))
 		{
-			if(mouse_check_button_pressed(mb_right))
+			if inventory[selected_cell] = item_type.none
 			{
-				pickup_item = selected_cell
-
-				
-				
-				
-			}	
+				array_replace_value(obj_inventory_manager.inventory, item_type.none, inventory[selected_cell])
+				inventory[pickup_item] = item_type.none
+			}
 		}
+		
+			
+}
 }
