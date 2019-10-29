@@ -17,12 +17,13 @@ xprev[2] = 0;
 yprev[2] = 0;
 
 // Animation
-still = 1;				// Whether the player is still, also affects positions of some parts
-anim = 0;				// How far a player has moved
-anim_frame = 0;			// Transfers distance a player has moved into subframes
-frame = 0;				// Transfers subframes into frames depending on room speed
-anim_x = 0;				// x offset for animating
-anim_y = 0;				// y offset for animating
+still = 1;					// Whether the player is still, also affects positions of some parts
+anim = 0;					// How far a player has moved
+anim_frame = 0;				// Transfers distance a player has moved into subframes
+frame = 0;					// Transfers subframes into frames depending on room speed
+frametime = room_speed / 4	// Determines animating frames per second
+anim_x = 0;					// x offset for animating
+anim_y = 0;					// y offset for animating
 
 // Weapon Constants
 prev_weap = 0;			// Last selected weapon

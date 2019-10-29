@@ -115,25 +115,25 @@ if (h_move == 0 and v_move == 0)
 while (anim >= 3)
 {
 	anim -= 3;
-	if (anim_frame < 0) anim_frame = room_speed / 4;	// Force animation if first frame of movement
+	if (anim_frame < 0) anim_frame = frametime;		// Force animation if first frame of movement
 	anim_frame += 1;
 }
 while (anim <= -3)
 {
 	anim += 3;
-	if (anim_frame > 0) anim_frame = -(room_speed / 4);	// Force animation if first frame of movement
+	if (anim_frame > 0) anim_frame = -frametime;	// Force animation if first frame of movement
 	anim_frame -= 1;
 }
 
 // Frametime
-if (anim_frame > room_speed / 4 or (still = 1 and anim_frame > 0))
+if (anim_frame > frametime or (still = 1 and anim_frame > 0))
 {
 	anim_frame = 0;
 	frame += 1;
 	if (frame >= 5) frame = 1;	// Loops frame
 	still = 0;
 }
-if (anim_frame < room_speed / -4 or (still = 1 and anim_frame < 0))
+if (anim_frame < -frametime or (still = 1 and anim_frame < 0))
 {
 	anim_frame = 0;
 	frame -= 1;
@@ -218,19 +218,25 @@ if (reloading < 0 and fire_cooldown == 0) reloading = 0;	// negative reload sign
 if (pump < 0 and fire_cooldown == 0) pump = 0;				// neagtive pump signifies pump reload
 if (reloading > 1) reloading -= 1;							// Decrease reloading count
 
-// Play sound pre-emptively
+// Pre-emptive reload
 if (reloading == 30)
 {
 	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 	audio_play_sound(snd_reload_clip, 1, false);
-	if (atk_type == "pump_action")
+	switch (type)
 	{
-		ammo += 1;
-		if (ammo < max_ammo)
-		{
-			reloading = reload_time;
-			fire_cooldown = reloading;
-		}
+		case "pistol":
+		case "rifle":
+			ammo = max_ammo;
+			break;
+		case "shotgun":
+			ammo += 1;
+			if (ammo < max_ammo)
+			{
+				reloading = reload_time;
+				fire_cooldown = reloading;
+			}
+			break;
 	}
 }
 if (reloading == 15)										
@@ -243,7 +249,6 @@ if (reloading == 1)
 {
 	reloading = 0;
 	pump = 0;
-	ammo = max_ammo;
 }
 // Check for reload
 if (keyboard_check(global.p_reload) and fire_cooldown == 0 and reloading == 0 and !global.holstered)
