@@ -3,9 +3,10 @@
 // Set Variables
 gui_holder_width = sprite_get_width(spr_hotbar);
 gui_holder_height = sprite_get_height(spr_hotbar);
-gui_holder_pos_x = (view_get_wport(0) / 2) - (gui_holder_width / 2);
+gui_holder_pos_x = (camera_get_view_width(0) / 2) - (gui_holder_width / 2);
 gui_holder_pad   = 6;
 gui_holder_slot_offset_x = 64 + gui_holder_pad;
+display_set_gui_size(camera_get_view_width(0), camera_get_view_height(0))
 if (global.in_inv)
 {
 	hotbar_height = view_get_hport(0) - gui_holder_height * 3;
@@ -166,9 +167,8 @@ if (_draw != spr_gui_empty)
 
 if (pickup_item != -1)
 {
-	var draw_item = inventory[selected_cell]
-	draw_sprite_ext(item_definitions[inventory[draw_item], item_properties.sprite_gui], -1,
-					mousex,mousey, 1, 1, 0, _col, 1);
+	var draw_item = inventory[pickup_item]
+	draw_sprite_ext(item_definitions[draw_item, item_properties.sprite_gui], -1, mousex,mousey, 1, 1, 0, _col, 1);
 }
 
 

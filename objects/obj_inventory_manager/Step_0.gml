@@ -73,7 +73,7 @@ if (global.in_inv)
 	mousey = device_mouse_y_to_gui(0)
 	
 	
-	
+	if mouse_check_button_pressed(mb_right){
 		if mousey >= camera_get_view_height(0) - spr_hotbar_height and mousex > gui_holder_pos_x and mousex < gui_holder_pos_x + sprite_get_width(spr_hotbar)
 		{
 			inv_row = 3
@@ -89,31 +89,31 @@ if (global.in_inv)
 			inv_row = 1
 		}
 		
-		if mousex >= gui_holder_pos_x + divider_width and mousex < gui_holder_pos_x + divider_width + cell_width and mousey > room_height - spr_hotbar_height*3
+		if mousex >= (gui_holder_pos_x + divider_width) and mousex < (gui_holder_pos_x + divider_width + cell_width) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			inv_column = 1
 		}
 		
-		if mousex >= gui_holder_pos_x + divider_width*2 + cell_width and mousex < gui_holder_pos_x + divider_width*2 + cell_width*2 and mousey > room_height - spr_hotbar_height*3
+		if mousex >= (gui_holder_pos_x + divider_width*2 + cell_width) and mousex < (gui_holder_pos_x + divider_width*2 + cell_width*2) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			inv_column = 2 
 		}
 		
-		if mousex >= gui_holder_pos_x + divider_width*3 + cell_width*2 and mousex < gui_holder_pos_x + divider_width*3 + cell_width*3 and mousey > room_height - spr_hotbar_height*3
+		if mousex >= (gui_holder_pos_x + divider_width*3 + cell_width*2) and mousex < gui_holder_pos_x + (divider_width*3 + cell_width*3) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			inv_column = 3
 		}
 
-		if mousex >= gui_holder_pos_x + divider_width*4 + cell_width*3 and mousex < gui_holder_pos_x + divider_width*4 + cell_width*4 and mousey > room_height - spr_hotbar_height*3
+		if mousex >= (gui_holder_pos_x + divider_width*4 + cell_width*3) and mousex < gui_holder_pos_x + (divider_width*4 + cell_width*4) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			inv_column = 4
 		}
 		
-		if mousex >= gui_holder_pos_x + divider_width*5 + cell_width*4 and mousex < gui_holder_pos_x + divider_width*5 + cell_width*5
+		if mousex >= (gui_holder_pos_x + divider_width*5) + cell_width*4 and mousex < (gui_holder_pos_x + divider_width*5 + cell_width*5) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			inv_column = 5
 		}
-	
+	}
 	/// find selected cell
 	
 		switch(inv_row)
@@ -133,21 +133,9 @@ if (global.in_inv)
 
 	if(mouse_check_button_pressed(mb_right))
 	{
-		pickup_item = selected_cell
-	}
-	
-	
-	
-	var item = inventory[selected_cell] 
-		if (item != item_type.none)
+		if inventory[selected_cell] != item_type.none
 		{
-			if(mouse_check_button_pressed(mb_right))
-			{
-				pickup_item = selected_cell
-
-				
-				
-				
-			}	
+			pickup_item = selected_cell
 		}
+	}
 }
