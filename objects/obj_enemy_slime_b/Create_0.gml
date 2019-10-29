@@ -7,7 +7,7 @@ hurt_flash = 0;
 
 // Slime Specific Stats
 hp				= 250;
-color			= c_blue;
+color			= make_color_hsv(145, 255, 255);
 scale			= 1.25;
 idle_min_time	= 45;
 idle_max_time	= 120;
