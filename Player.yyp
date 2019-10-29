@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "25aecd44-d8b2-4a9a-a277-c0bffaabd0c7",
+            "Value": {
+                "id": "940371c9-93aa-4bca-979f-19009cdab7e6",
+                "resourcePath": "views\\25aecd44-d8b2-4a9a-a277-c0bffaabd0c7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "261e4ddc-7c5e-44c1-b9c4-659bb7bd0f49",
             "Value": {
                 "id": "a3b5f29d-a645-489f-ba9b-d631b52dacba",
@@ -412,6 +420,14 @@
                 "id": "e3410115-698f-4334-80a1-11f6d6ebb1bb",
                 "resourcePath": "views\\45147dcf-4ff6-40bd-8824-62700cd89d06.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "451e7c8d-6cbe-4552-85c4-9d3244aaedd5",
+            "Value": {
+                "id": "3f7b5230-842e-43ed-8f7d-f2caa907fee0",
+                "resourcePath": "objects\\obj_enemy_slime_b\\obj_enemy_slime_b.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1095,6 +1111,14 @@
             }
         },
         {
+            "Key": "af419074-c5b9-4fb0-8742-a50bbb9dbdfc",
+            "Value": {
+                "id": "6e2fc868-2125-4bae-9ad9-0f13f8aea059",
+                "resourcePath": "objects\\obj_enemy_slime_r\\obj_enemy_slime_r.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b0b7d49e-ef3e-461b-a797-2491ad204d78",
             "Value": {
                 "id": "4415736b-7648-4671-a9dd-f678d0b923d6",
@@ -1443,6 +1467,14 @@
             "Value": {
                 "id": "bbbee263-6a40-423e-a2bc-402a5537da07",
                 "resourcePath": "objects\\obj_declare_transition\\obj_declare_transition.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
+            "Value": {
+                "id": "63bf673e-8df2-4cac-a4a4-e2e47814e55d",
+                "resourcePath": "objects\\obj_enemy_slime_parent\\obj_enemy_slime_parent.yy",
                 "resourceType": "GMObject"
             }
         },

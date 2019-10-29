@@ -24,10 +24,12 @@ switch (action)
 		if (image_index > (14 * _image) + 7)
 		{
 			image_index = (14 * _image) + 7;
+			// Define Jump speed when ready
 			if (spd == 0)
 			{
-				spd = irandom_range(3, 5);
-				action_timer = spd * 5 + irandom_range(-5, 5);
+				spd = irandom_range(jump_min_speed, jump_max_speed);
+				action_timer = spd * jump_prep_time + irandom_range(-jump_prep_time, jump_prep_time);
+				direction += irandom_range(-spd, spd) * spd;
 			}
 		}
 		break;
@@ -37,15 +39,21 @@ switch (action)
 	case "land":
 		if (image_index >= (14 * _image) + 13)
 		{
+			// Return to idle
 			image_index = (14 * _image);
 			action_timer = 0;
 		}
 		break;
 }
-draw_sprite_ext(spr_enemy_slime, image_index, x, y, 1, 1, 0, c_lime, 1);
+
+var _bounce = sign(bounce) * round((bounce / 2) - abs(action_timer - (bounce / 2)));
+
+draw_sprite_ext(spr_enemy_slime, 56, x, y + _bounce,
+	scale - (_bounce / jump_height_div / 10), scale - (_bounce / jump_height_div / 10), 0, c_white, 0.25);
+draw_sprite_ext(spr_enemy_slime, image_index, x, y, scale, scale, 0, color, 0.9);
 if (hurt_flash > 0)
 {
-	draw_sprite_ext(spr_enemy_slime, image_index, x, y, 1, 1, 0, c_white, hurt_flash);
+	draw_sprite_ext(spr_enemy_slime, image_index, x, y, scale, scale, 0, c_white, hurt_flash);
 	hurt_flash -= 0.05;
 }
 if (hurt_flash < 0) hurt_flash = 0;

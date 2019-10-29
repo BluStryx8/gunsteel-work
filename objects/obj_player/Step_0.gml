@@ -212,6 +212,7 @@ if (fire > 0 and fire_cooldown == 0)
 if (fire_cooldown > 0) fire_cooldown -= 1;
 if (fire_cooldown <= 0) fire_cooldown = 0;
 if (accuracy > base_accuracy) accuracy -= 0.1;	// Decrease inaccuracy back to base accuracy
+if (sneak and accuracy > max_recoil - (max_recoil - base_accuracy) / 2) accuracy -= 0.1;
 
 /// Calculate Reloading
 if (reloading < 0 and fire_cooldown == 0) reloading = 0;	// negative reload signifies weapon swap

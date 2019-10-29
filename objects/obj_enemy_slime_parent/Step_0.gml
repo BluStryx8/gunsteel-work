@@ -12,18 +12,19 @@ if action_timer <= 0
 			break;
 		case "jump_prep":
 			action = "jump";
-			action_timer = irandom_range(25, 35);
+			action_timer = irandom_range(jump_min_time, jump_max_time);
 			bounce = action_timer;
-			anim = 10;
+			anim = anim_speed;
 			break;
 		case "jump":
 			action = "land";
 			action_timer = 60;
 			spd = 0;
+			bounce = 0;
 			break;
 		case "land":
 			action = "idle";
-			action_timer = irandom_range(30, 90);
+			action_timer = irandom_range(idle_min_time, idle_max_time);
 			break;
 	}
 }
@@ -45,15 +46,15 @@ if (action == "jump")
 {
 	speed = spd;
 	var _hspd = hspeed;
-	var _vspd = vspeed - round((action_timer - (bounce / 2)) / 5);
+	var _vspd = vspeed - round((action_timer - (bounce / 2)) / jump_height_div);
 	speed = 0;
 	_hspd = collision("x", _hspd, 0);
 	_vspd = collision("y", _vspd, 0);
 }
 
 anim += 1;
-if (anim >= 10)
+if (anim >= anim_speed)
 {
-	anim -= 10;
+	anim -= anim_speed;
 	image_index += 1;
 }
