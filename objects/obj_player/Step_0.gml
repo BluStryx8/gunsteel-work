@@ -219,10 +219,19 @@ if (pump < 0 and fire_cooldown == 0) pump = 0;				// neagtive pump signifies pum
 if (reloading > 1) reloading -= 1;							// Decrease reloading count
 
 // Play sound pre-emptively
-if (reloading == 30)										
+if (reloading == 30)
 {
 	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 	audio_play_sound(snd_reload_clip, 1, false);
+	if (atk_type == "pump_action")
+	{
+		ammo += 1;
+		if (ammo < max_ammo)
+		{
+			reloading = reload_time;
+			fire_cooldown = reloading;
+		}
+	}
 }
 if (reloading == 15)										
 {
@@ -243,6 +252,7 @@ if (keyboard_check(global.p_reload) and fire_cooldown == 0 and reloading == 0 an
 	audio_play_sound(snd_reload_eject_clip, 1, false);
 	reloading = reload_time;
 	fire_cooldown = reloading;
+	if (atk_type == "pump_action") pump = 1;
 }
 
 /// Camera (Temp)

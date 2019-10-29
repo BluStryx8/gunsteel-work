@@ -236,6 +236,6 @@ ds_map_add(global.weapons[7], "shake_dur", 20);
 ds_map_add(global.weapons[7], "max_ammo", 5);
 ds_map_add(global.weapons[7], "ammo", 5);
 ds_map_add(global.weapons[7], "draw_time", 30);
-ds_map_add(global.weapons[7], "reload_time", 180);
+ds_map_add(global.weapons[7], "reload_time", 60);
 ds_map_add(global.weapons[7], "pump", 0);
 ds_map_add(global.weapons[7], "pump_time", 15);

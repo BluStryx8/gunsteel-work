@@ -1671,6 +1671,14 @@
             }
         },
         {
+            "Key": "f99be1e3-8766-4763-a8ae-3e74e2663a05",
+            "Value": {
+                "id": "47c92c2a-4860-4f66-98a1-dade2fc46d6a",
+                "resourcePath": "objects\\obj_enemy_slime_g\\obj_enemy_slime_g.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fa2a4e23-96e3-4de1-997d-4e8406da8329",
             "Value": {
                 "id": "92e43151-58f6-4f45-8e81-e208ed7016dd",
