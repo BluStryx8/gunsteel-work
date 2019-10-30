@@ -27,8 +27,8 @@ switch (action)
 			// Define Jump speed when ready
 			if (spd == 0)
 			{
-				spd = irandom_range(jump_min_speed, jump_max_speed);
-				action_timer = spd * jump_prep_time + irandom_range(-jump_prep_time, jump_prep_time);
+				spd = random_range(jump_min_speed, jump_max_speed);
+				action_timer = floor(spd) * jump_prep_time + irandom_range(-jump_prep_time, jump_prep_time);
 				direction += irandom_range(-spd, spd) * spd;
 			}
 		}

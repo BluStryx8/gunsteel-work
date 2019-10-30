@@ -159,7 +159,7 @@ ds_map_add(global.weapons[5], "hands", 2);
 ds_map_add(global.weapons[5], "hand_one", [0, 5]);
 ds_map_add(global.weapons[5], "hand_two", [17, 3]);
 ds_map_add(global.weapons[5], "offset", [-6, 2, 0]);
-ds_map_add(global.weapons[5], "min_damage", 18);
+ds_map_add(global.weapons[5], "min_damage", 19);
 ds_map_add(global.weapons[5], "max_damage", 24);
 ds_map_add(global.weapons[5], "bullet_speed", 24);
 ds_map_add(global.weapons[5], "bullet_speed_var", 1);

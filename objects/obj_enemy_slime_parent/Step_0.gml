@@ -1,5 +1,5 @@
 /// @description AI change
-if (global.paused) exit;
+if (global.paused or !active) exit;
 action_timer -= 1;
 
 if action_timer <= 0

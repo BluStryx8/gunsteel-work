@@ -34,6 +34,7 @@ global.settings_shake = 0.5;
 // Character Restriction
 global.paused = false;
 global.holstered = false;
+global.truepause = false;
 
 // Weapons
 declare_weapons();
