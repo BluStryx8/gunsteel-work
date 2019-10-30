@@ -66,7 +66,7 @@ if keyboard_check_pressed(global.p_inv_open)
 }
 
 /// Drag and Drop
-if (global.in_inv)
+if (global.in_inv)    ///This part find which row or column your mouse is hovering over
 {
 	
 	mousex = device_mouse_x_to_gui(0)
@@ -114,7 +114,7 @@ if (global.in_inv)
 			inv_column = 5
 		}
 	
-	/// find selected cell
+	/// Uses row and column to determine which cell your mouse is hovering over
 	
 		switch(inv_row)
 		{
@@ -130,22 +130,27 @@ if (global.in_inv)
 				selected_cell = inv_column + 9
 			break;
 		}
+		
 
+/// this part sets your pickup item to the cell's inventory reference if there is an item in that cell
+/// this subsequently draws it in the draw event
 	if(mouse_check_button_pressed(mb_left))
 	{
 		if inventory[selected_cell] != item_type.none
 		{
 			pickup_item = selected_cell
-		
-		item_in_hand = true
+			item_in_hand = true
 		}
 		
-		else{
+		else
+		{
 			item_in_hand = false
-			}
+		}
 	}
 	
 	
+	/// if you have an item in your gand, check if the slot you click if empty
+	/// if so set your hand to 0, clicked slot to the old slot, old slot to empty then reset variables
 	
 	if item_in_hand = true
 	{
@@ -175,6 +180,7 @@ if (global.in_inv)
 }
 }
 
+/// backup if item_in_hand was not reset
 if (!global.in_inv)
 {
 	item_in_hand = false

@@ -165,6 +165,7 @@ if (_draw != spr_gui_empty)
 									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
 }
 
+/// if you are holding something draw it
 if item_in_hand = true{
 	if (pickup_item != -1)
 	{
