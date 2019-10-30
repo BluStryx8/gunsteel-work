@@ -158,6 +158,8 @@ if (global.in_inv)
 				
 			}
 			item_in_hand = false
+			pickup_item = -1
+			selected_cell = 1
 		}
 		
 }
