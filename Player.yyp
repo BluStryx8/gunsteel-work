@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "1bf31dd6-d10d-4ef3-b7ea-5429382e357d",
+            "Value": {
+                "id": "372e014d-3e4f-4fc4-a2a3-cfad5331bca6",
+                "resourcePath": "objects\\obj_reset_ini_NOT_IN_ROOM\\obj_reset_ini_NOT_IN_ROOM.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1da4336d-6d11-4a5a-9656-b5eb75d853e4",
             "Value": {
                 "id": "0fee3054-eca3-4ba1-ad9f-1596e4e243dc",
@@ -308,6 +316,14 @@
                 "id": "5ff1a29d-e974-408d-becd-8f3169c44429",
                 "resourcePath": "views\\2cb8096a-60df-4a5b-9322-237715b41737.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3049eaee-0324-4b5c-87c1-7d80108ec74e",
+            "Value": {
+                "id": "6595a961-659d-4ccc-a83e-bc15492eab36",
+                "resourcePath": "rooms\\rm_dungeon\\rm_dungeon.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -731,6 +747,14 @@
             "Value": {
                 "id": "7ee22f2a-9d5b-4199-a4e0-015f12a0182a",
                 "resourcePath": "objects\\obj_slider_sounds_volume\\obj_slider_sounds_volume.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6aee63dd-33cc-4779-a830-7b036f2cf6a1",
+            "Value": {
+                "id": "f0288924-2ae7-4e04-9df8-df93375a5ff8",
+                "resourcePath": "objects\\obj_next_room_rm_dungeon\\obj_next_room_rm_dungeon.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1363,6 +1387,14 @@
             "Value": {
                 "id": "e863a966-177b-4522-9921-7ed0af03017b",
                 "resourcePath": "objects\\obj_game_timer\\obj_game_timer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c6afbe23-f30c-4b96-be2c-cc98ef4899bf",
+            "Value": {
+                "id": "e3805377-184f-4dfb-8235-2cbbf14eed19",
+                "resourcePath": "objects\\obj_fade_out_game_dungeon_room\\obj_fade_out_game_dungeon_room.yy",
                 "resourceType": "GMObject"
             }
         },

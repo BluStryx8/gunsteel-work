@@ -5,7 +5,8 @@
     "name": "cec6d508-062e-4976-895f-b1c33376b2ec",
     "children": [
         "5a274bfb-497f-4431-a814-a5ce620337d1",
-        "7ae4d939-f5f3-462e-bf5a-ba404ebc471a"
+        "7ae4d939-f5f3-462e-bf5a-ba404ebc471a",
+        "6aee63dd-33cc-4779-a830-7b036f2cf6a1"
     ],
     "filterType": "GMObject",
     "folderName": "Registers change",
