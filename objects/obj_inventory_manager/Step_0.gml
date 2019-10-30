@@ -153,9 +153,19 @@ if (global.in_inv)
 		{
 			if inventory[selected_cell] = item_type.none
 			{
-				array_replace_value(obj_inventory_manager.inventory, item_type.none, inventory[pickup_item])
-				array_replace_value(obj_inventory_manager.inventory, inventory[pickup_item], item_type.none)
+				inventory[selected_cell] = inventory[pickup_item]
+				inventory[pickup_item] = item_type.none
+			}
 				
+			if active_item = pickup_item{
+				if active_item = 4
+				{
+					active_item = active_item -1
+				}
+				else
+				{
+					active_item = active_item +1
+				}
 			}
 			item_in_hand = false
 			pickup_item = -1

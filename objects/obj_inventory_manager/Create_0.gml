@@ -17,3 +17,5 @@ divider_width = 6
 selected_cell = 1
 pickup_item = -1
 item_in_hand = false
+item_old_slot = 0
+exception = false
