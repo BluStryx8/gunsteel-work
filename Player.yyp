@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "01428fe5-374e-4e4f-9b25-9c767a47b12b",
+            "Value": {
+                "id": "9fca021d-a910-4ad7-bf28-aa2203247366",
+                "resourcePath": "sprites\\spr_v_gate\\spr_v_gate.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "01a74c67-8dae-43e0-a756-b860990ba84e",
             "Value": {
                 "id": "1396046c-20fd-4d43-9823-2cd10f6f2dce",
@@ -563,6 +571,14 @@
             "Value": {
                 "id": "1ea257ad-bdd0-4d29-bcff-597db989967b",
                 "resourcePath": "sprites\\spr_gui_m4\\spr_gui_m4.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "572633f9-cb87-4f01-b5ff-78e7775e1f0c",
+            "Value": {
+                "id": "8f64abf3-5554-4d47-a90b-6a5dd3f217a7",
+                "resourcePath": "sprites\\spr_h_gate\\spr_h_gate.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1111,6 +1127,14 @@
             }
         },
         {
+            "Key": "a9e679ff-6e31-4f81-92fb-bb04546ff14a",
+            "Value": {
+                "id": "3314e1a8-9c64-4ccb-9263-03a0a85cfecb",
+                "resourcePath": "objects\\obj_v_gate\\obj_v_gate.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ae3d8454-8dae-4761-9f6b-4773cee46ec6",
             "Value": {
                 "id": "1a1ea563-fc01-4ad4-a774-10876e2f0f28",
@@ -1196,6 +1220,14 @@
                 "id": "de3fd671-f1db-40c3-825e-e32c9b06bb87",
                 "resourcePath": "views\\b8c789c8-135e-4add-99b5-a5024ff84873.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ba54b4b7-0bf9-4e37-a63b-2d1c2e7673c4",
+            "Value": {
+                "id": "4adbb404-8397-41e5-a6af-498fce992161",
+                "resourcePath": "objects\\obj_h_gate\\obj_h_gate.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1447,6 +1479,14 @@
             }
         },
         {
+            "Key": "d415c325-b9c3-45c9-92e4-9cef3392f700",
+            "Value": {
+                "id": "18a03fec-424f-43d5-86d3-d0d8f575264c",
+                "resourcePath": "objects\\obj_room_control\\obj_room_control.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d42f3c74-24cc-493c-a26d-449138a5cfb8",
             "Value": {
                 "id": "bd5de8df-cb39-4ed4-b601-caa1ffe3d683",
@@ -1535,6 +1575,14 @@
             }
         },
         {
+            "Key": "e020b386-efd9-44e6-99d9-627f8c0af787",
+            "Value": {
+                "id": "e35d4a4d-03da-423b-b165-ec3e46415ddb",
+                "resourcePath": "views\\e020b386-efd9-44e6-99d9-627f8c0af787.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e324ed6a-ae90-4e2a-9764-5e06f0ffb84c",
             "Value": {
                 "id": "1b94de8f-4897-489b-b58d-7aa52ad764c9",
@@ -1603,6 +1651,14 @@
             "Value": {
                 "id": "49b2648c-de76-41cf-972f-43e10ec8ee11",
                 "resourcePath": "objects\\obj_dmg_number\\obj_dmg_number.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e9ce5eb1-e18b-4bac-9fc1-6e41fb605f88",
+            "Value": {
+                "id": "ddec8b99-610c-4cfc-9702-dd9063626d47",
+                "resourcePath": "objects\\obj_v_gate_collision\\obj_v_gate_collision.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1692,6 +1748,14 @@
                 "id": "a9589065-b58c-4c49-aa45-09a0773d272e",
                 "resourcePath": "views\\f65b2483-5c56-45d5-bec1-7ed83bcd277d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f7338668-6f18-416c-9a99-6827630d09b4",
+            "Value": {
+                "id": "263ff237-7089-4166-a55c-7b7f1d2cea96",
+                "resourcePath": "objects\\obj_h_gate_collision\\obj_h_gate_collision.yy",
+                "resourceType": "GMObject"
             }
         },
         {
