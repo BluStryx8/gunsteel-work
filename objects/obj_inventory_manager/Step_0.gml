@@ -136,14 +136,16 @@ if (global.in_inv)
 		if inventory[selected_cell] != item_type.none
 		{
 			pickup_item = selected_cell
-			item_in_hand = true
+		
+		item_in_hand = true
 		}
 		
-	else{
+		else{
 			item_in_hand = false
+			}
 	}
 	
-	}
+	
 	
 	if item_in_hand = true
 	{
@@ -151,11 +153,18 @@ if (global.in_inv)
 		{
 			if inventory[selected_cell] = item_type.none
 			{
-				array_replace_value(obj_inventory_manager.inventory, item_type.none, inventory[selected_cell])
-				inventory[pickup_item] = item_type.none
+				array_replace_value(obj_inventory_manager.inventory, item_type.none, inventory[pickup_item])
+				array_replace_value(obj_inventory_manager.inventory, inventory[pickup_item], item_type.none)
+				
 			}
+			item_in_hand = false
 		}
 		
-			
 }
 }
+
+if (!global.in_inv)
+{
+	item_in_hand = false
+}
+	

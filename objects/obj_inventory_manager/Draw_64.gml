@@ -165,10 +165,11 @@ if (_draw != spr_gui_empty)
 									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
 }
 
-if (pickup_item != -1)
-{
-	var draw_item = inventory[pickup_item]
-	draw_sprite_ext(item_definitions[draw_item, item_properties.sprite_gui], -1, mousex,mousey, 1, 1, 0, _col, 1);
+if item_in_hand = true{
+	if (pickup_item != -1)
+	{
+		var draw_item = inventory[pickup_item]
+		draw_sprite_ext(item_definitions[draw_item, item_properties.sprite_gui], -1, mousex,mousey, 1, 1, 0, _col, 1);
+	}
 }
-
 
