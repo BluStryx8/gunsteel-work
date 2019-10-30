@@ -4,7 +4,6 @@ anim = 0;
 spd = 0;
 bounce = 0;
 hurt_flash = 0;
-active = true;
 action = "idle";
 action_timer = idle_max_time;
 

@@ -1,5 +1,14 @@
 /// @description AI change
-if (global.paused or !active) exit;
+if (global.paused) exit;
+
+anim += 1;
+if (anim >= anim_speed)
+{
+	anim -= anim_speed;
+	image_index += 1;
+}
+if (!master_id.active) exit;
+
 action_timer -= 1;
 
 if action_timer <= 0
@@ -50,11 +59,4 @@ if (action == "jump")
 	speed = 0;
 	_hspd = collision("x", _hspd, 0);
 	_vspd = collision("y", _vspd, 0);
-}
-
-anim += 1;
-if (anim >= anim_speed)
-{
-	anim -= anim_speed;
-	image_index += 1;
 }
