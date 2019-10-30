@@ -3,7 +3,6 @@ if (master_id.active and !state)
 {
 	state = true;
 	col = instance_create_layer(x, y, "tiles", obj_v_gate_collision);
-	col.master_id = id;
 }
 if (master_id.enemy_count == 0 and state)
 {

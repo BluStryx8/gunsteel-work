@@ -5,9 +5,16 @@ enemy_count = 0;
 var _tile = 16;
 var _x = _tile;
 var _y = _tile * 12;
-var _v_gate = instance_create_layer(x + _x, y + _y, "tiles", obj_v_gate);
-_v_gate.master_id = id;
-_v_gate.prime_dir = "left";	// Direction player enters room through
+var _gate = instance_create_layer(x + _x, y + _y, "tiles", obj_v_gate);
+_gate.master_id = id;
+_gate.prime_dir = "left";	// Direction player enters room through
+
+_x = _tile * 12;
+_y = _tile;
+_gate = instance_create_layer(x + _x, y + _y, "tiles", obj_h_gate);
+_gate.master_id = id;
+_gate.prime_dir = "up";	// Direction player enters room through
+
 
 var _room_tile	= layer_tilemap_get_id("room_tile");
 var _tile_x = tilemap_get_cell_x_at_pixel(_room_tile, x, y);
