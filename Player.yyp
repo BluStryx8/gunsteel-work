@@ -1823,6 +1823,14 @@
             }
         },
         {
+            "Key": "fae488ef-98b3-4705-9a96-c4b76f221a91",
+            "Value": {
+                "id": "1d3e49e4-c401-4981-92c2-63c724f59972",
+                "resourcePath": "sprites\\spr_singlebar\\spr_singlebar.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fb94cb10-5a3b-4435-be7c-5877f4f57162",
             "Value": {
                 "id": "5c12c23a-9161-4ba0-8198-19acfaf16eb6",

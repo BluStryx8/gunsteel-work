@@ -12,6 +12,7 @@ if clicked = false
 		clicked = true;
 		global.moveable = false;
 		in_furnace = true
+		global.in_inv = true
 		
 	}
 }

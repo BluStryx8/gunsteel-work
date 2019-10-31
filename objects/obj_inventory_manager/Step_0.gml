@@ -136,7 +136,7 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 /// this subsequently draws it in the draw event
 	if(mouse_check_button_pressed(mb_left))
 	{
-		if inventory[selected_cell] != item_type.none
+		if inventory[selected_cell] != item_type.none and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
 			pickup_item = selected_cell
 			item_in_hand = true
@@ -161,23 +161,19 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 				inventory[selected_cell] = inventory[pickup_item]
 				inventory[pickup_item] = item_type.none
 			}
-				
-			if active_item = pickup_item{
-				if active_item = 4
-				{
-					active_item = active_item -1
-				}
-				else
-				{
-					active_item = active_item +1
-				}
-			}
+			global.p_active = inventory[active_item];	
+			change_check = active_item;
+			obj_player.fire = 0;
+			obj_player.focus = 0;
+			obj_player.reloading = 0;
+			obj_cursor_bracket.rotate = 0;
+			inv_use_script(global.p_active, "change");
 			item_in_hand = false
 			pickup_item = -1
-			selected_cell = 1
+			selected_cell = -1
 		}
 		
-}
+	}
 }
 
 /// backup if item_in_hand was not reset
