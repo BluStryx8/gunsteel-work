@@ -182,18 +182,29 @@ if (fire > 0 and fire_cooldown == 0)
 	{
 		var _bullet_count = 0;
 		// Create bullets until _bullet_count matches bullets
-		if (bullets != 0) do
+		switch (type)
 		{
-			instance_create_layer(x, y, "bullets", obj_player_bullet);
-			_bullet_count += 1;
+			case "pistol":
+			case "rifle":
+			case "shotgun":
+				if (bullets != 0) do
+				{
+					instance_create_layer(x, y, "bullets", obj_player_bullet);
+					_bullet_count += 1;
+				}
+				until _bullet_count >= bullets;
+				break;
+			case "sniper":
+				instance_create_layer(x, y, "bullets", obj_player_s_bullet);
+				break;
 		}
-		until _bullet_count >= bullets;
 		// Sound
 		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 		switch (type)
 		{
 			case "pistol":
 			case "rifle":
+			case "sniper":
 				audio_play_sound(snd_fire_rifle, 1, false);
 				break;
 			case "shotgun":
@@ -234,6 +245,7 @@ if (reloading == 30)
 	{
 		case "pistol":
 		case "rifle":
+		case "sniper":
 			ammo = max_ammo;
 			break;
 		case "shotgun":

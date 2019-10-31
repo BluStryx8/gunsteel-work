@@ -13,6 +13,7 @@ enum item_type
 	m4,
 	p90,
 	remington_870,
+	omark_44,
 	// Bars
 	bar_iron,
 	

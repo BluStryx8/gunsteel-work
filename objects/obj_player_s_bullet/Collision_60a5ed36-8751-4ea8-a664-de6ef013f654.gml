@@ -1,6 +1,8 @@
 /// @description Damage and destroy
-if !other.master_id.active exit;
+if (!other.master_id.active or other.id == last_hit) exit;
+
 instance_create_layer(x, y, "bullets", obj_player_bullet_hit);
+last_hit = other.id;
 with (other)
 {
 	// Adds to damage when hit
@@ -15,4 +17,5 @@ with (other)
 	dmg = instance_create_layer(x, y, "HUD", obj_dmg_number);
 	dmg.damage = other.damage;
 }
-instance_destroy();
+damage -= pierce;
+if (damage <= 0) instance_destroy();

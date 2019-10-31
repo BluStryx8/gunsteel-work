@@ -19,7 +19,11 @@ if (_movement == "x")
 	{
 		// Checks if bullet collides with wall at every 16 pixels to discern distance to wall
 		if (tilemap_get_at_pixel(global.bulletmap, _bbox_side + _speed, bbox_top) != 0) ||
-	   (tilemap_get_at_pixel(global.bulletmap, _bbox_side + _speed, bbox_bottom) != 0) _detect += 1;
+	   (tilemap_get_at_pixel(global.bulletmap, _bbox_side + _speed, bbox_bottom) != 0) or
+	   (position_meeting(_bbox_side + _speed, bbox_top, obj_v_gate_collision) ||
+	   position_meeting(_bbox_side + _speed, bbox_bottom, obj_v_gate_collision)) or
+	   (position_meeting(_bbox_side + _speed, bbox_top, obj_h_gate_collision) ||
+	   position_meeting(_bbox_side + _speed, bbox_bottom, obj_h_gate_collision)) _detect += 1;
 		if (_speed > 0) _speed -= 16 else _speed += 16;
 		_check -= 1;
 		_shift += 1;
@@ -49,7 +53,11 @@ if (_movement == "y")
 	while (_check >= 0)
 	{
 		if (tilemap_get_at_pixel(global.bulletmap, bbox_left, _bbox_side + _speed) != 0) ||
-		  (tilemap_get_at_pixel(global.bulletmap, bbox_right, _bbox_side + _speed) != 0) _detect += 1;
+		  (tilemap_get_at_pixel(global.bulletmap, bbox_right, _bbox_side + _speed) != 0) or
+	   (position_meeting(bbox_left, _bbox_side + _speed, obj_v_gate_collision) ||
+	   position_meeting(bbox_right, _bbox_side + _speed, obj_v_gate_collision)) or
+	   (position_meeting(bbox_left, _bbox_side + _speed, obj_h_gate_collision) ||
+	   position_meeting(bbox_right, _bbox_side + _speed, obj_h_gate_collision)) _detect += 1;
 		if (_speed > 0) _speed -= 16 else _speed += 16;
 		_check -= 1;
 		_shift += 1;

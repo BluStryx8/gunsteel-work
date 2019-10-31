@@ -1,12 +1,16 @@
-/// @description Destroys instance
+/// @description Damage and destroy
+if (other.id == last_hit) exit;
+
 instance_create_layer(x, y, "bullets", obj_player_bullet_hit);
+last_hit = other.id;
 with (other)
 {
 	// Adds to damage when hit
-	total_damage = total_damage + other.damage;
-	current_damage = current_damage + other.damage;
+	hp -= other.damage;
+	if hp <= 0 instance_destroy();
 	// Draw damage
 	dmg = instance_create_layer(x, y, "HUD", obj_dmg_number);
 	dmg.damage = other.damage;
 }
-instance_destroy();
+damage -= pierce;
+if (damage <= 0) instance_destroy();

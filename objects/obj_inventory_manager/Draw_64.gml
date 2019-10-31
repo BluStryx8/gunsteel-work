@@ -91,7 +91,7 @@ if (global.in_inv)
 
 
 // Draw Weapon
-var _weap_offset_x = -32;	// x offset from the bottom right hand corner
+var _weap_offset_x = -40;	// x offset from the bottom right hand corner
 var _weap_offset_y = -48;	// y offset from the bottom right hand corner
 
 if (global.holstered) exit;
@@ -107,6 +107,7 @@ switch (obj_player.type)
 		break;
 	case "rifle":
 	case "shotgun":
+	case "sniper":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
 		draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
@@ -128,6 +129,7 @@ switch (obj_player.type)
 		_draw = spr_ammo_pistolbullet;
 		break;
 	case "rifle":
+	case "sniper":
 		_draw = spr_ammo_riflebullet;
 		break;
 	case "shotgun":
@@ -138,7 +140,7 @@ switch (obj_player.type)
 for (var _ammo = obj_player.ammo; _ammo > 0; _ammo--)
 {
 	draw_sprite_ext(_draw, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, 1);
-	_y -= 16;
+	_y -= 10;
 	if ((view_get_hport(0) + _y - _top_pad) <= 0)
 	{
 		_x += _weap_offset_x;
