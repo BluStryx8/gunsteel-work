@@ -78,6 +78,6 @@ switch (_id)
 		break;
 	case "start":
 		// Sets Spawn
-		set_spawn(29, 19);
+		set_spawn(30, 21);
 		break;
 }
