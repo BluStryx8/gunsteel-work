@@ -1959,6 +1959,14 @@
             }
         },
         {
+            "Key": "e350f482-425c-4d63-a8cd-49da70ea16b1",
+            "Value": {
+                "id": "3ca4be11-f252-47d2-a049-4e209b71df36",
+                "resourcePath": "rooms\\rm_game\\rm_game.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "e4db062b-b3b9-42fa-811a-c1c0c900bb77",
             "Value": {
                 "id": "86e67676-632f-44e5-9e4e-aafd88e9485c",
