@@ -17,6 +17,7 @@ ds_map_add(global.weapons[0], "decay", 0);				// Frames before bullets disappear
 ds_map_add(global.weapons[0], "reload", 0);				// Frames between shots
 ds_map_add(global.weapons[0], "burst", 0);				// How many times it fires
 ds_map_add(global.weapons[0], "bullets", 0);			// How many bullets it makes
+ds_map_add(global.weapons[0], "pierce", -1);				// Damage reduction after pierce (-1 to cancel)
 ds_map_add(global.weapons[0], "bullet_dd", 0);			// Frames before bullets are drawn
 ds_map_add(global.weapons[0], "base_accuracy", 0);		// Minimum accuracy variation
 ds_map_add(global.weapons[0], "recoil", 0);				// Increases accuracy variation
@@ -47,6 +48,7 @@ ds_map_add(global.weapons[1], "decay", 30);
 ds_map_add(global.weapons[1], "reload", 10);
 ds_map_add(global.weapons[1], "burst", 1);
 ds_map_add(global.weapons[1], "bullets", 1);
+ds_map_add(global.weapons[1], "pierce", -1);
 ds_map_add(global.weapons[1], "bullet_dd", 0);
 ds_map_add(global.weapons[1], "base_accuracy", 2);
 ds_map_add(global.weapons[1], "recoil", 2);
@@ -78,6 +80,7 @@ ds_map_add(global.weapons[2], "reload", 3);
 ds_map_add(global.weapons[2], "burst", 1);
 ds_map_add(global.weapons[2], "bullets", 1);
 ds_map_add(global.weapons[2], "bullet_dd", 0);
+ds_map_add(global.weapons[2], "pierce", -1);
 ds_map_add(global.weapons[2], "base_accuracy", 2);
 ds_map_add(global.weapons[2], "recoil", 1.5);
 ds_map_add(global.weapons[2], "max_recoil", 11);
@@ -107,6 +110,7 @@ ds_map_add(global.weapons[3], "decay", 90);
 ds_map_add(global.weapons[3], "reload", 6);
 ds_map_add(global.weapons[3], "burst", 1);
 ds_map_add(global.weapons[3], "bullets", 1);
+ds_map_add(global.weapons[3], "pierce", -1);
 ds_map_add(global.weapons[3], "bullet_dd", 0);
 ds_map_add(global.weapons[3], "base_accuracy", 3);
 ds_map_add(global.weapons[3], "recoil", 1);
@@ -137,6 +141,7 @@ ds_map_add(global.weapons[4], "decay", 180);
 ds_map_add(global.weapons[4], "reload", 6);
 ds_map_add(global.weapons[4], "burst", 1);
 ds_map_add(global.weapons[4], "bullets", 1);
+ds_map_add(global.weapons[4], "pierce", -1);
 ds_map_add(global.weapons[4], "bullet_dd", 1);
 ds_map_add(global.weapons[4], "base_accuracy", 2);
 ds_map_add(global.weapons[4], "recoil", 0.9);
@@ -167,6 +172,7 @@ ds_map_add(global.weapons[5], "decay", 180);
 ds_map_add(global.weapons[5], "reload", 5);
 ds_map_add(global.weapons[5], "burst", 1);
 ds_map_add(global.weapons[5], "bullets", 1);
+ds_map_add(global.weapons[5], "pierce", -1);
 ds_map_add(global.weapons[5], "bullet_dd", 1);
 ds_map_add(global.weapons[5], "base_accuracy", 2.5);
 ds_map_add(global.weapons[5], "recoil", 0.7);
@@ -197,6 +203,7 @@ ds_map_add(global.weapons[6], "decay", 60);
 ds_map_add(global.weapons[6], "reload", 4);
 ds_map_add(global.weapons[6], "burst", 1);
 ds_map_add(global.weapons[6], "bullets", 1);
+ds_map_add(global.weapons[6], "pierce", -1);
 ds_map_add(global.weapons[6], "bullet_dd", 0);
 ds_map_add(global.weapons[6], "base_accuracy", 2);
 ds_map_add(global.weapons[6], "recoil", 0.6);
@@ -227,6 +234,7 @@ ds_map_add(global.weapons[7], "decay", 30);
 ds_map_add(global.weapons[7], "reload", 30);
 ds_map_add(global.weapons[7], "burst", 1);
 ds_map_add(global.weapons[7], "bullets", 12);
+ds_map_add(global.weapons[7], "pierce", -1);
 ds_map_add(global.weapons[7], "bullet_dd", 1);
 ds_map_add(global.weapons[7], "base_accuracy", 10);
 ds_map_add(global.weapons[7], "recoil", 6);
@@ -256,11 +264,12 @@ ds_map_add(global.weapons[8], "bullet_speed_var", 1);
 ds_map_add(global.weapons[8], "decay", 240);
 ds_map_add(global.weapons[8], "reload", 30);
 ds_map_add(global.weapons[8], "burst", 1);
-ds_map_add(global.weapons[8], "bullets", 30);
+ds_map_add(global.weapons[8], "bullets", 1);
+ds_map_add(global.weapons[8], "pierce", 30);
 ds_map_add(global.weapons[8], "bullet_dd", 0);
 ds_map_add(global.weapons[8], "base_accuracy", 0.5);
-ds_map_add(global.weapons[8], "recoil", 7);
-ds_map_add(global.weapons[8], "max_recoil", 7.5);
+ds_map_add(global.weapons[8], "recoil", 4.5);
+ds_map_add(global.weapons[8], "max_recoil", 5);
 ds_map_add(global.weapons[8], "recoil_mult", 5);
 ds_map_add(global.weapons[8], "shake_dur", 20);
 ds_map_add(global.weapons[8], "max_ammo", 1);

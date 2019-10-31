@@ -14,28 +14,8 @@ switch (_id)
 			load_door(53, 16, "right");
 			load_door(26, 5, "up");
 			load_door(26, 33, "down");
-			switch (choose("slime", "slime"))
-			{
-				case "slime":
-					// Spawn Slimes
-					repeat (irandom_range(3, 7))
-					{
-						enemy_count += 1;
-						switch(choose("g", "g", "r", "b"))
-						{
-							case "g":
-								rand_load_enemy(obj_enemy_slime_g);
-								break;
-							case "r":
-								rand_load_enemy(obj_enemy_slime_r);
-								break;
-							case "b":
-								rand_load_enemy(obj_enemy_slime_b);
-								break;
-						}
-					}
-					break;
-			}
+			spawn_wave("basic", 3, 7);
+			break;
 		case "none":
 			break;
 		}

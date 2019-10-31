@@ -6,44 +6,21 @@ var _id = argument0;
 switch (_id)
 {
 	case "null":
-		switch (choose("slime", "slime", "crate"))
+		switch (choose("enemy", "enemy", "crate"))
 		{
-			case "slime":
+			case "enemy":
+			// Loads Enemy Doors
 			load_door(5, 16, "left");
 			load_door(53, 16, "right");
 			load_door(26, 33, "down");
-			// Enemies
-			repeat (irandom_range(4, 7))
-			{
-				enemy_count += 1;
-				switch(choose("g", "g", "r", "b"))
-				{
-					case "g":
-						rand_load_enemy(obj_enemy_slime_g);
-						break;
-					case "r":
-						rand_load_enemy(obj_enemy_slime_r);
-						break;
-					case "b":
-						rand_load_enemy(obj_enemy_slime_b);
-						break;
-				}
-			}
-			var _y = 7;
-			for (var _x = 6; _x <= 52; _x += 4)
-				if choose(true, false, false, false) load_tile(_x, _y, obj_crate);
+			spawn_wave("basic", 4, 7);
+			// Spawns outliner crates
+			spawn_tile_rect(6, 52, 7, 7, 8, 2, 3, obj_crate);
 			break;
 		case "crate":
-			var _y = 7;
-			for (var _x = 6; _x <= 52; _x += 4)
-				if choose(true, true, true, false) load_tile(_x, _y, obj_crate);
-			var _y = 14;
-			for (var _x = 27; _x <= 31; _x += 2)
-				load_tile(_x, _y, obj_crate);
-			var _y = 24;
-			for (var _x = 27; _x <= 31; _x += 2)
-				load_tile(_x, _y, obj_crate);
-					
+			// Draws some boxes on top and in mid
+			spawn_tile_rect(6, 52, 7, 7, 4, 2, 1, obj_crate);
+			spawn_tile_rect(27, 31, 24, 14, 2, 10, 1, obj_crate);	
 			break;
 		}
 		break;

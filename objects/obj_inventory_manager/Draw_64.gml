@@ -102,18 +102,19 @@ switch (obj_player.type)
 	case "pistol":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 1, 1, 0, _col, 1);
-		draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
-					string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 		break;
 	case "rifle":
 	case "shotgun":
 	case "sniper":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
-		draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
-					string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 		break;
 }
+if obj_player.reloading > 0
+	draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
+					"Reloading...")
+else draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
+					string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 
 
 // Draw Ammo

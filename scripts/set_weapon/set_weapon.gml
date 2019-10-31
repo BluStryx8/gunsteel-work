@@ -24,6 +24,7 @@ with (obj_player)
 	reload			 = ds_map_find_value(global.weapons[_w], "reload");
 	burst			 = ds_map_find_value(global.weapons[_w], "burst");
 	bullets			 = ds_map_find_value(global.weapons[_w], "bullets");
+	pierce			 = ds_map_find_value(global.weapons[_w], "pierce");
 	bullet_dd		 = ds_map_find_value(global.weapons[_w], "bullet_dd");
 	base_accuracy	 = ds_map_find_value(global.weapons[_w], "base_accuracy");
 	recoil			 = ds_map_find_value(global.weapons[_w], "recoil");

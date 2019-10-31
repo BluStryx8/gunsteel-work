@@ -24,3 +24,4 @@ _control.y_offset = _y * section_height;
 _control.alarm[0] = 1;
 _control.active = 0;
 _control.enemy_count = 0;
+_control.waves = 0;

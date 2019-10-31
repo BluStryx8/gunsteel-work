@@ -36,3 +36,9 @@ switch (section_id)
 		load_R_1(special_id);
 		break;
 }
+
+if (enemy_count > 0)	// Checks to see if room is an enemy room
+{
+	waves = irandom_range(0, floor(enemy_count / 5));
+	enemy_count += waves;
+}

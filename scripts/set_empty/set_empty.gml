@@ -23,6 +23,7 @@ if obj_player.weapon != "none"
 		reload			 = 0;
 		burst			 = 0;
 		bullets			 = 0;
+		pierce			 = -1;
 		bullet_dd		 = 0;
 		base_accuracy	 = 0;
 		recoil			 = 0;

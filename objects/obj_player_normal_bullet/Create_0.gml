@@ -8,7 +8,11 @@ spd = speed;							// Saves speed for later
 
 damage = irandom_range(obj_player.min_damage, obj_player.max_damage);
 damage -= round((obj_player.accuracy - obj_player.base_accuracy) * obj_player.recoil_mult);
-	// Decreases damage by the weapon's inaccuracy
+// Decreases damage by the weapon's inaccuracy
+
+// Piercing
+pierce = obj_player.pierce;
+last_hit = noone;
 
 // Accuracy
 var _acc = obj_player.accuracy;

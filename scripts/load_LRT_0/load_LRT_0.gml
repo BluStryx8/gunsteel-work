@@ -13,68 +13,28 @@ switch (_id)
 			load_door(5, 16, "left");
 			load_door(53, 16, "right");
 			load_door(26, 5, "up");
-			switch (choose("slime", "slime"))
-			{
-				case "slime":
-					// Spawn Slimes
-					repeat (irandom_range(7, 12))
-					{
-						enemy_count += 1;
-						switch(choose("g", "g", "r", "b"))
-						{
-							case "g":
-								rand_load_enemy(obj_enemy_slime_g);
-								break;
-							case "r":
-								rand_load_enemy(obj_enemy_slime_r);
-								break;
-							case "b":
-								rand_load_enemy(obj_enemy_slime_b);
-								break;
-						}
-					}
-					break;
-			}
+			spawn_wave("basic", 7, 12);
 			// Scatter outliner crates
-			var _y = 32;
-			for (var _x = 8; _x <= 50; _x += 6)
-				if choose(true, false, false, false) load_tile(_x, _y, obj_crate);
-			var _y = 7;
-			for (var _x = 6; _x <= 22; _x += 4)
-				if choose(true, false, false, false) load_tile(_x, _y, obj_crate);
-			for (var _x = 36; _x <= 52; _x += 4)
-				if choose(true, false, false, false) load_tile(_x, _y, obj_crate);
+			spawn_tile_rect(8, 50, 32, 32, 6, 2, 3, obj_crate);
+			spawn_tile_rect(6, 22, 7, 7, 4, 2, 3, obj_crate);
+			spawn_tile_rect(36, 52, 7, 7, 4, 2, 3, obj_crate);
 			break;
 		case "crate":
 			switch (choose("box", "outline"))
 			{
 				case "box":
 					// Draws a big box in centre and some outliner crates
-					for (var _y = 23; _y >= 17; _y -= 2)
-						for (var _x = 24; _x <= 34; _x += 2)
-							load_tile(_x, _y, obj_crate);
-					var _y = 32;
-					for (var _x = 8; _x <= 50; _x += 6)
-						if choose(true, false, false, false) load_tile(_x, _y, obj_crate);
-					var _y = 7;
-					for (var _x = 6; _x <= 22; _x += 4)
-						if choose(true, false, false, false) load_tile(_x, _y, obj_crate);
-					for (var _x = 36; _x <= 52; _x += 4)
-						if choose(true, false, false, false) load_tile(_x, _y, obj_crate);
+					spawn_tile_rect(24, 34, 23, 17, 2, 2, 0, obj_crate);
+					spawn_tile_rect(8, 50, 32, 32, 6, 2, 3, obj_crate);
+					spawn_tile_rect(6, 22, 7, 7, 4, 2, 3, obj_crate);
+					spawn_tile_rect(36, 52, 7, 7, 4, 2, 3, obj_crate);
 					break;
 				case "outline":
-					// Draws only outliner crates					
-					var _y = 32;
-					for (var _x = 8; _x <= 50; _x += 6)
-						if choose(true, true, true, false) load_tile(_x, _y, obj_crate);
-					var _y = 30;
-					for (var _x = 6; _x <= 52; _x += 6)
-						if choose(true, false) load_tile(_x, _y, obj_crate);
-					var _y = 7;
-					for (var _x = 6; _x <= 22; _x += 4)
-						if choose(true, false) load_tile(_x, _y, obj_crate);
-					for (var _x = 36; _x <= 52; _x += 4)
-						if choose(true, false) load_tile(_x, _y, obj_crate);
+					// Draws only outliner crates	
+					spawn_tile_rect(8, 50, 32, 32, 6, 2, 1, obj_crate);
+					spawn_tile_rect(6, 52, 30, 30, 6, 2, 2, obj_crate);
+					spawn_tile_rect(6, 22, 7, 7, 4, 2, 2, obj_crate);
+					spawn_tile_rect(36, 52, 7, 7, 4, 2, 2, obj_crate);
 					break;
 			}
 			break;

@@ -10,7 +10,7 @@ if (image_index == 0)
 		{
 			var _col = make_colour_hsv(0, 0, 200);
 			if (obj_player.reloading < 0) rotate += (90 / obj_player.draw_time)
-				else rotate += 3;
+				else rotate += 6;
 		}
 		else
 		{

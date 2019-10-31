@@ -180,37 +180,28 @@ if (fire > 0 and fire_cooldown == 0)
 	// Check Ammo
 	if (ammo > 0 and pump == 0)
 	{
-		var _bullet_count = 0;
-		// Create bullets until _bullet_count matches bullets
-		switch (type)
-		{
-			case "pistol":
-			case "rifle":
-			case "shotgun":
-				if (bullets != 0) do
-				{
-					instance_create_layer(x, y, "bullets", obj_player_bullet);
-					_bullet_count += 1;
-				}
-				until _bullet_count >= bullets;
-				break;
-			case "sniper":
-				instance_create_layer(x, y, "bullets", obj_player_s_bullet);
-				break;
-		}
-		// Sound
+		// Set bullet type, and do sound
 		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 		switch (type)
 		{
 			case "pistol":
 			case "rifle":
+				var _bullet = obj_player_normal_bullet;
+				audio_play_sound(snd_fire_rifle, 1, false);
+				break;
 			case "sniper":
+				var _bullet = obj_player_snipe_bullet;
 				audio_play_sound(snd_fire_rifle, 1, false);
 				break;
 			case "shotgun":
+				var _bullet = obj_player_round_bullet;
 				audio_play_sound(snd_fire_shotgun, 1, false);
 				break;
 		}
+		// Create bullets until _bullet_count matches bullets
+		for (var _bullet_count = 0; _bullet_count < bullets; _bullet_count++)
+			instance_create_layer(x, y, "bullets", _bullet);
+		
 		// Increase inaccuracy
 		accuracy += recoil;
 		if (accuracy > max_recoil) accuracy = max_recoil;
@@ -241,6 +232,7 @@ if (reloading == 30)
 {
 	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 	audio_play_sound(snd_reload_clip, 1, false);
+	accuracy = max_recoil;
 	switch (type)
 	{
 		case "pistol":
@@ -249,7 +241,7 @@ if (reloading == 30)
 			ammo = max_ammo;
 			break;
 		case "shotgun":
-			ammo += 1;
+			if (ammo < max_ammo) ammo += 1;
 			if (ammo < max_ammo)
 			{
 				reloading = reload_time;
@@ -276,6 +268,7 @@ if (keyboard_check(global.p_reload) and fire_cooldown == 0 and reloading == 0 an
 	audio_play_sound(snd_reload_eject_clip, 1, false);
 	reloading = reload_time;
 	fire_cooldown = reloading;
+	if (type != "shotgun") ammo = 0;
 	if (atk_type == "pump_action") pump = 1;
 }
 
@@ -305,18 +298,18 @@ camera_set_view_pos(view_camera[0], x - h_move - camera_width / 2 + shake_x,
 if (focus == 1)
 {
 	// True Scope
-	if (camera_pan > 2) camera_pan -= camera_pan / 2;
+	if (camera_pan > 1.3) camera_pan -= camera_pan / 4;
 }
 else if (focus == 0)
 {
 	// Standard scoping effect
-	if (camera_pan > 8) camera_pan -= camera_pan / 2;
-	if (camera_pan < 8) camera_pan += camera_pan;
+	if (camera_pan > 8) camera_pan -= camera_pan / 4;
+	if (camera_pan < 8) camera_pan += camera_pan / 3;
 }
 else
 {
 	// Still camera
-	if camera_pan < 1024 camera_pan += camera_pan;
+	if camera_pan < 1024 camera_pan += camera_pan / 3;
 }
 
 if camera_pan < 1024 // 1024 or over makes the camera lock on player without scoping effect
