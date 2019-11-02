@@ -15,5 +15,6 @@ do
 }
 until (_tile == 32 or _tile == 33 or _tile == 40 or _tile == 41)	// Until on blue large tile
 var _enemy = instance_create_layer((x_offset + (_x * grid_size)), (y_offset + (_y * grid_size)),
-									"enemies", _obj_to_create);
+									"bullets", obj_enemy_spawner);
+_enemy.spawn = _obj_to_create;
 _enemy.master_id = id;

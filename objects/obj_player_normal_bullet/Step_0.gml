@@ -13,10 +13,13 @@ if (decay < 0) image_alpha -= 0.1;			// Begin fading
 if (image_alpha <= 0) instance_destroy();	// Destroy itself after fading completely
 
 // Collision
-var _destroy_x = bullet_collision("x", hspeed);
-var _destroy_y = bullet_collision("y", vspeed);
+var _hspd = hspeed;
+var _vspd = vspeed;
+speed = 0;
 
-if (_destroy_x == 1 or _destroy_y == 1)
+var _destroy = bullet_collision(_hspd, _vspd);
+
+if (_destroy)
 {
 	// Collided with wall
 	instance_create_layer(x, y, "bullets", obj_player_bullet_hit);

@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "366c26fb-7801-4a2f-9ce3-8b85b0ef5707",
+            "Value": {
+                "id": "36cc9618-4dd2-47b5-bdd4-e8c49e53e477",
+                "resourcePath": "scripts\\bullet_collision\\bullet_collision.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "36c85f46-f08c-4b2e-b23e-f6ce0211b52f",
             "Value": {
                 "id": "f19d0ce7-8625-4508-a446-469b23296eee",
@@ -500,14 +508,6 @@
                 "id": "16196d4e-e328-4ca8-94ed-50e275356933",
                 "resourcePath": "objects\\obj_collision_parent\\obj_collision_parent.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "3ab92209-917f-47c2-93ca-26175f394e84",
-            "Value": {
-                "id": "6f1e22a5-ed4f-41ca-bb19-6ccc070ba5c0",
-                "resourcePath": "scripts\\bullet_collision\\bullet_collision.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -1076,6 +1076,14 @@
                 "id": "21e7e7e8-49ed-459d-b482-25298b285d6f",
                 "resourcePath": "sprites\\spr_gui_remington_870\\spr_gui_remington_870.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "78b6db72-d6fb-4489-a1f1-4b7ecc33749e",
+            "Value": {
+                "id": "0ef7a55a-ea6f-4113-aa93-2f156f9bbd49",
+                "resourcePath": "objects\\obj_enemy_spawner\\obj_enemy_spawner.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1967,6 +1975,14 @@
             }
         },
         {
+            "Key": "dc46c318-d25a-4252-aa3f-bb118559d46f",
+            "Value": {
+                "id": "dec5e895-ffde-49da-a2a6-fb6db2738dfb",
+                "resourcePath": "sprites\\spr_spawn\\spr_spawn.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dc5f5540-5122-4049-9302-5edde1bf2f9e",
             "Value": {
                 "id": "9532bb80-1e32-4242-aaf6-f40ec214d791",
@@ -2333,7 +2349,7 @@
         "c4cdfdc1-6bd8-4177-80c9-68a9ea7971ba",
         "235fed7c-8c6c-47f9-849b-cd14e2729802",
         "d3b71c79-3876-4e2c-8ebb-37d238d6e5bc",
-        "3ab92209-917f-47c2-93ca-26175f394e84",
+        "366c26fb-7801-4a2f-9ce3-8b85b0ef5707",
         "4604832b-d49f-49f6-96c5-d6dd4039383f",
         "c5a01845-ae93-47d2-92ac-f6462a10a1c1",
         "75fe7d4e-f318-4375-9d79-7ca2e2645554",
