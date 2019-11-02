@@ -234,7 +234,7 @@ ds_map_add(global.weapons[7], "decay", 30);
 ds_map_add(global.weapons[7], "reload", 30);
 ds_map_add(global.weapons[7], "burst", 1);
 ds_map_add(global.weapons[7], "bullets", 12);
-ds_map_add(global.weapons[7], "pierce", -1);
+ds_map_add(global.weapons[7], "pierce", 16);
 ds_map_add(global.weapons[7], "bullet_dd", 1);
 ds_map_add(global.weapons[7], "base_accuracy", 10);
 ds_map_add(global.weapons[7], "recoil", 6);

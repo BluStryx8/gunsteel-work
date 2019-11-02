@@ -37,8 +37,10 @@ switch (section_id)
 		break;
 }
 
-if (enemy_count > 0)	// Checks to see if room is an enemy room
+// Enemy waves
+if (enemy_count > 5)	// Checks to see if room is an enemy room with enough enemies
 {
+	wave_count = enemy_count - 1;
 	waves = irandom_range(0, floor(enemy_count / 5));
 	enemy_count += waves;
 }
