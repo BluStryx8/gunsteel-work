@@ -1,9 +1,11 @@
 /// @description Load
-switch load_step
+switch (load_step)
 {
 	case 0:
 		// Initialise
 		init_room();
+		obj_player.x = -(obj_player.sprite_width);
+		obj_player.y = -(obj_player.sprite_height);
 		load_step += 1;
 		alarm[0] = 1;
 		break;
@@ -45,5 +47,6 @@ switch load_step
 		global.truepause = false;
 		global.paused = false;
 		start = true;
+		loading = 0;
 		break;
 }

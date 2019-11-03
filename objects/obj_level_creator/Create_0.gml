@@ -4,4 +4,6 @@ global.truepause = true;
 load_step = 0;
 current_x = 0;
 current_y = 0;
+loading = 0;
+loading_fade = 1;
 alarm[0] = 1;
