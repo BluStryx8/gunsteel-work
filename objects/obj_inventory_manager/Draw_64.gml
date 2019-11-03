@@ -177,3 +177,8 @@ if item_in_hand = true{
 	}
 }
 
+if global.in_furnace = true and  item_in_slot = true and furnace_slot != -1
+{
+	var draw_furnace = inventory[furnace_slot]
+	draw_sprite_ext(item_definitions[draw_furnace, item_properties.sprite_gui], -1, gui_holder_pos_x +40 ,display_get_gui_height()/3 +37, 1, 1, 0, _col, 1);
+}

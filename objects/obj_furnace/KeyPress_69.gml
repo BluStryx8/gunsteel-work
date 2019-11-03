@@ -11,12 +11,19 @@ if clicked = false
 	{
 		clicked = true;
 		global.moveable = false;
-		in_furnace = true
+		global.in_furnace = true
 		global.in_inv = true
+	
 		
 	}
 }
-
+else
+{
+	clicked = false
+	global.moveable = true
+	global.in_furnace = false
+	global.in_inv = false
+}
 
 
 	

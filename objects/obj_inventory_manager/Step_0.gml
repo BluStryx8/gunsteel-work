@@ -149,6 +149,36 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 	}
 	
 	
+	
+	if item_in_hand = true and global.in_furnace = true
+	{
+		furnace_slot = pickup_item
+	}
+
+	if global.in_furnace = true
+	{
+		if mousex > gui_holder_pos_x and mousex < gui_holder_pos_x +cell_width and mousey > display_get_gui_height()/3 and mousey < display_get_gui_height()/3 + cell_width 
+			{
+				if mouse_check_button_pressed(mb_right)
+				{
+					item_in_slot = true
+				}
+				
+				if mouse_check_button_pressed(mb_left)
+				{
+					item_in_slot = false
+				}
+			}
+	}
+	else
+	{
+		item_in_slot = false
+		furnace_slot = -1
+		
+	}
+	
+
+	
 	/// if you have an item in your gand, check if the slot you click if empty
 	/// if so set your hand to 0, clicked slot to the old slot, old slot to empty then reset variables
 	
@@ -180,5 +210,12 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 if (!global.in_inv)
 {
 	item_in_hand = false
+	selected_cell = -1
+	pickup_item = -1
 }
 	
+if (!global.in_furnace)
+{
+	furnace_slot = -1
+	item_in_slot = false
+}
