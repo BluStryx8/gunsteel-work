@@ -1,6 +1,5 @@
 /// @description AI change
 if (global.paused) exit;
-
 anim += 1;
 if (anim >= anim_speed)
 {

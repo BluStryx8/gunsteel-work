@@ -22,7 +22,7 @@
             "mvc": "1.0",
             "objectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
             "propertyId": "24230b57-02ca-4d21-9eb3-f36a003ead64",
-            "value": "60"
+            "value": "round(60 * scale)"
         },
         {
             "id": "0df3d37e-5357-4c29-9993-8781d8f38f7d",
@@ -30,7 +30,7 @@
             "mvc": "1.0",
             "objectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
             "propertyId": "be112154-188e-4c92-aeda-eff9c1cf3db0",
-            "value": "1"
+            "value": "irandom_range(90, 110) \/ 100"
         }
     ],
     "parentObjectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",

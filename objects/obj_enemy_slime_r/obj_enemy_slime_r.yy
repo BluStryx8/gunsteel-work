@@ -14,7 +14,7 @@
             "mvc": "1.0",
             "objectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
             "propertyId": "24230b57-02ca-4d21-9eb3-f36a003ead64",
-            "value": "35"
+            "value": "round(50 * scale)"
         },
         {
             "id": "52063ff8-5a5c-4978-a210-83b6c86f90bb",
@@ -30,7 +30,7 @@
             "mvc": "1.0",
             "objectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
             "propertyId": "be112154-188e-4c92-aeda-eff9c1cf3db0",
-            "value": "0.75"
+            "value": "irandom_range(75, 90) \/ 100"
         },
         {
             "id": "cdf90f2d-f838-4b68-8f78-0b18ba6dc10b",
