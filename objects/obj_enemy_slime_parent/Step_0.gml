@@ -30,6 +30,8 @@ if action_timer <= 0
 			action_timer = 60;
 			spd = 0;
 			bounce = 0;
+			hspd = 0;
+			vspd = 0;
 			break;
 		case "land":
 			action = "idle";
@@ -54,9 +56,9 @@ if (action == "idle")
 if (action == "jump")
 {
 	speed = spd;
-	var _hspd = hspeed;
-	var _vspd = vspeed - round((action_timer - (bounce / 2)) / jump_height_div);
+	hspd = hspeed;
+	vspd = vspeed - round((action_timer - (bounce / 2)) / jump_height_div);
 	speed = 0;
-	_hspd = collision("x", _hspd, 0);
-	_vspd = collision("y", _vspd, 0);
+	hspd = collision("x", hspd, 0);
+	vspd = collision("y", vspd, 0);
 }

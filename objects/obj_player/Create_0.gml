@@ -11,6 +11,7 @@ sneak = false;			// Sneaking
 dodge = 0;				// Dodge distance
 h_dodge = 0;			// Horizontal speed of player when init dodge
 v_dodge = 0;			// Vertical speed of player when init dodge
+immune = 0;				// If taken damage recently
 
 // Records previous 3 positions
 xprev[2] = 0;

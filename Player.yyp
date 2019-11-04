@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "0162b22b-0b0f-4ee6-b741-8186da2d89b6",
+            "Value": {
+                "id": "4c96261e-5878-479f-a9fb-4d19cc26d793",
+                "resourcePath": "objects\\obj_enemy_parent\\obj_enemy_parent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "01a74c67-8dae-43e0-a756-b860990ba84e",
             "Value": {
                 "id": "1396046c-20fd-4d43-9823-2cd10f6f2dce",
@@ -1119,6 +1127,14 @@
             }
         },
         {
+            "Key": "7abee7d5-3efd-4867-897c-f77dd5677d84",
+            "Value": {
+                "id": "898420ff-0a98-4a57-b6b3-9036eb928ad7",
+                "resourcePath": "sprites\\spr_death\\spr_death.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7add4456-12b9-4686-a38b-681549a7b391",
             "Value": {
                 "id": "a11eba7b-23b4-4663-b939-0f1d9011944f",
@@ -1235,6 +1251,14 @@
             "Value": {
                 "id": "ab6b67fb-f9aa-4270-9b71-4d128db854b8",
                 "resourcePath": "views\\8d9775a1-4fe1-4b4f-968c-1e7f84dc16b4.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8e628117-7253-4637-88c4-4bc472d70ba1",
+            "Value": {
+                "id": "0301635b-153f-4375-a994-182db61618d2",
+                "resourcePath": "views\\8e628117-7253-4637-88c4-4bc472d70ba1.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -2043,6 +2067,14 @@
             "Value": {
                 "id": "b8ba1737-97ff-4a96-9dd3-79c584818686",
                 "resourcePath": "objects\\obj_item_pickup_omark_44\\obj_item_pickup_omark_44.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dd5426e8-e889-4917-b346-94ed26ab15a3",
+            "Value": {
+                "id": "f4fd57a3-9909-4dd1-815e-de74ed47afcf",
+                "resourcePath": "objects\\obj_enemy_death\\obj_enemy_death.yy",
                 "resourceType": "GMObject"
             }
         },

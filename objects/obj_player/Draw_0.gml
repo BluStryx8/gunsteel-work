@@ -26,8 +26,9 @@ if (dir <= 90 or dir >= 270)
 	draw_sprite_ext(spr_player_hat, 0, x, y - anim_y, 1, 1, 0, c_white, 1)
 	// Draw weapon
 	if (hands >= 1) draw_sprite_ext(sprite, 0, x + offset[0], y + offset[1], 1, 1, dir, c_white, 1)
-	// Dodge brighten
-	if (dodge > 0) draw_sprite_ext(spr_player_hitbox, -1, x, y, 1, 1, 0, global.p_dash_colour, 0.1);
+	// Dodge or Immune brighten
+	if (dodge > 0 or (immune > 0 and round(immune / 5) mod 2 == 0))
+		draw_sprite_ext(spr_player_hitbox, -1, x, y, 1, 1, 0, global.p_dash_colour, 0.1);
 }
 else
 {
@@ -56,6 +57,7 @@ else
 	// Draw weapon (weapon positioned differently depending on number of hands)
 	if (hands == 2) draw_sprite_ext(sprite, 0, x - offset[0], y + offset[1], 1, -1, dir, c_white, 1)
 	else if (hands >= 1) draw_sprite_ext(sprite, 0, x + offset[0] + offset[2], y + offset[1], 1, -1, dir, c_white, 1)
-	// Dodge brighten
-	if (dodge > 0) draw_sprite_ext(spr_player_hitbox, -1, x, y, -1, 1, 0, global.p_dash_colour, 0.1);
+	// Dodge or Immune brighten
+	if (dodge > 0 or (immune > 0 and round(immune / 5) mod 2 == 0))
+		draw_sprite_ext(spr_player_hitbox, -1, x, y, -1, 1, 0, global.p_dash_colour, 0.1);
 }

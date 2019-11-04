@@ -1,10 +1,14 @@
 /// @description Declare Variables
+hspd = 0;
+vspd = 0;
 anim = 0;
 spd = 0;
 bounce = 0;
 hurt_flash = 1;
 action = "idle";
 action_timer = idle_max_time;
+image_xscale = scale;
+image_yscale = scale;
 
 // Random Direction
 direction = irandom_range(0, 359);

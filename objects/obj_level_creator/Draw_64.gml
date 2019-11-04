@@ -7,7 +7,8 @@ if (loading_fade > 0)
 {
 	draw_set_colour(c_black);
 	draw_set_alpha(loading_fade);
-	draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
+	// Draws outside the view by a small amount to avoid 1 pixel misdraw
+	draw_rectangle(-16, -16, display_get_gui_width() + 16, display_get_gui_height() + 16, false);
 }
 draw_set_colour(c_white);
 draw_set_halign(fa_left);

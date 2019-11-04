@@ -23,7 +23,7 @@ xprev[0] = xprevious;	// Records position 1 frame ago
 yprev[0] = yprevious;
 
 /// Keyboard Movements
-if (global.moveable == true)	// Checks if player can move
+if (global.moveable == true and immune <= 45)	// Checks if player can move
 {
 	// Check keyboard
 	if (keyboard_check(global.p_left))	h_move -= 2;	// Move left
@@ -44,46 +44,31 @@ if (global.moveable == true)	// Checks if player can move
 }
 
 /// Decrease Speed
-if (dodge <= 0)	// If not dodging
+if (dodge <= 0 and immune <= 50)	// If not dodging
 {
 	// Horizontal Movement; Decrement speed towards 0
 	if (h_move > 0) h_move -= 1;
 	if (h_move < 0) h_move += 1;
-	if (sneak)
-	{
-		// Slow Movement Cap
-		if (h_move > move_speed / 2)  h_move = round(move_speed / 2);
-		if (h_move < -move_speed / 2) h_move = round(-move_speed / 2);
-	}
+	if (sneak)	// Slow Movement Cap
+		h_move = round(clamp(h_move, -move_speed / 2, move_speed / 2));
 	else
-	{
-		// Standard Movement Cap
-		if (h_move > move_speed)  h_move = move_speed;
-		if (h_move < -move_speed) h_move = -move_speed;
-	}
+		h_move = clamp(h_move, -move_speed, move_speed);
 	// Vertical Movement; Decrement speed towards 0
 	if (v_move > 0) v_move -= 1;
 	if (v_move < 0) v_move += 1;
-	if (sneak)
-	{
-		// Slow Movement Cap
-		if (v_move > move_speed / 2)  v_move = round(move_speed / 2);
-		if (v_move < -move_speed / 2) v_move = round(-move_speed / 2);
-	}
+	if (sneak)	// Slow Movement Cap
+		v_move = round(clamp(v_move, -move_speed / 2, move_speed / 2));
 	else
-	{
-		// Standard Movement Cap
-		if (v_move > move_speed)  v_move = move_speed;
-		if (v_move < -move_speed) v_move = -move_speed;
-	}
+		v_move = clamp(v_move, -move_speed, move_speed);
 }
-else	// If dodging
+else if (dodge > 0)	// If dodging
 {
 	// Dodge Speed
 	dodge -= 0.25;	// Decrements speed and duration of dodge
 	h_move = round(h_dodge * dodge);
 	v_move = round(v_dodge * dodge);
 }
+if immune > 0 immune -= 1;
 
 /// Update position
 h_move = collision("x", h_move, 0);
