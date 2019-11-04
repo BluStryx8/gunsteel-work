@@ -1063,6 +1063,14 @@
             }
         },
         {
+            "Key": "74f48870-0b9e-472f-af03-f65ff89ab430",
+            "Value": {
+                "id": "cd8beff1-5acd-4e3b-b231-d22f59a1bbf3",
+                "resourcePath": "views\\74f48870-0b9e-472f-af03-f65ff89ab430.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "751260fd-6f6c-47e9-aaeb-8199172b1b40",
             "Value": {
                 "id": "cb6ed51b-969a-4e91-8520-2baedc4a19ab",
@@ -1188,6 +1196,14 @@
                 "id": "e27a3721-6afe-4528-9c0f-d5c8f7ba5d6e",
                 "resourcePath": "views\\853da668-9cb6-432a-b2c7-d42e00cb724a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
+            "Value": {
+                "id": "254e3444-940e-4f26-89db-01923a107bf6",
+                "resourcePath": "objects\\obj_enemy_bat_parent\\obj_enemy_bat_parent.yy",
+                "resourceType": "GMObject"
             }
         },
         {
