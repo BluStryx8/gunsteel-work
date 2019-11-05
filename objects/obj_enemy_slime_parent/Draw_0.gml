@@ -53,9 +53,5 @@ var _bounce = sign(bounce) * round((bounce / 2) - abs(action_timer - (bounce / 2
 draw_sprite_ext(spr_enemy_slime, 56, x, y + _bounce,
 	scale - (_bounce / jump_height_div / 10), scale - (_bounce / jump_height_div / 10), 0, c_white, 0.25);
 draw_sprite_ext(spr_enemy_slime, image_index, x, y, scale, scale, 0, color, 0.9);
-if (hurt_flash > 0)
-{
-	draw_sprite_ext(spr_enemy_slime, image_index, x, y, scale, scale, 0, c_white, hurt_flash);
-	hurt_flash -= 0.05;
-}
-if (hurt_flash < 0) hurt_flash = 0;
+
+hurt_flash = flash_effect(hurt_flash);

@@ -1007,6 +1007,14 @@
             }
         },
         {
+            "Key": "6756b048-53d5-420e-bac9-2dfa31d49909",
+            "Value": {
+                "id": "ce20c839-e864-4f8d-ab91-bcb79a8c7de4",
+                "resourcePath": "scripts\\flash_effect\\flash_effect.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6882e18f-0508-4c25-b0ea-4d0f59c9f506",
             "Value": {
                 "id": "4799c7d1-6514-47be-abdb-8304db00cab4",
@@ -1156,6 +1164,14 @@
                 "id": "0ef7a55a-ea6f-4113-aa93-2f156f9bbd49",
                 "resourcePath": "objects\\obj_enemy_spawner\\obj_enemy_spawner.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "794c7af9-d4c2-4d1c-8649-fd61453cc428",
+            "Value": {
+                "id": "2d2d508c-28c1-4e3c-9a21-114eae7d960e",
+                "resourcePath": "shaders\\shd_flash\\shd_flash.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -2526,6 +2542,7 @@
         "235fed7c-8c6c-47f9-849b-cd14e2729802",
         "d3b71c79-3876-4e2c-8ebb-37d238d6e5bc",
         "366c26fb-7801-4a2f-9ce3-8b85b0ef5707",
+        "6756b048-53d5-420e-bac9-2dfa31d49909",
         "4604832b-d49f-49f6-96c5-d6dd4039383f",
         "c5a01845-ae93-47d2-92ac-f6462a10a1c1",
         "75fe7d4e-f318-4375-9d79-7ca2e2645554",

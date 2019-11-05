@@ -38,8 +38,8 @@ if (global.moveable == true and immune <= 45)	// Checks if player can move
 		and not (h_move == 0 and v_move == 0))
 	{
 		// Initialise Dodge
-		h_dodge = h_move / 3;
-		v_dodge = v_move / 3;
+		h_dodge = h_move / 2;
+		v_dodge = v_move / 2;
 		dodge = move_speed;
 	}
 }
@@ -66,8 +66,8 @@ else if (dodge > 0)	// If dodging
 {
 	// Dodge Speed
 	dodge -= 0.25;	// Decrements speed and duration of dodge
-	h_move = round(h_dodge * dodge);
-	v_move = round(v_dodge * dodge);
+	h_move = clamp(round(h_dodge * dodge), -move_speed * 2, move_speed * 2);
+	v_move = clamp(round(v_dodge * dodge), -move_speed * 2, move_speed * 2);
 }
 if immune > 0 immune -= 1;
 
@@ -210,7 +210,7 @@ if (accuracy > base_accuracy) accuracy -= 0.1;	// Decrease inaccuracy back to ba
 if (sneak and accuracy > max_recoil - (max_recoil - base_accuracy) / 2) accuracy -= 0.1;
 if (wind > 0 and not mouse_check_button(mb_left))
 {
-	wind -= 0.5;
+	wind -= 1;
 	if !audio_is_playing(snd_minigun_winddown)
 	{
 		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
@@ -260,7 +260,7 @@ if (reloading == 1)
 	pump = 0;
 }
 // Check for reload
-if (keyboard_check(ord("R")) and fire_cooldown == 0 and reloading == 0 and !global.holstered)
+if (keyboard_check(ord("R")) and fire_cooldown == 0 and reloading == 0 and wind <= 0 and !global.holstered)
 {
 	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 	audio_play_sound(snd_reload_eject_clip, 1, false);
