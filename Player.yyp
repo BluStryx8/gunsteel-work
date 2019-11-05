@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "02973a38-eb6c-49e2-bbc1-75f624367728",
+            "Value": {
+                "id": "e30de2a8-06b3-4c18-b32b-d2599095d440",
+                "resourcePath": "objects\\obj_enemy_necromancer\\obj_enemy_necromancer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "02aaafbb-10d6-49ef-a93e-9c2801adcf8e",
             "Value": {
                 "id": "4d0c617d-e39d-4f4e-8379-ae25d6aa6c00",
@@ -1743,6 +1751,14 @@
             }
         },
         {
+            "Key": "bf48ebd6-2304-496e-9131-2fce0e315b00",
+            "Value": {
+                "id": "91889da3-d1e5-4a75-a2c1-cf7c39df168f",
+                "resourcePath": "objects\\obj_enemy_necromancer_bullet\\obj_enemy_necromancer_bullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bfb0661c-feea-4a95-9b66-0e479bf1e71e",
             "Value": {
                 "id": "a6cfef6f-1b79-4df1-a3ca-092416e773eb",
@@ -1796,6 +1812,14 @@
                 "id": "c497190b-3040-4725-b615-7e8b933f4491",
                 "resourcePath": "notes\\Useful Links.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "c3bf12a3-130b-479a-97c7-b4c77f202e90",
+            "Value": {
+                "id": "6a2b64b6-b15a-40ca-bc4b-7b3034bbd921",
+                "resourcePath": "views\\c3bf12a3-130b-479a-97c7-b4c77f202e90.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
