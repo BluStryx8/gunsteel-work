@@ -11,8 +11,10 @@ with (other)
 	if hp <= 0
 	{
 		var _death = instance_create_layer(x, y, "enemies", obj_enemy_death);
-		_death.image_xscale = scale;
-		_death.image_yscale = scale;
+		var _scale_mod = irandom_range(-10, 10) / 100;
+		_death.image_xscale = scale + _scale_mod;
+		_death.image_yscale = scale + _scale_mod;
+		_death.image_alpha = irandom_range(80, 100) / 100;
 		instance_destroy();
 		master_id.enemy_count -= 1;
 	}

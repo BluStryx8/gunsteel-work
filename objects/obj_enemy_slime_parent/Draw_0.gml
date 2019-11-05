@@ -14,16 +14,18 @@ switch (dir)
 		var _image = 3;
 		break;
 }
+var _dir_frames = 14 // Frames for each direction
+
 switch (action)
 {
 	case "idle":
-		if (image_index > (14 * _image) + 4) image_index = (14 * _image);
-		if (image_index < (14 * _image)) image_index = (14 * _image);
+		if (image_index > (_dir_frames * _image) + 4) image_index = (_dir_frames * _image);
+		if (image_index < (_dir_frames * _image)) image_index = (_dir_frames * _image);
 		break;
 	case "jump_prep":
-		if (image_index > (14 * _image) + 7)
+		if (image_index > (_dir_frames * _image) + 7)
 		{
-			image_index = (14 * _image) + 7;
+			image_index = (_dir_frames * _image) + 7;
 			// Define Jump speed when ready
 			if (spd == 0)
 			{
@@ -34,13 +36,13 @@ switch (action)
 		}
 		break;
 	case "jump":
-		if (image_index > (14 * _image) + 9) image_index = (14 * _image) + 9;
+		if (image_index > (_dir_frames * _image) + 9) image_index = (_dir_frames * _image) + 9;
 		break;
 	case "land":
-		if (image_index >= (14 * _image) + 13)
+		if (image_index >= (_dir_frames * _image) + 13)
 		{
 			// Return to idle
-			image_index = (14 * _image);
+			image_index = (_dir_frames * _image);
 			action_timer = 0;
 		}
 		break;
