@@ -97,23 +97,28 @@ var _weap_offset_y = -48;	// y offset from the bottom right hand corner
 if (global.holstered) exit;
 draw_set_halign(fa_center);
 var _sprite = obj_inventory_manager.item_definitions[inventory[active_item], item_properties.sprite_gui];
+var _weapon = false;
 switch (obj_player.type)
 {
 	case "pistol":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 1, 1, 0, _col, 1);
+		_weapon = true;
 		break;
 	case "rifle":
 	case "shotgun":
 	case "sniper":
+	case "minigun":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
+		_weapon = true;
 		break;
 }
-if obj_player.reloading > 0
-	draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
+if (_weapon)
+	if (obj_player.reloading > 0)
+		draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
 					"Reloading...")
-else draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
+	else draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
 					string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 
 
@@ -138,16 +143,17 @@ switch (obj_player.type)
 		break;
 }
 // Draw bullets
-for (var _ammo = obj_player.ammo; _ammo > 0; _ammo--)
-{
-	draw_sprite_ext(_draw, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, 1);
-	_y -= 10;
-	if ((view_get_hport(0) + _y - _top_pad) <= 0)
+if (_draw != spr_gui_empty)
+	for (var _ammo = obj_player.ammo; _ammo > 0; _ammo--)
 	{
-		_x += _weap_offset_x;
-		_y = _weap_offset_y - 80;
+		draw_sprite_ext(_draw, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, 1);
+		_y -= 10;
+		if ((view_get_hport(0) + _y - _top_pad) <= 0)
+		{
+			_x += _weap_offset_x;
+			_y = _weap_offset_y - 80;
+		}
 	}
-}
 
 // Draw Fire Mode
 var _mode_x_offset = -15; // x offset of bullets to draw

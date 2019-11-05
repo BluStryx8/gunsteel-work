@@ -14,6 +14,7 @@ enum item_type
 	p90,
 	remington_870,
 	omark_44,
+	minigun,
 	// Bars
 	bar_iron,
 	

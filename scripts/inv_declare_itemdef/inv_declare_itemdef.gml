@@ -10,4 +10,5 @@ inv_add_itemdef(item_type.m4, spr_gui_m4, spr_held_m4, "M4", 0, "firearm", set_w
 inv_add_itemdef(item_type.p90, spr_gui_p90, spr_held_p90, "P90", 0, "firearm", set_weapon, weapon_shoot, fire_mode);
 inv_add_itemdef(item_type.remington_870, spr_gui_remington_870, spr_held_remington_870, "Remington 870", 0, "firearm", set_weapon, weapon_shoot, weapon_pump);
 inv_add_itemdef(item_type.omark_44, spr_gui_omark_44, spr_held_omark_44, "Omark Model 44", 0, "firearm", set_weapon, weapon_shoot, scope);
+inv_add_itemdef(item_type.minigun, spr_gui_minigun, spr_held_minigun, "Minigun", 0, "firearm", set_weapon, weapon_shoot, use_empty);
 inv_add_itemdef(item_type.bar_iron, spr_gui_bar_iron, spr_gui_empty, "Iron Bar", 0, "bar", set_empty, use_empty, use_empty);

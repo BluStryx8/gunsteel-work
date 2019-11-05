@@ -28,6 +28,8 @@ ds_map_add(global.weapons[0], "max_ammo", 0);			// Maximum ammo per clip
 ds_map_add(global.weapons[0], "ammo", 0);				// Current ammo
 ds_map_add(global.weapons[0], "draw_time", 0);			// Frames it takes to draw weapon
 ds_map_add(global.weapons[0], "reload_time", 0);		// Frames it takes to reload weapon
+ds_map_add(global.weapons[0], "windup_time", 0);		// Frames it takes before firing
+ds_map_add(global.weapons[0], "weight", 0);				// The decrease in speed the weapon causes
 ds_map_add(global.weapons[0], "pump", 0);				// (For pump-action) Checks if pump needed
 ds_map_add(global.weapons[0], "pump_time", 0);			// (For pump-action) Time to pump
 
@@ -59,6 +61,8 @@ ds_map_add(global.weapons[1], "max_ammo", 7);
 ds_map_add(global.weapons[1], "ammo", 7);
 ds_map_add(global.weapons[1], "draw_time", 10);
 ds_map_add(global.weapons[1], "reload_time", 60);
+ds_map_add(global.weapons[1], "windup_time", 0);
+ds_map_add(global.weapons[1], "weight", 0);
 ds_map_add(global.weapons[1], "pump", 0);
 ds_map_add(global.weapons[1], "pump_time", 0);
 
@@ -90,6 +94,8 @@ ds_map_add(global.weapons[2], "max_ammo", 17);
 ds_map_add(global.weapons[2], "ammo", 17);
 ds_map_add(global.weapons[2], "draw_time", 10);
 ds_map_add(global.weapons[2], "reload_time", 60);
+ds_map_add(global.weapons[2], "windup_time", 0);
+ds_map_add(global.weapons[2], "weight", 0);
 ds_map_add(global.weapons[2], "pump", 0);
 ds_map_add(global.weapons[2], "pump_time", 0);
 
@@ -121,6 +127,8 @@ ds_map_add(global.weapons[3], "max_ammo", 32);
 ds_map_add(global.weapons[3], "ammo", 32);
 ds_map_add(global.weapons[3], "draw_time", 10);
 ds_map_add(global.weapons[3], "reload_time", 90);
+ds_map_add(global.weapons[3], "windup_time", 0);
+ds_map_add(global.weapons[3], "weight", 0);
 ds_map_add(global.weapons[3], "pump", 0);
 ds_map_add(global.weapons[3], "pump_time", 0);
 
@@ -152,6 +160,8 @@ ds_map_add(global.weapons[4], "max_ammo", 30);
 ds_map_add(global.weapons[4], "ammo", 30);
 ds_map_add(global.weapons[4], "draw_time", 30);
 ds_map_add(global.weapons[4], "reload_time", 120);
+ds_map_add(global.weapons[4], "windup_time", 0);
+ds_map_add(global.weapons[4], "weight", 0);
 ds_map_add(global.weapons[4], "pump", 0);
 ds_map_add(global.weapons[4], "pump_time", 0);
 
@@ -183,6 +193,8 @@ ds_map_add(global.weapons[5], "max_ammo", 30);
 ds_map_add(global.weapons[5], "ammo", 30);
 ds_map_add(global.weapons[5], "draw_time", 30);
 ds_map_add(global.weapons[5], "reload_time", 120);
+ds_map_add(global.weapons[5], "windup_time", 0);
+ds_map_add(global.weapons[5], "weight", 0);
 ds_map_add(global.weapons[5], "pump", 0);
 ds_map_add(global.weapons[5], "pump_time", 0);
 
@@ -214,6 +226,8 @@ ds_map_add(global.weapons[6], "max_ammo", 50);
 ds_map_add(global.weapons[6], "ammo", 50);
 ds_map_add(global.weapons[6], "draw_time", 30);
 ds_map_add(global.weapons[6], "reload_time", 150);
+ds_map_add(global.weapons[6], "windup_time", 0);
+ds_map_add(global.weapons[6], "weight", 0);
 ds_map_add(global.weapons[6], "pump", 0);
 ds_map_add(global.weapons[6], "pump_time", 0);
 
@@ -245,6 +259,8 @@ ds_map_add(global.weapons[7], "max_ammo", 5);
 ds_map_add(global.weapons[7], "ammo", 5);
 ds_map_add(global.weapons[7], "draw_time", 30);
 ds_map_add(global.weapons[7], "reload_time", 60);
+ds_map_add(global.weapons[7], "windup_time", 0);
+ds_map_add(global.weapons[7], "weight", 1);
 ds_map_add(global.weapons[7], "pump", 0);
 ds_map_add(global.weapons[7], "pump_time", 15);
 
@@ -276,5 +292,40 @@ ds_map_add(global.weapons[8], "max_ammo", 1);
 ds_map_add(global.weapons[8], "ammo", 1);
 ds_map_add(global.weapons[8], "draw_time", 30);
 ds_map_add(global.weapons[8], "reload_time", 90);
+ds_map_add(global.weapons[8], "windup_time", 0);
+ds_map_add(global.weapons[8], "weight", 1);
 ds_map_add(global.weapons[8], "pump", 0);
 ds_map_add(global.weapons[8], "pump_time", 0);
+
+//Minigun
+global.weapons[9] = ds_map_create();
+ds_map_add(global.weapons[9], "weapon", "Minigun");
+ds_map_add(global.weapons[9], "type", "minigun");
+ds_map_add(global.weapons[9], "atk_type", "auto");
+ds_map_add(global.weapons[9], "hands", 2);
+ds_map_add(global.weapons[9], "hand_one", [8, -6]);
+ds_map_add(global.weapons[9], "hand_two", [-12, -7]);
+ds_map_add(global.weapons[9], "offset", [1, 10, 0]);
+ds_map_add(global.weapons[9], "min_damage", 8);
+ds_map_add(global.weapons[9], "max_damage", 12);
+ds_map_add(global.weapons[9], "bullet_speed", 26);
+ds_map_add(global.weapons[9], "bullet_speed_var", 4);
+ds_map_add(global.weapons[9], "decay", 240);
+ds_map_add(global.weapons[9], "reload", 3);
+ds_map_add(global.weapons[9], "burst", 1);
+ds_map_add(global.weapons[9], "bullets", 2);
+ds_map_add(global.weapons[9], "pierce", 5);
+ds_map_add(global.weapons[9], "bullet_dd", 1);
+ds_map_add(global.weapons[9], "base_accuracy", 1.5);
+ds_map_add(global.weapons[9], "recoil", 0.5);
+ds_map_add(global.weapons[9], "max_recoil", 6);
+ds_map_add(global.weapons[9], "recoil_mult", 0.5);
+ds_map_add(global.weapons[9], "shake_dur", 4);
+ds_map_add(global.weapons[9], "max_ammo", 1000);
+ds_map_add(global.weapons[9], "ammo", 1000);
+ds_map_add(global.weapons[9], "draw_time", 60);
+ds_map_add(global.weapons[9], "reload_time", 300);
+ds_map_add(global.weapons[9], "windup_time", 45);
+ds_map_add(global.weapons[9], "weight", 2);
+ds_map_add(global.weapons[9], "pump", 0);
+ds_map_add(global.weapons[9], "pump_time", 0);

@@ -9,7 +9,7 @@ if obj_player.weapon != "none"
 		prev_weap		 = 0;
 		// Load blank
 		weapon			 = "none";
-		type			 = "none";
+		type			 = "other";
 		atk_type		 = "none";
 		hands			 = 0;
 		hand_one		 = [0, 0];
@@ -35,6 +35,8 @@ if obj_player.weapon != "none"
 		ammo			 = max_ammo;
 		draw_time		 = 0;
 		reload_time		 = 0;
+		windup_time		 = 0;
+		weight			 = 0;
 		pump			 = 0;
 		pump_time		 = 0;
 	}

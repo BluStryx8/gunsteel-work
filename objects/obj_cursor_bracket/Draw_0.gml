@@ -24,8 +24,7 @@ if (image_index == 0)
 	else rotate = 0;
 }
 if (obj_player.reloading != 0) exit;
-if (obj_player.type == "pistol") or (obj_player.type == "rifle") or (obj_player.type == "shotgun")
-	or (obj_player.type == "sniper")
+if (obj_player.type != "other" and obj_player.type != "bar")
 {
 	if (obj_player.pump != 0 or obj_player.ammo == 0) var _col = make_colour_hsv(0, 0, 220)
 		else var _col = c_white;

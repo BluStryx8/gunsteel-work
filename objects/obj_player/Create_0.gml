@@ -4,6 +4,7 @@ declare_globals();
 
 // Movement
 global.moveable = true;	// If player can move or not
+base_speed = 5;			// Base speed of player
 move_speed = 5;			// Speed of player
 h_move = 0;				// Horizontal speed
 v_move = 0;				// Vertical speed
@@ -31,6 +32,7 @@ prev_weap = 0;			// Last selected weapon
 ammo = 0;				// Current weapon ammo
 pump = 0;				// (For pump-action) Checks if pump needed
 weapon = "";			// Current weapon selected
+wind = 0;				// (For windup weapons) adds to wind until it matches windup before firing
 set_empty();			// Declares all weapon variables
 
 // Weapon Vars

@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "0ce0d2df-b807-495e-b378-222ac19db353",
+            "Value": {
+                "id": "1ade9ab6-8f71-4bfc-8f13-92131d3b103c",
+                "resourcePath": "objects\\obj_item_pickup_minigun\\obj_item_pickup_minigun.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0f299652-c379-46f3-8728-e9910e25d7a8",
             "Value": {
                 "id": "c1a6ac86-f311-4a32-bdb5-ed83d9b58115",
@@ -1207,6 +1215,14 @@
             }
         },
         {
+            "Key": "84ed5495-417a-48c9-b296-805469b92200",
+            "Value": {
+                "id": "87026173-86f2-40c5-b28f-8e1284497191",
+                "resourcePath": "sprites\\spr_held_minigun\\spr_held_minigun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "853da668-9cb6-432a-b2c7-d42e00cb724a",
             "Value": {
                 "id": "e27a3721-6afe-4528-9c0f-d5c8f7ba5d6e",
@@ -1323,6 +1339,14 @@
             "Value": {
                 "id": "2d86bd30-24b8-4020-a92d-6419f7714d93",
                 "resourcePath": "sprites\\spr_held_uzi\\spr_held_uzi.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "93b49704-3e4f-4381-a82a-fd0862f6881b",
+            "Value": {
+                "id": "e2acb5b9-9c63-417a-9b4f-4375af8ceb41",
+                "resourcePath": "sprites\\spr_gui_minigun\\spr_gui_minigun.yy",
                 "resourceType": "GMSprite"
             }
         },

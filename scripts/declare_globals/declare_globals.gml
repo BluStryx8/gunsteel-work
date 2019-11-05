@@ -9,17 +9,6 @@ global.p_shirt_colour = make_colour_hsv(0, 0, 148);
 global.p_pants_colour = make_colour_hsv(0, 0, 50);
 global.p_dash_colour = make_colour_hsv(0, 0, 255);
 
-// Control Variables (Temporary)
-global.p_left = ord("A");
-global.p_right = ord("D");
-global.p_up = ord("W");
-global.p_down = ord("S");
-
-global.p_sneak = vk_shift;
-global.p_dodge = vk_space;
-
-global.p_reload = ord("R");
-
 global.p_inv_1 = ord("1");
 global.p_inv_2 = ord("2");
 global.p_inv_3 = ord("3");

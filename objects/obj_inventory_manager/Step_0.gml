@@ -30,6 +30,7 @@ if (!global.holstered)
 		obj_player.fire = 0;
 		obj_player.focus = 0;
 		obj_player.reloading = 0;
+		obj_player.wind = 0;
 		obj_cursor_bracket.rotate = 0;
 		inv_use_script(global.p_active, "change");
 	}
@@ -41,6 +42,7 @@ else if (change_check != -1)
 	obj_player.fire = 0;
 	obj_player.focus = 0;
 	obj_player.reloading = 0;
+	obj_player.wind = 0;
 	obj_cursor_bracket.rotate = 0;
 	inv_use_script(global.p_active, "change");
 }

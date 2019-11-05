@@ -38,6 +38,8 @@ with (obj_player)
 	fire_cooldown	 = draw_time;
 	reloading		 = -1;
 	reload_time		 = ds_map_find_value(global.weapons[_w], "reload_time");
+	windup_time		 = ds_map_find_value(global.weapons[_w], "windup_time");
+	weight			 = ds_map_find_value(global.weapons[_w], "weight");
 	pump			 = ds_map_find_value(global.weapons[_w], "pump");
 	pump_time		 = ds_map_find_value(global.weapons[_w], "pump_time");
 }

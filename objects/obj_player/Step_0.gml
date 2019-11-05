@@ -21,18 +21,19 @@ xprev[1] = xprev[0];	// Records position 2 frames ago
 yprev[1] = yprev[0];
 xprev[0] = xprevious;	// Records position 1 frame ago
 yprev[0] = yprevious;
+move_speed = base_speed - weight;	// Weighs down player if using heavy weapons
 
 /// Keyboard Movements
 if (global.moveable == true and immune <= 45)	// Checks if player can move
 {
 	// Check keyboard
-	if (keyboard_check(global.p_left))	h_move -= 2;	// Move left
-	if (keyboard_check(global.p_right)) h_move += 2;	// Move right
-	if (keyboard_check(global.p_up))	v_move -= 2;	// Move up
-	if (keyboard_check(global.p_down))	v_move += 2;	// Move down
-	if (keyboard_check(global.p_sneak) or global.in_inv) sneak = true;	// Sneaking
+	if (keyboard_check(ord("A")))	h_move -= 2;	// Move left
+	if (keyboard_check(ord("D")))	h_move += 2;	// Move right
+	if (keyboard_check(ord("W")))	v_move -= 2;	// Move up
+	if (keyboard_check(ord("S")))	v_move += 2;	// Move down
+	if (keyboard_check(vk_shift) or global.in_inv) sneak = true;	// Sneaking
 	// Check dodge
-	if ((mouse_check_button_pressed(mb_middle) or keyboard_check_pressed(global.p_dodge))
+	if ((mouse_check_button_pressed(mb_middle) or keyboard_check_pressed(vk_space))
 		and dodge <= 0 and !sneak
 		and not (h_move == 0 and v_move == 0))
 	{
@@ -175,6 +176,7 @@ if (fire > 0 and fire_cooldown == 0)
 				audio_play_sound(snd_fire_rifle, 1, false);
 				break;
 			case "sniper":
+			case "minigun":
 				var _bullet = obj_player_snipe_bullet;
 				audio_play_sound(snd_fire_rifle, 1, false);
 				break;
@@ -206,6 +208,10 @@ if (fire_cooldown > 0) fire_cooldown -= 1;
 if (fire_cooldown <= 0) fire_cooldown = 0;
 if (accuracy > base_accuracy) accuracy -= 0.1;	// Decrease inaccuracy back to base accuracy
 if (sneak and accuracy > max_recoil - (max_recoil - base_accuracy) / 2) accuracy -= 0.1;
+if (wind > 0 and not mouse_check_button(mb_left))
+{
+	wind -= 0.5;
+}
 
 /// Calculate Reloading
 if (reloading < 0 and fire_cooldown == 0) reloading = 0;	// negative reload signifies weapon swap
@@ -223,6 +229,7 @@ if (reloading == 30)
 		case "pistol":
 		case "rifle":
 		case "sniper":
+		case "minigun":
 			ammo = max_ammo;
 			break;
 		case "shotgun":
@@ -247,7 +254,7 @@ if (reloading == 1)
 	pump = 0;
 }
 // Check for reload
-if (keyboard_check(global.p_reload) and fire_cooldown == 0 and reloading == 0 and !global.holstered)
+if (keyboard_check(ord("R")) and fire_cooldown == 0 and reloading == 0 and !global.holstered)
 {
 	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 	audio_play_sound(snd_reload_eject_clip, 1, false);
