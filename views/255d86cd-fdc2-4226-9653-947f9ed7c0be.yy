@@ -9,7 +9,9 @@
         "5b05dab9-866b-48d8-afab-93ab9a3f06fa",
         "e324ed6a-ae90-4e2a-9764-5e06f0ffb84c",
         "bac48f7c-5821-4e1f-8d0e-97c45f34b372",
-        "ef9f046e-6061-4c1c-8bf0-7f532b276dda"
+        "ef9f046e-6061-4c1c-8bf0-7f532b276dda",
+        "faf29c77-4698-4558-94ec-51cfaf66a596",
+        "5d44ed44-6026-4fbe-861f-0d319de62d96"
     ],
     "filterType": "GMSound",
     "folderName": "Weapons",

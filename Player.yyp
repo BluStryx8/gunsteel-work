@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "15d691ea-73bd-4d2a-93ce-dd2e6c9c1b2a",
+            "Value": {
+                "id": "b967ad31-f3e3-489d-8202-c8bcf39fc1db",
+                "resourcePath": "objects\\obj_enemy_bat_black\\obj_enemy_bat_black.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "16ef70ca-f631-46e2-b34e-ca33c7a51194",
             "Value": {
                 "id": "2689eb55-2db5-47dc-a8c8-f73e6ac395c7",
@@ -895,6 +903,14 @@
             }
         },
         {
+            "Key": "5d44ed44-6026-4fbe-861f-0d319de62d96",
+            "Value": {
+                "id": "559677ff-7861-4e67-9788-b43e0a87b950",
+                "resourcePath": "sounds\\snd_minigun_winddown\\snd_minigun_winddown.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "5d5a8b6f-10ce-4468-8129-3341d307107c",
             "Value": {
                 "id": "5f15805d-aa11-4ffb-8b62-82a268991d34",
@@ -1348,6 +1364,14 @@
                 "id": "54d6b55b-fa64-4cac-a100-f9c23c4332f5",
                 "resourcePath": "views\\9118897e-72c5-48ec-ad90-ac9dd7b46841.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "93098424-8204-42d0-aa52-69647c535510",
+            "Value": {
+                "id": "85fe9237-b965-4900-9b53-718b48be7273",
+                "resourcePath": "objects\\obj_enemy_bat_blue\\obj_enemy_bat_blue.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2412,6 +2436,14 @@
                 "id": "1d3e49e4-c401-4981-92c2-63c724f59972",
                 "resourcePath": "sprites\\spr_singlebar\\spr_singlebar.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "faf29c77-4698-4558-94ec-51cfaf66a596",
+            "Value": {
+                "id": "51476a19-f79a-4f03-b1f0-d75e47f55fdf",
+                "resourcePath": "sounds\\snd_minigun_windup\\snd_minigun_windup.yy",
+                "resourceType": "GMSound"
             }
         },
         {

@@ -90,7 +90,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "65",
+            "value": "50",
             "varName": "hp",
             "varType": 1
         },
@@ -107,6 +107,34 @@
             "value": "320",
             "varName": "detect_distance",
             "varType": 1
+        },
+        {
+            "id": "83b889ed-62d0-4c33-ae10-6ac23125ee41",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "64",
+            "varName": "dive_distance",
+            "varType": 1
+        },
+        {
+            "id": "18af2830-e01e-4842-b8a8-06ec1e157be5",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "2.5",
+            "varName": "dive_speed",
+            "varType": 0
         },
         {
             "id": "14ca7c8e-6cba-40be-b593-7e4a7c0ac611",
@@ -146,9 +174,9 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "3",
+            "value": "2.5",
             "varName": "max_speed",
-            "varType": 1
+            "varType": 0
         },
         {
             "id": "6a9b7a5d-db1d-4a13-b181-f38f08013fd1",

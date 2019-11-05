@@ -211,6 +211,12 @@ if (sneak and accuracy > max_recoil - (max_recoil - base_accuracy) / 2) accuracy
 if (wind > 0 and not mouse_check_button(mb_left))
 {
 	wind -= 0.5;
+	if !audio_is_playing(snd_minigun_winddown)
+	{
+		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_stop_sound(snd_minigun_windup);
+		audio_play_sound(snd_minigun_winddown, 1, false);
+	}
 }
 
 /// Calculate Reloading

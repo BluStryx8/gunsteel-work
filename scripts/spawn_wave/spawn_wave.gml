@@ -10,7 +10,7 @@ var _max  = argument2;
 switch (_biome)
 {
 	case "basic":
-		switch (choose(0, 0))
+		switch (choose(0, 1))
 		{
 			case 0:
 				// Spawn Slimes
@@ -27,6 +27,28 @@ switch (_biome)
 							break;
 						case "b":
 							rand_load_enemy(obj_enemy_slime_b);
+							break;
+					}
+				}
+				break;
+			case 1:
+				// Spawn Slimes and Bats
+				repeat (irandom_range(_min, _max))
+				{
+					enemy_count += 1;
+					switch(choose("gs", "gs", "gs", "bs", "nb", "nbl"))
+					{
+						case "gs":
+							rand_load_enemy(obj_enemy_slime_g);
+							break;
+						case "bs":
+							rand_load_enemy(obj_enemy_slime_b);
+							break;
+						case "nb":
+							rand_load_enemy(obj_enemy_bat_black);
+							break;
+						case "nbl":
+							rand_load_enemy(obj_enemy_bat_blue);
 							break;
 					}
 				}

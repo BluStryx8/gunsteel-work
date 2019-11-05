@@ -104,7 +104,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "30",
+            "value": "15",
             "varName": "idle_min_time",
             "varType": 1
         },
@@ -118,7 +118,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "90",
+            "value": "30",
             "varName": "idle_max_time",
             "varType": 1
         },
@@ -132,7 +132,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "5",
+            "value": "3",
             "varName": "jump_prep_time",
             "varType": 1
         },

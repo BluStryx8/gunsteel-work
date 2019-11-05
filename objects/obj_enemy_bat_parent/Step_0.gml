@@ -23,8 +23,9 @@ switch (state)
 		speed = spd;
 		hspd = hspeed;
 		vspd = vspeed;
-		if (place_meeting(x, y, obj_player_collision))
+		if (distance_to_object(obj_player) < dive_distance)
 		{
+			spd = dive_speed;
 			state = 2;
 			dont_run = false;
 		}

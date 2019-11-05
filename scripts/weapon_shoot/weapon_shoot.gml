@@ -8,7 +8,12 @@ with (obj_player)
 		if (wind < windup_time)
 		{
 			wind += 1;
-			// if !audio_is_playing() play windup
+			if !audio_is_playing(snd_minigun_windup)
+			{
+				audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+				audio_stop_sound(snd_minigun_winddown);
+				audio_play_sound(snd_minigun_windup, 1, false);
+			}
 		}
 		else fire += burst;
 }
