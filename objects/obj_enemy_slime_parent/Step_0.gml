@@ -6,7 +6,8 @@ if (anim >= anim_speed)
 	anim -= anim_speed;
 	image_index += 1;
 }
-if (!master_id.active) exit;
+if (variable_instance_exists(id, "master_id"))
+	if (!master_id.active) exit;
 
 action_timer -= 1;
 

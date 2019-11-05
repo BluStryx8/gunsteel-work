@@ -1,5 +1,8 @@
 /// @description Damage and destroy
-if (!other.master_id.active or other.id == last_hit) exit;
+if (variable_instance_exists(other.id, "master_id")) var _master = true
+	else var _master = false;
+if (_master)
+	if (!other.master_id.active or other.id == last_hit) exit;
 
 instance_create_layer(x, y, "bullets", obj_player_bullet_hit);
 last_hit = other.id;
@@ -16,7 +19,7 @@ with (other)
 		_death.image_yscale = scale + _scale_mod;
 		_death.image_alpha = irandom_range(80, 100) / 100;
 		instance_destroy();
-		master_id.enemy_count -= 1;
+		if (_master) master_id.enemy_count -= 1;
 	}
 	// Draw damage
 	dmg = instance_create_layer(x, y, "HUD", obj_dmg_number);

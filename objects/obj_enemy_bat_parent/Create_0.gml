@@ -1,16 +1,14 @@
 /// @description Declareation
+state = 0;			// Current action of bat
+dont_run = false;	// Single use check when escaping
+time = 0;			// Time after escaping before attacking again
+anim = 0;			// Animation
+hurt_flash = 0;		// Flashes when damaged
 
-hp = 65
-state = 0
+spd = 0;	// Remember speed
+hspd = 0;	// Used in collision
+vspd = 0;	// Used in collision
+speed = 0;
 
-speed = 3
-
-dont_run = false
-time = 0
-
-hspd = 0;
-vspd = 0;
-anim = 0;
-anim_speed = 7.5;
-
-scale = 1;
+image_xscale = scale * 2;
+image_yscale = scale * 2;

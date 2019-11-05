@@ -7,7 +7,7 @@
         "072aadcb-1723-44bf-80c0-72e86574261b"
     ],
     "filterType": "GMSprite",
-    "folderName": "group0",
+    "folderName": "Bat",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
