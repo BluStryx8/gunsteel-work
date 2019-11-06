@@ -26,21 +26,24 @@ move_speed = base_speed - weight;	// Weighs down player if using heavy weapons
 /// Keyboard Movements
 if (global.moveable == true and immune <= 45)	// Checks if player can move
 {
-	// Check keyboard
-	if (keyboard_check(ord("A")))	h_move -= 2;	// Move left
-	if (keyboard_check(ord("D")))	h_move += 2;	// Move right
-	if (keyboard_check(ord("W")))	v_move -= 2;	// Move up
-	if (keyboard_check(ord("S")))	v_move += 2;	// Move down
-	if (keyboard_check(vk_shift) or global.in_inv) sneak = true;	// Sneaking
 	// Check dodge
 	if ((mouse_check_button_pressed(mb_middle) or keyboard_check_pressed(vk_space))
-		and dodge <= 0 and !sneak
+		and dodge == 0 and !sneak
 		and not (h_move == 0 and v_move == 0))
 	{
 		// Initialise Dodge
 		h_dodge = h_move / 2;
 		v_dodge = v_move / 2;
 		dodge = move_speed;
+	}
+	else
+	{
+		// Check keyboard
+		if (keyboard_check(ord("A")))	h_move -= 2;	// Move left
+		if (keyboard_check(ord("D")))	h_move += 2;	// Move right
+		if (keyboard_check(ord("W")))	v_move -= 2;	// Move up
+		if (keyboard_check(ord("S")))	v_move += 2;	// Move down
+		if (keyboard_check(vk_shift) or global.in_inv) sneak = true;	// Sneaking
 	}
 }
 
@@ -68,8 +71,10 @@ else if (dodge > 0)	// If dodging
 	dodge -= 0.25;	// Decrements speed and duration of dodge
 	h_move = clamp(round(h_dodge * dodge), -move_speed * 2, move_speed * 2);
 	v_move = clamp(round(v_dodge * dodge), -move_speed * 2, move_speed * 2);
+	if (dodge <= 0) dodge = -dodge_cooldown;
 }
-if immune > 0 immune -= 1;
+if (dodge < 0) dodge += 1;
+if (immune > 0) immune -= 1;
 
 /// Update position
 h_move = collision("x", h_move, 0);
@@ -202,6 +207,8 @@ if (fire > 0 and fire_cooldown == 0)
 			else audio_play_sound(snd_reload_clip, 1, false);	// Not pumped sound
 	}
 }
+// If not firing
+if (not mouse_check_button(mb_left)) firing = false;
 
 // Attack Cooldown
 if (fire_cooldown > 0) fire_cooldown -= 1;

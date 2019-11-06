@@ -12,6 +12,7 @@ sneak = false;			// Sneaking
 dodge = 0;				// Dodge distance
 h_dodge = 0;			// Horizontal speed of player when init dodge
 v_dodge = 0;			// Vertical speed of player when init dodge
+dodge_cooldown = 30;	// Frames before dodge can be used again
 immune = 0;				// If taken damage recently
 
 // Records previous 3 positions
@@ -32,6 +33,7 @@ prev_weap = 0;			// Last selected weapon
 ammo = 0;				// Current weapon ammo
 pump = 0;				// (For pump-action) Checks if pump needed
 weapon = "";			// Current weapon selected
+firing = false;			// Detects if player is firing
 wind = 0;				// (For windup weapons) adds to wind until it matches windup before firing
 set_empty();			// Declares all weapon variables
 
