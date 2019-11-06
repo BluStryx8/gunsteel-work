@@ -1359,6 +1359,14 @@
             }
         },
         {
+            "Key": "8da5b82b-4377-49d1-940f-ec3733dd4276",
+            "Value": {
+                "id": "99f27427-f1d7-44f1-a108-8c8ded798f4e",
+                "resourcePath": "objects\\obj_item_pickup_ore_iron\\obj_item_pickup_ore_iron.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8e628117-7253-4637-88c4-4bc472d70ba1",
             "Value": {
                 "id": "0301635b-153f-4375-a994-182db61618d2",
@@ -1371,6 +1379,14 @@
             "Value": {
                 "id": "853d619b-6b3b-482e-92b2-99797283c3bd",
                 "resourcePath": "objects\\obj_item_pickup_uzi\\obj_item_pickup_uzi.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8ee9747c-2367-48a2-96f8-765c17a650f3",
+            "Value": {
+                "id": "3bbb2156-6082-46af-9f7e-5470d09a6828",
+                "resourcePath": "objects\\obj_crafting\\obj_crafting.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1435,6 +1451,14 @@
             "Value": {
                 "id": "2d86bd30-24b8-4020-a92d-6419f7714d93",
                 "resourcePath": "sprites\\spr_held_uzi\\spr_held_uzi.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "93599943-1fac-443f-8358-4d281bbdffd2",
+            "Value": {
+                "id": "1cba3427-2403-4f76-880f-ada7923d9124",
+                "resourcePath": "sprites\\spr_gui_ore_iron\\spr_gui_ore_iron.yy",
                 "resourceType": "GMSprite"
             }
         },
