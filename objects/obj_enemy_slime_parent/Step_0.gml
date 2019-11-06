@@ -36,13 +36,20 @@ if action_timer <= 0
 		case "land":
 			action = "idle";
 			action_timer = irandom_range(idle_min_time, idle_max_time);
+			if (distance_to_object(obj_player) > undetect_distance)
+			{
+				aggro = false;
+				direction = irandom_range(0, 359);
+			}
 			break;
 	}
 }
 
 if (action == "idle")
 {
-	direction = point_direction(x, y, obj_player.x, obj_player.y);
+	if (distance_to_object(obj_player) < detect_distance) aggro = true;
+	if (aggro)
+		direction = point_direction(x, y, obj_player.x, obj_player.y);
 	if (direction <= 45 or direction > 315)
 		dir = "right";
 	else if (direction <= 135 and direction > 45)

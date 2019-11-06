@@ -28,7 +28,7 @@ if action_timer <= 0
 		case "jump":
 			action = "land";
 			action_timer = 60;
-			enemy_spawn_bullet_pattern("spread", 8, 2, 2, 180, scale - 0.1, scale + 0.1);
+			enemy_spawn_bullet_pattern("spread", 8, 10, 2.5, 240, scale - 0.1, scale + 0.1);
 			spd = 0;
 			bounce = 0;
 			hspd = 0;

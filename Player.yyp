@@ -1666,7 +1666,7 @@
             "Key": "af419074-c5b9-4fb0-8742-a50bbb9dbdfc",
             "Value": {
                 "id": "6e2fc868-2125-4bae-9ad9-0f13f8aea059",
-                "resourcePath": "objects\\obj_enemy_slime_red\\obj_enemy_slime_red.yy",
+                "resourcePath": "objects\\obj_enemy_slime_yellow\\obj_enemy_slime_yellow.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1890,7 +1890,7 @@
             "Key": "c17dfed9-f98d-4e8a-8743-187fe02e3bbc",
             "Value": {
                 "id": "8cedf619-1566-469a-9d4e-062c194c8acc",
-                "resourcePath": "objects\\obj_enemy_slime_orange\\obj_enemy_slime_orange.yy",
+                "resourcePath": "objects\\obj_enemy_slime_red\\obj_enemy_slime_red.yy",
                 "resourceType": "GMObject"
             }
         },
