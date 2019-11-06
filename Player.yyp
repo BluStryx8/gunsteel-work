@@ -1007,6 +1007,14 @@
             }
         },
         {
+            "Key": "64724e03-c366-48b5-b8a2-b1400abf3365",
+            "Value": {
+                "id": "ea6da0ac-8c19-4be8-94af-4cb4757a191e",
+                "resourcePath": "objects\\obj_enemy_bat_green\\obj_enemy_bat_green.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6535a66b-a1bc-4cdb-b5b6-2b2cb2c01e62",
             "Value": {
                 "id": "77dc843a-289d-481f-9a13-ab9f913ace20",
@@ -1364,6 +1372,14 @@
                 "id": "0301635b-153f-4375-a994-182db61618d2",
                 "resourcePath": "views\\8e628117-7253-4637-88c4-4bc472d70ba1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8e722613-cadf-4c8c-b0db-181e53dbb59b",
+            "Value": {
+                "id": "8e8612a8-6f71-4ce5-9dcb-5ba06f2e5427",
+                "resourcePath": "objects\\obj_enemy_bat_red\\obj_enemy_bat_red.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2548,14 +2564,6 @@
                 "id": "51476a19-f79a-4f03-b1f0-d75e47f55fdf",
                 "resourcePath": "sounds\\snd_minigun_windup\\snd_minigun_windup.yy",
                 "resourceType": "GMSound"
-            }
-        },
-        {
-            "Key": "fb94cb10-5a3b-4435-be7c-5877f4f57162",
-            "Value": {
-                "id": "5c12c23a-9161-4ba0-8198-19acfaf16eb6",
-                "resourcePath": "sprites\\spr_crate_icon\\spr_crate_icon.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

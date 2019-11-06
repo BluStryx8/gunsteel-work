@@ -13,7 +13,8 @@ switch (_id)
 			load_door(5, 16, "left");
 			load_door(53, 16, "right");
 			load_door(26, 33, "down");
-			spawn_wave("basic", 4, 7);
+			biome = choose("basic", "basic");
+			spawn_wave(biome, 4, 7);
 			// Spawns outliner crates
 			spawn_tile_rect(6, 52, 7, 7, 8, 2, 3, obj_crate);
 			break;

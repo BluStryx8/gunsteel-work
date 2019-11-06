@@ -95,6 +95,20 @@
             "varType": 1
         },
         {
+            "id": "5606e955-da7d-4a33-bc6a-9c2879cd7b3b",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "2.5",
+            "varName": "max_speed",
+            "varType": 0
+        },
+        {
             "id": "55c36cec-0cbd-45f2-9d42-9376598e431e",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -118,7 +132,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "64",
+            "value": "48",
             "varName": "dive_distance",
             "varType": 1
         },
@@ -132,7 +146,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "2.5",
+            "value": "max_speed",
             "varName": "dive_speed",
             "varType": 0
         },
@@ -163,20 +177,6 @@
             "value": "120",
             "varName": "max_escape_time",
             "varType": 1
-        },
-        {
-            "id": "5606e955-da7d-4a33-bc6a-9c2879cd7b3b",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "2.5",
-            "varName": "max_speed",
-            "varType": 0
         },
         {
             "id": "6a9b7a5d-db1d-4a13-b181-f38f08013fd1",

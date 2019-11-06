@@ -20,6 +20,7 @@ if (dir <= 90 or dir >= 270)
 		draw_sprite_ext(spr_player_hitbox, -1, xprev[1], yprev[1], 0.8, 0.8, 0, global.p_dash_colour, 0.3);
 		draw_sprite_ext(spr_player_hitbox, -1, xprev[2], yprev[2], 0.7, 0.7, 0, global.p_dash_colour, 0.2);
 	}
+	draw_sprite_ext(spr_player_shadow, 0, x, y + 17, 1, 1, 0, c_white, 0.25);
 	for (var _n = 0; _n < _times; _n++)
 	{
 		// Set up Shader
@@ -30,7 +31,6 @@ if (dir <= 90 or dir >= 270)
 			shader_set_uniform_f(_shd_alpha, _flash);
 		}
 		// Draw Player
-		draw_sprite_ext(spr_player_shadow, 0, x, y + 17, 1, 1, 0, c_white, 0.25);
 		draw_sprite_ext(spr_player_feet, 0, x + 4 + anim_x, y + 15 + anim_y, 1, 1, 0, global.p_skin_colour, 1)
 		draw_sprite_ext(spr_player_feet, 0, x - 4 - anim_x, y + 14 - anim_y + still, 1, 1, 0, global.p_skin_colour, 1)
 		draw_sprite_ext(spr_player_pants, 0, x, y, 1, 1, 0, global.p_pants_colour, 1)
@@ -62,6 +62,7 @@ else
 		draw_sprite_ext(spr_player_hitbox, -1, xprev[1], yprev[1], -0.8, 0.8, 0, global.p_dash_colour, 0.3);
 		draw_sprite_ext(spr_player_hitbox, -1, xprev[2], yprev[2], -0.7, 0.7, 0, global.p_dash_colour, 0.2);
 	}
+	draw_sprite_ext(spr_player_shadow, 0, x, y + 17, 1, 1, 0, c_white, 0.25);
 	for (var _n = 0; _n < _times; _n++)
 	{
 		// Set up Shader
@@ -71,7 +72,6 @@ else
 			var _shd_alpha = shader_get_uniform(shd_flash, "_alpha");	// Finds the variable inside the shader
 			shader_set_uniform_f(_shd_alpha, _flash);
 		}
-		draw_sprite_ext(spr_player_shadow, 0, x, y + 17, 1, 1, 0, c_white, 0.25);
 		draw_sprite_ext(spr_player_feet, 0, x + 4 + anim_x, y + 14 - anim_y + still, 1, 1, 0, global.p_skin_colour, 1)
 		draw_sprite_ext(spr_player_feet, 0, x - 4 - anim_x, y + 15 + anim_y, 1, 1, 0, global.p_skin_colour, 1)
 		draw_sprite_ext(spr_player_pants, 0, x, y, -1, 1, 0, global.p_pants_colour, 1)

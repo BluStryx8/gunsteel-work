@@ -6,7 +6,7 @@ var _id = argument0;
 switch (_id)
 {
 	case "null":
-		switch (choose("enemy", "enemy", "none"))
+		switch (choose("enemy", "none", "none"))
 		{
 			case "enemy":
 			// Loads enemy doors
@@ -14,7 +14,8 @@ switch (_id)
 			load_door(53, 16, "right");
 			load_door(26, 5, "up");
 			load_door(26, 33, "down");
-			spawn_wave("basic", 3, 7);
+			biome = choose("basic", "basic");
+			spawn_wave(biome, 3, 7)
 			break;
 		case "none":
 			break;

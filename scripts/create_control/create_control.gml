@@ -25,3 +25,4 @@ _control.alarm[0] = 1;
 _control.active = 0;
 _control.enemy_count = 0;
 _control.waves = 0;
+_control.biome = "basic";

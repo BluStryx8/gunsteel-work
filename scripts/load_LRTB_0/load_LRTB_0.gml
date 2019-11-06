@@ -14,7 +14,9 @@ switch (_id)
 			load_door(53, 16, "right");
 			load_door(26, 5, "up");
 			load_door(26, 33, "down");
-			spawn_wave("basic", 7, 12);
+			biome = choose("basic", "basic", "slime", "elite");
+			if (biome != "elite") spawn_wave(biome, 8, 14)
+				else spawn_wave(biome, 4, 8);
 			// Scatter outliner crates
 			spawn_tile_rect(6, 22, 32, 7, 4, 25, 3, obj_crate);
 			spawn_tile_rect(36, 52, 32, 7, 4, 25, 3, obj_crate);
@@ -32,8 +34,8 @@ switch (_id)
 					// Draws only outliner crates			
 					spawn_tile_rect(6, 22, 32, 7, 4, 25, 1, obj_crate);
 					spawn_tile_rect(36, 52, 32, 7, 4, 25, 1, obj_crate);
-					spawn_tile_rect(6, 22, 29, 10, 6, 19, 2, obj_crate);
-					spawn_tile_rect(36, 52, 29, 10, 6, 19, 2, obj_crate);
+					spawn_tile_rect(6, 22, 30, 10, 6, 20, 2, obj_crate);
+					spawn_tile_rect(36, 52, 30, 10, 6, 20, 2, obj_crate);
 					break;
 			}
 			break;

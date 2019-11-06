@@ -13,7 +13,9 @@ switch (_id)
 			load_door(5, 16, "left");
 			load_door(53, 16, "right");
 			load_door(26, 5, "up");
-			spawn_wave("basic", 7, 12);
+			biome = choose("basic", "basic", "slime", "elite");
+			if (biome != "elite") spawn_wave(biome, 7, 12)
+				else spawn_wave(biome, 4, 8);
 			// Scatter outliner crates
 			spawn_tile_rect(8, 50, 32, 32, 6, 2, 3, obj_crate);
 			spawn_tile_rect(6, 22, 7, 7, 4, 2, 3, obj_crate);

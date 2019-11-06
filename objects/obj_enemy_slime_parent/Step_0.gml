@@ -1,11 +1,23 @@
 /// @description AI change
 if (global.paused) exit;
 anim += 1;
-if (anim >= anim_speed)
+if (aggro and distance_to_object(obj_player) < detect_distance)
 {
-	anim -= anim_speed;
-	image_index += 1;
+	if (anim >= anim_speed - 1)
+	{
+		anim -= (anim_speed - 1);
+		image_index += 1;
+	}
 }
+else
+{
+	if (anim >= anim_speed)
+	{
+		anim -= anim_speed;
+		image_index += 1;
+	}
+}
+
 if (variable_instance_exists(id, "master_id"))
 	if (!master_id.active) exit;
 
@@ -47,7 +59,8 @@ if action_timer <= 0
 
 if (action == "idle")
 {
-	if (distance_to_object(obj_player) < detect_distance) aggro = true;
+	if (distance_to_object(obj_player) < detect_distance) or instance_exists(obj_player_normal_bullet)
+		aggro = true;
 	if (aggro)
 		direction = point_direction(x, y, obj_player.x, obj_player.y);
 	if (direction <= 45 or direction > 315)

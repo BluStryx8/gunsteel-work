@@ -26,6 +26,7 @@ move_speed = base_speed - weight;	// Weighs down player if using heavy weapons
 /// Keyboard Movements
 if (global.moveable == true and immune <= 45)	// Checks if player can move
 {
+	if (keyboard_check(vk_shift) or global.in_inv) sneak = true;	// Sneaking
 	// Check dodge
 	if ((mouse_check_button_pressed(mb_middle) or keyboard_check_pressed(vk_space))
 		and dodge == 0 and !sneak
@@ -43,7 +44,6 @@ if (global.moveable == true and immune <= 45)	// Checks if player can move
 		if (keyboard_check(ord("D")))	h_move += 2;	// Move right
 		if (keyboard_check(ord("W")))	v_move -= 2;	// Move up
 		if (keyboard_check(ord("S")))	v_move += 2;	// Move down
-		if (keyboard_check(vk_shift) or global.in_inv) sneak = true;	// Sneaking
 	}
 }
 

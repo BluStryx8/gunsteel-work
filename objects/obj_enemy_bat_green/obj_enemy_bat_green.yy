@@ -1,23 +1,32 @@
 {
-    "id": "93098424-8204-42d0-aa52-69647c535510",
+    "id": "64724e03-c366-48b5-b8a2-b1400abf3365",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_enemy_bat_blue",
+    "name": "obj_enemy_bat_green",
     "eventList": [
-        
+        {
+            "id": "9d31f197-be21-4b8f-a977-26b7dfe141a4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "64724e03-c366-48b5-b8a2-b1400abf3365"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "61c2e4c2-e878-496f-8288-2fc473f85658",
+            "id": "baefe3bc-36e6-44e5-a413-a6b102e801aa",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "8a9b2ee3-0c07-4d74-b985-77d241ab3576",
-            "value": "irandom_range(70, 80) \/ 100"
+            "value": "irandom_range(50, 60) \/ 100"
         },
         {
-            "id": "2d5b0e72-581a-46a2-9ad8-d2c08f67d393",
+            "id": "00ec096f-b1c8-455f-8cc4-f9031fb08d4b",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
@@ -25,31 +34,31 @@
             "value": "round(100 * scale)"
         },
         {
-            "id": "07029eef-fc03-4f05-8f80-d9e8328d1386",
+            "id": "c43cbfee-9fbf-4d4e-8b6c-cfe52517a940",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "5606e955-da7d-4a33-bc6a-9c2879cd7b3b",
-            "value": "8 * (1 - scale)"
+            "value": "6 * (1 - scale)"
         },
         {
-            "id": "a93ebe9a-8890-46ab-acf7-16797e57be59",
+            "id": "d121b12b-b4d2-46e0-9e8f-3a1a53873310",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "3eb8042c-00a7-400a-a760-a1fb08843f1b",
-            "value": "$FFFFA75B"
+            "value": "$FF73FF2D"
         },
         {
-            "id": "6d2a4cb0-0aa5-4a34-ae87-9d30a0b65984",
+            "id": "0adfb8e3-beb7-439f-91cc-b338eadcaebd",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "55c36cec-0cbd-45f2-9d42-9376598e431e",
-            "value": "256"
+            "value": "224"
         },
         {
-            "id": "9984bf9d-53f4-4eca-813c-f5e1dc08c1a0",
+            "id": "40ec1812-548f-4e7c-865e-4af6223b05d9",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
@@ -57,36 +66,36 @@
             "value": "160"
         },
         {
-            "id": "61742081-6591-4491-995d-846555bb5348",
+            "id": "f14d5fff-e3e7-4fbc-9d10-6b3467e036cf",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "18af2830-e01e-4842-b8a8-06ec1e157be5",
-            "value": "4.5"
+            "value": "max_speed"
         },
         {
-            "id": "594e1a71-c091-4816-961c-fb059bfaa338",
+            "id": "5b9e9a8d-9d18-4ce6-8d32-1c00bcb1caa7",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "6a9b7a5d-db1d-4a13-b181-f38f08013fd1",
-            "value": "10"
+            "value": "8"
         },
         {
-            "id": "b038a036-483a-4534-8d56-32e30d23fdab",
+            "id": "b0148cae-f7e7-4372-ba05-d2f725fd7a2e",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "14ca7c8e-6cba-40be-b593-7e4a7c0ac611",
-            "value": "45"
+            "value": "120"
         },
         {
-            "id": "6c8d9f78-50c1-4f7f-be51-fcc68b0cd6a0",
+            "id": "407aad06-1bb8-4075-88cf-095e8712d9c0",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "30275deb-2357-4cf3-a195-d1496fe80c94",
-            "value": "90"
+            "value": "150"
         }
     ],
     "parentObjectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",

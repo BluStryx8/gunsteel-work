@@ -42,22 +42,6 @@
             "value": "irandom_range(100, 120) \/ 100"
         },
         {
-            "id": "35059863-3856-448c-bc58-f273eb744172",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
-            "propertyId": "94304e85-e002-406f-b4ce-fa19a484f308",
-            "value": "15"
-        },
-        {
-            "id": "2295c51c-b640-41eb-ad77-1ff778dfc1b1",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
-            "propertyId": "7248b63d-72cf-4b56-8820-aa8827d0654d",
-            "value": "30"
-        },
-        {
             "id": "cbff8dc5-2b6c-4155-a0b3-eaf650e37645",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
@@ -96,14 +80,6 @@
             "objectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
             "propertyId": "bcec7db4-02a3-404b-ba1f-23b4769ed237",
             "value": "7"
-        },
-        {
-            "id": "2495a8c9-a237-47ac-b303-21b29c90fa45",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
-            "propertyId": "f34c8549-8089-4bdd-a253-a14d49cf0e80",
-            "value": "10"
         },
         {
             "id": "ab0493ca-8e19-4077-82ab-a40b2f9b0445",

@@ -104,7 +104,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "15",
+            "value": "40",
             "varName": "idle_min_time",
             "varType": 1
         },
@@ -118,7 +118,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "30",
+            "value": "90",
             "varName": "idle_max_time",
             "varType": 1
         },
@@ -216,7 +216,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "10",
+            "value": "9",
             "varName": "anim_speed",
             "varType": 1
         },
@@ -230,7 +230,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "200",
+            "value": "192",
             "varName": "detect_distance",
             "varType": 1
         },
@@ -244,7 +244,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "400",
+            "value": "512",
             "varName": "undetect_distance",
             "varType": 1
         }
