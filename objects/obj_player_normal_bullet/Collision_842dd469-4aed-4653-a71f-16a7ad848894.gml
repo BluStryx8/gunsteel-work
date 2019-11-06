@@ -22,8 +22,8 @@ with (other)
 		if (_master) master_id.enemy_count -= 1;
 	}
 	// Draw damage
-	dmg = instance_create_layer(x, y, "HUD", obj_dmg_number);
-	dmg.damage = other.damage;
+	var _dmg = instance_create_layer(x, y, "HUD", obj_dmg_number);
+	_dmg.damage = other.damage;
 }
 if (pierce != -1)
 {

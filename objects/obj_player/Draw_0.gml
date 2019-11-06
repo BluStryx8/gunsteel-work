@@ -29,6 +29,7 @@ if (dir <= 90 or dir >= 270)
 	// Dodge or Immune brighten
 	if (dodge > 0 or (immune > 0 and round(immune / 5) mod 2 == 0))
 		draw_sprite_ext(spr_player_hitbox, -1, x, y, 1, 1, 0, global.p_dash_colour, 0.1);
+	if (sneak) draw_sprite_ext(spr_player_hitbox, 1, x, y, 1, 1, 0, c_white, 0.2);
 }
 else
 {
@@ -60,4 +61,5 @@ else
 	// Dodge or Immune brighten
 	if (dodge > 0 or (immune > 0 and round(immune / 5) mod 2 == 0))
 		draw_sprite_ext(spr_player_hitbox, -1, x, y, -1, 1, 0, global.p_dash_colour, 0.1);
+	if (sneak) draw_sprite_ext(spr_player_hitbox, 1, x, y, -1, 1, 0, c_white, 0.2);
 }

@@ -2,7 +2,7 @@
     "id": "af419074-c5b9-4fb0-8742-a50bbb9dbdfc",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_enemy_slime_r",
+    "name": "obj_enemy_slime_red",
     "eventList": [
         
     ],
