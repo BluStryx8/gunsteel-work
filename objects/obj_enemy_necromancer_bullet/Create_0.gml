@@ -1,11 +1,22 @@
 /// @description Shoot
 // Declare Variables
-draw_delay = obj_player.bullet_dd;		// Delays drawing so the bullet is positioned properly
-decay = obj_player.decay;				// Sets time before bullet eventually fades and deletes self
+		// Delays drawing so the bullet is positioned properly
+decay = 180			// Sets time before bullet eventually fades and deletes self
 
-speed = obj_player.bullet_speed + irandom_range(-obj_player.bullet_speed_var, obj_player.bullet_speed_var);
+speed = 5
 spd = speed;							// Saves speed for later
 
-damage = irandom_range(obj_player.min_damage, obj_player.max_damage);
-damage -= round((obj_player.accuracy - obj_player.base_accuracy) * obj_player.recoil_mult);
+damage = 15
+last_hit = noone;
+
+pierce = -1
+
+direction = obj_enemy_necromancer.dir + irandom_range(0,60 );
+image_angle = direction;
+
+// Collision
+var _hspd = hspeed;
+var _vspd = vspeed;
+speed = 0;
+
 

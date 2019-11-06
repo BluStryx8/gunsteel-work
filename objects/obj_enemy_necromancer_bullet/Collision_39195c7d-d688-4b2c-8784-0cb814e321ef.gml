@@ -1,7 +1,6 @@
 /// @description Destroys instance
 if (other.id == last_hit) exit;
 
-instance_create_layer(x, y, "bullets", obj_player_bullet_hit);
 last_hit = other.id;
 with (other)
 {
