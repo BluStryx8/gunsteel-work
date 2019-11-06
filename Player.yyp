@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "14f6067d-a14e-4602-a8f0-e96ff1537160",
+            "Value": {
+                "id": "630988f1-878b-43c8-aefb-98fd45c35ab4",
+                "resourcePath": "objects\\obj_enemy_necromancer_bullet\\obj_enemy_necromancer_bullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "15746df6-2369-4676-a38c-3814309407bd",
             "Value": {
                 "id": "997e281a-e36b-4e5d-814f-4c0a4344356e",
@@ -1826,7 +1834,7 @@
             "Key": "bf48ebd6-2304-496e-9131-2fce0e315b00",
             "Value": {
                 "id": "91889da3-d1e5-4a75-a2c1-cf7c39df168f",
-                "resourcePath": "objects\\obj_enemy_necromancer_bullet\\obj_enemy_necromancer_bullet.yy",
+                "resourcePath": "objects\\obj_enemy_necromancer_bullet_follow\\obj_enemy_necromancer_bullet_follow.yy",
                 "resourceType": "GMObject"
             }
         },

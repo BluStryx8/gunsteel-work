@@ -83,6 +83,48 @@
             "value": "25",
             "varName": "chance_agro",
             "varType": 1
+        },
+        {
+            "id": "16dca244-ee23-4113-99e0-0203c3084f8c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "120",
+            "varName": "attack_time",
+            "varType": 1
+        },
+        {
+            "id": "491ba02b-65fd-4287-aedb-e170197ec64c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "120",
+            "varName": "attack_1_time",
+            "varType": 1
+        },
+        {
+            "id": "54ca5bd5-b098-4cfd-b9b5-8f8fff71cc2f",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "50",
+            "varName": "spawn_distance",
+            "varType": 0
         }
     ],
     "solid": false,
