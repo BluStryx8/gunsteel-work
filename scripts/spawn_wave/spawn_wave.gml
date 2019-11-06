@@ -17,16 +17,19 @@ switch (_biome)
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("green", "green", "red", "blue"))
+					switch(choose("green", "green", "yellow", "blue", "red"))
 					{
 						case "green":
 							rand_load_enemy(obj_enemy_slime_green);
 							break;
-						case "red":
-							rand_load_enemy(obj_enemy_slime_red);
+						case "yellow":
+							rand_load_enemy(obj_enemy_slime_yellow);
 							break;
 						case "blue":
 							rand_load_enemy(obj_enemy_slime_blue);
+							break;
+						case "red":
+							rand_load_enemy(obj_enemy_slime_red);
 							break;
 					}
 				}

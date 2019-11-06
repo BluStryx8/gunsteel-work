@@ -308,8 +308,8 @@ if (focus == 1)
 else if (focus == 0)
 {
 	// Standard scoping effect
-	if (camera_pan > 8) camera_pan -= camera_pan / 4;
-	if (camera_pan < 8) camera_pan += camera_pan / 3;
+	if (camera_pan > 6) camera_pan -= camera_pan / 4;
+	if (camera_pan < 6) camera_pan += camera_pan / 3;
 }
 else
 {

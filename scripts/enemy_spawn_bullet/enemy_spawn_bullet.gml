@@ -11,7 +11,7 @@ var _b_decay	= argument2;
 var _b_min_size	= argument3;
 var _b_max_size	= argument4;
 
-var _bullet = instance_create_layer(x, y, "bullets", obj_enemy_bullet_r);
+var _bullet = instance_create_layer(x, y, "enemy_bullets", obj_enemy_bullet_r);
 // Important
 _bullet.direction	= _b_dir;
 _bullet.image_angle	= _b_dir;

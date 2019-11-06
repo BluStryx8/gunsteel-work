@@ -161,7 +161,7 @@
                 },
                 {
                     "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-                    "name": "enemy",
+                    "name": "NPCs",
                     "id": "93347e12-86d8-4605-89f2-d67f1660a9ad",
                     "depth": 600,
                     "grid_x": 32,
@@ -240,7 +240,7 @@
                 {
                     "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
                     "name": "tiles",
-                    "id": "b1884fbf-3942-4eba-9f9a-d9218b3a46bd",
+                    "id": "a93b6869-0060-4c52-97b5-8b26823db947",
                     "depth": 900,
                     "grid_x": 32,
                     "grid_y": 32,

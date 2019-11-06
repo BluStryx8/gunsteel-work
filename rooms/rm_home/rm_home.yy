@@ -251,7 +251,7 @@
                 },
                 {
                     "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-                    "name": "enemy",
+                    "name": "NPCs",
                     "id": "97039ebd-244f-4302-8401-f6aaddd4b400",
                     "depth": 700,
                     "grid_x": 32,

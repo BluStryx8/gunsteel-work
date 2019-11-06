@@ -5,6 +5,7 @@ anim = 0;
 spd = 0;
 bounce = 0;
 hurt_flash = 1;
+aggro = false;
 action = "idle";
 action_timer = idle_max_time;
 image_xscale = scale;

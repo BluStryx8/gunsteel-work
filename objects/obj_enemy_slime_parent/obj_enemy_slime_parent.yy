@@ -219,6 +219,34 @@
             "value": "10",
             "varName": "anim_speed",
             "varType": 1
+        },
+        {
+            "id": "933bc4dc-ce71-4819-b8b6-f0be24b45acd",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "200",
+            "varName": "detect_distance",
+            "varType": 1
+        },
+        {
+            "id": "7b3b4f8e-9594-4a26-a0e5-497178c66e93",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "400",
+            "varName": "undetect_distance",
+            "varType": 1
         }
     ],
     "solid": false,
