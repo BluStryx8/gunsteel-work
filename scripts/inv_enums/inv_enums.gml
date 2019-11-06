@@ -18,6 +18,10 @@ enum item_type
 	// Bars
 	bar_iron,
 	
+	
+	//ores
+	ore_iron,
+	
 	// Length enum for reference
 	length
 }
