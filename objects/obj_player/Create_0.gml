@@ -5,7 +5,7 @@ declare_globals();
 // Movement
 global.moveable = true;	// If player can move or not
 base_speed = 5;			// Base speed of player
-move_speed = 5;			// Speed of player
+move_speed = base_speed;// Speed of player
 h_move = 0;				// Horizontal speed
 v_move = 0;				// Vertical speed
 sneak = false;			// Sneaking
