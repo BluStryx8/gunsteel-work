@@ -1,11 +1,11 @@
 /// @description Finds the location of mouse pressed
 if (global.paused) exit;
-var mousex = mouse_x;
-var mousey = mouse_y;
+var playerx = obj_player.x;
+var playery = obj_player.y;
 
 if (clicked = false)
 {
-	if ((distance_to_point(mousex, mousey) < 10) and obj_player.dodge <= 0 and !global.in_inv)
+	if ((distance_to_point(playerx, playery) < 45) and obj_player.dodge <= 0 and !global.in_inv)
 	{
 		clicked = true;
 		global.moveable = false;
