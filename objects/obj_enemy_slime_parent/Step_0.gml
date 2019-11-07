@@ -1,21 +1,13 @@
 /// @description AI change
 if (global.paused) exit;
 anim += 1;
-if (aggro and distance_to_object(obj_player) < detect_distance)
+var _anim_mod = 0;
+if (aggro and distance_to_object(obj_player) < detect_distance) _anim_mod += 1;
+if (action == "jump_prep") _anim_mod += 2; 
+if (anim >= anim_speed - _anim_mod)
 {
-	if (anim >= anim_speed - 1)
-	{
-		anim -= (anim_speed - 1);
-		image_index += 1;
-	}
-}
-else
-{
-	if (anim >= anim_speed)
-	{
-		anim -= anim_speed;
-		image_index += 1;
-	}
+	anim -= (anim_speed - _anim_mod);
+	image_index += 1;
 }
 
 if (variable_instance_exists(id, "master_id"))
@@ -40,6 +32,8 @@ if action_timer <= 0
 		case "jump":
 			action = "land";
 			action_timer = 60;
+			if (object_index == obj_enemy_slime_red)
+				enemy_spawn_bullet_pattern("spread", 8, 0, 10, 2.5, 240, scale - 0.1, scale + 0.1);
 			spd = 0;
 			bounce = 0;
 			hspd = 0;
@@ -62,7 +56,10 @@ if (action == "idle")
 	if (distance_to_object(obj_player) < detect_distance) or instance_exists(obj_player_normal_bullet)
 		aggro = true;
 	if (aggro)
+	{
+		action_timer -= 1;
 		direction = point_direction(x, y, obj_player.x, obj_player.y);
+	}
 	if (direction <= 45 or direction > 315)
 		dir = "right";
 	else if (direction <= 135 and direction > 45)

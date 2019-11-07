@@ -25,6 +25,9 @@ for (var _y = 0; _y < y_sections; _y++)
 create_main_path();
 create_sub_path();
 
+// Init Biomes
+init_biomes();
+
 // Init Tilemaps
 var _room_tile_width  = section_tiles_x * x_sections;
 var _room_tile_height = section_tiles_y * y_sections;

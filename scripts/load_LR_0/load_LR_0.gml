@@ -6,18 +6,23 @@ var _id = argument0;
 switch (_id)
 {
 	case "null":
-		switch (choose("enemy", "enemy", "crate"))
+		switch (biome)
 		{
-			case "enemy":
-			// Loads enemy doors
-			load_door(5, 16, "left");
-			load_door(53, 16, "right");
-			biome = choose("basic", "basic", "slime", "elite");
-			if (biome != "elite") spawn_wave(biome, 7, 12)
-				else spawn_wave(biome, 4, 8);
-			// Scatter outliner crates
-			spawn_tile_rect(6, 52, 32, 7, 8, 25, 3, obj_crate);
-			break;
+			case "basic":
+			case "slime":
+				// Loads enemy doors
+				load_door(5, 16, "left");
+				load_door(53, 16, "right");
+				spawn_wave(biome, 7, 12);
+				// Scatter outliner crates
+				spawn_tile_rect(6, 52, 32, 7, 8, 25, 3, obj_crate);
+				break;
+			case "elite":
+				// Loads enemy doors
+				load_door(5, 16, "left");
+				load_door(53, 16, "right");
+				spawn_wave(biome, 4, 8);
+				break;
 		case "crate":
 			switch (choose("box", "outline"))
 			{

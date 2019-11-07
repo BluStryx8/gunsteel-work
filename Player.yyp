@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "1b1f755a-30d3-489d-b2c5-6b0674b5fca2",
+            "Value": {
+                "id": "881ab4f9-21f0-45c4-96a6-2f0acbfe9cbe",
+                "resourcePath": "scripts\\init_biomes\\init_biomes.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1bf31dd6-d10d-4ef3-b7ea-5429382e357d",
             "Value": {
                 "id": "372e014d-3e4f-4fc4-a2a3-cfad5331bca6",
@@ -2645,6 +2653,7 @@
         "c5a01845-ae93-47d2-92ac-f6462a10a1c1",
         "75fe7d4e-f318-4375-9d79-7ca2e2645554",
         "44a9b71e-4a9a-4b49-96a6-42a23b3b54c6",
+        "1b1f755a-30d3-489d-b2c5-6b0674b5fca2",
         "49ad3ae4-b800-4ec1-bdf9-b5da63d37481",
         "d95177a4-2f37-4600-9454-978d640e99e5",
         "7f9c460d-5276-4d17-9b29-b73b78826e55",

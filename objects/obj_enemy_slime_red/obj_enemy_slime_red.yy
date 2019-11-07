@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "obj_enemy_slime_red",
     "eventList": [
-        {
-            "id": "5fd302f8-3e52-4aac-9467-7a7b2342b881",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "c17dfed9-f98d-4e8a-8743-187fe02e3bbc"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
