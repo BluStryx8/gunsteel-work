@@ -30,7 +30,7 @@
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "5606e955-da7d-4a33-bc6a-9c2879cd7b3b",
-            "value": "8 * (1 - scale)"
+            "value": "3 * (1.5 - scale)"
         },
         {
             "id": "a93ebe9a-8890-46ab-acf7-16797e57be59",
@@ -62,7 +62,7 @@
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "18af2830-e01e-4842-b8a8-06ec1e157be5",
-            "value": "4.5"
+            "value": "max_speed * 2"
         },
         {
             "id": "594e1a71-c091-4816-961c-fb059bfaa338",
@@ -86,7 +86,7 @@
             "mvc": "1.0",
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "30275deb-2357-4cf3-a195-d1496fe80c94",
-            "value": "90"
+            "value": "75"
         }
     ],
     "parentObjectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
