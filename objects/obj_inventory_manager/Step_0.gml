@@ -193,6 +193,12 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 				inventory[selected_cell] = inventory[pickup_item]
 				inventory[pickup_item] = item_type.none
 			}
+			else
+			{
+				old_item = inventory[selected_cell];
+				inventory[selected_cell] = inventory[pickup_item]
+				inventory[pickup_item] = old_item
+			}
 			global.p_active = inventory[active_item];	
 			change_check = active_item;
 			obj_player.fire = 0;
