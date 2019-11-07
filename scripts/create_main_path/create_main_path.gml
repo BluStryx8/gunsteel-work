@@ -27,7 +27,7 @@ while (_current_y < (y_sections - 1))
 			else
 				sections[_current_x, _current_y] = 2;	// Guarantees an exit in the floor
 			sections[_current_x, ++_current_y] = 3;		// Guarantees an exit in ceiling
-			_new_direction = choose(2, 2, 2, 2, 3);
+			_new_direction = 2;
 		}
 		else ++_current_y; // Exit Loop
 	}
@@ -47,7 +47,7 @@ while (_current_y < (y_sections - 1))
 			else
 				sections[_current_x, _current_y] = 2;	// Guarantees an exit in the floor
 			sections[_current_x, ++_current_y] = 3;		// Guarantees an exit in ceiling
-			_new_direction = choose(1, 1, 1, 1, 3);
+			_new_direction = 1;
 		}
 		else ++_current_y; // Exit Loop
 	}
@@ -61,9 +61,9 @@ while (_current_y < (y_sections - 1))
 			else
 				sections[_current_x, _current_y] = 2;	// Guarantees an exit in the floor
 			sections[_current_x, ++_current_y] = 3;		// Guarantees an exit in ceiling
-			_new_direction = 0;
-			if (_current_x == x_sections - 1) _new_direction = choose(1, 1, 1, 1, 3);
-			else if (_current_x == 0) _new_direction = choose(2, 2, 2, 2, 3);
+			_new_direction = choose(1, 1, 2, 2);
+			if (_current_x == x_sections - 1) _new_direction = 1;
+			else if (_current_x == 0) _new_direction = 2;
 		}
 		else ++_current_y;
 	}
