@@ -102,7 +102,7 @@
             "mvc": "1.0",
             "objectId": "dba8611c-7bd4-4b89-b3c3-293da2702610",
             "propertyId": "7ab3e82b-eb16-4eb6-9b93-c06ce4172671",
-            "value": "round(140 * scale)"
+            "value": "round(150 * scale)"
         },
         {
             "id": "2ff3896f-e727-4b3d-bee9-2c7080c7e36e",
