@@ -2,7 +2,7 @@
     "id": "c17dfed9-f98d-4e8a-8743-187fe02e3bbc",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_enemy_slime_red",
+    "name": "obj_elite_slime_red",
     "eventList": [
         
     ],
@@ -79,9 +79,33 @@
             "objectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
             "propertyId": "c3bdd3ea-0b62-46f2-894f-62b2a1bf51a0",
             "value": "2.5"
+        },
+        {
+            "id": "896fbfb8-9a40-4e89-ac3c-863a5f174b8a",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "dba8611c-7bd4-4b89-b3c3-293da2702610",
+            "propertyId": "4ff8c73a-c789-4d66-a8ec-041696d4a759",
+            "value": "$FF2249E5"
+        },
+        {
+            "id": "b8054965-6a80-4eed-bf80-2a3e09ca7fc7",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "dba8611c-7bd4-4b89-b3c3-293da2702610",
+            "propertyId": "234405fd-8e4e-4435-9794-97121dd2544c",
+            "value": "irandom_range(90, 110) \/ 100"
+        },
+        {
+            "id": "85226d85-5bda-4c5f-b622-01c31c83613a",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "dba8611c-7bd4-4b89-b3c3-293da2702610",
+            "propertyId": "7ab3e82b-eb16-4eb6-9b93-c06ce4172671",
+            "value": "round(90 * scale)"
         }
     ],
-    "parentObjectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
+    "parentObjectId": "dba8611c-7bd4-4b89-b3c3-293da2702610",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -97,6 +121,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "33a495ff-3027-4919-b3fe-fe93ece4e6f6",
+    "spriteId": "39c2b04c-4047-4472-a6cc-47e8585353b6",
     "visible": true
 }

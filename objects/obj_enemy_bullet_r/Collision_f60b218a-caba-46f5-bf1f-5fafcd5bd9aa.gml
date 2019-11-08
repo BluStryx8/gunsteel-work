@@ -1,7 +1,7 @@
 /// @description Damage and destroy
 if (other.id == last_hit) exit;
 
-instance_create_layer(x, y, "bullets", obj_player_bullet_hit);
+instance_create_layer(x, y, "bullets", obj_enemy_bullet_hit);
 last_hit = other.id;
 with (other)
 {

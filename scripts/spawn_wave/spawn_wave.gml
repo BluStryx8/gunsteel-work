@@ -29,7 +29,7 @@ switch (_biome)
 							rand_load_enemy(obj_enemy_slime_blue);
 							break;
 						case "red":
-							rand_load_enemy(obj_enemy_slime_red);
+							rand_load_enemy(obj_elite_slime_red);
 							break;
 					}
 				}
@@ -70,7 +70,7 @@ switch (_biome)
 							rand_load_enemy(obj_enemy_slime_blue);
 							break;
 						case "s_red":
-							rand_load_enemy(obj_enemy_slime_red);
+							rand_load_enemy(obj_elite_slime_red);
 							break;
 						case "b_red":
 							rand_load_enemy(obj_enemy_bat_red);
@@ -106,7 +106,7 @@ switch (_biome)
 		switch (irandom_range(0, 2))
 		{
 			case 0:
-				// All
+				// All Basic
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
@@ -122,35 +122,32 @@ switch (_biome)
 							rand_load_enemy(obj_enemy_slime_blue);
 							break;
 						case "red":
-							rand_load_enemy(obj_enemy_slime_red);
+							rand_load_enemy(obj_elite_slime_red);
 							break;
 					}
 				}
 				break;
 			case 1:
-				// Favoured Blue
+				// Chonky
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("green", "blue", "blue", "red"))
+					switch(choose("green", "blue", "blue", "grey"))
 					{
 						case "green":
 							rand_load_enemy(obj_enemy_slime_green);
 							break;
-						case "yellow":
-							rand_load_enemy(obj_enemy_slime_yellow);
-							break;
 						case "blue":
 							rand_load_enemy(obj_enemy_slime_blue);
 							break;
-						case "red":
-							rand_load_enemy(obj_enemy_slime_red);
+						case "grey":
+							rand_load_enemy(obj_elite_slime_grey);
 							break;
 					}
 				}
 				break;
 			case 2:
-				// Favoured Red
+				// Bullet Slimes
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
@@ -163,7 +160,7 @@ switch (_biome)
 							rand_load_enemy(obj_enemy_slime_yellow);
 							break;
 						case "red":
-							rand_load_enemy(obj_enemy_slime_red);
+							rand_load_enemy(obj_elite_slime_red);
 							break;
 					}
 				}
@@ -171,23 +168,20 @@ switch (_biome)
 		}
 		break;
 	case "elite":
-		switch (irandom_range(0, 1))
+		switch (irandom_range(0, 2))
 		{
 			case 0:
 				// Bullets
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("s_red", "s_red", "b_red", "b_green"))
+					switch(choose("s_grey", "s_red", "s_red", "b_red", "b_green"))
 					{
-						case "s_green":
-							rand_load_enemy(obj_enemy_slime_green);
-							break;
-						case "s_yellow":
-							rand_load_enemy(obj_enemy_slime_yellow);
+						case "s_grey":
+							rand_load_enemy(obj_elite_slime_grey);
 							break;
 						case "s_red":
-							rand_load_enemy(obj_enemy_slime_red);
+							rand_load_enemy(obj_elite_slime_red);
 							break;
 						case "b_red":
 							rand_load_enemy(obj_enemy_bat_red);
@@ -203,7 +197,7 @@ switch (_biome)
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("s_yellow", "s_yellow", "b_black", "b_blue", "b_red", "b_green"))
+					switch(choose("s_yellow", "b_black", "b_blue", "b_red", "b_green"))
 					{
 						case "s_yellow":
 							rand_load_enemy(obj_enemy_slime_yellow);
@@ -219,6 +213,25 @@ switch (_biome)
 							break;
 						case "b_green":
 							rand_load_enemy(obj_enemy_bat_green);
+							break;
+					}
+				}
+				break;
+			case 2:
+				// Slimes
+				repeat (irandom_range(_min, _max))
+				{
+					enemy_count += 1;
+					switch(choose("s_yellow", "s_grey", "s_grey", "s_red", "s_red"))
+					{
+						case "s_yellow":
+							rand_load_enemy(obj_enemy_slime_yellow);
+							break;
+						case "s_grey":
+							rand_load_enemy(obj_elite_slime_grey);
+							break;
+						case "s_red":
+							rand_load_enemy(obj_elite_slime_red);
 							break;
 					}
 				}
