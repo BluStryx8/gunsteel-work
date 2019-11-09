@@ -15,6 +15,7 @@ enum item_type
 	remington_870,
 	omark_44,
 	minigun,
+	tesro,
 	// Bars
 	bar_iron,
 	

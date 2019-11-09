@@ -15,7 +15,8 @@
         "dcf1c251-01d7-44b3-997d-d781891aa255",
         "0ce0d2df-b807-495e-b378-222ac19db353",
         "4ef8632e-50a5-458d-85d2-1b8e7191a4e6",
-        "8da5b82b-4377-49d1-940f-ec3733dd4276"
+        "8da5b82b-4377-49d1-940f-ec3733dd4276",
+        "ce13e1d9-8070-4151-8001-f9f706de1de8"
     ],
     "filterType": "GMObject",
     "folderName": "Pickups",

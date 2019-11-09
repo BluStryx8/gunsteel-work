@@ -1,4 +1,4 @@
-/// @description Movement
+/// @description All player actions
 if (global.truepause)
 {
 	global.paused = true;

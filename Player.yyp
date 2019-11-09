@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "1810d1de-4727-4b7a-8613-abececf9c16a",
+            "Value": {
+                "id": "557b2d88-1539-4add-a960-c062e5c201c9",
+                "resourcePath": "sprites\\spr_held_tesro\\spr_held_tesro.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "186a3c4f-5901-4ac0-ba1c-376240e0dd57",
             "Value": {
                 "id": "bf68085f-5576-4155-b529-2f2ae042d4cb",
@@ -1559,6 +1567,14 @@
             }
         },
         {
+            "Key": "96b880f0-c014-498a-9484-aacf68ee3706",
+            "Value": {
+                "id": "30b5a28b-10af-44d9-b2f6-de9faf9f12dc",
+                "resourcePath": "sprites\\spr_gui_tesro\\spr_gui_tesro.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "96ea632c-b514-4009-b105-b5e763ba1a2c",
             "Value": {
                 "id": "c077833b-cb36-46d9-8dc2-405c8619091e",
@@ -2132,6 +2148,14 @@
                 "id": "20132763-13a9-43cf-8dae-ce3732fc86ad",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "ce13e1d9-8070-4151-8001-f9f706de1de8",
+            "Value": {
+                "id": "fd795ae7-004c-4879-a94f-d079272be94f",
+                "resourcePath": "objects\\obj_item_pickup_tesro\\obj_item_pickup_tesro.yy",
+                "resourceType": "GMObject"
             }
         },
         {
