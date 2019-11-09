@@ -73,9 +73,11 @@ if (action == "idle")
 if (action == "jump")
 {
 	speed = spd;
-	hspd = hspeed;
-	vspd = vspeed - round((action_timer - (bounce / 2)) / jump_height_div);
+	hspd = round(hspeed);
+	vspd = round(vspeed - (action_timer - (bounce / 2)) / jump_height_div);
 	speed = 0;
+	mask_index = spr_enemy_slime_mask;
 	hspd = collision("x", hspd, 0);
-	vspd = collision("y", vspd, 0);
+	vspd = collision("y", vspd, 7);
+	mask_index = sprite_index;
 }

@@ -88,7 +88,7 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "p_item_size",
-            "varType": 1
+            "varType": 3
         }
     ],
     "solid": false,

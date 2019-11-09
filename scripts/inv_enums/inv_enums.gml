@@ -9,19 +9,20 @@ enum item_type
 	pistol_1911,
 	glock,
 	uzi,
+	mad_taurus,
 	ak47,
 	m4,
 	p90,
 	remington_870,
 	omark_44,
-	minigun,
 	tesro,
+	minigun,
+	
+	// Ores
+	ore_iron,
+	
 	// Bars
 	bar_iron,
-	
-	
-	//ores
-	ore_iron,
 	
 	// Length enum for reference
 	length
