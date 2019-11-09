@@ -16,9 +16,9 @@ if (dir <= 90 or dir >= 270)
 	if (dodge > 0)
 	{
 		// Dodge afterimages
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[0], yprev[0], 0.9, 0.9, 0, global.p_dash_colour, 0.4);
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[1], yprev[1], 0.8, 0.8, 0, global.p_dash_colour, 0.3);
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[2], yprev[2], 0.7, 0.7, 0, global.p_dash_colour, 0.2);
+		draw_sprite_ext(spr_player_collision, -1, xprev[0], yprev[0], 0.9, 0.9, 0, global.p_dash_colour, 0.4);
+		draw_sprite_ext(spr_player_collision, -1, xprev[1], yprev[1], 0.8, 0.8, 0, global.p_dash_colour, 0.3);
+		draw_sprite_ext(spr_player_collision, -1, xprev[2], yprev[2], 0.7, 0.7, 0, global.p_dash_colour, 0.2);
 	}
 	draw_sprite_ext(spr_player_shadow, 0, x, y + 17, 1, 1, 0, c_white, 0.25);
 	for (var _n = 0; _n < _times; _n++)
@@ -58,9 +58,9 @@ else
 	if (dodge > 0)
 	{
 		// Dodge afterimages
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[0], yprev[0], -0.9, 0.9, 0, global.p_dash_colour, 0.4);
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[1], yprev[1], -0.8, 0.8, 0, global.p_dash_colour, 0.3);
-		draw_sprite_ext(spr_player_hitbox, -1, xprev[2], yprev[2], -0.7, 0.7, 0, global.p_dash_colour, 0.2);
+		draw_sprite_ext(spr_player_collision, -1, xprev[0], yprev[0], -0.9, 0.9, 0, global.p_dash_colour, 0.4);
+		draw_sprite_ext(spr_player_collision, -1, xprev[1], yprev[1], -0.8, 0.8, 0, global.p_dash_colour, 0.3);
+		draw_sprite_ext(spr_player_collision, -1, xprev[2], yprev[2], -0.7, 0.7, 0, global.p_dash_colour, 0.2);
 	}
 	draw_sprite_ext(spr_player_shadow, 0, x, y + 17, 1, 1, 0, c_white, 0.25);
 	for (var _n = 0; _n < _times; _n++)

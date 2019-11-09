@@ -21,7 +21,7 @@ switch (_id)
 				// Loads enemy doors
 				load_door(5, 16, "left");
 				load_door(53, 16, "right");
-				spawn_wave(biome, 4, 8);
+				spawn_wave(biome, 6, 9);
 				break;
 		case "crate":
 			switch (choose("box", "outline"))

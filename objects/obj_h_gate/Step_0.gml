@@ -1,5 +1,6 @@
 /// @description Check Collision to prime
 if master_id.active exit;
+obj_player.mask_index = spr_player_collision;
 switch (prime_dir)
 {
 	// Check priming direction
@@ -21,3 +22,4 @@ else if (position_meeting(obj_player.bbox_left, _bbox_side, id) ||
 		prime = true;			// If correct side is touching
 else if (prime)
 	master_id.active = true;	// If leaving correct side
+obj_player.mask_index = obj_player.sprite_index;

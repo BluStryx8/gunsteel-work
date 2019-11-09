@@ -65,7 +65,6 @@ rhand = instance_create_layer(x, y, "player_hand", obj_player_held);	// Right ha
 rhand.hand = 1;
 
 // Item Management
-instance_create_layer(x, y, "player", obj_player_collision);			// Collision for item pickup and enemies
 instance_create_layer(x, y, "HUD", obj_inventory_manager);				// Manages inventory
 
 global.player_setx = 270;	// Starting x position

@@ -2063,14 +2063,6 @@
             }
         },
         {
-            "Key": "c61581cf-36d7-4847-971d-d71b039ff3f9",
-            "Value": {
-                "id": "c5290e42-b5fc-482e-ba53-77d2c424ff11",
-                "resourcePath": "objects\\obj_player_collision\\obj_player_collision.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "c642108b-4088-4d7b-8082-e2385ea13dc2",
             "Value": {
                 "id": "f4fc553d-2495-417e-9c7a-f540834fc3cf",

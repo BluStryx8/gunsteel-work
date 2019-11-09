@@ -15,7 +15,7 @@ switch (_id)
 				load_door(53, 16, "right");
 				load_door(26, 5, "up");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 8, 14);
+				spawn_wave(biome, 9, 14);
 				// Scatter outliner crates
 				spawn_tile_rect(6, 22, 32, 7, 4, 25, 3, obj_crate);
 				spawn_tile_rect(36, 52, 32, 7, 4, 25, 3, obj_crate);
@@ -26,7 +26,7 @@ switch (_id)
 				load_door(53, 16, "right");
 				load_door(26, 5, "up");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 5, 9);
+				spawn_wave(biome, 7, 10);
 				break;
 			case "crate":
 				switch (choose("box", "outline"))

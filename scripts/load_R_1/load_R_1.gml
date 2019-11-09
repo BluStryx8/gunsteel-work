@@ -19,7 +19,7 @@ switch (_id)
 			case "elite":
 				// Loads enemy doors
 				load_door(32, 16, "right");
-				spawn_wave(biome, 3, 8);
+				spawn_wave(biome, 5, 8);
 				break;
 			case "crate":
 				switch (choose("box", "outline"))

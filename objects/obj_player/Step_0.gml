@@ -77,9 +77,11 @@ if (dodge < 0) dodge += 1;
 if (immune > 0) immune -= 1;
 
 /// Update position
+mask_index = spr_player_collision;
 h_move = collision("x", h_move, 0);
 v_move = collision("y", v_move, 16);
 dir = point_direction(x, y, mouse_x, mouse_y);
+mask_index = sprite_index;
 
 // Dodge handling if the player hits a wall
 if (dodge > 0)

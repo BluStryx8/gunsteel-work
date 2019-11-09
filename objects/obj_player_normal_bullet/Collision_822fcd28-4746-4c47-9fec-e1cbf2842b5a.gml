@@ -28,7 +28,7 @@ with (other)
 }
 if (pierce != -1)
 {
-	damage -= pierce;
+	damage -= pierce + (damage - _damage);	// Pierce reduced by reduction damage as well
 	if (damage <= 0) instance_destroy();
 }
 else instance_destroy();
