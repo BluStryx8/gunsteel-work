@@ -17,7 +17,7 @@ ds_map_add(global.weapons[0], "decay", 0);				// Frames before bullets disappear
 ds_map_add(global.weapons[0], "reload", 0);				// Frames between shots
 ds_map_add(global.weapons[0], "burst", 0);				// How many times it fires
 ds_map_add(global.weapons[0], "bullets", 0);			// How many bullets it makes
-ds_map_add(global.weapons[0], "pierce", -1);				// Damage reduction after pierce (-1 to cancel)
+ds_map_add(global.weapons[0], "pierce", -1);			// Damage reduction after pierce (-1 to cancel)
 ds_map_add(global.weapons[0], "bullet_dd", 0);			// Frames before bullets are drawn
 ds_map_add(global.weapons[0], "base_accuracy", 0);		// Minimum accuracy variation
 ds_map_add(global.weapons[0], "recoil", 0);				// Increases accuracy variation
@@ -37,8 +37,8 @@ ds_map_add(global.weapons[0], "pump_time", 0);			// (For pump-action) Time to pu
 // 1911
 global.weapons[1] = ds_map_create();
 ds_map_add(global.weapons[1], "weapon", "1911");
-ds_map_add(global.weapons[1], "type", "pistol");
-ds_map_add(global.weapons[1], "atk_type", "semi_auto");
+ds_map_add(global.weapons[1], "type", "Pistol");
+ds_map_add(global.weapons[1], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[1], "hands", 1);
 ds_map_add(global.weapons[1], "hand_one", [-1, 7]);
 ds_map_add(global.weapons[1], "hand_two", [0, 0]);
@@ -70,8 +70,8 @@ ds_map_add(global.weapons[1], "pump_time", 0);
 // Glock 17
 global.weapons[2] = ds_map_create();
 ds_map_add(global.weapons[2], "weapon", "Glock 17");
-ds_map_add(global.weapons[2], "type", "pistol");
-ds_map_add(global.weapons[2], "atk_type", "semi_auto");
+ds_map_add(global.weapons[2], "type", "Pistol");
+ds_map_add(global.weapons[2], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[2], "hands", 1);
 ds_map_add(global.weapons[2], "hand_one", [0, 6]);
 ds_map_add(global.weapons[2], "hand_two", [0, 0]);
@@ -103,8 +103,8 @@ ds_map_add(global.weapons[2], "pump_time", 0);
 // Uzi
 global.weapons[3] = ds_map_create();
 ds_map_add(global.weapons[3], "weapon", "Uzi");
-ds_map_add(global.weapons[3], "type", "pistol");
-ds_map_add(global.weapons[3], "atk_type", "auto");
+ds_map_add(global.weapons[3], "type", "Pistol");
+ds_map_add(global.weapons[3], "atk_type", "Automatic");
 ds_map_add(global.weapons[3], "hands", 1);
 ds_map_add(global.weapons[3], "hand_one", [0, 4]);
 ds_map_add(global.weapons[3], "hand_two", [0, 0]);
@@ -136,8 +136,8 @@ ds_map_add(global.weapons[3], "pump_time", 0);
 // Mad Taurus
 global.weapons[4] = ds_map_create();
 ds_map_add(global.weapons[4], "weapon", "Mad Taurus");
-ds_map_add(global.weapons[4], "type", "pistol");
-ds_map_add(global.weapons[4], "atk_type", "semi_auto");
+ds_map_add(global.weapons[4], "type", "Pistol");
+ds_map_add(global.weapons[4], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[4], "hands", 1);
 ds_map_add(global.weapons[4], "hand_one", [-7, 7]);
 ds_map_add(global.weapons[4], "hand_two", [0, 0]);
@@ -170,8 +170,8 @@ ds_map_add(global.weapons[4], "pump_time", 0);
 //AK-47
 global.weapons[11] = ds_map_create();
 ds_map_add(global.weapons[11], "weapon", "AK-47");
-ds_map_add(global.weapons[11], "type", "rifle");
-ds_map_add(global.weapons[11], "atk_type", "semi_auto");
+ds_map_add(global.weapons[11], "type", "Assault Rifle");
+ds_map_add(global.weapons[11], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[11], "hands", 2);
 ds_map_add(global.weapons[11], "hand_one", [0, 5]);
 ds_map_add(global.weapons[11], "hand_two", [17, 1]);
@@ -203,8 +203,8 @@ ds_map_add(global.weapons[11], "pump_time", 0);
 //M4
 global.weapons[12] = ds_map_create();
 ds_map_add(global.weapons[12], "weapon", "M4");
-ds_map_add(global.weapons[12], "type", "rifle");
-ds_map_add(global.weapons[12], "atk_type", "semi_auto");
+ds_map_add(global.weapons[12], "type", "Assault Rifle");
+ds_map_add(global.weapons[12], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[12], "hands", 2);
 ds_map_add(global.weapons[12], "hand_one", [0, 5]);
 ds_map_add(global.weapons[12], "hand_two", [17, 3]);
@@ -236,8 +236,8 @@ ds_map_add(global.weapons[12], "pump_time", 0);
 //P90
 global.weapons[13] = ds_map_create();
 ds_map_add(global.weapons[13], "weapon", "P90");
-ds_map_add(global.weapons[13], "type", "rifle");
-ds_map_add(global.weapons[13], "atk_type", "semi_auto");
+ds_map_add(global.weapons[13], "type", "Assault Rifle");
+ds_map_add(global.weapons[13], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[13], "hands", 2);
 ds_map_add(global.weapons[13], "hand_one", [4, 4]);
 ds_map_add(global.weapons[13], "hand_two", [12, 4]);
@@ -270,8 +270,8 @@ ds_map_add(global.weapons[13], "pump_time", 0);
 //Remington 870
 global.weapons[21] = ds_map_create();
 ds_map_add(global.weapons[21], "weapon", "Remington 870");
-ds_map_add(global.weapons[21], "type", "shotgun");
-ds_map_add(global.weapons[21], "atk_type", "pump_action");
+ds_map_add(global.weapons[21], "type", "Shotgun");
+ds_map_add(global.weapons[21], "atk_type", "Pump Action");
 ds_map_add(global.weapons[21], "hands", 2);
 ds_map_add(global.weapons[21], "hand_one", [0, 2]);
 ds_map_add(global.weapons[21], "hand_two", [17, 2]);
@@ -304,8 +304,8 @@ ds_map_add(global.weapons[21], "pump_time", 15);
 //Omark Model 44
 global.weapons[31] = ds_map_create();
 ds_map_add(global.weapons[31], "weapon", "Omark Model 44");
-ds_map_add(global.weapons[31], "type", "sniper");
-ds_map_add(global.weapons[31], "atk_type", "semi_auto");
+ds_map_add(global.weapons[31], "type", "Sniper Rifle");
+ds_map_add(global.weapons[31], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[31], "hands", 2);
 ds_map_add(global.weapons[31], "hand_one", [-1, 4]);
 ds_map_add(global.weapons[31], "hand_two", [15, 4]);
@@ -337,8 +337,8 @@ ds_map_add(global.weapons[31], "pump_time", 0);
 // Tesro
 global.weapons[32] = ds_map_create();
 ds_map_add(global.weapons[32], "weapon", "Tesro");
-ds_map_add(global.weapons[32], "type", "sniper");
-ds_map_add(global.weapons[32], "atk_type", "semi_auto");
+ds_map_add(global.weapons[32], "type", "Sniper Rifle");
+ds_map_add(global.weapons[32], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[32], "hands", 2);
 ds_map_add(global.weapons[32], "hand_one", [-1, 5]);
 ds_map_add(global.weapons[32], "hand_two", [16, 4]);
@@ -371,8 +371,8 @@ ds_map_add(global.weapons[32], "pump_time", 0);
 //Minigun
 global.weapons[41] = ds_map_create();
 ds_map_add(global.weapons[41], "weapon", "Minigun");
-ds_map_add(global.weapons[41], "type", "minigun");
-ds_map_add(global.weapons[41], "atk_type", "auto");
+ds_map_add(global.weapons[41], "type", "Minigun");
+ds_map_add(global.weapons[41], "atk_type", "Automatic");
 ds_map_add(global.weapons[41], "hands", 2);
 ds_map_add(global.weapons[41], "hand_one", [8, -6]);
 ds_map_add(global.weapons[41], "hand_two", [-12, -7]);

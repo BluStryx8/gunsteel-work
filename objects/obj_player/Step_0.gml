@@ -177,17 +177,17 @@ if (fire > 0 and fire_cooldown == 0)
 		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 		switch (type)
 		{
-			case "pistol":
-			case "rifle":
+			case "Pistol":
+			case "Assault Rifle":
 				var _bullet = obj_player_normal_bullet;
 				audio_play_sound(snd_fire_rifle, 1, false);
 				break;
-			case "sniper":
-			case "minigun":
+			case "Sniper Rifle":
+			case "Minigun":
 				var _bullet = obj_player_snipe_bullet;
 				audio_play_sound(snd_fire_rifle, 1, false);
 				break;
-			case "shotgun":
+			case "Shotgun":
 				var _bullet = obj_player_round_bullet;
 				audio_play_sound(snd_fire_shotgun, 1, false);
 				break;
@@ -201,7 +201,7 @@ if (fire > 0 and fire_cooldown == 0)
 		if (accuracy > max_recoil) accuracy = max_recoil;
 		shake = round(shake_dur * global.settings_shake);	// Shake
 		ammo -= 1;											// Reduce ammo
-		if atk_type == "pump_action" pump = 1;				// Pump
+		if atk_type == "Pump Action" pump = 1;				// Pump
 	}
 	else
 	{
@@ -241,13 +241,13 @@ if (reloading == 30)
 	accuracy = max_recoil;
 	switch (type)
 	{
-		case "pistol":
-		case "rifle":
-		case "sniper":
-		case "minigun":
+		case "Pistol":
+		case "Assault Rifle":
+		case "Sniper Rifle":
+		case "Minigun":
 			ammo = max_ammo;
 			break;
-		case "shotgun":
+		case "Shotgun":
 			if (ammo < max_ammo) ammo += 1;
 			if (ammo < max_ammo)
 			{
@@ -275,8 +275,8 @@ if (keyboard_check(ord("R")) and fire_cooldown == 0 and reloading == 0 and wind 
 	audio_play_sound(snd_reload_eject_clip, 1, false);
 	reloading = reload_time;
 	fire_cooldown = reloading;
-	if (type != "shotgun") ammo = 0;
-	if (atk_type == "pump_action") pump = 1;
+	if (type != "Shotgun") ammo = 0;
+	if (atk_type == "Pump Action") pump = 1;
 }
 
 /// Camera (Temp)

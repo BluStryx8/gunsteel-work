@@ -13,5 +13,5 @@ inv_add_itemdef(item_type.remington_870, spr_gui_remington_870, spr_held_remingt
 inv_add_itemdef(item_type.omark_44, spr_gui_omark_44, spr_held_omark_44, "Omark Model 44", 0, "firearm", set_weapon, weapon_shoot, scope);
 inv_add_itemdef(item_type.tesro, spr_gui_tesro, spr_held_tesro, "Tesro", 0, "firearm", set_weapon, weapon_shoot, scope);
 inv_add_itemdef(item_type.minigun, spr_gui_minigun, spr_held_minigun, "Minigun", 0, "firearm", set_weapon, weapon_shoot, use_empty);
-inv_add_itemdef(item_type.ore_iron, spr_gui_ore_iron, spr_gui_empty, "Iron Ore", 0, "ore", set_empty, use_empty, use_empty);
-inv_add_itemdef(item_type.bar_iron, spr_gui_bar_iron, spr_gui_empty, "Iron Bar", 0, "bar", set_empty, use_empty, use_empty);
+inv_add_itemdef(item_type.ore_iron, spr_gui_ore_iron, spr_gui_empty, "Iron Ore", 0, "Ore", set_empty, use_empty, use_empty);
+inv_add_itemdef(item_type.bar_iron, spr_gui_bar_iron, spr_gui_empty, "Iron Bar", 0, "Bar", set_empty, use_empty, use_empty);

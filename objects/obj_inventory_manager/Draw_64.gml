@@ -6,17 +6,11 @@ gui_holder_height = sprite_get_height(spr_hotbar);
 gui_holder_pos_x = (camera_get_view_width(0) / 2) - (gui_holder_width / 2);
 gui_holder_pad   = 6;
 gui_holder_slot_offset_x = 64 + gui_holder_pad;
-display_set_gui_size(camera_get_view_width(0), camera_get_view_height(0))
-if (global.in_inv)
-{
-	hotbar_height = view_get_hport(0) - gui_holder_height * 3;
-	gui_holder_pos_y = 32 + hotbar_height;
-}
-else
-{
-	hotbar_height = 0;
-	gui_holder_pos_y = 32;
-}
+display_set_gui_size(camera_get_view_width(0), camera_get_view_height(0));
+if (global.in_inv) hotbar_height = view_get_hport(0) - gui_holder_height * 3
+	else hotbar_height = view_get_hport(0) - gui_holder_height;
+gui_holder_pos_y = 32 + hotbar_height;
+
 
 // Declare Draw Constants
 draw_set_halign(fa_right);
@@ -47,7 +41,7 @@ for (var _inv = 0; _inv <= HOTBAR; _inv++)
 	}
 }
 
-//Draw extended inventory
+// Draw extended inventory
 if (global.in_inv)
 {
 	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height, 1, 1, 0, _col, 1);
@@ -88,10 +82,33 @@ if (global.in_inv)
 	}
 }
 
+if selected_cell > -1
+	if (inventory[selected_cell] != item_type.none and mousey > camera_get_view_height(0) - spr_hotbar_height*3)
+	{
+		var _inv    = inventory[selected_cell];
+		draw_stats(_inv, gui_holder_pos_x + gui_holder_width + 32, hotbar_height);
+	}
+	
+/// if you are holding something draw it
+if (item_in_hand)
+{
+	if (pickup_item != -1)
+	{
+		var draw_item = inventory[pickup_item]
+		draw_sprite_ext(item_definitions[draw_item, item_properties.sprite_gui], -1, mousex,mousey, 1, 1, 0, _col, 1);
+	}
+}
 
+if (global.in_furnace and  item_in_slot and furnace_slot != -1)
+{
+	var draw_furnace = inventory[furnace_slot]
+	draw_sprite_ext(item_definitions[draw_furnace, item_properties.sprite_gui], -1, gui_holder_pos_x +40 ,display_get_gui_height()/3 +37, 1, 1, 0, _col, 1);
+}
+
+if (global.in_inv) exit;
 
 // Draw Weapon
-var _weap_offset_x = -40;	// x offset from the bottom right hand corner
+var _weap_offset_x = -48;	// x offset from the bottom right hand corner
 var _weap_offset_y = -48;	// y offset from the bottom right hand corner
 
 if (global.holstered) exit;
@@ -100,15 +117,15 @@ var _sprite = obj_inventory_manager.item_definitions[inventory[active_item], ite
 var _weapon = false;
 switch (obj_player.type)
 {
-	case "pistol":
+	case "Pistol":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 1, 1, 0, _col, 1);
 		_weapon = true;
 		break;
-	case "rifle":
-	case "shotgun":
-	case "sniper":
-	case "minigun":
+	case "Assault Rifle":
+	case "Shotgun":
+	case "Sniper Rifle":
+	case "Minigun":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
 		_weapon = true;
@@ -131,14 +148,14 @@ var _top_pad = 80;				// Height from top when to move to next row
 var _draw = spr_gui_empty;
 switch (obj_player.type)
 {
-	case "pistol":
+	case "Pistol":
 		_draw = spr_ammo_pistolbullet;
 		break;
-	case "rifle":
-	case "sniper":
+	case "Assault Rifle":
+	case "Sniper Rifle":
 		_draw = spr_ammo_riflebullet;
 		break;
-	case "shotgun":
+	case "Shotgun":
 		_draw = spr_ammo_shotgunbullet;
 		break;
 }
@@ -161,8 +178,8 @@ var _mode_y_offset = -20; // y offset of bullets to draw
 
 // Bullets to draw representative of atk modes
 var _bullets = 1;
-if (obj_player.atk_type == "semi_auto" and obj_player.burst > 1) _bullets = 2;
-if (obj_player.atk_type == "auto") _bullets = 3;
+if (obj_player.atk_type == "Semi-automatic" and obj_player.burst > 1) _bullets = 2;
+if (obj_player.atk_type == "Automatic") _bullets = 3;
 
 if (_draw != spr_gui_empty)
 {
@@ -172,19 +189,4 @@ if (_draw != spr_gui_empty)
 									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
 	if (_bullets >= 3) draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 3,
 									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
-}
-
-/// if you are holding something draw it
-if item_in_hand = true{
-	if (pickup_item != -1)
-	{
-		var draw_item = inventory[pickup_item]
-		draw_sprite_ext(item_definitions[draw_item, item_properties.sprite_gui], -1, mousex,mousey, 1, 1, 0, _col, 1);
-	}
-}
-
-if global.in_furnace = true and  item_in_slot = true and furnace_slot != -1
-{
-	var draw_furnace = inventory[furnace_slot]
-	draw_sprite_ext(item_definitions[draw_furnace, item_properties.sprite_gui], -1, gui_holder_pos_x +40 ,display_get_gui_height()/3 +37, 1, 1, 0, _col, 1);
 }

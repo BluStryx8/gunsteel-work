@@ -16,7 +16,7 @@ if (mouse_check_button_pressed(mb_right))
 				audio_play_sound(snd_reload_eject_clip, 1, false);
 				reloading = reload_time;
 				fire_cooldown = reloading;
-				if (type != "shotgun") ammo = 0;
-				if (atk_type == "pump_action") pump = 1;
+				if (type != "Shotgun") ammo = 0;
+				if (atk_type == "Pump Action") pump = 1;
 			}
 		}

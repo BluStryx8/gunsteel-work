@@ -136,7 +136,7 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 
 /// this part sets your pickup item to the cell's inventory reference if there is an item in that cell
 /// this subsequently draws it in the draw event
-	if(mouse_check_button_pressed(mb_left))
+if(mouse_check_button_pressed(mb_left))
 	{
 		if inventory[selected_cell] != item_type.none and mousey > camera_get_view_height(0) - spr_hotbar_height*3
 		{
