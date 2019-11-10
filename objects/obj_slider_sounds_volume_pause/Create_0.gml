@@ -1,5 +1,4 @@
 /// @description Decalare
-global.sound_value = 0.5
 max_value = 1
 selected = false
 
