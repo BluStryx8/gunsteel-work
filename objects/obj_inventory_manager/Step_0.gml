@@ -138,7 +138,7 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 /// this subsequently draws it in the draw event
 if(mouse_check_button_pressed(mb_left))
 	{
-		if inventory[selected_cell] != item_type.none and mousey > camera_get_view_height(0) - spr_hotbar_height*3
+		if inventory[selected_cell] != item_type.none and mousey > camera_get_view_height(0) - spr_hotbar_height*3 and mousex >= gui_holder_width and mousex <= gui_holder_width + spr_hotbar_height * 5
 		{
 			pickup_item = selected_cell
 			item_in_hand = true
