@@ -1,4 +1,4 @@
-/// @description runs stuff
+/// @description Necro AI
 if (global.paused) exit;
 // Animate
 // anim += 1;
@@ -14,11 +14,11 @@ if (variable_instance_exists(id, "master_id"))
 	if (!master_id.active) exit;
 
 if (distance_to_object(obj_player) < close_distance)
-	state = 1 // Running
+	state = false // Running
 else
-	state = 0 // Attacking
+	state = true // Attacking
 
-if (state == 0)
+if (state)
 {
 	// Movement Control
 	if (move_timer == 0)
@@ -44,13 +44,17 @@ if (state == 0)
 			dir = "down";
 			direction = (irandom_range(316, 585)) mod 360;
 		}
-		spd = 1;
+		spd = 1.5;
 		move_timer = irandom_range(min_move, max_move);
+		if (distance_to_object(obj_player) > far_distance)
+		{
+			direction = point_direction(x, y, obj_player.x, obj_player.y) + irandom_range(-90, 90);
+			spd = 0.75;
+		}
 	}
 	else if (move_timer > 1)
 	{
 		move_timer -= 1;
-		if (distance_to_object(obj_player) > far_distance) move_timer = 1;
 	}
 	else if (move_timer == 1)
 	{
@@ -63,7 +67,7 @@ if (state == 0)
 	{
 		// Homing Shot
 		var _dir = point_direction(x, y, obj_player.x, obj_player.y);
-		enemy_spawn_bullet_pattern("homing", 3, _dir, 60, 2.5, 240, scale - 0.1, scale + 0.1);
+		enemy_spawn_bullet_pattern("homing", 1, _dir, 60, 2, 240, scale - 0.1, scale + 0.1);
 		attack_timer_1 = irandom_range(attack_1_rate_min, attack_1_rate_max);
 	}
 	else attack_timer_1 -= 1;
@@ -76,8 +80,7 @@ if (state == 0)
 	else attack_timer_2 -= 1;
 	attack_timer_3 = 0;
 }
-
-if (state == 1)
+else if (!state)
 {
 	// Movement Control
 	if (move_timer <= 0)
@@ -87,6 +90,13 @@ if (state == 1)
 		move_timer = irandom_range(min_move, max_move);
 	}
 	else move_timer -= 10;
+	if (attack_timer_2 <= 0)
+	{
+		// Spread
+		enemy_spawn_bullet_pattern("spread", 6, 0, 15, 2, 180, scale - 0.1, scale + 0.1);
+		attack_timer_2 = irandom_range(attack_2_rate_min, attack_2_rate_max);
+	}
+	else attack_timer_2 -= 2;
 	if (attack_timer_3 <= 0)
 	{
 		// Trail
@@ -98,13 +108,15 @@ if (state == 1)
 
 
 speed = spd;
-hspd = hspeed;
-vspd = vspeed;
+hspd = round(hspeed);
+vspd = round(vspeed);
 speed = 0;
 if hspd == 0 var _htest = true else var _htest = false;
 if vspd == 0 var _vtest = true else var _vtest = false;
+mask_index = spr_enemy_slime_mask;
 hspd = collision("x", hspd, 0);
-vspd = collision("y", vspd, 0);
+vspd = collision("y", vspd, 7);
+mask_index = sprite_index;
 
-if (hspd == 0 and !_htest) or (vspd == 0 and !_vtest) or (hspd == 0 and vspd == 0)
+if (hspd == 0 and !_htest) or (vspd == 0 and !_vtest) or (hspd == 0 and vspd == 0 and move_timer > 0)
 	move_timer = 0;	// New direction off wall

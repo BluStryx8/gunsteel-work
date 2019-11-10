@@ -35,7 +35,7 @@ far_distance = 320;		// Distance to stand out of range at
 
 min_move = 60;
 max_move = 120;
-min_move_cd = 30;
+min_move_cd = 45;
 max_move_cd = 60;
 move_timer = -irandom_range(min_move_cd, max_move_cd);
 
