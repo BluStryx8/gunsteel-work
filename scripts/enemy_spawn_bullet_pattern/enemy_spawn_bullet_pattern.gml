@@ -37,4 +37,12 @@ switch (_pattern)
 			enemy_spawn_bullet(_b_dir, _b_speed, _b_decay, _b_min_size, _b_max_size);
 		}
 		break;
+	case "homing":
+		var _offset = -(_spread * (_number - 1) / 2);
+		for (var _n = 0; _n < _number; _n++)
+		{
+			_b_dir = _direction + _offset + (_n * _spread) + (irandom_range(-_spread, _spread) / 2);
+			enemy_spawn_homing_bullet(_b_dir, _b_speed, _b_decay, _b_min_size, _b_max_size);
+		}
+		break;
 }

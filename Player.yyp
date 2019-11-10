@@ -458,7 +458,7 @@
             "Key": "26861cf8-225f-4f5d-9f9d-6498aec12b41",
             "Value": {
                 "id": "5892defa-bce0-43e2-99b5-ac856f128553",
-                "resourcePath": "objects\\obj_enemy_necromancer_bullet\\obj_enemy_necromancer_bullet.yy",
+                "resourcePath": "objects\\obj_enemy_bullet_h\\obj_enemy_bullet_h.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1367,6 +1367,14 @@
             }
         },
         {
+            "Key": "8232344a-c3ec-4778-9b51-975f5570f23d",
+            "Value": {
+                "id": "36001942-f9c8-4fab-aa67-a203bf35f29a",
+                "resourcePath": "sprites\\spr_enemy_h_bullet\\spr_enemy_h_bullet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "824d5581-6b15-406d-9f97-27ab08e6dcfc",
             "Value": {
                 "id": "3f83b5c5-f707-480f-8be5-2fa6f78c8f5f",
@@ -1636,6 +1644,14 @@
                 "id": "c22c6c5c-3199-42a1-966f-8896b510ecd1",
                 "resourcePath": "views\\99f4187a-cd74-4c9c-9bdc-6c71df17d53a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9b94b000-4eae-49f9-a3c0-b121594f4681",
+            "Value": {
+                "id": "a509811a-9c7f-4e69-9568-a0af74b08f3e",
+                "resourcePath": "scripts\\enemy_spawn_homing_bullet\\enemy_spawn_homing_bullet.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2754,6 +2770,7 @@
         "6756b048-53d5-420e-bac9-2dfa31d49909",
         "dc2a5d65-cefc-4bde-a80a-2100a9748bea",
         "27f676b1-d310-44f0-8073-8de87549a66c",
+        "9b94b000-4eae-49f9-a3c0-b121594f4681",
         "4604832b-d49f-49f6-96c5-d6dd4039383f",
         "c5a01845-ae93-47d2-92ac-f6462a10a1c1",
         "75fe7d4e-f318-4375-9d79-7ca2e2645554",

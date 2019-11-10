@@ -6,7 +6,8 @@
     "children": [
         "6756b048-53d5-420e-bac9-2dfa31d49909",
         "dc2a5d65-cefc-4bde-a80a-2100a9748bea",
-        "27f676b1-d310-44f0-8073-8de87549a66c"
+        "27f676b1-d310-44f0-8073-8de87549a66c",
+        "9b94b000-4eae-49f9-a3c0-b121594f4681"
     ],
     "filterType": "GMScript",
     "folderName": "Enemies",
