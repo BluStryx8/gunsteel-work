@@ -11,6 +11,7 @@ if obj_player.weapon != "none"
 		weapon			 = "none";
 		type			 = "other";
 		atk_type		 = "none";
+		upgrades		 = 0;
 		hands			 = 0;
 		hand_one		 = [0, 0];
 		hand_two		 = [0, 0];

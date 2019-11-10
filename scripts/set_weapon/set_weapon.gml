@@ -12,6 +12,7 @@ with (obj_player)
 	weapon			 = ds_map_find_value(global.weapons[_w], "weapon");
 	type			 = ds_map_find_value(global.weapons[_w], "type");
 	atk_type		 = ds_map_find_value(global.weapons[_w], "atk_type");
+	upgrades		 = ds_map_find_value(global.weapons[_w], "upgrades");
 	hands			 = ds_map_find_value(global.weapons[_w], "hands");
 	hand_one		 = ds_map_find_value(global.weapons[_w], "hand_one");
 	hand_two		 = ds_map_find_value(global.weapons[_w], "hand_two");

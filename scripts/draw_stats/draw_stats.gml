@@ -6,14 +6,19 @@ var _text_spacing = 20;
 
 
 draw_set_halign(fa_left);
-draw_text(_text_x, _text_y, string(item_definitions[_inv, item_properties.name]));
-_text_y += _text_spacing;
 switch (item_definitions[_inv, item_properties.type])
 {
 	case "firearm":
 		var _weapon = true;
+		// Weapon and Upgrades
 		var _w = weapon_find(global.weapons, "weapon", item_definitions[_inv, item_properties.name]);
-		var _stat_1 = ds_map_find_value(global.weapons[_w], "type");
+		var _stat_1 = ds_map_find_value(global.weapons[_w], "upgrades");
+		if (_stat_1 > 0) draw_text(_text_x, _text_y, string(item_definitions[_inv, item_properties.name])
+								+ " (+" + string(_stat_1)+")");
+		else draw_text(_text_x, _text_y, string(item_definitions[_inv, item_properties.name]));
+		_text_y += _text_spacing;
+		// Weapon Type
+		_stat_1 = ds_map_find_value(global.weapons[_w], "type");
 		var _stat_2 = ds_map_find_value(global.weapons[_w], "atk_type");
 		var _stat_3 = ds_map_find_value(global.weapons[_w], "burst");
 		if (_stat_3 <= 1) draw_text(_text_x, _text_y, _stat_2 + " " + _stat_1);
@@ -21,6 +26,8 @@ switch (item_definitions[_inv, item_properties.type])
 		break;
 	default:
 		var _weapon = false;
+		draw_text(_text_x, _text_y, string(item_definitions[_inv, item_properties.name]));
+		_text_y += _text_spacing;
 		draw_text(_text_x, _text_y, string(item_definitions[_inv, item_properties.type]));
 		break;
 }
@@ -41,6 +48,9 @@ _text_y += _text_spacing;
 // Damage
 _stat_1 = ds_map_find_value(global.weapons[_w], "min_damage");
 _stat_2 = ds_map_find_value(global.weapons[_w], "max_damage");
+_stat_3 = ds_map_find_value(global.weapons[_w], "upgrades");
+_stat_1 = floor(_stat_1 * (_stat_3 + 20) / 20);
+_stat_2 = floor(_stat_2 * (_stat_3 + 20) / 20);
 _stat_3 = ds_map_find_value(global.weapons[_w], "bullets");
 if (_stat_3 <= 1) draw_text(_text_x, _text_y, string(_stat_1) + " - " + string(_stat_2) + " damage");
 else draw_text(_text_x, _text_y, string(_stat_1) + " - " + string(_stat_2) + " x " + string(_stat_3) + " damage");

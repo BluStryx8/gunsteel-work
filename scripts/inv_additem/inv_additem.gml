@@ -19,13 +19,10 @@ if (_index_added_at != -1)
 				obj_inventory_manager.item_definitions[_type, item_properties.amount] += 1;
 			else
 			{
-				_index_added_at = -1;
 				// Upgrade Weapon
-				//var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_type, item_properties.name]);
-				//var _min_damage = ds_map_find_value(global.weapons[_w], "min_damage");
-				//var _max_damage = ds_map_find_value(global.weapons[_w], "max_damage");
-				//ds_map_replace(global.weapons[_w], "min_damage", _min_damage + 1);
-				//ds_map_replace(global.weapons[_w], "max_damage", _max_damage + 1);
+				var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_type, item_properties.name]);
+				var _upgrades = ds_map_find_value(global.weapons[_w], "upgrades");
+				ds_map_replace(global.weapons[_w], "upgrades", _upgrades + 1);
 			}
 			break;
 		default:
