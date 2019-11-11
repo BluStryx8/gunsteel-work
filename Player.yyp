@@ -487,6 +487,14 @@
             }
         },
         {
+            "Key": "2b32ff79-c0eb-4dcc-8f7c-7d3cac9d5c47",
+            "Value": {
+                "id": "c937d970-29b4-454c-b269-879bee5e6a54",
+                "resourcePath": "views\\2b32ff79-c0eb-4dcc-8f7c-7d3cac9d5c47.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2ba97db1-ce6a-496a-b8e9-007846dc8642",
             "Value": {
                 "id": "105108aa-03e4-4cc0-b10a-4b41c99f7ab4",
@@ -1031,6 +1039,14 @@
             }
         },
         {
+            "Key": "5e5fc41b-4e9b-465d-807e-a0c9fb815f40",
+            "Value": {
+                "id": "2640d528-95ce-4ec0-b075-feb30f3d3847",
+                "resourcePath": "objects\\obj_slider_sounds_music_pause\\obj_slider_sounds_music_pause.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5e95334e-ecf7-4c31-b11e-9ae4c8eec8a7",
             "Value": {
                 "id": "7e3a044d-c0c7-4006-a308-4e85e3d9766b",
@@ -1364,6 +1380,14 @@
                 "id": "ab218f58-a19a-4d15-acc5-629faf73f5c6",
                 "resourcePath": "scripts\\spawn_tile_rect\\spawn_tile_rect.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "82129fc5-2c1e-4206-ac27-0cb5f1e132b1",
+            "Value": {
+                "id": "2bef9916-624b-4d5f-a554-ea973e016d8d",
+                "resourcePath": "objects\\obj_slider_sounds_music\\obj_slider_sounds_music.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1755,6 +1779,14 @@
             "Value": {
                 "id": "3314e1a8-9c64-4ccb-9263-03a0a85cfecb",
                 "resourcePath": "objects\\obj_v_gate\\obj_v_gate.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "aafe61a8-ed64-492d-afa4-e347cf55e7cb",
+            "Value": {
+                "id": "de6584e2-f149-4b5c-98e8-1393a5de13af",
+                "resourcePath": "objects\\obj_pause_buttons\\obj_pause_buttons.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2311,6 +2343,14 @@
             }
         },
         {
+            "Key": "d952fa83-40db-4c31-be32-dbe0ea6424ec",
+            "Value": {
+                "id": "31f94e4c-44dc-4fcc-821c-56adbb5b5e4e",
+                "resourcePath": "objects\\obj_pause_menu\\obj_pause_menu.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "da5d20ce-9ae0-4d61-8670-8a7f40664b68",
             "Value": {
                 "id": "b66d01e5-f252-49c8-8c39-d45c13749bce",
@@ -2524,6 +2564,14 @@
                 "id": "7f2f129c-5edb-45c1-b38a-0884b3a89756",
                 "resourcePath": "views\\e6f7b8d1-981d-40d3-ac42-c5b68066a60f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e777fe5a-e5ad-4868-85ac-ca29c9613977",
+            "Value": {
+                "id": "ab396dc0-ebc6-477c-ab85-b3c51db5349e",
+                "resourcePath": "objects\\obj_slider_sounds_volume_pause\\obj_slider_sounds_volume_pause.yy",
+                "resourceType": "GMObject"
             }
         },
         {

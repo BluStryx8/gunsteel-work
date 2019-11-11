@@ -17,4 +17,4 @@ if selected{
 	event_user(0)
 }
 
-global.settings_sound_volume =global.sound_value
+global.settings_sound_volume = global.sound_value
