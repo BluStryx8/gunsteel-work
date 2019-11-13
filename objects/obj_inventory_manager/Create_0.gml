@@ -19,3 +19,7 @@ pickup_item = -1
 item_in_hand = false
 item_in_slot = false
 old_item = -1
+
+logo_alpha = 0
+
+global.settings = false
