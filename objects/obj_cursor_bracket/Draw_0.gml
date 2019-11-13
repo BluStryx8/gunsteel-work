@@ -24,9 +24,10 @@ if (image_index == 0)
 	else rotate = 0;
 }
 if (obj_player.reloading != 0) exit;
-if (obj_player.type != "other" and obj_player.type != "Bar")
+if (obj_player.type != "other" and obj_player.type != "Bar" and obj_player.type != "Ore")
 {
-	if (obj_player.atk_type == "Semi-automatic" and obj_player.fire_cooldown > 4)
+	if ((obj_player.atk_type == "Semi-automatic" or obj_player.atk_type == "Pump Action")
+		and obj_player.fire_cooldown > 4)
 		var _col = make_colour_hsv(140, 20, 230)
 	else if (obj_player.pump != 0 or obj_player.ammo == 0)
 		var _col = make_colour_hsv(140, 30, 200)
