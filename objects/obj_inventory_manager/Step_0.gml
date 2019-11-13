@@ -227,3 +227,5 @@ if (!global.in_furnace)
 	furnace_slot = -1
 	item_in_slot = false
 }
+
+
