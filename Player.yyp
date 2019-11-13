@@ -1575,6 +1575,14 @@
             }
         },
         {
+            "Key": "92e0f2f2-e135-46ac-81c8-3bc43cee36b8",
+            "Value": {
+                "id": "ad316f0e-0201-4e14-83a3-605192e5e769",
+                "resourcePath": "sprites\\spr_gui_mossberg_500\\spr_gui_mossberg_500.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "93098424-8204-42d0-aa52-69647c535510",
             "Value": {
                 "id": "85fe9237-b965-4900-9b53-718b48be7273",
@@ -2119,6 +2127,14 @@
             }
         },
         {
+            "Key": "c6861cbd-8336-409d-ae60-8cf389ad022c",
+            "Value": {
+                "id": "eeb58629-272b-4159-95c7-1748db736856",
+                "resourcePath": "objects\\obj_item_pickup_mossberg_500\\obj_item_pickup_mossberg_500.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c68f96d5-30b9-4c05-9985-01caef7c03e4",
             "Value": {
                 "id": "e863a966-177b-4522-9921-7ed0af03017b",
@@ -2636,6 +2652,14 @@
                 "id": "06f33bbf-1883-49ec-ad24-a6fa11e6711a",
                 "resourcePath": "views\\ebf5b061-6eb1-425f-8378-97b68aa0915e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ed300787-8f47-41ea-8a47-baa2d6ce0ec7",
+            "Value": {
+                "id": "2ecf1d6a-f139-4f47-b43e-d9ba5fe5cef6",
+                "resourcePath": "sprites\\spr_held_mossberg_500\\spr_held_mossberg_500.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

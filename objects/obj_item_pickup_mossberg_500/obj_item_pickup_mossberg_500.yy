@@ -1,23 +1,23 @@
 {
-    "id": "0ce0d2df-b807-495e-b378-222ac19db353",
+    "id": "c6861cbd-8336-409d-ae60-8cf389ad022c",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_item_pickup_minigun",
+    "name": "obj_item_pickup_mossberg_500",
     "eventList": [
         
     ],
     "maskSpriteId": "e540acf7-d209-4252-a5da-acc2ef8ed90b",
     "overriddenProperties": [
         {
-            "id": "4d286531-2735-4443-a1b3-30e76211466b",
+            "id": "e877fc50-a46f-4e8d-9628-d08fda77f5ff",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "6d0b600f-acc8-4a48-8fb9-0022235c3fde",
             "propertyId": "1af200f7-6fcb-4df8-8ca0-a77812ecf574",
-            "value": "item_type.minigun"
+            "value": "item_type.mossberg_500"
         },
         {
-            "id": "9592ab70-84f6-4f85-9b4d-8a652673355d",
+            "id": "1d3d319e-6feb-4bc6-a42f-980a692eadc3",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "6d0b600f-acc8-4a48-8fb9-0022235c3fde",
@@ -41,6 +41,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "93b49704-3e4f-4381-a82a-fd0862f6881b",
+    "spriteId": "92e0f2f2-e135-46ac-81c8-3bc43cee36b8",
     "visible": true
 }

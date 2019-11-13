@@ -248,11 +248,22 @@ if (reloading == 30)
 			ammo = max_ammo;
 			break;
 		case "Shotgun":
-			if (ammo < max_ammo) ammo += 1;
 			if (ammo < max_ammo)
 			{
-				reloading = reload_time;
+				ammo += 1;
+				reloading += pump_time;
 				fire_cooldown = reloading;
+			}
+			else
+			{
+				audio_stop_sound(snd_reload_clip);
+				if (ammo == max_ammo) and (pump == 1)
+				{
+					audio_play_sound(snd_reload_eject_clip, 1, false);
+					reloading += pump_time;
+					fire_cooldown = reloading;
+					pump = -1;
+				}
 			}
 			break;
 	}

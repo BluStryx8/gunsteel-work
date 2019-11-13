@@ -14,6 +14,7 @@ enum item_type
 	m4,
 	p90,
 	remington_870,
+	mossberg_500,
 	omark_44,
 	tesro,
 	minigun,

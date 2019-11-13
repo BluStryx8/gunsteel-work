@@ -9,8 +9,9 @@ var _value = argument2;
 
 for (var _g = 0; _g < array_length_1d(_array); _g++)
 {
-	if (ds_map_find_value(_array[_g], _key) == _value)
-	return _g;
+	if (_array[_g] != 0)
+		if (ds_map_find_value(_array[_g], _key) == _value)
+		return _g;
 }
 
 // If not found
