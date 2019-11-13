@@ -23,7 +23,7 @@ switch (_id)
 				load_door(5, 16, "left");
 				load_door(53, 16, "right");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 3, 6);
+				spawn_wave(biome, 5, 7);
 				break;
 			case "crate":
 				// Draws some boxes on top and in mid

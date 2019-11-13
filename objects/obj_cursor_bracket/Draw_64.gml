@@ -1,5 +1,5 @@
 /// @description Draw Cursor Proper
-if (global.truepause) exit;	// Exits in cutscenes/loading
+if (global.truepause and not obj_player.starting) exit;	// Exits in cutscenes/loading
 if (image_index == 0)	// Only middle draws
 {
 	// Define mouse positions

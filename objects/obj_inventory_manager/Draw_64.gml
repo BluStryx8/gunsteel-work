@@ -1,4 +1,5 @@
 /// @description Draw Inventory
+if (global.truepause) exit;
 
 // Set Variables
 gui_holder_width = sprite_get_width(spr_hotbar);

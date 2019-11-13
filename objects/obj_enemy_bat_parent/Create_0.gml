@@ -12,3 +12,11 @@ speed = 0;
 
 image_xscale = scale * 2;
 image_yscale = scale * 2;
+
+// Difficulty Scaling
+hp = floor(hp * (global.difficulty / 100));
+max_speed = min(floor(max_speed * 1.5), floor(max_speed * ((global.difficulty + 300) / 400)));
+min_escape_time = max(floor(min_escape_time / 1.5), ceil(min_escape_time / ((global.difficulty + 300) / 400)));
+max_escape_time = max(floor(max_escape_time / 1.5), ceil(max_escape_time / ((global.difficulty + 300) / 400)));
+detect_distance = floor(min(detect_distance * 1.5, detect_distance * ((global.difficulty + 300) / 400)));
+anim_speed = max(anim_speed - 2, anim_speed + 1 - floor(global.difficulty / 100));

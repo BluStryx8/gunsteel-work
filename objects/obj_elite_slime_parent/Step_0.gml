@@ -33,7 +33,10 @@ if action_timer <= 0
 			action = "land";
 			action_timer = 60;
 			if (object_index == obj_elite_slime_red)
-				enemy_spawn_bullet_pattern("spread", 8, 0, 10, 2.5, 240, scale - 0.1, scale + 0.1);
+			{
+				var _b_speed = (jump_min_speed + jump_max_speed) / 2;
+				enemy_spawn_bullet_pattern("spread", 8, 0, 10, _b_speed, 240, scale - 0.1, scale + 0.1);
+			}
 			spd = 0;
 			bounce = 0;
 			hspd = 0;

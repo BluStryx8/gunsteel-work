@@ -47,6 +47,9 @@ accuracy = base_accuracy;	// Inaccuracy of weapon
 dir = 0;					// Direction facing
 reloading = 0;				// Whether the player is reloading or not
 
+
+starting = true;		// Determines whether player is entering from main menu
+
 // Create Others (Temp)
 // Cursor
 window_set_cursor(cr_none);
@@ -66,6 +69,3 @@ rhand.hand = 1;
 
 // Item Management
 instance_create_layer(x, y, "HUD", obj_inventory_manager);				// Manages inventory
-
-global.player_setx = 270;	// Starting x position
-global.player_sety = 170;	// Starting y position

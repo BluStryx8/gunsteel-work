@@ -42,7 +42,7 @@ switch (state)
 		else time -= 1;
 		if (time > 30 and bullet_spawn <= 0)
 		{
-			bullet_spawn = 5;
+			bullet_spawn = anim_speed - 3;
 			enemy_spawn_bullet_pattern("direct", 1, direction, 0, 0, 180, scale + 0.1, scale + 0.3);
 		}
 		else bullet_spawn -= 1;

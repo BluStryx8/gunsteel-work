@@ -42,9 +42,10 @@ switch (state)
 		else time -= 1;
 		if (time > 30 and bullet_spawn <= 0)
 		{
-			bullet_spawn = 12;
 			var _dir = point_direction(x, y, obj_player.x, obj_player.y);
-			enemy_spawn_bullet_pattern("direct", 1, _dir, 10, 4, 120, scale + 0.1, scale + 0.3);
+			var _b_speed = floor(max_speed * 1.5);
+			bullet_spawn = anim_speed * 2 - 4;
+			enemy_spawn_bullet_pattern("direct", 1, _dir, 10, _b_speed, 120, scale + 0.1, scale + 0.3);
 		}
 		else bullet_spawn -= 1;
 		if (time < 0) spd -= 0.1;

@@ -2,11 +2,11 @@
 if (global.paused) exit;	// Exits if paused
 
 // Active Item
-if (keyboard_check(global.p_inv_1)) active_item = 0;
-if (keyboard_check(global.p_inv_2)) active_item = 1;
-if (keyboard_check(global.p_inv_3)) active_item = 2;
-if (keyboard_check(global.p_inv_4)) active_item = 3;
-if (keyboard_check(global.p_inv_5)) active_item = 4;
+if (keyboard_check(ord("1"))) active_item = 0;
+if (keyboard_check(ord("2"))) active_item = 1;
+if (keyboard_check(ord("3"))) active_item = 2;
+if (keyboard_check(ord("4"))) active_item = 3;
+if (keyboard_check(ord("5"))) active_item = 4;
 if (mouse_wheel_up())
 	if (active_item <= 0) active_item = 4 else active_item -= 1;
 if (mouse_wheel_down())
@@ -55,7 +55,7 @@ if (!global.in_inv)
 }
 
 // Opens full inventory
-if keyboard_check_pressed(global.p_inv_open)
+if keyboard_check_pressed(ord("I"))
 {
 	if (!global.in_inv)
 	{

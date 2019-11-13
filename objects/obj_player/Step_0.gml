@@ -280,7 +280,8 @@ if (reloading == 1)
 	pump = 0;
 }
 // Check for reload
-if (keyboard_check(ord("R")) and fire_cooldown == 0 and reloading == 0 and wind <= 0 and !global.holstered)
+if (keyboard_check(ord("R")) and fire_cooldown == 0 and reloading == 0 and wind <= 0
+					and !global.holstered and type != "other")
 {
 	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 	audio_play_sound(snd_reload_eject_clip, 1, false);

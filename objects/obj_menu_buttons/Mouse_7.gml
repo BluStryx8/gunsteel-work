@@ -15,8 +15,8 @@ switch image_index
 		break;
 	case 3:
 		//continue (Fades out them goes to rm_game)
-		if clicked = false
-		instance_create_layer(0,0,"menu",obj_fade_out)
-		clicked = true
+		if (clicked == false)
+		instance_create_layer(0,0,"fade",obj_fade_out);
+		clicked = true;
 	
 }

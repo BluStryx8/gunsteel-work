@@ -17,7 +17,7 @@ switch (_biome)
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("green", "green", "yellow", "blue", "red"))
+					switch(choose("green", "green", "yellow", "blue"))
 					{
 						case "green":
 							rand_load_enemy(obj_enemy_slime_green);
@@ -28,18 +28,34 @@ switch (_biome)
 						case "blue":
 							rand_load_enemy(obj_enemy_slime_blue);
 							break;
-						case "red":
-							rand_load_enemy(obj_elite_slime_red);
-							break;
 					}
 				}
 				break;
 			case 1:
-				// Spawn Slimes and Bats
+				// Slimes Green + Yellow, Bats Black
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("s_green", "s_green", "s_blue", "b_black", "b_blue"))
+					switch(choose("s_green", "s_green", "s_yellow", "b_black"))
+					{
+						case "s_green":
+							rand_load_enemy(obj_enemy_slime_green);
+							break;
+						case "s_yellow":
+							rand_load_enemy(obj_enemy_slime_yellow);
+							break;
+						case "b_black":
+							rand_load_enemy(obj_enemy_bat_black);
+							break;
+					}
+				}
+				break;
+			case 2:
+				// Slimes Green + Blue, Bats Blue
+				repeat (irandom_range(_min, _max))
+				{
+					enemy_count += 1;
+					switch(choose("s_green", "s_green", "s_blue", "b_blue"))
 					{
 						case "s_green":
 							rand_load_enemy(obj_enemy_slime_green);
@@ -47,33 +63,8 @@ switch (_biome)
 						case "s_blue":
 							rand_load_enemy(obj_enemy_slime_blue);
 							break;
-						case "b_black":
-							rand_load_enemy(obj_enemy_bat_black);
-							break;
 						case "b_blue":
 							rand_load_enemy(obj_enemy_bat_blue);
-							break;
-					}
-				}
-				break;
-			case 2:
-				// Reds
-				repeat (irandom_range(_min, _max))
-				{
-					enemy_count += 1;
-					switch(choose("s_green", "s_green", "s_yellow", "s_red", "b_red"))
-					{
-						case "s_green":
-							rand_load_enemy(obj_enemy_slime_green);
-							break;
-						case "s_yellow":
-							rand_load_enemy(obj_enemy_slime_blue);
-							break;
-						case "s_red":
-							rand_load_enemy(obj_elite_slime_red);
-							break;
-						case "b_red":
-							rand_load_enemy(obj_enemy_bat_red);
 							break;
 					}
 				}
@@ -110,7 +101,7 @@ switch (_biome)
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("green", "yellow", "blue", "red"))
+					switch(choose("green", "yellow", "blue"))
 					{
 						case "green":
 							rand_load_enemy(obj_enemy_slime_green);
@@ -120,9 +111,6 @@ switch (_biome)
 							break;
 						case "blue":
 							rand_load_enemy(obj_enemy_slime_blue);
-							break;
-						case "red":
-							rand_load_enemy(obj_elite_slime_red);
 							break;
 					}
 				}
@@ -147,11 +135,11 @@ switch (_biome)
 				}
 				break;
 			case 2:
-				// Bullet Slimes
+				// Chance for Bullet Slimes
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("green", "yellow", "red", "red"))
+					switch(choose("green", "green", "yellow", "red"))
 					{
 						case "green":
 							rand_load_enemy(obj_enemy_slime_green);
@@ -175,7 +163,7 @@ switch (_biome)
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("s_grey", "s_red", "s_red", "b_red", "b_green"))
+					switch(choose("s_grey", "s_red", "b_red", "b_green"))
 					{
 						case "s_grey":
 							rand_load_enemy(obj_elite_slime_grey);
@@ -197,13 +185,10 @@ switch (_biome)
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("s_yellow", "b_black", "b_blue", "b_red", "b_green"))
+					switch(choose("s_yellow", "b_blue", "b_red", "b_red", "b_green"))
 					{
 						case "s_yellow":
 							rand_load_enemy(obj_enemy_slime_yellow);
-							break;
-						case "b_black":
-							rand_load_enemy(obj_enemy_bat_black);
 							break;
 						case "b_blue":
 							rand_load_enemy(obj_enemy_bat_blue);
@@ -222,7 +207,7 @@ switch (_biome)
 				repeat (irandom_range(_min, _max))
 				{
 					enemy_count += 1;
-					switch(choose("s_yellow", "s_grey", "s_grey", "s_red", "s_red"))
+					switch(choose("s_yellow", "s_grey", "s_red", "s_red"))
 					{
 						case "s_yellow":
 							rand_load_enemy(obj_enemy_slime_yellow);
