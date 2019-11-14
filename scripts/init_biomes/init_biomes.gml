@@ -35,7 +35,5 @@ for (var _y = 0; _y < y_sections; _y++)
 		}
 		_list_size -= 1;
 	}
-for (var _y = 0; _y < y_sections; _y++)
-	show_debug_message(biome[0, _y] + " " + biome[1, _y] + " " + biome[2, _y] + " " + biome[3, _y]);
 	
 ds_list_destroy(biome_list);

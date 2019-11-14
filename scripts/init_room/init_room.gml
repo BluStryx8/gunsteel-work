@@ -37,8 +37,10 @@ global.tilemap = layer_tilemap_create("collision", 0, 0, tile_collision, _room_t
 global.bulletmap = layer_tilemap_create("bullet_collision", 0, 0, tile_collision, _room_tile_width, _room_tile_height);
 
 // Debug
-for (_y = 0; _y < y_sections; _y++)
-	show_debug_message(string(sections[0, _y]) + string(sections[1, _y]) + string(sections[2, _y]) + string(sections[3, _y]))
+// for (_y = 0; _y < y_sections; _y++)
+// 	show_debug_message(string(sections[0, _y]) + string(sections[1, _y]) + string(sections[2, _y]) + string(sections[3, _y]))
+// for (var _y = 0; _y < y_sections; _y++)
+// 	show_debug_message(biome[0, _y] + " " + biome[1, _y] + " " + biome[2, _y] + " " + biome[3, _y]);
 
 // Initialise sections (loading sections as strings to memory)
 init_all_sections();

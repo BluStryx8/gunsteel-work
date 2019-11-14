@@ -2351,6 +2351,14 @@
             }
         },
         {
+            "Key": "d7f49cb4-7b3b-48f5-93de-b24d63f3e182",
+            "Value": {
+                "id": "23826756-b26f-49e2-af5b-fe4db18fbb5b",
+                "resourcePath": "sprites\\spr_player_eyes\\spr_player_eyes.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d95177a4-2f37-4600-9454-978d640e99e5",
             "Value": {
                 "id": "c2d818e8-620f-42af-b869-82e30d43b691",

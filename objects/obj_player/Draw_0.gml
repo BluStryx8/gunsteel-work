@@ -62,6 +62,8 @@ if (dir <= 90 or dir >= 270)
 						global.p_scale, global.p_scale, 0, global.p_skin_colour, 1)
 		draw_sprite_ext(spr_player_shade, 0, x, y - anim_y * global.p_scale,
 						global.p_scale, global.p_scale, 0, global.p_skin_colour, 1)
+		draw_sprite_ext(spr_player_eyes, 0, x, y - anim_y * global.p_scale,
+						global.p_scale, global.p_scale, 0, global.p_hair_colour, 1)
 		draw_sprite_ext(spr_player_hair, 0, x, y - anim_y * global.p_scale,
 						global.p_scale, global.p_scale, 0, global.p_hair_colour, 1)
 		draw_sprite_ext(spr_player_hat, 0, x, y - anim_y * global.p_scale,
@@ -121,6 +123,8 @@ else
 						-global.p_scale, global.p_scale, 0, global.p_skin_colour, 1)
 		draw_sprite_ext(spr_player_shade, 0, x, y - anim_y * global.p_scale,
 						-global.p_scale, global.p_scale, 0, global.p_skin_colour, 1)
+		draw_sprite_ext(spr_player_eyes, 0, x, y - anim_y * global.p_scale,
+						-global.p_scale, global.p_scale, 0, global.p_hair_colour, 1)
 		draw_sprite_ext(spr_player_hair, 0, x, y - anim_y * global.p_scale,
 						-global.p_scale, global.p_scale, 0, global.p_hair_colour, 1)
 		draw_sprite_ext(spr_player_hat, 0, x, y - anim_y * global.p_scale,
