@@ -12,14 +12,14 @@ switch (_id)
 			case "slime":
 				// Loads enemy doors
 				load_door(53, 16, "right");
-				spawn_wave(biome, 9, 15);
+				spawn_wave(biome, 8, 12);
 				// Scatter outliner crates
 				spawn_tile_rect(6, 52, 32, 7, 8, 25, 3, obj_crate);
 				break;
 			case "elite":
 				// Loads enemy doors
 				load_door(53, 16, "right");
-				spawn_wave(biome, 7, 10);
+				spawn_wave(biome, 9, 13);
 				break;
 			case "crate":
 				switch (choose("box", "outline"))

@@ -14,7 +14,7 @@ switch (_id)
 				load_door(5, 16, "left");
 				load_door(53, 16, "right");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 5, 9);
+				spawn_wave(biome, 5, 7);
 				// Spawns outliner crates
 				spawn_tile_rect(6, 52, 7, 7, 8, 2, 3, obj_crate);
 				break;
@@ -23,7 +23,7 @@ switch (_id)
 				load_door(5, 16, "left");
 				load_door(53, 16, "right");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 5, 7);
+				spawn_wave(biome, 6, 8);
 				break;
 			case "crate":
 				// Draws some boxes on top and in mid

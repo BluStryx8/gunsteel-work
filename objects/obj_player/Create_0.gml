@@ -15,9 +15,9 @@ v_dodge = 0;			// Vertical speed of player when init dodge
 dodge_cooldown = 15;	// Frames before dodge can be used again
 immune = 0;				// If taken damage recently
 
-p_max_health = 3;			// Max HP
+p_max_health = 5;			// Max HP
 p_health = p_max_health;	// Current HP
-p_max_defense = 1;			// Max Defense
+p_max_defense = 3;			// Max Defense
 p_defense = p_max_defense;	// Current Defense
 
 // Records previous 3 positions
@@ -73,7 +73,7 @@ rhand = instance_create_layer(x, y, "player_hand", obj_player_held);	// Right ha
 rhand.hand = 1;
 
 // Item Management
-instance_create_layer(x, y, "HUD", obj_inventory_manager);				// Manages inventory
+instance_create_layer(0, 0, "HUD", obj_inventory_manager);				// Manages inventory
 
 // Health Bars
-instance_create_layer(x, y, "HUD", obj_healthbar);
+instance_create_layer(0, 0, "HUD", obj_healthbar);

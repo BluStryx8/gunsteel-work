@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "obj_enemy_bat_green",
     "eventList": [
-        {
-            "id": "9d31f197-be21-4b8f-a977-26b7dfe141a4",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "64724e03-c366-48b5-b8a2-b1400abf3365"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
@@ -96,6 +87,14 @@
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "30275deb-2357-4cf3-a195-d1496fe80c94",
             "value": "150"
+        },
+        {
+            "id": "cc5ad36e-51e2-4d50-b858-1110012b9ab5",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
+            "propertyId": "fc9a7731-f662-4ea7-bdc8-c11291efbaec",
+            "value": "-1"
         }
     ],
     "parentObjectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",

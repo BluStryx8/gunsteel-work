@@ -1,6 +1,7 @@
 /// @description Enums for reference
 enum hpbar
 {
+	onehit,
 	slot_single,
 	slot_left,
 	slot_middle,

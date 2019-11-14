@@ -24,7 +24,7 @@ switch (_id)
 				load_door(5, 16, "left");
 				load_door(53, 16, "right");
 				load_door(26, 5, "up");
-				spawn_wave(biome, 5, 7);
+				spawn_wave(biome, 7, 11);
 				break;
 			case "crate":
 				switch (choose("box", "outline"))

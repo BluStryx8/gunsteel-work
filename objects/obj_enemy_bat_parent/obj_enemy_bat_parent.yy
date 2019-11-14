@@ -151,6 +151,20 @@
             "varType": 0
         },
         {
+            "id": "fc9a7731-f662-4ea7-bdc8-c11291efbaec",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "-1",
+            "varName": "windup_time",
+            "varType": 1
+        },
+        {
             "id": "14ca7c8e-6cba-40be-b593-7e4a7c0ac611",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",

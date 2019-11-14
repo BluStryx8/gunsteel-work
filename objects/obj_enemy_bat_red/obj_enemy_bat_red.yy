@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "obj_enemy_bat_red",
     "eventList": [
-        {
-            "id": "76b23e8f-0e11-4fc8-86f9-04f80604e4fa",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "8e722613-cadf-4c8c-b0db-181e53dbb59b"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
@@ -96,6 +87,14 @@
             "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
             "propertyId": "30275deb-2357-4cf3-a195-d1496fe80c94",
             "value": "150"
+        },
+        {
+            "id": "5ca6869e-b319-4fa0-9873-31ccdc4f372a",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",
+            "propertyId": "fc9a7731-f662-4ea7-bdc8-c11291efbaec",
+            "value": "-1"
         }
     ],
     "parentObjectId": "897442ab-d2cf-421a-8e8e-19d4d85f513a",

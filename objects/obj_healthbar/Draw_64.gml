@@ -5,17 +5,23 @@ var _health		 = obj_player.p_health;
 var _max_defense = obj_player.p_max_defense;
 var _defense	 = obj_player.p_defense;
 
-var _width = sprite_get_width(spr_healthbar);
-var _height = sprite_get_height(spr_healthbar);
 var _x_offset = 32;
 var _y_offset = 32;
 var _padding = 16;
+var _scale = 2;
+
+var _width = sprite_get_width(spr_healthbar) * _scale;
+var _height = sprite_get_height(spr_healthbar) * _scale;
 
 var _x = _x_offset;
 var _y = _y_offset;
-var _scale = 1;
 
 // Draw Healthbar
+if (_max_health <= 0)
+{
+	draw_sprite_ext(spr_healthbar,hpbar.onehit, _x, _y, _scale, _scale, 0, c_white, 1);
+	exit;
+}
 draw_sprite_ext(spr_healthbar,hpbar.hp_icon, _x, _y, _scale, _scale, 0, c_white, 1);
 _x += _width;
 if (_max_health > 1)

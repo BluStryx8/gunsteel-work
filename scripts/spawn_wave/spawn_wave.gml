@@ -4,8 +4,8 @@
 /// @param max Maximum amount of enemies to spawn
 
 var _biome = argument0;
-var _min  = argument1;
-var _max  = argument2;
+var _min  = argument1 + min(3, floor(global.difficulty / 100)) - 1;
+var _max  = argument2 + min(3, floor(global.difficulty / 100)) - 1;
 
 switch (_biome)
 {
