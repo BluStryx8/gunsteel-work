@@ -4,7 +4,9 @@
     "mvc": "1.1",
     "name": "d124de83-b04c-4809-ba85-293eb9c8770d",
     "children": [
-        "48951567-d3e5-4612-bd33-34fcc67407ce"
+        "06265ef8-7f84-4989-8f5e-53c1fb01adcf",
+        "f5ab7166-675f-4bf7-980f-b9266b1907f5",
+        "81a34e3c-9b63-4ef5-bbed-fac0590b3902"
     ],
     "filterType": "GMSprite",
     "folderName": "HUD",

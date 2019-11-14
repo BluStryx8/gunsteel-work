@@ -29,8 +29,7 @@ if (room == rm_game)
 }
 if (room == rm_game2) global.holstered = true;
 
-
-
 // Goes to the right place in room
 x = global.player_setx;
 y = global.player_sety;
+p_defense = p_max_defense;
