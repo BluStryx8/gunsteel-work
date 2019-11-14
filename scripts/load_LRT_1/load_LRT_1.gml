@@ -45,7 +45,7 @@ switch (_id)
 				break;
 		}
 		break;
-	case "start":
-		show_debug_message("Error: Not a start room!")
+	case "end":
+		load_tile(30, 30, obj_next_floor);
 		break;
 }

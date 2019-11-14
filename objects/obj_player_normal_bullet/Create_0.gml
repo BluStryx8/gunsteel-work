@@ -6,7 +6,7 @@ decay = obj_player.decay;				// Sets time before bullet eventually fades and del
 speed = obj_player.bullet_speed + irandom_range(-obj_player.bullet_speed_var, obj_player.bullet_speed_var);
 spd = speed;							// Saves speed for later
 
-damage = floor(irandom_range(obj_player.min_damage, obj_player.max_damage) * (obj_player.upgrades + 10) / 10);
+damage = floor(irandom_range(obj_player.min_damage, obj_player.max_damage) * (obj_player.upgrades + 5) / 5);
 damage -= round((obj_player.accuracy - obj_player.base_accuracy) * obj_player.recoil_mult);
 // Decreases damage by the weapon's inaccuracy
 

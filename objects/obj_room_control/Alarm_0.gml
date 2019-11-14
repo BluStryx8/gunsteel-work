@@ -38,9 +38,11 @@ switch (section_id)
 }
 
 // Enemy waves
-if (enemy_count > 5)	// Checks to see if room is an enemy room with enough enemies
+var _difficulty = min(3, floor(global.difficulty / 100) - 1);
+if (enemy_count > 6 - _difficulty)	// Checks to see if room is an enemy room with enough enemies
 {
 	wave_count = enemy_count - 1;
-	waves = irandom_range(0, floor(enemy_count / 5));
+	waves = irandom_range(0, floor(enemy_count / 6 - _difficulty));
 	enemy_count += waves;
 }
+if (enemy_count > 0) combat = true;

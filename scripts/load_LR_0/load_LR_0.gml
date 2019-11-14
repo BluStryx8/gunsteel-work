@@ -45,4 +45,8 @@ switch (_id)
 		// Sets Spawn
 		set_spawn(30, 21);
 		break;
+	case "end":
+		// Sets Exit
+		load_tile(30, 21, obj_next_floor);
+		break;
 }

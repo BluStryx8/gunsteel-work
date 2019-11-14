@@ -32,4 +32,7 @@ if (room == rm_game2) global.holstered = true;
 // Goes to the right place in room
 x = global.player_setx;
 y = global.player_sety;
+
+// Regenerate
 p_defense = p_max_defense;
+if (p_health < p_max_health) p_health += 1;

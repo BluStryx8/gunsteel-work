@@ -15,7 +15,7 @@ switch (_id)
 				load_door(53, 16, "right");
 				load_door(26, 5, "up");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 4, 6);
+				spawn_wave(biome, 2, 4);
 				break;
 			case "slime":
 			case "elite":
@@ -24,7 +24,7 @@ switch (_id)
 				load_door(53, 16, "right");
 				load_door(26, 5, "up");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 5, 6);
+				spawn_wave(biome, 3, 4);
 				break;
 			case "crate":
 				break;

@@ -8,7 +8,7 @@ var _defense	 = obj_player.p_defense;
 var _x_offset = 32;
 var _y_offset = 32;
 var _padding = 16;
-var _scale = 2;
+var _scale = 1;
 
 var _width = sprite_get_width(spr_healthbar) * _scale;
 var _height = sprite_get_height(spr_healthbar) * _scale;

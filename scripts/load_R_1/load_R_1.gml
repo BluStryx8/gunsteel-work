@@ -39,8 +39,8 @@ switch (_id)
 				break;
 		}
 		break;
-	case "start":
-		// Generates centre crate
-		load_tile(29, 19, obj_crate);
+	case "end":
+		// Sets Exit
+		load_tile(20, 21, obj_next_floor);
 		break;
 }
