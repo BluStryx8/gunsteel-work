@@ -1,5 +1,5 @@
 /// @description Draw Healthbars
-if (global.truepause) or (global.holstered) exit;
+if (global.truepause) or (global.holstered) or (global.settings) exit;
 var _max_health	 = obj_player.p_max_health;
 var _health		 = obj_player.p_health;
 var _max_defense = obj_player.p_max_defense;

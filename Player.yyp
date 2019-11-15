@@ -439,6 +439,14 @@
             }
         },
         {
+            "Key": "25c43731-d205-4a60-ab46-11e88b9c91f1",
+            "Value": {
+                "id": "babbdeaa-2715-4d29-81e5-332148943820",
+                "resourcePath": "views\\25c43731-d205-4a60-ab46-11e88b9c91f1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "261e4ddc-7c5e-44c1-b9c4-659bb7bd0f49",
             "Value": {
                 "id": "a3b5f29d-a645-489f-ba9b-d631b52dacba",
@@ -1084,6 +1092,14 @@
                 "id": "cc2ac43d-61b6-4086-bd3f-59dacb55941d",
                 "resourcePath": "scripts\\init_lrb_sections\\init_lrb_sections.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6304913f-62e2-44af-8038-f6c5321eadb1",
+            "Value": {
+                "id": "abc8fed2-d63a-429c-aeef-c0d0f93762ea",
+                "resourcePath": "objects\\obj_pause_settings\\obj_pause_settings.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1876,6 +1892,14 @@
                 "id": "495c31f9-bc86-43f3-a2bb-8b9524392f6a",
                 "resourcePath": "fonts\\fnt_inventory\\fnt_inventory.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "b1a9e983-fa5f-469d-983a-9a209184852c",
+            "Value": {
+                "id": "5963bc24-8908-450d-bb1f-766871eeafa5",
+                "resourcePath": "rooms\\rm_settings\\rm_settings.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

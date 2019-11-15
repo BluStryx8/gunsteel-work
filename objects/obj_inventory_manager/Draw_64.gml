@@ -22,28 +22,31 @@ draw_set_color(_col);
 
 
 // Draw Hotbar
-draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, hotbar_height, 1, 1, 0, _col, 1);
-draw_sprite_ext(spr_active, -1, gui_holder_pos_x + (gui_holder_slot_offset_x * active_item) + 38,
-				gui_holder_pos_y + gui_holder_pad, 1, 1, 0, _col, 1);
-for (var _inv = 0; _inv <= HOTBAR; _inv++)
+if (!global.settings)
 {
-	item_define_index = inventory[_inv];
-	if (item_define_index != item_type.none)
+	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, hotbar_height, 1, 1, 0, _col, 1);
+	draw_sprite_ext(spr_active, -1, gui_holder_pos_x + (gui_holder_slot_offset_x * active_item) + 38,
+					gui_holder_pos_y + gui_holder_pad, 1, 1, 0, _col, 1);
+	for (var _inv = 0; _inv <= HOTBAR; _inv++)
 	{
-		draw_sprite_ext(item_definitions[item_define_index, item_properties.sprite_gui], -1,
-					(gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 32,
-					(gui_holder_pos_y + gui_holder_pad), 1, 1, 0, _col, 1);
-		if obj_inventory_manager.item_definitions[item_define_index, item_properties.type] != "firearm"
+		item_define_index = inventory[_inv];
+		if (item_define_index != item_type.none)
 		{
-			draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 57,
-						(gui_holder_pos_y + gui_holder_pad) + 10,
-						string(item_definitions[item_define_index, item_properties.amount]));
+			draw_sprite_ext(item_definitions[item_define_index, item_properties.sprite_gui], -1,
+						(gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 32,
+						(gui_holder_pos_y + gui_holder_pad), 1, 1, 0, _col, 1);
+			if obj_inventory_manager.item_definitions[item_define_index, item_properties.type] != "firearm"
+			{
+				draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 57,
+							(gui_holder_pos_y + gui_holder_pad) + 10,
+							string(item_definitions[item_define_index, item_properties.amount]));
+			}
 		}
 	}
 }
 
 // Draw extended inventory
-if (global.in_inv)
+if (global.in_inv) and (!global.settings)
 {
 	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height, 1, 1, 0, _col, 1);
 	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height * 2, 1, 1, 0, _col, 1);
@@ -112,7 +115,7 @@ if (global.in_inv) exit;
 var _weap_offset_x = -48;	// x offset from the bottom right hand corner
 var _weap_offset_y = -48;	// y offset from the bottom right hand corner
 
-if (global.holstered) exit;
+if (global.holstered) or (global.settings) exit;
 draw_set_halign(fa_center);
 var _sprite = obj_inventory_manager.item_definitions[inventory[active_item], item_properties.sprite_gui];
 var _weapon = false;
@@ -191,3 +194,52 @@ if (_draw != spr_gui_empty)
 	if (_bullets >= 3) draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 3,
 									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
 }
+
+if global.paused = true and (!global.settings) ///temp, just a reference for now
+{
+	if logo_alpha < 1
+	{
+		logo_alpha = logo_alpha + 0.015
+	}
+	draw_rectangle(display_get_gui_width()/2 - 120, display_get_gui_height()/2-120, display_get_gui_width()/2 + 120, display_get_gui_height()/2 + 100,false)
+	draw_sprite_ext(spr_main_icon,0,display_get_gui_width()/2 ,display_get_gui_height()/2-190,0.8,0.8,0,c_white,logo_alpha)
+	draw_sprite_ext(spr_main_menu_buttons,3,display_get_gui_width()/2, display_get_gui_height()/2-75,0.8,0.8,0,c_white,1)
+	draw_sprite_ext(spr_main_menu_buttons,1,display_get_gui_width()/2, display_get_gui_height()/2-10,0.8,0.8,0,c_white,1)
+	draw_sprite_ext(spr_main_menu_buttons,2,display_get_gui_width()/2, display_get_gui_height()/2+55,0.8,0.8,0,c_white,1)
+}
+else
+{
+	logo_alpha = 0
+}
+
+
+//Pause menu code
+if global.paused = true and global.settings = false
+{
+	pmousex = device_mouse_x_to_gui(0)
+	pmousey = device_mouse_y_to_gui(0)
+	if pmousex >= camera_get_view_width(0)/2 - 120 and pmousex <= camera_get_view_width(0)/2 + 120
+	{
+		if pmousey >= camera_get_view_height(0)/2-100 and pmousey < camera_get_view_height(0)/2- 60 and mouse_check_button_pressed(mb_left)
+		{
+			global.paused = false
+		}
+		
+		if pmousey >= camera_get_view_height(0)/2-35 and pmousey < camera_get_view_height(0)/2 + 5 and mouse_check_button_pressed(mb_left)
+		{
+			global.settings = true
+			room_goto(rm_settings)
+			
+		}
+		
+		if pmousey >= camera_get_view_height(0)/2+ 30 and pmousey < camera_get_view_height(0)/2 + 60 and mouse_check_button_pressed(mb_left)
+		{
+			global.paused = false
+			global.truepause = false
+			room_goto(rm_mainmenu) ///need to change some vars in other objects (particularly camera etc to get to work)
+		}
+		
+		
+	}
+}
+

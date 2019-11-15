@@ -18,5 +18,11 @@ switch image_index
 		if (clicked == false)
 		instance_create_layer(0,0,"fade",obj_fade_out);
 		clicked = true;
+		break;
+		
+	case 4:
+	//return to center
+		global.menu_follow = 2 
+		break;
 	
 }

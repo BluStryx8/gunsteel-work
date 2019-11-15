@@ -1,5 +1,6 @@
 /// @description Draws the faded rectangle
 // Paused
+if (!room = rm_mainmenu)
 if (global.paused)
 {
 	draw_set_colour(c_black);

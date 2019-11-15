@@ -6,7 +6,7 @@ if (global.truepause)
 }
 
 /// Pause Game
-if (keyboard_check_pressed(vk_escape) and room != rm_mainmenu)
+if (keyboard_check_pressed(vk_escape) and room != rm_mainmenu and room != rm_settings)
 {
 	global.paused = !global.paused;	// Toggle paused
 }
