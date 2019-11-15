@@ -11,6 +11,7 @@ if (room == rm_mainmenu)
 }
 else
 {
+	global.truepause = false
 	focus = 0;
 	camera_pan = 1024;
 	camera_width = 512;

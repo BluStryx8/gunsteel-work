@@ -195,17 +195,17 @@ if (_draw != spr_gui_empty)
 									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
 }
 
-if global.paused = true and (!global.settings) ///temp, just a reference for now
+if global.paused = true and (!global.settings) 
 {
 	if logo_alpha < 1
 	{
 		logo_alpha = logo_alpha + 0.015
 	}
-	draw_rectangle(display_get_gui_width()/2 - 120, display_get_gui_height()/2-120, display_get_gui_width()/2 + 120, display_get_gui_height()/2 + 100,false)
+	
 	draw_sprite_ext(spr_main_icon,0,display_get_gui_width()/2 ,display_get_gui_height()/2-190,0.8,0.8,0,c_white,logo_alpha)
-	draw_sprite_ext(spr_main_menu_buttons,3,display_get_gui_width()/2, display_get_gui_height()/2-75,0.8,0.8,0,c_white,1)
-	draw_sprite_ext(spr_main_menu_buttons,1,display_get_gui_width()/2, display_get_gui_height()/2-10,0.8,0.8,0,c_white,1)
-	draw_sprite_ext(spr_main_menu_buttons,2,display_get_gui_width()/2, display_get_gui_height()/2+55,0.8,0.8,0,c_white,1)
+	draw_sprite_ext(spr_main_menu_buttons,3,display_get_gui_width()/2, display_get_gui_height()/2-75,0.8,0.8,0,c_ltgray,1)
+	draw_sprite_ext(spr_main_menu_buttons,1,display_get_gui_width()/2, display_get_gui_height()/2-10,0.8,0.8,0,c_ltgray,1)
+	draw_sprite_ext(spr_main_menu_buttons,2,display_get_gui_width()/2, display_get_gui_height()/2+55,0.8,0.8,0,c_ltgray,1)
 }
 else
 {
