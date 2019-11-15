@@ -671,6 +671,14 @@
             }
         },
         {
+            "Key": "3e1f0405-5c2b-4da1-bb38-d402ccaa122c",
+            "Value": {
+                "id": "67cbeb19-276f-4211-b903-d951d9ed43b3",
+                "resourcePath": "objects\\obj_fade_out_to_menu\\obj_fade_out_to_menu.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3f9070e1-98d7-4f1a-9466-f9479521167b",
             "Value": {
                 "id": "92113a43-2f97-4060-bd86-6c43e102ad66",

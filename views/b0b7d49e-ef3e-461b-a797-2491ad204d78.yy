@@ -6,7 +6,8 @@
     "children": [
         "5872f950-8570-4f37-b406-54ccba62e424",
         "c105ca4e-0cc6-4e09-a9c7-d9f233143fcc",
-        "c6afbe23-f30c-4b96-be2c-cc98ef4899bf"
+        "c6afbe23-f30c-4b96-be2c-cc98ef4899bf",
+        "3e1f0405-5c2b-4da1-bb38-d402ccaa122c"
     ],
     "filterType": "GMObject",
     "folderName": "Fade (changes the room)",

@@ -236,7 +236,8 @@ if global.paused = true and global.settings = false
 		{
 			global.paused = false
 			global.truepause = false
-			room_goto(rm_mainmenu) ///need to change some vars in other objects (particularly camera etc to get to work)
+			instance_create_layer(x,y,"fade",obj_fade_out_to_menu)
+			
 		}
 		
 		
