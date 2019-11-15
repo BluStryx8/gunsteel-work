@@ -1,5 +1,6 @@
 /// @desc Changes fire mode
-if (mouse_check_button_pressed(mb_right))
+if (room != rm_settings)
+if (mouse_check_button_pressed(mb_right)) 
 	with (obj_player)
 		if (fire_cooldown == 0)
 		{

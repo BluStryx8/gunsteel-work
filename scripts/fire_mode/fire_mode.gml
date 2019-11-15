@@ -1,4 +1,5 @@
 /// @desc Changes fire mode
+if (room != rm_settings)
 if (mouse_check_button_pressed(mb_right))
 {
 	var _w = weapon_find(global.weapons, "weapon", item_definitions[global.p_active, item_properties.name]);

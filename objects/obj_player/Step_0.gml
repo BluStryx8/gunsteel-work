@@ -5,6 +5,11 @@ if (global.truepause)
 	exit;
 }
 
+if room = rm_settings
+{
+	global.paused = true
+}
+
 /// Pause Game
 if (keyboard_check_pressed(vk_escape) and room != rm_mainmenu and room != rm_settings)
 {
