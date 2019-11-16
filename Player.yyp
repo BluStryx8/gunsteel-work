@@ -423,6 +423,14 @@
             }
         },
         {
+            "Key": "217ce3ed-c384-4cd7-bc6c-a717d1a18323",
+            "Value": {
+                "id": "0c28f903-c3c2-4391-b074-04a34f810951",
+                "resourcePath": "objects\\obj_chest\\obj_chest.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "23375b7a-4a7b-4bed-bcdc-20326261fa0d",
             "Value": {
                 "id": "c6e9da8e-00f1-4778-9b06-a7cbaba7d830",
@@ -443,6 +451,14 @@
             "Value": {
                 "id": "367986e4-e69c-405d-9df4-aa3c9139eec4",
                 "resourcePath": "scripts\\array_replace_value\\array_replace_value.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "23a81af7-9346-48f7-a1fb-05e09022ecfd",
+            "Value": {
+                "id": "91bf42eb-07dc-4186-824d-d85de181ee1b",
+                "resourcePath": "scripts\\death_check\\death_check.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -703,6 +719,14 @@
             }
         },
         {
+            "Key": "3b60e6e6-0b74-4e27-9787-3f0c03daa330",
+            "Value": {
+                "id": "06008376-3bf2-404f-9de5-79ce0e0ebbf5",
+                "resourcePath": "notes\\Classes.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "3bdcdc73-eeec-4df4-a2da-f5c29091b9ed",
             "Value": {
                 "id": "b99d0e9e-f4be-4c34-88bc-b1fe0664b995",
@@ -940,6 +964,14 @@
                 "id": "87c9dbef-2091-4beb-bba2-91c6fd9da4eb",
                 "resourcePath": "sprites\\spr_enemy_bullet_hit\\spr_enemy_bullet_hit.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "51192a88-00ea-4fb9-a90b-a2383592e2b3",
+            "Value": {
+                "id": "76e22aa0-264c-454c-9ad5-c4f27ebd01c9",
+                "resourcePath": "scripts\\create_loot\\create_loot.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1551,14 +1583,6 @@
             }
         },
         {
-            "Key": "8bc9416f-7c51-4c8a-8384-3cad286be446",
-            "Value": {
-                "id": "2f287e9c-fd03-47b8-b615-f8cdbbf047ab",
-                "resourcePath": "sprites\\temp\\temp.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "8c6bb850-39e7-4503-a5ca-dce23261076c",
             "Value": {
                 "id": "533322ed-3daf-426f-8fd1-66619437faec",
@@ -1732,6 +1756,14 @@
                 "id": "0edc1961-47d9-44e5-8fd2-094d80eae162",
                 "resourcePath": "views\\94fdbb1b-137f-479d-b5d1-6eea1a6351a0.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9530efc2-b42a-42e5-99e6-fe89a0533ae0",
+            "Value": {
+                "id": "ead2d098-a35a-4fbc-9960-620dfa74c584",
+                "resourcePath": "sprites\\spr_item_arrow\\spr_item_arrow.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2348,6 +2380,14 @@
                 "id": "20132763-13a9-43cf-8dae-ce3732fc86ad",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cd0f2883-d92c-465c-9dc1-e1492d04ec5d",
+            "Value": {
+                "id": "5ceb54c0-1985-45a8-a8d1-a4ceefcf1aa0",
+                "resourcePath": "sprites\\spr_tile_chest\\spr_tile_chest.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3007,6 +3047,7 @@
         "c4cdfdc1-6bd8-4177-80c9-68a9ea7971ba",
         "235fed7c-8c6c-47f9-849b-cd14e2729802",
         "be25dd5d-e748-41ac-9676-36dc6f1018ef",
+        "51192a88-00ea-4fb9-a90b-a2383592e2b3",
         "d3b71c79-3876-4e2c-8ebb-37d238d6e5bc",
         "366c26fb-7801-4a2f-9ce3-8b85b0ef5707",
         "6756b048-53d5-420e-bac9-2dfa31d49909",
@@ -3014,6 +3055,7 @@
         "27f676b1-d310-44f0-8073-8de87549a66c",
         "9b94b000-4eae-49f9-a3c0-b121594f4681",
         "fea803c0-1267-4db4-b15e-d18ce911415d",
+        "23a81af7-9346-48f7-a1fb-05e09022ecfd",
         "4604832b-d49f-49f6-96c5-d6dd4039383f",
         "c5a01845-ae93-47d2-92ac-f6462a10a1c1",
         "75fe7d4e-f318-4375-9d79-7ca2e2645554",

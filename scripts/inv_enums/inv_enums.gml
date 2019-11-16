@@ -18,11 +18,12 @@ enum item_type
 	omark_44,
 	tesro,
 	minigun,
+	w_length,
 	
 	// Consumables
 	potion,
 	ammo_crate,
-	
+	c_length,
 	// Ores
 	ore_iron,
 	

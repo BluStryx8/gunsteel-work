@@ -1,7 +1,7 @@
 /// @description Collect Item
-if (global.paused) exit;
-
-if keyboard_check(ord("E"))
+collided = true;
+if (global.paused or created > 0) exit;
+if keyboard_check_pressed(ord("E"))
 {
 	var _success = inv_additem(p_item_type);
 	if (_success)
