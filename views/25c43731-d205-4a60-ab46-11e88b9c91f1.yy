@@ -4,7 +4,7 @@
     "mvc": "1.1",
     "name": "25c43731-d205-4a60-ab46-11e88b9c91f1",
     "children": [
-        "6304913f-62e2-44af-8038-f6c5321eadb1"
+        "070f43f0-ded3-4266-ab1c-2866bd63fecf"
     ],
     "filterType": "GMObject",
     "folderName": "Pause settings",
