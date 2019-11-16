@@ -18,3 +18,12 @@ if selected{
 }
 
 global.settings_sound_volume =global.sound_value
+
+
+
+if global.paused = false and (!room = rm_mainmenu)
+{
+	global.settings = false
+	instance_destroy()
+}
+

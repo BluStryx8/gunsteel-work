@@ -249,12 +249,12 @@ if global.paused = true and global.settings = false
 		if pmousey >= camera_get_view_height(0)/2-100 and pmousey < camera_get_view_height(0)/2- 60 and mouse_check_button_pressed(mb_left)
 		{
 			global.paused = false
+			global.settings = false
 		}
 		
 		if pmousey >= camera_get_view_height(0)/2-35 and pmousey < camera_get_view_height(0)/2 + 5 and mouse_check_button_pressed(mb_left)
 		{
 			global.settings = true
-			room_goto(rm_settings)
 			
 		}
 		
@@ -263,6 +263,7 @@ if global.paused = true and global.settings = false
 			global.paused = false
 			global.truepause = false
 			instance_create_layer(x,y,"fade",obj_fade_out_to_menu)
+			global.settings = false
 			
 		}
 		
@@ -270,3 +271,16 @@ if global.paused = true and global.settings = false
 	}
 }
 
+// pause menu
+
+if global.settings = true
+{
+	xx = (camera_get_view_x(view_camera[0])) + 5;
+	yy = (camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2));
+	instance_create_layer(xx,yy,"control",obj_slider_sounds_volume)
+
+}
+
+
+
+	
