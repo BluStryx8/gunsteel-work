@@ -90,7 +90,8 @@ if selected_cell > -1
 	if (inventory[selected_cell] != item_type.none and mousey > camera_get_view_height(0) - spr_hotbar_height*3)
 	{
 		var _inv    = inventory[selected_cell];
-		draw_stats(_inv, gui_holder_pos_x + gui_holder_width + 32, hotbar_height);
+		draw_stats(_inv, gui_holder_pos_x + gui_holder_width + 16, hotbar_height - 16);
+		draw_set_font(fnt_inventory);
 	}
 	
 /// if you are holding something draw it

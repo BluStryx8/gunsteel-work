@@ -2,9 +2,10 @@
 var _inv    = argument0;
 var _text_x = argument1;
 var _text_y = argument2;
-var _text_spacing = 20;
+var _init_spacing = 20;
+var _text_spacing = 16;
 
-
+draw_set_font(fnt_inventory);
 draw_set_halign(fa_left);
 switch (item_definitions[_inv, item_properties.type])
 {
@@ -16,7 +17,8 @@ switch (item_definitions[_inv, item_properties.type])
 		if (_stat_1 > 0) draw_text(_text_x, _text_y, string(item_definitions[_inv, item_properties.name])
 								+ " (+" + string(_stat_1)+")");
 		else draw_text(_text_x, _text_y, string(item_definitions[_inv, item_properties.name]));
-		_text_y += _text_spacing;
+		_text_y += _init_spacing;
+		draw_set_font(fnt_stat);
 		// Weapon Type
 		_stat_1 = ds_map_find_value(global.weapons[_w], "type");
 		var _stat_2 = ds_map_find_value(global.weapons[_w], "atk_type");
@@ -27,11 +29,16 @@ switch (item_definitions[_inv, item_properties.type])
 	default:
 		var _weapon = false;
 		draw_text(_text_x, _text_y, string(item_definitions[_inv, item_properties.name]));
-		_text_y += _text_spacing;
+		_text_y += _init_spacing;
+		draw_set_font(fnt_stat);
 		draw_text(_text_x, _text_y, string(item_definitions[_inv, item_properties.type]));
 		break;
 }
 _text_y += _text_spacing;
+var _stat_1 = item_definitions[_inv, item_properties.tooltip];
+var _stat_2 = item_definitions[_inv, item_properties.tip_lines];
+if (_stat_2 > 0) draw_text(_text_x, _text_y, _stat_1);
+_text_y += _text_spacing * _stat_2;
 if (!_weapon) exit;
 /// The following code only applies to weapons
 // Weight

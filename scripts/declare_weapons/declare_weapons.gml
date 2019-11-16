@@ -402,7 +402,7 @@ ds_map_add(global.weapons[32], "base_accuracy", 0.5);
 ds_map_add(global.weapons[32], "recoil", 4);
 ds_map_add(global.weapons[32], "max_recoil", 4.5);
 ds_map_add(global.weapons[32], "recoil_mult", 5);
-ds_map_add(global.weapons[32], "shake_dur", 16);
+ds_map_add(global.weapons[32], "shake_dur", 8);
 ds_map_add(global.weapons[32], "max_ammo", 1);
 ds_map_add(global.weapons[32], "ammo", 1);
 ds_map_add(global.weapons[32], "draw_time", 30);

@@ -44,7 +44,8 @@ enum item_properties
 	set,
 	use_left,
 	use_right,
-	
+	tooltip,
+	tip_lines,
 	// Length enum for reference
 	length
 }
