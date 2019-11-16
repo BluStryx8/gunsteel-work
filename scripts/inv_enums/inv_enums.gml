@@ -19,6 +19,10 @@ enum item_type
 	tesro,
 	minigun,
 	
+	// Consumables
+	potion,
+	ammo_crate,
+	
 	// Ores
 	ore_iron,
 	

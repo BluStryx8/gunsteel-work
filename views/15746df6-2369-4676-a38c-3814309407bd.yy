@@ -4,8 +4,8 @@
     "mvc": "1.1",
     "name": "15746df6-2369-4676-a38c-3814309407bd",
     "children": [
-        "610a2b01-aef0-4ccd-a7d3-e8bac7b6f6ec",
-        "93599943-1fac-443f-8358-4d281bbdffd2"
+        "30f3a0dd-b705-40ac-9478-4a1c0e6ac904",
+        "32da7397-31d0-4aa3-8615-561f4c3a66c5"
     ],
     "filterType": "GMSprite",
     "folderName": "Items",

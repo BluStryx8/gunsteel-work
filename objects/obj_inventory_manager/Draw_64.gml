@@ -119,29 +119,53 @@ if (global.holstered) or (global.settings) exit;
 draw_set_halign(fa_center);
 var _sprite = obj_inventory_manager.item_definitions[inventory[active_item], item_properties.sprite_gui];
 var _weapon = false;
+var _total_ammo = 0;
 switch (obj_player.type)
 {
 	case "Pistol":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 1, 1, 0, _col, 1);
 		_weapon = true;
+		_total_ammo = "Infinite";
 		break;
 	case "Assault Rifle":
+		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
+						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
+		_weapon = true;
+		_total_ammo = global.ammo_rifle;
+		break;
 	case "Shotgun":
+		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
+						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
+		_weapon = true;
+		_total_ammo = global.ammo_shotgun;
+		break;
 	case "Sniper Rifle":
+		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
+						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
+		_weapon = true;
+		_total_ammo = global.ammo_sniper;
+		break;
 	case "Minigun":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
 		_weapon = true;
+		_total_ammo = global.ammo_minigun;
 		break;
 }
 if (_weapon)
+{
 	if (obj_player.reloading > 0)
 		draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
 					"Reloading...")
 	else draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y - 64,
 					string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
-
+	draw_set_halign(fa_right);
+	if (_total_ammo != "Infinite")
+		draw_text(view_get_wport(0) + _weap_offset_x - 32, view_get_hport(0) + _weap_offset_y + 24,
+					string(_total_ammo));
+	draw_set_halign(fa_center);
+}
 
 // Draw Ammo
 var _x = _weap_offset_x;		// x offset from the bottom right hand corner
@@ -156,8 +180,10 @@ switch (obj_player.type)
 		_draw = spr_ammo_pistolbullet;
 		break;
 	case "Assault Rifle":
-	case "Sniper Rifle":
 		_draw = spr_ammo_riflebullet;
+		break;
+	case "Sniper Rifle":
+		_draw = spr_ammo_sniperbullet;
 		break;
 	case "Shotgun":
 		_draw = spr_ammo_shotgunbullet;
@@ -177,8 +203,8 @@ if (_draw != spr_gui_empty)
 	}
 
 // Draw Fire Mode
-var _mode_x_offset = -15; // x offset of bullets to draw
-var _mode_y_offset = -20; // y offset of bullets to draw
+var _mode_x_offset = _weap_offset_x + 32; // x offset of bullets to draw
+var _mode_y_offset = _weap_offset_y + 24; // y offset of bullets to draw
 
 // Bullets to draw representative of atk modes
 var _bullets = 1;

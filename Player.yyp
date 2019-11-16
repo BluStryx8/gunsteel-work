@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "053e01c3-a0c3-49cd-90bc-8aef92a278ef",
+            "Value": {
+                "id": "1855abbd-49e8-47cc-9bce-6a0809beaf24",
+                "resourcePath": "scripts\\use_potion\\use_potion.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "06265ef8-7f84-4989-8f5e-53c1fb01adcf",
             "Value": {
                 "id": "e0ea5a50-0a91-4479-a07e-835ace26e76a",
@@ -415,6 +423,14 @@
             }
         },
         {
+            "Key": "233b26b3-0b94-495b-928a-359c89523da1",
+            "Value": {
+                "id": "e83a3fb2-fbf3-4fbd-866c-44dd190deb04",
+                "resourcePath": "sprites\\spr_ammo_sniperbullet\\spr_ammo_sniperbullet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "235fed7c-8c6c-47f9-849b-cd14e2729802",
             "Value": {
                 "id": "367986e4-e69c-405d-9df4-aa3c9139eec4",
@@ -428,6 +444,14 @@
                 "id": "8553357f-f756-4244-a2df-4baeb2b4f05f",
                 "resourcePath": "views\\255d86cd-fdc2-4226-9653-947f9ed7c0be.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2592f84f-7c8d-4913-8c38-f3f24e3040da",
+            "Value": {
+                "id": "528ffec8-ca86-4884-8a41-626bcf594cf1",
+                "resourcePath": "objects\\obj_item_pickup_ammo_crate\\obj_item_pickup_ammo_crate.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -551,6 +575,14 @@
             }
         },
         {
+            "Key": "30f3a0dd-b705-40ac-9478-4a1c0e6ac904",
+            "Value": {
+                "id": "bb5bfac9-a3e9-4b40-817c-3f0085789031",
+                "resourcePath": "sprites\\spr_gui_potion\\spr_gui_potion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3187caf4-4312-417d-a126-9039beb42a1c",
             "Value": {
                 "id": "706272b4-17e6-4fd0-878c-bf5b3b37f42c",
@@ -571,6 +603,14 @@
             "Value": {
                 "id": "3c55982b-4186-4f73-8a0c-6e606854a3d9",
                 "resourcePath": "sprites\\spr_player_hand\\spr_player_hand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "32da7397-31d0-4aa3-8615-561f4c3a66c5",
+            "Value": {
+                "id": "62c2b583-6365-4140-803b-05effd8c6c51",
+                "resourcePath": "sprites\\spr_gui_ammo_crate\\spr_gui_ammo_crate.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -652,6 +692,14 @@
                 "id": "6daf40f8-b041-46fc-beb7-344aa20aaa5d",
                 "resourcePath": "objects\\obj_enemy_bullet_r\\obj_enemy_bullet_r.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3bdcdc73-eeec-4df4-a2da-f5c29091b9ed",
+            "Value": {
+                "id": "b99d0e9e-f4be-4c34-88bc-b1fe0664b995",
+                "resourcePath": "scripts\\use_ammo_crate\\use_ammo_crate.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -940,6 +988,14 @@
                 "id": "1ea257ad-bdd0-4d29-bcff-597db989967b",
                 "resourcePath": "sprites\\spr_gui_m4\\spr_gui_m4.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "56acaf05-e3a8-4a57-a985-56048fca6d09",
+            "Value": {
+                "id": "30a312af-2eea-462f-8f61-21743bc61f8f",
+                "resourcePath": "views\\56acaf05-e3a8-4a57-a985-56048fca6d09.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1647,6 +1703,14 @@
             }
         },
         {
+            "Key": "93c607c8-c391-493e-8938-62fda3f1b885",
+            "Value": {
+                "id": "2a34df49-afee-4ae8-b73d-0cfd44921efa",
+                "resourcePath": "sprites\\spr_enemy_necro_mask\\spr_enemy_necro_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "94fdbb1b-137f-479d-b5d1-6eea1a6351a0",
             "Value": {
                 "id": "0edc1961-47d9-44e5-8fd2-094d80eae162",
@@ -2143,6 +2207,14 @@
             }
         },
         {
+            "Key": "c4ff044b-48da-4715-9d7f-9c3c88d56c05",
+            "Value": {
+                "id": "7ec14546-2565-490b-9829-e7089c2ccb1e",
+                "resourcePath": "sprites\\spr_enemy_necro\\spr_enemy_necro.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c5a01845-ae93-47d2-92ac-f6462a10a1c1",
             "Value": {
                 "id": "ac0ba9da-4517-4588-a822-42b44ba53419",
@@ -2559,6 +2631,14 @@
             }
         },
         {
+            "Key": "e0b63fd1-0548-4085-bd9c-091da59f8827",
+            "Value": {
+                "id": "3b305901-a02a-4d05-afa8-142a38da0c18",
+                "resourcePath": "views\\e0b63fd1-0548-4085-bd9c-091da59f8827.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e324ed6a-ae90-4e2a-9764-5e06f0ffb84c",
             "Value": {
                 "id": "1b94de8f-4897-489b-b58d-7aa52ad764c9",
@@ -2751,6 +2831,14 @@
             }
         },
         {
+            "Key": "f129009f-4c65-41b0-b9c5-e4f19a5da167",
+            "Value": {
+                "id": "0f9524a7-5135-4bf8-91d7-1d68372575a5",
+                "resourcePath": "objects\\obj_item_pickup_potion\\obj_item_pickup_potion.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f1d69b4d-0736-435f-823f-b89dae5bb075",
             "Value": {
                 "id": "c00d4b47-0628-431b-952b-66bf6ddd5585",
@@ -2898,6 +2986,8 @@
         "51371395-3cf3-4459-b6c7-85409aa6adf2",
         "824d5581-6b15-406d-9f97-27ab08e6dcfc",
         "5a36136f-2866-42c7-b62a-399baa6341d3",
+        "053e01c3-a0c3-49cd-90bc-8aef92a278ef",
+        "3bdcdc73-eeec-4df4-a2da-f5c29091b9ed",
         "336c5481-1a5b-4741-93a0-4d745b393b63",
         "baadaa62-8623-4201-9167-d51d33b42758",
         "f5f39a98-91a8-4c74-bbb6-af8b9a6dabe0",

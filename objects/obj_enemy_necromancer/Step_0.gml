@@ -1,14 +1,14 @@
 /// @description Necro AI
 if (global.paused) exit;
 // Animate
-// anim += 1;
-// var _anim_mod = 0;
-// if (distance_to_object(obj_player) < close_distance) _anim_mod += 1;
-// if (anim >= anim_speed - _anim_mod)
-// {
-// 	anim -= (anim_speed - _anim_mod);
-// 	image_index += 1;
-// }
+anim += 1;
+var _anim_mod = 0;
+if (distance_to_object(obj_player) < close_distance) _anim_mod += 2;
+if (anim >= anim_speed - _anim_mod)
+{
+	anim -= (anim_speed - _anim_mod);
+	image_index += 1;
+}
 
 if (variable_instance_exists(id, "master_id"))
 	if (!master_id.active) exit;
@@ -20,29 +20,20 @@ else
 
 if (state)
 {
+	/// Attacking
 	// Movement Control
 	if (move_timer == 0)
 	{
 		var _dir = point_direction(x, y, obj_player.x, obj_player.y);
-		if (_dir <= 45 or _dir > 315)
+		if (_dir <= 90 or _dir > 270)
 		{
 			dir = "right";
-			direction = irandom_range(46, 316);
+			direction = irandom_range(91, 270);
 		}
-		else if (_dir <= 135 and _dir > 45)
-		{
-			dir = "up";
-			direction = (irandom_range(136, 405)) mod 360;
-		}
-		else if (_dir <= 225 and _dir > 135)
+		else if (_dir <= 270 and _dir > 90)
 		{
 			dir = "left";
-			direction = (irandom_range(226, 495)) mod 360;
-		}
-		else if (_dir <= 315 and _dir > 225)
-		{
-			dir = "down";
-			direction = (irandom_range(316, 585)) mod 360;
+			direction = (irandom_range(271, 450)) mod 360;
 		}
 		spd = 1.5;
 		move_timer = irandom_range(min_move, max_move);
@@ -82,10 +73,16 @@ if (state)
 }
 else if (!state)
 {
+	/// Escaping
 	// Movement Control
 	if (move_timer <= 0)
 	{
 		direction = point_direction(obj_player.x, obj_player.y, x, y) + irandom_range(-10, 10);
+		var _dir = direction;
+		if (_dir <= 90 or _dir > 270)
+			dir = "right";
+		else if (_dir <= 270 and _dir > 90)
+			dir = "left";
 		spd = 2;
 		move_timer = irandom_range(min_move, max_move);
 	}
@@ -113,9 +110,9 @@ vspd = round(vspeed);
 speed = 0;
 if hspd == 0 var _htest = true else var _htest = false;
 if vspd == 0 var _vtest = true else var _vtest = false;
-mask_index = spr_enemy_slime_mask;
+mask_index = spr_enemy_necro_mask;
 hspd = collision("x", hspd, 0);
-vspd = collision("y", vspd, 7);
+vspd = collision("y", vspd, 16);
 mask_index = sprite_index;
 
 if (hspd == 0 and !_htest) or (vspd == 0 and !_vtest) or (hspd == 0 and vspd == 0 and move_timer > 0)

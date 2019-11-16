@@ -22,6 +22,9 @@ global.holstered = false;
 global.truepause = false;
 
 // Weapons
+global.ammo_rifle   = 300;
+global.ammo_sniper  = 30;
+global.ammo_shotgun = 180;
+global.ammo_minigun = 1000;
+
 declare_weapons();
-
-

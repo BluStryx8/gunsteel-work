@@ -14,5 +14,7 @@ inv_add_itemdef(item_type.mossberg_500, spr_gui_mossberg_500, spr_held_mossberg_
 inv_add_itemdef(item_type.omark_44, spr_gui_omark_44, spr_held_omark_44, "Omark Model 44", 0, "firearm", set_weapon, weapon_shoot, scope);
 inv_add_itemdef(item_type.tesro, spr_gui_tesro, spr_held_tesro, "Tesro", 0, "firearm", set_weapon, weapon_shoot, scope);
 inv_add_itemdef(item_type.minigun, spr_gui_minigun, spr_held_minigun, "Minigun", 0, "firearm", set_weapon, weapon_shoot, use_empty);
+inv_add_itemdef(item_type.potion, spr_gui_potion, spr_gui_empty, "Potion", 0, "Consumable", set_empty, use_potion, use_potion);
+inv_add_itemdef(item_type.ammo_crate, spr_gui_ammo_crate, spr_gui_empty, "Ammo Crate", 0, "Consumable", set_empty, use_ammo_crate, use_ammo_crate);
 inv_add_itemdef(item_type.ore_iron, spr_gui_ore_iron, spr_gui_empty, "Iron Ore", 0, "Ore", set_empty, use_empty, use_empty);
 inv_add_itemdef(item_type.bar_iron, spr_gui_bar_iron, spr_gui_empty, "Iron Bar", 0, "Bar", set_empty, use_empty, use_empty);

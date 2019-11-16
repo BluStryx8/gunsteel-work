@@ -4,10 +4,9 @@ if (global.truepause)
 	global.paused = true;
 	exit;
 }
-
-if room = rm_settings
+if (room == rm_settings)
 {
-	global.paused = true
+	global.paused = true;
 }
 
 /// Pause Game
@@ -247,15 +246,34 @@ if (reloading == 30)
 	switch (type)
 	{
 		case "Pistol":
-		case "Assault Rifle":
-		case "Sniper Rifle":
-		case "Minigun":
 			ammo = max_ammo;
 			break;
+		case "Assault Rifle":
+			if (max_ammo > global.ammo_rifle)
+				ammo = global.ammo_rifle;
+			else
+				ammo = max_ammo;
+			global.ammo_rifle -= ammo;
+			break;
+		case "Sniper Rifle":
+			if (max_ammo > global.ammo_sniper)
+				ammo = global.ammo_sniper;
+			else
+				ammo = max_ammo;
+			global.ammo_sniper -= ammo;
+			break;
+		case "Minigun":
+			if (max_ammo > global.ammo_minigun)
+				ammo = global.ammo_minigun;
+			else
+				ammo = max_ammo;
+			global.ammo_minigun -= ammo;
+			break;
 		case "Shotgun":
-			if (ammo < max_ammo)
+			if (ammo < max_ammo) and (global.ammo_shotgun > 0)
 			{
 				ammo += 1;
+				global.ammo_shotgun -= 1;
 				reloading += pump_time;
 				fire_cooldown = reloading;
 			}
@@ -285,15 +303,48 @@ if (reloading == 1)
 	pump = 0;
 }
 // Check for reload
-if (keyboard_check(ord("R")) and fire_cooldown == 0 and reloading == 0 and wind <= 0
+if (keyboard_check_pressed(ord("R")) and fire_cooldown == 0 and reloading == 0 and wind <= 0
 					and !global.holstered and type != "other")
 {
-	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
-	audio_play_sound(snd_reload_eject_clip, 1, false);
-	reloading = reload_time;
-	fire_cooldown = reloading;
-	if (type != "Shotgun") ammo = 0;
-	if (atk_type == "Pump Action") pump = 1;
+	var _success = false;
+	switch (type)
+	{
+		case "Pistol":
+			_success = true;
+			ammo = 0;
+			break;
+		case "Assault Rifle":
+			if (global.ammo_rifle > 0 or ammo > 0) _success = true;
+			global.ammo_rifle += ammo;
+			ammo = 0;
+			break;
+		case "Sniper Rifle":
+			if (global.ammo_sniper > 0 or ammo > 0) _success = true;
+			global.ammo_sniper += ammo;
+			ammo = 0;
+			break;
+		case "Minigun":
+			if (global.ammo_minigun > 0 or ammo > 0) _success = true;
+			global.ammo_minigun += ammo;
+			ammo = 0;
+			break;
+		case "Shotgun":
+			if (global.ammo_shotgun > 0 or ammo > 0) _success = true;
+			break;
+	}
+	if (_success)
+	{
+		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_play_sound(snd_reload_eject_clip, 1, false);
+		reloading = reload_time;
+		fire_cooldown = reloading;
+		if (atk_type == "Pump Action") pump = 1;
+	}
+	else
+	{
+		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_play_sound(snd_dry_fire, 1, false);
+	}
 }
 
 /// Camera (Temp)

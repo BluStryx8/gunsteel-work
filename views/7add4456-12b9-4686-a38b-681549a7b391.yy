@@ -10,7 +10,7 @@
         "6dca6c17-26a3-4693-8c4c-845f729fd782"
     ],
     "filterType": "GMObject",
-    "folderName": " Inventory (and pause menu)",
+    "folderName": "Inventory (and pause menu)",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

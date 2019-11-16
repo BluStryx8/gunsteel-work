@@ -7,14 +7,11 @@ anim_speed = 10;	// Frames before animating
 hurt_flash = 0;		// Flashes when damaged
 // Random Direction
 direction = irandom_range(0, 359);
-if (direction <= 45 or direction > 315)
+if (direction <= 90 or direction > 270)
 	dir = "right";
-else if (direction <= 135 and direction > 45)
-	dir = "up";
-else if (direction <= 225 and direction > 135)
+else if (direction <= 270 and direction > 90)
 	dir = "left";
-else if (direction <= 315 and direction > 225)
-	dir = "down";
+
 
 spd = 0;	// Remember speed
 hspd = 0;	// Used in collision
@@ -39,5 +36,6 @@ min_move_cd = 45;
 max_move_cd = 60;
 move_timer = -irandom_range(min_move_cd, max_move_cd);
 
+color = c_white;
 scale = 1;
 hp = 100;
