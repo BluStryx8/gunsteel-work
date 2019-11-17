@@ -58,4 +58,5 @@ item_definitions[inventory[11], item_properties.amount] = ini_read_real("amount"
 item_definitions[inventory[12], item_properties.amount] = ini_read_real("amount", "item13",1)
 item_definitions[inventory[13], item_properties.amount] = ini_read_real("amount", "item14",1)
 item_definitions[inventory[14], item_properties.amount] = ini_read_real("amount", "item15",1)
+
 ini_close()

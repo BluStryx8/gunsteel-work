@@ -228,4 +228,3 @@ if (!global.in_furnace)
 	item_in_slot = false
 }
 
-

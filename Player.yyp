@@ -1103,6 +1103,14 @@
             }
         },
         {
+            "Key": "5a483249-e073-4779-9443-f47643760274",
+            "Value": {
+                "id": "de9abb0a-eb8b-4a86-b9eb-ed4dbe61981c",
+                "resourcePath": "objects\\obj_declare_in_game\\obj_declare_in_game.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5aa66d74-8cd9-4168-b36e-2227e6399821",
             "Value": {
                 "id": "2b442c46-c456-4b1f-b799-8d76d4043428",

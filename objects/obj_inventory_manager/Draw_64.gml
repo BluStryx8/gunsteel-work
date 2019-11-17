@@ -300,6 +300,30 @@ if global.paused = true and global.settings = false
 			ini_write_real("amount", "item13", item_definitions[inventory[12], item_properties.amount])
 			ini_write_real("amount", "item14", item_definitions[inventory[13], item_properties.amount])
 			ini_write_real("amount", "item15", item_definitions[inventory[14], item_properties.amount])
+			
+			
+			//save upgrades
+			//pistols
+			ini_write_real("upgrades", "1911", ds_map_find_value(global.weapons[1], "upgrades"))
+			ini_write_real("upgrades", "glock 17", ds_map_find_value(global.weapons[2], "upgrades"))
+			ini_write_real("upgrades", "uzi", ds_map_find_value(global.weapons[3], "upgrades"))
+			ini_write_real("upgrades", "mad taurus", ds_map_find_value(global.weapons[4], "upgrades"))
+			
+			//rifles
+			ini_write_real("upgrades", "ak47", ds_map_find_value(global.weapons[11], "upgrades"))
+			ini_write_real("upgrades", "m4", ds_map_find_value(global.weapons[12], "upgrades"))
+			ini_write_real("upgrades", "p90", ds_map_find_value(global.weapons[13], "upgrades"))
+			
+			//shotguns
+			ini_write_real("upgrades", "remington 870", ds_map_find_value(global.weapons[21], "upgrades"))
+			ini_write_real("upgrades", "mossberg 500", ds_map_find_value(global.weapons[22], "upgrades"))
+
+			//snipers
+			ini_write_real("upgrades", "omark", ds_map_find_value(global.weapons[31], "upgrades"))
+			ini_write_real("upgrades", "tesro", ds_map_find_value(global.weapons[32], "upgrades"))
+			
+			//special
+			ini_write_real("upgrades", "minigun", ds_map_find_value(global.weapons[41], "upgrades"))
 			ini_close()
 
 		
