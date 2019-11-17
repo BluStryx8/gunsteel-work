@@ -26,6 +26,10 @@ if room = rm_mainmenu
 		//return to center
 			global.menu_follow = 2 
 			break;
+			
+		case 7:
+			global.menu_follow = 4
+			break;
 	
 	}
 }
