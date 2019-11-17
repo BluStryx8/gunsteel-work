@@ -22,7 +22,11 @@ draw_set_color(_col);
 
 // Draw level
 if (global.level > 0)
+{
+	draw_set_font(fnt_room);
 	draw_text(camera_get_view_width(0) - 32, 32, "Floor " + string(global.level));
+	draw_set_font(fnt_inventory);
+}
 
 // Draw Hotbar
 if (!global.settings)

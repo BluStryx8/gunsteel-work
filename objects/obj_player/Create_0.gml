@@ -23,15 +23,15 @@ immune = 0;					// If taken damage recently
 switch (global.class)
 {
 	case "Soldier":
-		p_max_health = 5;	// Max HP
+		p_max_health  = 5;	// Max HP
 		p_max_defense = 3;	// Max Defense
 		break;
 	case "Scout":
-		p_max_health = 2;	// Max HP
-		p_max_defense = 3;	// Max Defense
+		p_max_health  = 3;	// Max HP
+		p_max_defense = 2;	// Max Defense
 		break;
 	case "Tinkerer":
-		p_max_health = 3;	// Max HP
+		p_max_health  = 3;	// Max HP
 		p_max_defense = 4;	// Max Defense
 		break;
 }

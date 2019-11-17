@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "263fee8e-34f6-48f5-b9db-a01962149630",
+            "Value": {
+                "id": "d55c2a6e-855f-4d8b-948b-9eaf3ad3d399",
+                "resourcePath": "scripts\\weapon_reload\\weapon_reload.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2678f27c-187a-4242-9cea-5f8c746de657",
             "Value": {
                 "id": "8cc5f26e-d778-43af-9199-dfc3d6e2f4f0",
@@ -1978,7 +1986,7 @@
             "Key": "ae6ef713-373f-4077-ba79-b631acfaa67e",
             "Value": {
                 "id": "7e1f4463-6dcb-4ac3-a654-6449450ac6ba",
-                "resourcePath": "fonts\\fnt_room_debug\\fnt_room_debug.yy",
+                "resourcePath": "fonts\\fnt_room\\fnt_room.yy",
                 "resourceType": "GMFont"
             }
         },
@@ -3079,6 +3087,7 @@
         "336c5481-1a5b-4741-93a0-4d745b393b63",
         "baadaa62-8623-4201-9167-d51d33b42758",
         "f5f39a98-91a8-4c74-bbb6-af8b9a6dabe0",
+        "263fee8e-34f6-48f5-b9db-a01962149630",
         "e50f02f2-72fd-4c2e-845f-9e7d3a696c0a",
         "d3649da0-e893-4bad-9041-675d0ac52e39",
         "b14c48b6-f007-4398-a6bc-4d4563fd118d",

@@ -91,9 +91,16 @@ if (_stat_1 > 0)
 _stat_1 = ds_map_find_value(global.weapons[_w], "reload_time");
 _stat_2 = ds_map_find_value(global.weapons[_w], "atk_type");
 _stat_3 = ds_map_find_value(global.weapons[_w], "max_ammo");
+if (global.class == "Scout")
+{
+	if (floor(_stat_1 * 4 / 5) > 30) _stat_1 = floor(_stat_1 * 4 / 5);
+		else _stat_1 = 30;
+}
 if (_stat_2 == "Pump Action")
 {
 	_stat_2 = ds_map_find_value(global.weapons[_w], "pump_time");
+	if (global.class == "Scout")
+		_stat_2 = floor(_stat_2 * 4 / 5);
 	_stat_3 = round(((_stat_2 * (_stat_3 + 1)) + _stat_1) / room_speed * 10) / 10;
 	_stat_2 = round((_stat_1 + _stat_2) / room_speed * 10) / 10;
 	draw_text(_text_x, _text_y, string(_stat_2) + " - " + string(_stat_3) + "s Reload Time");

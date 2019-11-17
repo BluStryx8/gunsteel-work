@@ -2,7 +2,7 @@
     "id": "ae6ef713-373f-4077-ba79-b631acfaa67e",
     "modelName": "GMFont",
     "mvc": "1.1",
-    "name": "fnt_room_debug",
+    "name": "fnt_room",
     "AntiAlias": 0,
     "TTFName": "",
     "ascenderOffset": 0,

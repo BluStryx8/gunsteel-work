@@ -24,7 +24,7 @@ global.holstered = false;
 global.truepause = false;
 
 // Weapons
-global.class		= "Soldier"; // Soldier, Scout, Tinkerer
+global.class		= "Scout"; // Soldier, Scout, Tinkerer
 global.starter		= item_type.pistol_1911;
 global.ammo_rifle   = 300;
 global.ammo_sniper  = 30;

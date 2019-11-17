@@ -25,11 +25,6 @@ with (obj_player)
 	}
 	else if (mouse_check_button_pressed(mb_left) and fire_cooldown == 0 and fire == 0)
 	{
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
-		audio_play_sound(snd_reload_eject_clip, 1, false);
-		reloading = reload_time;
-		fire_cooldown = reloading;
-		if (type != "Shotgun") ammo = 0;
-		if (atk_type == "Pump Action") pump = 1;
+		weapon_reload();
 	}
 }
