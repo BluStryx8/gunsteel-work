@@ -27,3 +27,11 @@ if global.paused = false and (!room = rm_mainmenu)
 	instance_destroy()
 }
 
+if global.settings = false and (!room = rm_mainmenu)
+{
+	instance_destroy()
+}
+
+ini_open("settings.ini")
+ini_write_real("volume", "snd_volume", global.sound_value)
+ini_close()

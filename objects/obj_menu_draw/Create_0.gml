@@ -26,3 +26,6 @@ continue_ = instance_create_layer(room_width /6 *5, 200, "buttons", obj_menu_but
 continue_.image_index = 3
 back_cont = instance_create_layer(room_width/3 * 2 + 200,room_height/10 * 9 ,"buttons", obj_menu_buttons);
 back_cont.image_index = 4
+
+
+

@@ -277,11 +277,26 @@ if global.paused = true and global.settings = false
 
 // pause menu
 
-if global.settings = true
+if global.settings = true and (!room = rm_mainmenu)
 {
-	xx = (camera_get_view_x(view_camera[0])) + 5;
-	yy = (camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2));
-	instance_create_layer(xx,yy,"control",obj_slider_sounds_volume)
+	//declaratiion of position
+	xx_vslider = (camera_get_view_x(view_camera[0])) + 5;
+	yy_vslider = (camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2));
+	xx_center = (camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])/2));
+	
+	//creating settings text and slider
+	instance_create_layer(xx_vslider,yy_vslider - 50,"control",obj_slider_sounds_volume)
+	instance_create_layer(xx_vslider,yy_vslider + 75 ,"control",obj_slider_music_volume)
+	settings = instance_create_layer(xx_center,yy_vslider - 150, "control",obj_menu_buttons)
+	settings.image_index = 1
+	
+	//creating sound text
+	sound = instance_create_layer(xx_center,yy_vslider - 75, "control",obj_menu_buttons)
+	sound.image_index = 5
+	
+	//create back button
+	back = instance_create_layer(xx_center + 200 ,yy_vslider + 160, "control",obj_menu_buttons)
+	back.image_index = 4
 
 }
 
