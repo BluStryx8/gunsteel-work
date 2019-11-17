@@ -16,7 +16,11 @@ if (_index_added_at != -1)
 	{
 		case "firearm":
 			if obj_inventory_manager.item_definitions[_type, item_properties.amount] < 1
+			{
 				obj_inventory_manager.item_definitions[_type, item_properties.amount] += 1;
+				audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+				audio_play_sound(snd_reload_eject_clip, 1, false);
+			}
 			else
 			{
 				// Upgrade Weapon
@@ -29,7 +33,11 @@ if (_index_added_at != -1)
 			break;
 		default:
 			if obj_inventory_manager.item_definitions[_type, item_properties.amount] < STACK
+			{
 				obj_inventory_manager.item_definitions[_type, item_properties.amount] += 1;
+				audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+				audio_play_sound(snd_reload_eject_clip, 1, false);
+			}
 			else _index_added_at = -1;
 			break;
 	}

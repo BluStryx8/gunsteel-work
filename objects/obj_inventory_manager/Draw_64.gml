@@ -91,6 +91,24 @@ if (global.in_inv) and (!global.settings)
 			}
 		}
 	}
+	// Draw Ammo Counts
+	var _x = gui_holder_pos_x - 32;
+	var _y = hotbar_height - 16;
+	draw_set_halign(fa_right);
+	draw_text(_x + 16, _y, "Ammo Count");
+	_y += 16;
+	draw_sprite_ext(spr_ammo_riflebullet, -1, _x + 16, _y + 16, 1, 1, 270, c_white, 1);
+	draw_text(_x, _y + 8, string(global.ammo_rifle));
+	_y += 32;
+	draw_sprite_ext(spr_ammo_sniperbullet, -1, _x + 16, _y + 16, 1, 1, 270, c_white, 1);
+	draw_text(_x, _y + 8, string(global.ammo_sniper));
+	_y += 32;
+	draw_sprite_ext(spr_ammo_shotgunbullet, -1, _x + 16, _y + 16, 1, 1, 270, c_white, 1);
+	draw_text(_x, _y + 8, string(global.ammo_shotgun));
+	_y += 32;
+	draw_sprite_ext(spr_gui_ammo_crate, -1, _x + 16, _y + 16, 0.5, 0.5, 0, c_white, 1);
+	draw_text(_x, _y + 8, string(global.ammo_minigun));
+	draw_set_halign(fa_right);
 }
 
 if selected_cell > -1
@@ -170,7 +188,7 @@ if (_weapon)
 					string(obj_player.ammo) + " / " + string(obj_player.max_ammo));
 	draw_set_halign(fa_right);
 	if (_total_ammo != "Infinite")
-		draw_text(view_get_wport(0) + _weap_offset_x - 32, view_get_hport(0) + _weap_offset_y + 24,
+		draw_text(view_get_wport(0) + _weap_offset_x - 16, view_get_hport(0) + _weap_offset_y + 16,
 					string(_total_ammo));
 	draw_set_halign(fa_center);
 }
@@ -195,7 +213,6 @@ switch (obj_player.type)
 		break;
 	case "Shotgun":
 		_draw = spr_ammo_shotgunbullet;
-		break;
 }
 // Draw bullets
 if (_draw != spr_gui_empty)
@@ -227,6 +244,12 @@ if (_draw != spr_gui_empty)
 									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
 	if (_bullets >= 3) draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 3,
 									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
+}
+if obj_player.type = "Minigun"
+{
+	_draw = spr_gui_ammo_crate;
+	draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 2,
+					view_get_hport(0) + _mode_y_offset, 0.5, 0.5, 0, _col, 1);
 }
 
 if global.paused = true and (!global.settings) 
