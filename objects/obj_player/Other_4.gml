@@ -8,6 +8,7 @@ if (room == rm_mainmenu)
 	dir = 0;
 	global.player_setx = 2272;	// Starting x position
 	global.player_sety = 416;	// Starting y position
+	
 }
 else
 {
