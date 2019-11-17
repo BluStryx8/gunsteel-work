@@ -24,7 +24,7 @@ draw_set_color(_col);
 if (global.level > 0)
 {
 	draw_set_font(fnt_room);
-	draw_text(camera_get_view_width(0) - 32, 32, "Floor " + string(global.level));
+	draw_text(camera_get_view_width(0) - 32, 32, "- " + string(global.level) + " -");
 	draw_set_font(fnt_inventory);
 }
 
@@ -55,8 +55,8 @@ if (!global.settings)
 // Draw extended inventory
 if (global.in_inv) and (!global.settings)
 {
-	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height, 1, 1, 0, _col, 1);
-	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height * 2, 1, 1, 0, _col, 1);
+	draw_sprite_ext(spr_hotbar, 1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height, 1, 1, 0, _col, 1);
+	draw_sprite_ext(spr_hotbar, 1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height * 2, 1, 1, 0, _col, 1);
 	var _offset = gui_holder_height;
 	for (var _inv = HOTBAR + 1; _inv <= INVENTORY; _inv++)
 	{
@@ -271,7 +271,7 @@ else
 
 
 //Pause menu code
-if global.paused = true and global.settings = false
+if global.paused and !global.settings
 {
 	pmousex = device_mouse_x_to_gui(0)
 	pmousey = device_mouse_y_to_gui(0)
@@ -291,10 +291,10 @@ if global.paused = true and global.settings = false
 		
 		if pmousey >= camera_get_view_height(0)/2+ 30 and pmousey < camera_get_view_height(0)/2 + 60 and mouse_check_button_pressed(mb_left)
 		{
-			//save inventorty
+			//save inventory
+			
 			save_game();
-			global.paused = false
-			global.truepause = false
+			global.truepause = true;
 			instance_create_layer(x,y,"fade",obj_fade_out_to_menu)
 			global.settings = false
 			

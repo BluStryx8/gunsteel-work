@@ -3007,6 +3007,14 @@
             }
         },
         {
+            "Key": "f8159f1e-e5b7-487c-a385-a8213a1b9ffc",
+            "Value": {
+                "id": "ea8683a1-a732-4188-9d7d-06680e314c17",
+                "resourcePath": "objects\\obj_player_death\\obj_player_death.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f8434fef-4de3-43bf-8ca8-8d2d80088274",
             "Value": {
                 "id": "d26a30b6-731d-4234-86fe-b36cea69b54d",

@@ -5,6 +5,7 @@ if (global.truepause)
 	exit;
 }
 
+if (global.death) exit;
 
 /// Pause Game
 if (keyboard_check_pressed(vk_escape) and room != rm_mainmenu )

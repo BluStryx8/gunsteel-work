@@ -19,6 +19,7 @@ global.difficulty = 100;
 global.seed		  = -1;
 
 // Character Restriction
+global.death	 = false;
 global.paused    = false;
 global.holstered = false;
 global.truepause = false;
