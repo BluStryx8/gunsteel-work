@@ -59,9 +59,21 @@ ini_write_real("upgrades", "tesro", ds_map_find_value(global.weapons[32], "upgra
 //special
 ini_write_real("upgrades", "minigun", ds_map_find_value(global.weapons[41], "upgrades"))
 
+//mag
+ini_write_real("mag", "p90", ds_map_find_value(global.weapons[13], "ammo"))
+
 //ammo
 ini_write_real("ammo", "rifle", global.ammo_rifle)
 ini_write_real("ammo", "shotgun", global.ammo_shotgun)
 ini_write_real("ammo", "sniper", global.ammo_sniper)
 ini_write_real("ammo", "minigun", global.ammo_minigun)
+ini_close()
+
+//player values
+//class
+ini_open("player.ini")
+ini_write_string("player", "class", global.class)
+ini_write_string("player", "starter", global.starter)
+ini_write_real("player", "health",obj_player.p_health)
+ini_write_real("player", "defence", obj_player.p_defense)
 ini_close()

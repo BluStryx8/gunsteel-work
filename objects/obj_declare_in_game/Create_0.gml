@@ -29,4 +29,14 @@ global.ammo_sniper = ini_read_real("ammo","sniper",30)
 global.ammo_shotgun = ini_read_real("ammo","shotgun",180)
 global.ammo_minigun = ini_read_real("ammo","minigun",1000)
 
+//mag
+ds_map_replace(global.weapons[13],"ammo", ini_read_real("mag", "p90",50))
+
+ini_close()
+
+ini_open("player.ini")
+global.class = ini_read_string("player","class", "Scout")
+global.starter = ini_read_string("player", "starter", item_type.pistol_1911)
+obj_player.p_health = ini_read_real("player", "health", obj_player.p_max_health);
+obj_player.p_defense = ini_read_real("player", "health",obj_player.p_max_defense)
 ini_close()
