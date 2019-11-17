@@ -12,7 +12,7 @@ if (loading_fade > 0)
 }
 draw_set_colour(c_white);
 draw_set_halign(fa_left);
-draw_set_font(fnt_room_debug);
+draw_set_font(fnt_room);
 
 var _x_offset = 32;
 var _y_offset = 32;

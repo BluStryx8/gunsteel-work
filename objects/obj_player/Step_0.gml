@@ -271,7 +271,10 @@ if (reloading == 30)
 			{
 				ammo += 1;
 				global.ammo_shotgun -= 1;
-				reloading += pump_time;
+				var _pump_time = pump_time;
+				if (global.class == "Scout")
+					_pump_time = floor(_pump_time * 4 / 5);
+				reloading += _pump_time;
 				fire_cooldown = reloading;
 			}
 			else
@@ -280,7 +283,10 @@ if (reloading == 30)
 				if (ammo == max_ammo) and (pump == 1)
 				{
 					audio_play_sound(snd_reload_eject_clip, 1, false);
-					reloading += pump_time;
+					var _pump_time = pump_time;
+					if (global.class == "Scout")
+						_pump_time = floor(_pump_time * 4 / 5);
+					reloading += _pump_time;
 					fire_cooldown = reloading;
 					pump = -1;
 				}
@@ -303,45 +309,7 @@ if (reloading == 1)
 if (keyboard_check_pressed(ord("R")) and fire_cooldown == 0 and reloading == 0 and wind <= 0
 					and !global.holstered and type != "other")
 {
-	var _success = false;
-	switch (type)
-	{
-		case "Pistol":
-			_success = true;
-			ammo = 0;
-			break;
-		case "Assault Rifle":
-			if (global.ammo_rifle > 0 or ammo > 0) _success = true;
-			global.ammo_rifle += ammo;
-			ammo = 0;
-			break;
-		case "Sniper Rifle":
-			if (global.ammo_sniper > 0 or ammo > 0) _success = true;
-			global.ammo_sniper += ammo;
-			ammo = 0;
-			break;
-		case "Minigun":
-			if (global.ammo_minigun > 0 or ammo > 0) _success = true;
-			global.ammo_minigun += ammo;
-			ammo = 0;
-			break;
-		case "Shotgun":
-			if (global.ammo_shotgun > 0 or ammo > 0) _success = true;
-			break;
-	}
-	if (_success)
-	{
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
-		audio_play_sound(snd_reload_eject_clip, 1, false);
-		reloading = reload_time;
-		fire_cooldown = reloading;
-		if (atk_type == "Pump Action") pump = 1;
-	}
-	else
-	{
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
-		audio_play_sound(snd_dry_fire, 1, false);
-	}
+	weapon_reload();
 }
 
 /// Camera (Temp)
