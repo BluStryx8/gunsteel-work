@@ -24,9 +24,9 @@ global.paused    = false;
 global.holstered = false;
 global.truepause = false;
 
-// Weapons
-global.class		= "Scout"; // Soldier, Scout, Tinkerer
+global.class		= "Scout"; // Soldier, Scout, Tinkerer  (jeff's side note: defult is currently scout too)
 global.starter		= item_type.pistol_1911;
 
-
+// Weapons
 declare_weapons();
+
