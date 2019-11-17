@@ -1,10 +1,18 @@
 /// @desc Initialise the room
-randomise();
+if (global.seed == -1)
+{
+	randomise();
+}
+else
+{
+	random_set_seed(global.seed);
+	global.seed = -1;
+}
 
 grid_size = 16; // Size of blocks & objects in game
 
-x_sections = 4;  // Rooms along x axis
-y_sections = 4;  // Rooms along y axis
+x_sections = 2;  // Rooms along x axis
+y_sections = 2;  // Rooms along y axis
 sections   = []; // Declare room array
 
 section_tiles_x = 60; // Number of x tiles in section

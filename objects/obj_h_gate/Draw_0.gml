@@ -25,4 +25,6 @@ if (!global.paused)
 }
 
 // Draws Self
-draw_sprite_ext(spr_h_gate, image_index, x, y, 1, 1, 0, c_white, (image_index + 1 / 6));
+var _col = c_white;
+if master_id.biome = "elite" _col = c_red;
+draw_sprite_ext(spr_h_gate, image_index, x, y, 1, 1, 0, _col, (image_index + 1 / 6));

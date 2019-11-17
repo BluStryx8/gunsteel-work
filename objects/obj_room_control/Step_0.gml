@@ -10,5 +10,14 @@ if (combat and enemy_count == 0)
 {
 	combat = false;
 	with (obj_player)
+	{
 		if (p_defense < p_max_defense) p_defense += 1;
+		if (global.class == "Soldier")
+			if (p_defense < p_max_defense) p_defense += 1;
+	}
+	if biome == "elite"
+	{
+		biome = "chest"
+		alarm[0] = 1;
+	}
 }

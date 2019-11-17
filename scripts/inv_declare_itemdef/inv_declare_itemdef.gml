@@ -69,10 +69,10 @@ Use it to restore 3 HP.",
 inv_add_itemdef(item_type.ammo_crate, spr_gui_ammo_crate, spr_gui_empty, "Ammo Crate", 0, "Consumable", set_empty, use_ammo_crate, use_ammo_crate,
 @"An ammo crate with a variety of ammunition.
 Use it to gain ammunition.
-+ 200-400 Assault Rifle Ammo
-+ 20-40 Sniper Rifle Ammo
-+ 120-240 Shotgun Ammo
-+ 750-2000 Minigun Ammo",
++ 100-200 Assault Rifle Ammo
++ 10-20 Sniper Rifle Ammo
++ 60-120 Shotgun Ammo
++ 750-1250 Minigun Ammo",
 				6);
 inv_add_itemdef(item_type.ore_iron, spr_gui_ore_iron, spr_gui_empty, "Iron Ore", 0, "Ore", set_empty, use_empty, use_empty,
 				"none", 1);

@@ -14,14 +14,18 @@ global.p_scale = 1;		// Size of the player
 global.settings_shake = 0.5;
 
 // Difficulty Scaling (Temporary)
+global.level	  = 0;
 global.difficulty = 100;
+global.seed		  = -1;
 
 // Character Restriction
-global.paused = false;
+global.paused    = false;
 global.holstered = false;
 global.truepause = false;
 
 // Weapons
+global.class		= "Soldier"; // Soldier, Scout, Tinkerer
+global.starter		= item_type.pistol_1911;
 global.ammo_rifle   = 300;
 global.ammo_sniper  = 30;
 global.ammo_shotgun = 180;

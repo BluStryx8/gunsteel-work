@@ -1,5 +1,7 @@
 /// @description Draw Self and Text
+draw_set_alpha(1 - flash);
 draw_self();
+flash = flash_effect(flash);
 if (text_alpha > 0)
 {
 	draw_set_halign(fa_center);

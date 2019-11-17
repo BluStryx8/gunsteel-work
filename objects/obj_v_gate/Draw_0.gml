@@ -25,4 +25,6 @@ if (!global.paused)
 }
 
 // Draws Self
-draw_sprite_ext(spr_v_gate, image_index, x, y, 1, 1, 0, c_white, (image_index + 1 / 6));
+var _col = c_white;
+if biome = "elite" _col = make_colour_hsv(0, 192, 192);
+draw_sprite_ext(spr_v_gate, image_index, x, y, 1, 1, 0, _col, (image_index + 1 / 6));

@@ -22,3 +22,4 @@ switch (_dir)
 
 _gate.master_id = id;	// Binds door to the creator object
 _gate.prime_dir = _dir;	// Direction player enters room through
+_gate.biome = biome;

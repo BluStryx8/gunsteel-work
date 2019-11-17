@@ -20,6 +20,9 @@ draw_set_alpha(1);
 if global.paused var _col = make_colour_hsv(0, 0, 150) else var _col = c_white;
 draw_set_color(_col);
 
+// Draw level
+if (global.level > 0)
+	draw_text(camera_get_view_width(0) - 32, 32, "Floor " + string(global.level));
 
 // Draw Hotbar
 if (!global.settings)
