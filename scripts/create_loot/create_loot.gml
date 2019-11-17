@@ -1,6 +1,5 @@
 /// @desc Generates loot
 /// @param loot_table The loot table to pull from
-
 var _loot_table = argument0;
 
 switch (_loot_table)
