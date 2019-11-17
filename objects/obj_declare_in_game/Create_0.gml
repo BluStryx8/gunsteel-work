@@ -23,5 +23,10 @@ ds_map_replace(global.weapons[32],"upgrades", ini_read_real("upgrades", "tesro",
 //speical
 ds_map_replace(global.weapons[41],"upgrades", ini_read_real("upgrades", "minigun",0))
 
+//ammo
+global.ammo_rifle = ini_read_real("ammo","rifle",300)
+global.ammo_sniper = ini_read_real("ammo","sniper",30)
+global.ammo_shotgun = ini_read_real("ammo","shotgun",180)
+global.ammo_minigun = ini_read_real("ammo","minigun",1000)
 
 ini_close()

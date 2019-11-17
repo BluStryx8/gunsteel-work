@@ -26,9 +26,6 @@ global.truepause = false;
 // Weapons
 global.class		= "Scout"; // Soldier, Scout, Tinkerer
 global.starter		= item_type.pistol_1911;
-global.ammo_rifle   = 300;
-global.ammo_sniper  = 30;
-global.ammo_shotgun = 180;
-global.ammo_minigun = 1000;
+
 
 declare_weapons();
