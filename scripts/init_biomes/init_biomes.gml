@@ -6,7 +6,7 @@ for (var _n = 0; _n < _rooms; _n++)
 
 var _elite = floor(_rooms * min(3, global.difficulty / 100) / irandom_range(8, 10));
 var _slime = floor(_rooms / irandom_range(5, 8));
-var _chest = floor(_rooms / irandom_range(12, 16) * min(1.5, (global.difficulty + 300) / 400));
+var _chest = floor(_rooms / irandom_range(10, 12) * min(1.5, (global.difficulty + 300) / 400));
 var _crate = floor(_rooms / irandom_range(5, 8) * min(3, global.difficulty / 100));
 
 for (var _n = _rooms - 1; _n > _rooms - 1 - _elite; _n--)

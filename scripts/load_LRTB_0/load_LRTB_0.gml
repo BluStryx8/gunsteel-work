@@ -1,12 +1,13 @@
 /// @desc Loads an LRTB_0 room
 /// @param special Determines special ID to be taken into consideration
 
-var _id = argument0;
+var _id    = argument0;
+var _biome = argument1;
 
 switch (_id)
 {
 	case "null":
-		switch (biome)
+		switch (_biome)
 		{
 			case "basic":
 			case "slime":
@@ -15,7 +16,7 @@ switch (_id)
 				load_door(53, 16, "right");
 				load_door(26, 5, "up");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 8, 12);
+				spawn_wave(_biome, 8, 12);
 				// Scatter outliner crates
 				spawn_tile_rect(6, 22, 32, 7, 4, 25, 3, obj_crate);
 				spawn_tile_rect(36, 52, 32, 7, 4, 25, 3, obj_crate);
@@ -26,7 +27,7 @@ switch (_id)
 				load_door(53, 16, "right");
 				load_door(26, 5, "up");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 9, 13);
+				spawn_wave(_biome, 9, 13);
 				break;
 			case "crate":
 				switch (choose("box", "outline"))
@@ -45,6 +46,9 @@ switch (_id)
 						spawn_tile_rect(36, 52, 30, 10, 6, 20, 2, obj_crate);
 						break;
 				}
+				break;
+			case "chest":
+				load_tile(30, 20, obj_chest);
 				break;
 		}
 		break;

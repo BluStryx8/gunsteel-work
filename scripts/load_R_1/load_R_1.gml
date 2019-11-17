@@ -1,25 +1,26 @@
 /// @desc Loads an R_1 room
 /// @param special Determines special ID to be taken into consideration
 
-var _id = argument0;
+var _id    = argument0;
+var _biome = argument1;
 
 switch (_id)
 {
 	case "null":
-		switch (biome)
+		switch (_biome)
 		{
 			case "basic":
 			case "slime":
 				// Loads enemy doors
 				load_door(32, 16, "right");
-				spawn_wave(biome, 7, 11);
+				spawn_wave(_biome, 7, 11);
 				// Scatter outliner crates
 				spawn_tile_rect(5, 31, 32, 7, 8, 25, 3, obj_crate);
 				break;
 			case "elite":
 				// Loads enemy doors
 				load_door(32, 16, "right");
-				spawn_wave(biome, 8, 12);
+				spawn_wave(_biome, 8, 12);
 				break;
 			case "crate":
 				switch (choose("box", "outline"))
@@ -37,10 +38,13 @@ switch (_id)
 						break;
 				}
 				break;
+			case "chest":
+				load_tile(20, 20, obj_chest);
+				break;
 		}
 		break;
 	case "end":
 		// Sets Exit
-		load_tile(20, 21, obj_next_floor);
+		load_tile(20, 20, obj_next_floor);
 		break;
 }

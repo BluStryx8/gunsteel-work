@@ -1,12 +1,13 @@
 /// @desc Loads an LRTB_0 room
 /// @param special Determines special ID to be taken into consideration
 
-var _id = argument0;
+var _id    = argument0;
+var _biome = argument1;
 
 switch (_id)
 {
 	case "null":
-		switch (biome)
+		switch (_biome)
 		{
 			case "basic":
 				if choose(true, false) break;
@@ -15,7 +16,7 @@ switch (_id)
 				load_door(53, 16, "right");
 				load_door(26, 5, "up");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 2, 4);
+				spawn_wave(_biome, 2, 4);
 				break;
 			case "slime":
 			case "elite":
@@ -24,9 +25,12 @@ switch (_id)
 				load_door(53, 16, "right");
 				load_door(26, 5, "up");
 				load_door(26, 33, "down");
-				spawn_wave(biome, 3, 4);
+				spawn_wave(_biome, 3, 4);
 				break;
 			case "crate":
+				break;
+			case "chest":
+				load_tile(30, 20, obj_chest);
 				break;
 		}
 		break;

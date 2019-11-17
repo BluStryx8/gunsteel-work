@@ -3,21 +3,40 @@
 declare_globals();
 
 // Movement
-global.moveable = true;	// If player can move or not
-base_speed = 5;			// Base speed of player
-move_speed = base_speed;// Speed of player
-h_move = 0;				// Horizontal speed
-v_move = 0;				// Vertical speed
-sneak = false;			// Sneaking
-dodge = 0;				// Dodge distance
-h_dodge = 0;			// Horizontal speed of player when init dodge
-v_dodge = 0;			// Vertical speed of player when init dodge
-dodge_cooldown = 15;	// Frames before dodge can be used again
-immune = 0;				// If taken damage recently
+global.moveable = true;		// If player can move or not
+if (global.class == "Scout")
+	base_speed = 6;
+else base_speed = 5;		// Base speed of player
+move_speed = base_speed;	// Speed of player
+h_move = 0;					// Horizontal speed
+v_move = 0;					// Vertical speed
+sneak = false;				// Sneaking
+dodge = 0;					// Dodge distance
+h_dodge = 0;				// Horizontal speed of player when init dodge
+v_dodge = 0;				// Vertical speed of player when init dodge
+if (global.class == "Scout")
+	dodge_cooldown = 10;
+else dodge_cooldown = 20;	// Frames before dodge can be used again
+immune = 0;					// If taken damage recently
 
-p_max_health = 5;			// Max HP
+// Hit Points
+switch (global.class)
+{
+	case "Soldier":
+		p_max_health = 5;	// Max HP
+		p_max_defense = 3;	// Max Defense
+		break;
+	case "Scout":
+		p_max_health = 2;	// Max HP
+		p_max_defense = 3;	// Max Defense
+		break;
+	case "Tinkerer":
+		p_max_health = 3;	// Max HP
+		p_max_defense = 4;	// Max Defense
+		break;
+}
+
 p_health = p_max_health;	// Current HP
-p_max_defense = 3;			// Max Defense
 p_defense = p_max_defense;	// Current Defense
 
 // Records previous 3 positions

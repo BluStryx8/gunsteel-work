@@ -3,37 +3,37 @@ switch (section_id)
 {
 	case "LR_0":
 	case "LR_1":
-		load_LR_0(special_id);
+		load_LR_0(special_id, biome);
 		break;
 	case "LRB_0":
-		load_LRB_0(special_id);
+		load_LRB_0(special_id, biome);
 		break;
 	case "LRB_1":
-		load_LRB_1(special_id);
+		load_LRB_1(special_id, biome);
 		break;
 	case "LRT_0":
-		load_LRT_0(special_id);
+		load_LRT_0(special_id, biome);
 		break;
 	case "LRT_1":
-		load_LRT_1(special_id);
+		load_LRT_1(special_id, biome);
 		break;
 	case "LRTB_0":
-		load_LRTB_0(special_id);
+		load_LRTB_0(special_id, biome);
 		break;
 	case "LRTB_1":
-		load_LRTB_1(special_id);
+		load_LRTB_1(special_id, biome);
 		break;
 	case "L_0":
-		load_L_0(special_id);
+		load_L_0(special_id, biome);
 		break;
 	case "L_1":
-		load_L_1(special_id);
+		load_L_1(special_id, biome);
 		break;
 	case "R_0":
-		load_R_0(special_id);
+		load_R_0(special_id, biome);
 		break;
 	case "R_1":
-		load_R_1(special_id);
+		load_R_1(special_id, biome);
 		break;
 }
 
