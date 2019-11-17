@@ -4,7 +4,7 @@ x = obj_player.x;
 y = obj_player.y;
 dir = obj_player.dir;
 
-if (global.paused) exit;	// Exits if paused
+// if (global.paused) exit;	// Exits if paused
 
 // Two Handed Offset
 if (obj_player.hands == 2)
