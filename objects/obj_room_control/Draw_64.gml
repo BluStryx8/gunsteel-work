@@ -19,7 +19,8 @@ if (active and alpha > 0)
 }
 if (active and !combat and alpha > 0)
 {
-	if (alpha > 0) alpha -= 0.05;
-	draw_set_halign(fa_center);
-	draw_text(camera_get_view_width(0) / 2, camera_get_view_height(0) / 2, "Room Clear");
+	if (alpha > 1) var _alpha = 9 - alpha * 5;
+		else _alpha = alpha;
+	if (alpha > 0) alpha -= 0.02;
+	draw_sprite_ext(spr_clear, -1, camera_get_view_width(0) / 2, camera_get_view_height(0) / 2, 1, 1, 0, c_white, _alpha);
 }

@@ -97,16 +97,16 @@ if (global.in_inv) and (!global.settings)
 	draw_set_halign(fa_right);
 	draw_text(_x + 16, _y, "Ammo Count");
 	_y += 16;
-	draw_sprite_ext(spr_ammo_riflebullet, -1, _x + 16, _y + 16, 1, 1, 270, c_white, 1);
+	draw_sprite_ext(spr_ammo_riflebullet, -1, _x + 16, _y + 16, 1, 1, 270, _col, 1);
 	draw_text(_x, _y + 8, string(global.ammo_rifle));
 	_y += 32;
-	draw_sprite_ext(spr_ammo_sniperbullet, -1, _x + 16, _y + 16, 1, 1, 270, c_white, 1);
+	draw_sprite_ext(spr_ammo_sniperbullet, -1, _x + 16, _y + 16, 1, 1, 270, _col, 1);
 	draw_text(_x, _y + 8, string(global.ammo_sniper));
 	_y += 32;
-	draw_sprite_ext(spr_ammo_shotgunbullet, -1, _x + 16, _y + 16, 1, 1, 270, c_white, 1);
+	draw_sprite_ext(spr_ammo_shotgunbullet, -1, _x + 16, _y + 16, 1, 1, 270, _col, 1);
 	draw_text(_x, _y + 8, string(global.ammo_shotgun));
 	_y += 32;
-	draw_sprite_ext(spr_gui_ammo_crate, -1, _x + 16, _y + 16, 0.5, 0.5, 0, c_white, 1);
+	draw_sprite_ext(spr_gui_ammo_crate, -1, _x + 16, _y + 16, 0.5, 0.5, 0, _col, 1);
 	draw_text(_x, _y + 8, string(global.ammo_minigun));
 	draw_set_halign(fa_right);
 }
