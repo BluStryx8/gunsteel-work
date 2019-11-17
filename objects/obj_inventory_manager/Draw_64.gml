@@ -268,6 +268,45 @@ if global.paused = true and global.settings = false
 		
 		if pmousey >= camera_get_view_height(0)/2+ 30 and pmousey < camera_get_view_height(0)/2 + 60 and mouse_check_button_pressed(mb_left)
 		{
+			//save inventorty
+			
+			ini_open("inventory_save.ini")
+			//writes what item
+			ini_write_string("item", "item1", inventory[0])
+			ini_write_string("item", "item2", inventory[1])
+			ini_write_string("item", "item3", inventory[2])
+			ini_write_string("item", "item4", inventory[3])
+			ini_write_string("item", "item5", inventory[4])
+			ini_write_string("item", "item6", inventory[5])
+			ini_write_string("item", "item7", inventory[6])
+			ini_write_string("item", "item8", inventory[7])
+			ini_write_string("item", "item9", inventory[8])
+			ini_write_string("item", "item10", inventory[9])
+			ini_write_string("item", "item11", inventory[10])
+			ini_write_string("item", "item12", inventory[11])
+			ini_write_string("item", "item13", inventory[12])
+			ini_write_string("item", "item14", inventory[13])
+			ini_write_string("item", "item15", inventory[14])
+			
+			//writes amount
+			ini_write_real("amount", "item1", item_definitions[inventory[0], item_properties.amount])
+			ini_write_real("amount", "item2", item_definitions[inventory[1], item_properties.amount])
+			ini_write_real("amount", "item3", item_definitions[inventory[2], item_properties.amount])
+			ini_write_real("amount", "item4", item_definitions[inventory[3], item_properties.amount])
+			ini_write_real("amount", "item5", item_definitions[inventory[4], item_properties.amount])
+			ini_write_real("amount", "item6", item_definitions[inventory[5], item_properties.amount])
+			ini_write_real("amount", "item7", item_definitions[inventory[6], item_properties.amount])
+			ini_write_real("amount", "item8", item_definitions[inventory[7], item_properties.amount])
+			ini_write_real("amount", "item9", item_definitions[inventory[8], item_properties.amount])
+			ini_write_real("amount", "item10", item_definitions[inventory[9], item_properties.amount])
+			ini_write_real("amount", "item11", item_definitions[inventory[10], item_properties.amount])
+			ini_write_real("amount", "item12", item_definitions[inventory[11], item_properties.amount])
+			ini_write_real("amount", "item13", item_definitions[inventory[12], item_properties.amount])
+			ini_write_real("amount", "item14", item_definitions[inventory[13], item_properties.amount])
+			ini_write_real("amount", "item15", item_definitions[inventory[14], item_properties.amount])
+			ini_close()
+
+		
 			global.paused = false
 			global.truepause = false
 			instance_create_layer(x,y,"fade",obj_fade_out_to_menu)
@@ -303,6 +342,7 @@ if global.settings = true and (!room = rm_mainmenu)
 	back.image_index = 4
 
 }
+
 
 
 

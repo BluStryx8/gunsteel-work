@@ -367,14 +367,6 @@
             }
         },
         {
-            "Key": "1bf31dd6-d10d-4ef3-b7ea-5429382e357d",
-            "Value": {
-                "id": "372e014d-3e4f-4fc4-a2a3-cfad5331bca6",
-                "resourcePath": "objects\\obj_reset_ini_NOT_IN_ROOM\\obj_reset_ini_NOT_IN_ROOM.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "1da4336d-6d11-4a5a-9656-b5eb75d853e4",
             "Value": {
                 "id": "0fee3054-eca3-4ba1-ad9f-1596e4e243dc",
