@@ -17,3 +17,19 @@ if selected{
 	event_user(0)
 }
 
+
+
+if global.paused = false and (!room = rm_mainmenu)
+{
+	global.settings = false
+	instance_destroy()
+}
+
+if global.settings = false and (!room = rm_mainmenu)
+{
+	instance_destroy()
+}
+
+ini_open("settings.ini")
+ini_write_real("volume", "msc_volume", global.music_value)
+ini_close()
