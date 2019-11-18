@@ -1,5 +1,5 @@
 /// @description Check for key input
-if (global.paused) exit;	// Exits if paused
+if (global.paused or global.death) exit;	// Exits if paused
 
 // Active Item
 if (keyboard_check(ord("1"))) active_item = 0;

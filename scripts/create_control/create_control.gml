@@ -27,3 +27,4 @@ _control.enemy_count = 0;
 _control.waves = 0;
 _control.biome = biome[_x, _y];
 _control.combat = false;
+_control.alpha = 0;

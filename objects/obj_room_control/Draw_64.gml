@@ -10,14 +10,14 @@ if (active and alpha > 0)
 	draw_set_halign(fa_right);
 	draw_set_alpha(alpha);
 	var _x = camera_get_view_width(0) - 32;
-	var _y = 64;
+	var _y = 96;
 	if (enemy_count - waves == 1)
 		draw_text_transformed(_x, _y, string(enemy_count - waves) + " enemy remaining", 0.5, 0.5, 0);
 	else draw_text_transformed(_x, _y, string(enemy_count - waves) + " enemies remaining", 0.5, 0.5, 0);
 	if (total_waves > 1) draw_text_transformed(_x, _y + 20,
 			"Wave " + string(total_waves - waves) + " / " + string(total_waves), 0.5, 0.5, 0);
 }
-if (active and !combat and alpha > 0)
+if ((active and !combat) and alpha > 0)
 {
 	if (alpha > 1) var _alpha = 9 - alpha * 5;
 		else _alpha = alpha;

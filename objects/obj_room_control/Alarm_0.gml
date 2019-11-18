@@ -46,5 +46,4 @@ if (enemy_count > 6 - _difficulty)	// Checks to see if room is an enemy room wit
 	enemy_count += waves;
 }
 if (enemy_count > 0) combat = true;
-alpha = 0;
 total_waves = waves + 1;

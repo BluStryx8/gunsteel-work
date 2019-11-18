@@ -7,7 +7,9 @@
         "06265ef8-7f84-4989-8f5e-53c1fb01adcf",
         "f5ab7166-675f-4bf7-980f-b9266b1907f5",
         "81a34e3c-9b63-4ef5-bbed-fac0590b3902",
-        "e4d4ad11-fefb-406c-b9fc-028357d8c3d5"
+        "dd25ba4e-b9bf-4a76-aa92-565453d97f6b",
+        "e4d4ad11-fefb-406c-b9fc-028357d8c3d5",
+        "58c89449-4236-4c49-9fc4-addecc22781a"
     ],
     "filterType": "GMSprite",
     "folderName": "HUD",

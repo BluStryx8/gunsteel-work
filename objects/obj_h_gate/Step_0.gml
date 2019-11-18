@@ -6,11 +6,11 @@ switch (prime_dir)
 	// Check priming direction
 	case "up":		// i.e. Player enters from top
 		var _bbox_side = obj_player.bbox_top;
-		var _bbox_other = obj_player.bbox_bottom + 5;
+		var _bbox_other = obj_player.bbox_bottom + 16;
 		break;
 	case "down":	// i.e. Player enters from bottom
 		var _bbox_side = obj_player.bbox_bottom;
-		var _bbox_other = obj_player.bbox_top - 5;
+		var _bbox_other = obj_player.bbox_top - 16;
 		break;
 }
 // Check bbox to prime it

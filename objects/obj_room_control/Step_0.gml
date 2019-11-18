@@ -17,7 +17,7 @@ if (combat and enemy_count == 0)
 	}
 	if biome == "elite"
 	{
-		biome = "chest"
+		biome = "chest";
 		alarm[0] = 1;
 	}
 }
