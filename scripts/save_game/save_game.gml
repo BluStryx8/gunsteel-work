@@ -59,6 +59,11 @@ ini_write_real("upgrades", "tesro", ds_map_find_value(global.weapons[32], "upgra
 //special
 ini_write_real("upgrades", "minigun", ds_map_find_value(global.weapons[41], "upgrades"))
 
+//magazine
+ini_write_real("mag", "p90", ds_map_find_value(global.weapons[13], "ammo"))
+rand = ds_map_find_value(global.weapons[13], "ammo")
+
+
 
 
 //ammo
