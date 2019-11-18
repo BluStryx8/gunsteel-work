@@ -1,5 +1,6 @@
 /// @description Create Buttons
 global.menu_follow = 2;
+global.level = 0;
 camera_width = view_get_wport(0);
 camera_height = view_get_hport(0);
 var _x = floor(view_get_wport(0) * 1);
