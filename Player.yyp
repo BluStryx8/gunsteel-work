@@ -2159,6 +2159,14 @@
             }
         },
         {
+            "Key": "bb26c38a-9f63-4bdb-8d02-ceee014a3682",
+            "Value": {
+                "id": "f0e49368-16ab-43f6-9417-fa35ee374a18",
+                "resourcePath": "objects\\obj_death_data_delete\\obj_death_data_delete.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bc01bd1e-d573-4100-95c9-d1f7d58e6f80",
             "Value": {
                 "id": "cd27da91-43c0-4a18-95d8-c44c22e68122",
