@@ -294,9 +294,7 @@ if global.paused and !global.settings
 		
 		if pmousey >= camera_get_view_height(0)/2+ 30 and pmousey < camera_get_view_height(0)/2 + 60 and mouse_check_button_pressed(mb_left)
 		{
-			//save inventory
-			
-			save_game();
+			// Quit
 			global.truepause = true;
 			instance_create_layer(x,y,"fade",obj_fade_out_to_menu)
 			global.settings = false

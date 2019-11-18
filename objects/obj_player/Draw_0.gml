@@ -26,7 +26,7 @@ if (global.death)
 		if (immune == 1)
 		{
 			immune = 100;
-			instance_create_layer(x, y, "HUD", obj_game_over);
+			instance_create_layer(x, y, "control", obj_game_over);
 		}
 		else if (immune > 1) immune -= 1;
 	}

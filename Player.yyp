@@ -1263,6 +1263,14 @@
             }
         },
         {
+            "Key": "657273bd-5961-43ef-9d98-25f029f9544d",
+            "Value": {
+                "id": "69069834-3a34-4cb0-860c-102ba07ead6c",
+                "resourcePath": "views\\657273bd-5961-43ef-9d98-25f029f9544d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "661c7073-23cc-41e5-8aef-dd45d808833f",
             "Value": {
                 "id": "0ba041b4-a26f-42de-9d29-ffbc3d9e78da",
@@ -2692,6 +2700,14 @@
                 "id": "5bb256b7-6d72-46a7-81e5-59fc016378cb",
                 "resourcePath": "tilesets\\tile_house\\tile_house.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "dca4b5e6-8599-4bf8-9190-a2f40d38ebe3",
+            "Value": {
+                "id": "73d03238-9126-4894-83f8-8c51c26050f8",
+                "resourcePath": "objects\\obj_class_select\\obj_class_select.yy",
+                "resourceType": "GMObject"
             }
         },
         {
