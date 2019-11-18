@@ -18,6 +18,7 @@ global.death	 = false;
 global.paused    = false;
 global.holstered = false;
 global.truepause = false;
+global.invupdate = false;
 
 global.class	 = "Soldier";
 global.starter	 = item_type.pistol_1911;

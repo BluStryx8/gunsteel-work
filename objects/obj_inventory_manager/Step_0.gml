@@ -30,10 +30,10 @@ else global.p_active = item_type.none;
 obj_player.sprite = inv_get_sprite(global.p_active);
 
 // Update current item
-if (!global.holstered)
+if (!global.holstered or global.invupdate)
 {
 	// Check for Change
-	if (active_item != change_check)
+	if (active_item != change_check or global.invupdate)
 	{
 		change_check = active_item;
 		obj_player.fire = 0;
@@ -41,6 +41,7 @@ if (!global.holstered)
 		obj_player.reloading = 0;
 		obj_player.wind = 0;
 		obj_cursor_bracket.rotate = 0;
+		global.invupdate = false;
 		inv_use_script(global.p_active, "change");
 	}
 }

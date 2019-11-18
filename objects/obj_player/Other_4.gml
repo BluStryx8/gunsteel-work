@@ -22,6 +22,7 @@ else
 }
 if (room == rm_game)
 {
+	global.invupdate = true;
 	global.holstered = false;
 	if (room_last = rm_game)
 	{
@@ -34,6 +35,7 @@ if (room == rm_game2) global.holstered = true;
 if (room == rm_dungeon)
 {
 	// Regenerate
+	global.invupdate = true;
 	global.holstered = false;
 	p_defense = p_max_defense;
 
