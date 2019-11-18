@@ -26,7 +26,7 @@ draw_set_color(_col);
 if (global.level > 0)
 {
 	draw_set_font(fnt_room);
-	draw_text(camera_get_view_width(0) - 32, 32, "- " + string(global.level) + " -");
+	draw_text(camera_get_view_width(0) - 32, 32, "- Floor " + string(global.level) + " -");
 	draw_set_font(fnt_inventory);
 	draw_text(camera_get_view_width(0) - 32, 64, "Score: " + string(score));
 }

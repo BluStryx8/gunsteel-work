@@ -21,7 +21,7 @@ with (other)
 		_death.image_alpha = irandom_range(80, 100) / 100;
 		instance_destroy();
 		if (_master) master_id.enemy_count -= 1;
-		var _multiplier = 5;
+		var _multiplier = 3;
 		score += floor(max_hp) * _multiplier;
 	}
 	// Draw damage

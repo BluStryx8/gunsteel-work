@@ -13,21 +13,43 @@ global.p_scale = 1;		// Size of the player
 // Shake (Temporary)
 global.settings_shake = 0.5;
 
-// Difficulty Scaling (Temporary)
-score			  = 0;
-global.level	  = 0;
-global.difficulty = 100;
-global.seed		  = -1;
-
 // Character Restriction
 global.death	 = false;
 global.paused    = false;
 global.holstered = false;
 global.truepause = false;
 
-global.class		= "Scout"; // Soldier, Scout, Tinkerer  (jeff's side note: defult is currently scout too)
-global.starter		= item_type.pistol_1911;
+// Difficulty Scaling
+ini_open("player.ini");
+score			  = ini_read_real("dungeon", "score", 0);
+global.level	  = ini_read_real("dungeon", "level", 0);
+global.difficulty = 98 + 2 * global.level;
+global.seed		  = ini_read_real("dungeon", "seed", -1);
 
+// Player
+global.class		 = ini_read_string("player","class", "Scout");
+global.starter		 = ini_read_string("player", "starter", item_type.pistol_1911);
+
+// Hit Points
+switch (global.class)
+{
+	case "Soldier":
+		p_max_health  = 5;	// Max HP
+		p_max_defense = 3;	// Max Defense
+		break;
+	case "Scout":
+		p_max_health  = 3;	// Max HP
+		p_max_defense = 2;	// Max Defense
+		break;
+	case "Tinkerer":
+		p_max_health  = 3;	// Max HP
+		p_max_defense = 4;	// Max Defense
+		break;
+}
+
+obj_player.p_health  = ini_read_real("player", "health", obj_player.p_max_health);
+obj_player.p_defense = ini_read_real("player", "health",obj_player.p_max_defense);
+
+ini_close();
 // Weapons
 declare_weapons();
-

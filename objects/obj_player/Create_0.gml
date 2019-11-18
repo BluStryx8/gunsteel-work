@@ -19,26 +19,6 @@ if (global.class == "Scout")
 else dodge_cooldown = 20;	// Frames before dodge can be used again
 immune = 0;					// If taken damage recently
 
-// Hit Points
-switch (global.class)
-{
-	case "Soldier":
-		p_max_health  = 5;	// Max HP
-		p_max_defense = 3;	// Max Defense
-		break;
-	case "Scout":
-		p_max_health  = 3;	// Max HP
-		p_max_defense = 2;	// Max Defense
-		break;
-	case "Tinkerer":
-		p_max_health  = 3;	// Max HP
-		p_max_defense = 4;	// Max Defense
-		break;
-}
-
-p_health = p_max_health;	// Current HP
-p_defense = p_max_defense;	// Current Defense
-
 // Records previous 3 positions
 xprev[2] = 0;
 yprev[2] = 0;

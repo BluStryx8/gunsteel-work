@@ -3,6 +3,7 @@
 if (global.seed == -1)
 {
 	randomise();
+	global.seed = random_get_seed();
 }
 else
 {

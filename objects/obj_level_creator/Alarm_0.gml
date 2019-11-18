@@ -4,6 +4,7 @@ switch (load_step)
 	case 0:
 		// Initialise
 		init_room();
+		save_game();
 		global.truepause = true;
 		obj_player.x = -(obj_player.sprite_width);
 		obj_player.y = -(obj_player.sprite_height);
