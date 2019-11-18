@@ -17,6 +17,7 @@ image_yscale = scale * 2;
 
 // Difficulty Scaling
 hp = floor(hp * (global.difficulty / 100));
+max_hp = hp;
 max_speed = min(floor(max_speed * 1.5), floor(max_speed * ((global.difficulty + 300) / 400)));
 dive_speed = min(floor(dive_speed * 1.5), floor(dive_speed * ((global.difficulty + 300) / 400)));
 if (windup_time != -1) windup_time = max(floor(windup_time / 1.5), ceil(windup_time / ((global.difficulty + 300) / 400)));

@@ -20,6 +20,7 @@ with (other)
 		_death.image_alpha = irandom_range(80, 100) / 100;
 		instance_destroy();
 		if (_master) master_id.enemy_count -= 1;
+		score += floor(max_hp);
 	}
 	// Draw damage
 	var _dmg = instance_create_layer(x, y, "HUD", obj_dmg_number);

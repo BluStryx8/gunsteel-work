@@ -25,6 +25,7 @@ else if (direction <= 315 and direction > 225)
 
 // Difficulty Scaling
 hp = floor(hp * (global.difficulty / 100));
+max_hp = hp;
 armor = floor(armor * (global.difficulty / 100));
 resistance = floor(min(resistance * 1.5, resistance * ((global.difficulty + 300) / 400)) * 100) / 100;
 idle_min_time = max(0, ceil(idle_min_time / (global.difficulty / 100)));

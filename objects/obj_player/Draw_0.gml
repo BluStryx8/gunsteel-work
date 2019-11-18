@@ -18,10 +18,24 @@ if (dodge > 0) or (immune > 0 and round(immune / 5) mod 2 == 0)
 
 if (global.death)
 {
-	_alpha = (immune - 1) / 20;
-	_flash = _alpha;
-	if (_flash > 0) _times = 2;
-	if (immune > 1) immune -= 1;
+	if (immune != 100)
+	{
+		_alpha = (immune - 1) / 20;
+		_flash = _alpha;
+		if (_flash > 0) _times = 2;
+		if (immune == 1)
+		{
+			immune = 100;
+			instance_create_layer(x, y, "HUD", obj_game_over);
+		}
+		else if (immune > 1) immune -= 1;
+	}
+	else
+	{
+		_alpha = 0;
+		_flash = 0;
+		_times = 1;
+	}
 }
 
 if (dir <= 90 or dir >= 270)

@@ -1,5 +1,7 @@
 /// @description Draw Inventory
 if (global.truepause) exit;
+var _alpha = 1;
+if (global.death and instance_exists(obj_game_over)) _alpha -= obj_game_over.alpha;
 
 // Set Variables
 gui_holder_width = sprite_get_width(spr_hotbar);
@@ -16,7 +18,7 @@ gui_holder_pos_y = 32 + hotbar_height;
 // Declare Draw Constants
 draw_set_halign(fa_right);
 draw_set_font(fnt_inventory);
-draw_set_alpha(1);
+draw_set_alpha(_alpha);
 if global.paused var _col = make_colour_hsv(0, 0, 150) else var _col = c_white;
 draw_set_color(_col);
 
@@ -26,14 +28,15 @@ if (global.level > 0)
 	draw_set_font(fnt_room);
 	draw_text(camera_get_view_width(0) - 32, 32, "- " + string(global.level) + " -");
 	draw_set_font(fnt_inventory);
+	draw_text(camera_get_view_width(0) - 32, 64, "Score: " + string(score));
 }
 
 // Draw Hotbar
 if (!global.settings)
 {
-	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, hotbar_height, 1, 1, 0, _col, 1);
+	draw_sprite_ext(spr_hotbar, -1, gui_holder_pos_x, hotbar_height, 1, 1, 0, _col, _alpha);
 	draw_sprite_ext(spr_active, -1, gui_holder_pos_x + (gui_holder_slot_offset_x * active_item) + 38,
-					gui_holder_pos_y + gui_holder_pad, 1, 1, 0, _col, 1);
+					gui_holder_pos_y + gui_holder_pad, 1, 1, 0, _col, _alpha);
 	for (var _inv = 0; _inv <= HOTBAR; _inv++)
 	{
 		item_define_index = inventory[_inv];
@@ -41,7 +44,7 @@ if (!global.settings)
 		{
 			draw_sprite_ext(item_definitions[item_define_index, item_properties.sprite_gui], -1,
 						(gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 32,
-						(gui_holder_pos_y + gui_holder_pad), 1, 1, 0, _col, 1);
+						(gui_holder_pos_y + gui_holder_pad), 1, 1, 0, _col, _alpha);
 			if obj_inventory_manager.item_definitions[item_define_index, item_properties.type] != "firearm"
 			{
 				draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * _inv) + 57,
@@ -55,8 +58,8 @@ if (!global.settings)
 // Draw extended inventory
 if (global.in_inv) and (!global.settings)
 {
-	draw_sprite_ext(spr_hotbar, 1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height, 1, 1, 0, _col, 1);
-	draw_sprite_ext(spr_hotbar, 1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height * 2, 1, 1, 0, _col, 1);
+	draw_sprite_ext(spr_hotbar, 1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height, 1, 1, 0, _col, _alpha);
+	draw_sprite_ext(spr_hotbar, 1, gui_holder_pos_x, view_get_hport(0) - gui_holder_height * 2, 1, 1, 0, _col, _alpha);
 	var _offset = gui_holder_height;
 	for (var _inv = HOTBAR + 1; _inv <= INVENTORY; _inv++)
 	{
@@ -68,7 +71,7 @@ if (global.in_inv) and (!global.settings)
 				_offset = gui_holder_height;
 				draw_sprite_ext(item_definitions[item_define_index, item_properties.sprite_gui], -1,
 							(gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * (_inv - 5)) + 32,
-							(gui_holder_pos_y + gui_holder_pad + _offset), 1, 1, 0, _col, 1);
+							(gui_holder_pos_y + gui_holder_pad + _offset), 1, 1, 0, _col, _alpha);
 				if obj_inventory_manager.item_definitions[item_define_index, item_properties.type] != "firearm"
 				{
 					draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * (_inv - 5)) + 57,
@@ -81,7 +84,7 @@ if (global.in_inv) and (!global.settings)
 				_offset = 2 * gui_holder_height;
 				draw_sprite_ext(item_definitions[item_define_index, item_properties.sprite_gui], -1,
 							(gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * (_inv - 10)) + 32,
-							(gui_holder_pos_y + gui_holder_pad + _offset), 1, 1, 0, _col, 1);
+							(gui_holder_pos_y + gui_holder_pad + _offset), 1, 1, 0, _col, _alpha);
 				if obj_inventory_manager.item_definitions[item_define_index, item_properties.type] != "firearm"
 				{
 					draw_text((gui_holder_pos_x + gui_holder_pad) + (gui_holder_slot_offset_x * (_inv - 10)) + 57,
@@ -150,31 +153,31 @@ switch (obj_player.type)
 {
 	case "Pistol":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
-						view_get_hport(0) + _weap_offset_y - 16, 1, 1, 0, _col, 1);
+						view_get_hport(0) + _weap_offset_y - 16, 1, 1, 0, _col, _alpha);
 		_weapon = true;
 		_total_ammo = "Infinite";
 		break;
 	case "Assault Rifle":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
-						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
+						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, _alpha);
 		_weapon = true;
 		_total_ammo = global.ammo_rifle;
 		break;
 	case "Shotgun":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
-						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
+						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, _alpha);
 		_weapon = true;
 		_total_ammo = global.ammo_shotgun;
 		break;
 	case "Sniper Rifle":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
-						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
+						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, _alpha);
 		_weapon = true;
 		_total_ammo = global.ammo_sniper;
 		break;
 	case "Minigun":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
-						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, 1);
+						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, _alpha);
 		_weapon = true;
 		_total_ammo = global.ammo_minigun;
 		break;
@@ -218,7 +221,7 @@ switch (obj_player.type)
 if (_draw != spr_gui_empty)
 	for (var _ammo = obj_player.ammo; _ammo > 0; _ammo--)
 	{
-		draw_sprite_ext(_draw, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, 1);
+		draw_sprite_ext(_draw, -1, view_get_wport(0) + _x, view_get_hport(0) + _y, 1, 1, 0, _col, _alpha);
 		_y -= 10;
 		if ((view_get_hport(0) + _y - _top_pad) <= 0)
 		{
@@ -239,17 +242,17 @@ if (obj_player.atk_type == "Automatic") _bullets = 3;
 if (_draw != spr_gui_empty)
 {
 	draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 2,
-					view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
+					view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, _alpha);
 	if (_bullets >= 2) draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset,
-									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
+									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, _alpha);
 	if (_bullets >= 3) draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 3,
-									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, 1);
+									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, _alpha);
 }
 if obj_player.type = "Minigun"
 {
 	_draw = spr_gui_ammo_crate;
 	draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 2,
-					view_get_hport(0) + _mode_y_offset, 0.5, 0.5, 0, _col, 1);
+					view_get_hport(0) + _mode_y_offset, 0.5, 0.5, 0, _col, _alpha);
 }
 
 if global.paused = true and (!global.settings) 

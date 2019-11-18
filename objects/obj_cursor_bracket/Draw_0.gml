@@ -1,6 +1,6 @@
 /// @description Draw Self
 speed = 0;
-if (global.paused or global.in_inv) exit;	// Exits if paused or in an inventory menu
+if (global.paused or global.in_inv or global.death) exit;	// Exits if paused or in an inventory menu
 
 if (image_index == 0)
 {

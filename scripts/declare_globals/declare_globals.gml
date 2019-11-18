@@ -14,6 +14,7 @@ global.p_scale = 1;		// Size of the player
 global.settings_shake = 0.5;
 
 // Difficulty Scaling (Temporary)
+score			  = 0;
 global.level	  = 0;
 global.difficulty = 100;
 global.seed		  = -1;
