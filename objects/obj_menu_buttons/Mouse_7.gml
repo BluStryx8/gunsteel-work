@@ -27,11 +27,14 @@ if room = rm_mainmenu
 			global.menu_follow = 2 
 			break;
 			
-		case 7:
+		case 6:
 			global.menu_follow = 4
 			break;
-	
-	}
+			
+		case 7:
+			global.menu_follow = 3
+			break;
+	}	
 }
 else
 {
