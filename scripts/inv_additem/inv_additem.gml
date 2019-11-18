@@ -28,6 +28,7 @@ if (_index_added_at != -1)
 				var _upgrades = ds_map_find_value(global.weapons[_w], "upgrades");
 				ds_map_replace(global.weapons[_w], "upgrades", _upgrades + 1);
 				audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+				audio_stop_sound(snd_upgrade);
 				audio_play_sound(snd_upgrade, 1, false);
 			}
 			break;

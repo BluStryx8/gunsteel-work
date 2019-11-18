@@ -14,6 +14,13 @@ if (combat and enemy_count == 0)
 		if (p_defense < p_max_defense) p_defense += 1;
 		if (global.class == "Soldier")
 			if (p_defense < p_max_defense) p_defense += 1;
+		if (global.class == "Tinkerer")
+		{
+			global.ammo_rifle   += irandom_range(5, 10) * 10;
+			global.ammo_sniper  += irandom_range(1, 2) * 5;
+			global.ammo_shotgun += irandom_range(3, 6) * 5;
+			global.ammo_minigun += irandom_range(1, 2) * 100;
+		}
 	}
 	if biome == "elite"
 	{

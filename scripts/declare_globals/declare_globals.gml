@@ -42,7 +42,7 @@ switch (global.class)
 		p_max_defense = 2;	// Max Defense
 		break;
 	case "Tinkerer":
-		p_max_health  = 3;	// Max HP
+		p_max_health  = 2;	// Max HP
 		p_max_defense = 4;	// Max Defense
 		break;
 }

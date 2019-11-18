@@ -42,10 +42,6 @@ p_defense = p_max_defense;
 // Classes
 if (global.class == "Tinkerer")
 {
-	global.ammo_rifle   += irandom_range(5, 10) * 10;
-	global.ammo_sniper  += irandom_range(1, 2) * 5;
-	global.ammo_shotgun += irandom_range(6, 12) * 5;
-	global.ammo_minigun += irandom_range(3, 5) * 100;
 	if ((global.level + 1) mod 5 == 0)
 	{
 		var _starter = global.starter;
