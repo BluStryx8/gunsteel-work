@@ -16,3 +16,5 @@ file_delete("save_play_time.ini")
 
 
 file_delete("player.ini")
+
+delete_save()
