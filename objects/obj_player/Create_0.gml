@@ -51,9 +51,6 @@ accuracy = base_accuracy;	// Inaccuracy of weapon
 dir = 0;					// Direction facing
 reloading = 0;				// Whether the player is reloading or not
 
-
-starting = true;		// Determines whether player is entering from main menu
-
 // Create Others (Temp)
 // Cursor
 window_set_cursor(cr_none);

@@ -44,6 +44,3 @@ _x = floor(view_get_wport(0) * 3.5);
 var _mad_taurus = instance_create_layer(_x, _y, "creator", obj_weapon_select);
 _mad_taurus.master_id	= id;
 _mad_taurus.weapon_id	= item_type.mad_taurus;
-
-_x = floor(view_get_wport(0) * 3.8);
-_y = floor(view_get_hport(0) * 0.9);

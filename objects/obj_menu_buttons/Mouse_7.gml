@@ -1,7 +1,7 @@
 /// @description Check Click
-if room = rm_mainmenu
+if (room == rm_mainmenu)
 	{
-	switch image_index
+	switch (image_index)
 	{
 		case 0:
 			// Start
@@ -18,8 +18,11 @@ if room = rm_mainmenu
 		case 3:
 			//continue (Fades out them goes to rm_game)
 			if (clicked == false)
-			instance_create_layer(0,0,"fade",obj_fade_out);
-			clicked = true;
+			{
+				load_save();
+				instance_create_layer(0,0,"fade",obj_fade_out);
+				clicked = true;
+			}
 			break;
 		
 		case 4:
@@ -33,6 +36,16 @@ if room = rm_mainmenu
 			
 		case 7:
 			global.menu_follow = 3
+			break;
+
+		case 8:
+			//continue (Fades out them goes to rm_game)
+			if (clicked == false)
+			{
+				new_save();
+				instance_create_layer(0,0,"fade",obj_fade_out);
+				clicked = true;
+			}
 			break;
 	}	
 }

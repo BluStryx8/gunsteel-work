@@ -43,6 +43,7 @@ Good for those who like weapons."
 
 draw_set_font(fnt_room);
 draw_set_halign(fa_center);
+draw_set_color(c_white);
 var _x = floor(view_get_wport(0) * 3.5);
 var _y = floor(view_get_hport(0) * 0.05);
 draw_text_transformed(_x, _y, p_class, 2, 2, 0);

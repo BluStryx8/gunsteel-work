@@ -4,16 +4,16 @@
 if (room == rm_mainmenu)
 {
 	global.truepause = true;
-	starting = true;
+	global.holstered = true;
 	dir = 0;
-	global.player_setx = 2272;	// Starting x position
-	global.player_sety = 416;	// Starting y position
+	x = 2272;	// Starting x position
+	y = 416;	// Starting y position
 	
 }
 else
 {
-	global.truepause = false
-	global.paused = false
+	global.truepause = false;
+	global.paused = false;
 	focus = 0;
 	camera_pan = 1024;
 	camera_width = 512;
@@ -23,46 +23,45 @@ else
 if (room == rm_game)
 {
 	global.holstered = false;
-	if (starting)
+	if (room_last = rm_game)
 	{
-		starting = false;
 		global.player_setx = 270;	// Starting x position
 		global.player_sety = 200;	// Starting y position
 	}
 }
 if (room == rm_game2) global.holstered = true;
 
-// Goes to the right place in room
-x = global.player_setx;
-y = global.player_sety;
-
-// Regenerate
-p_defense = p_max_defense;
-
-// Classes
-if (global.class == "Tinkerer")
+if (room == rm_dungeon)
 {
-	if ((global.level + 1) mod 5 == 0)
+	// Regenerate
+	global.holstered = false;
+	p_defense = p_max_defense;
+
+	// Classes
+	if (global.class == "Tinkerer")
 	{
-		var _starter = global.starter;
-		var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_starter, item_properties.name]);
-		var _upgrades = ds_map_find_value(global.weapons[_w], "upgrades");
-		ds_map_replace(global.weapons[_w], "upgrades", _upgrades + 1);
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
-		audio_play_sound(snd_upgrade, 1, false);
+		if ((global.level + 1) mod 5 == 0)
+		{
+			var _starter = global.starter;
+			var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_starter, item_properties.name]);
+			var _upgrades = ds_map_find_value(global.weapons[_w], "upgrades");
+			ds_map_replace(global.weapons[_w], "upgrades", _upgrades + 1);
+			audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+			audio_play_sound(snd_upgrade, 1, false);
+		}
 	}
-}
-else
-{
-	if ((global.level + 1) mod 10 == 0)
+	else
 	{
-		var _starter = global.starter;
-		var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_starter, item_properties.name]);
-		var _upgrades = ds_map_find_value(global.weapons[_w], "upgrades");
-		ds_map_replace(global.weapons[_w], "upgrades", _upgrades + 1);
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
-		audio_play_sound(snd_upgrade, 1, false);
+		if ((global.level + 1) mod 10 == 0)
+		{
+			var _starter = global.starter;
+			var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_starter, item_properties.name]);
+			var _upgrades = ds_map_find_value(global.weapons[_w], "upgrades");
+			ds_map_replace(global.weapons[_w], "upgrades", _upgrades + 1);
+			audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+			audio_play_sound(snd_upgrade, 1, false);
+		}
+		if (global.class == "Soldier")
+			if (p_health < p_max_health) and ((global.level + 1) mod 5 == 0) p_health += 1;
 	}
-	if (global.class == "Soldier")
-		if (p_health < p_max_health) and ((global.level + 1) mod 5 == 0) p_health += 1;
 }

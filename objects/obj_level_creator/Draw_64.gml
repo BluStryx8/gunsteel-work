@@ -39,7 +39,7 @@ if (!start)
 			loading = 0;
 			break;
 	}
-	draw_text(_x_offset, display_get_gui_height() - _y_offset, _text);
+	draw_text(_x_offset, view_get_hport(0) - _y_offset, _text);
 }
 else
 {

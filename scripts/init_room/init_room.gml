@@ -8,11 +8,9 @@ if (global.seed == -1)
 else
 {
 	random_set_seed(global.seed);
-	global.seed = -1;
 }
 
 // Scaling
-global.level += 1;
 global.difficulty = 98 + global.level * 2;
 
 grid_size = 16; // Size of blocks & objects in game

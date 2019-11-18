@@ -1,6 +1,6 @@
 /// @description Draw Player
 // Scale (if on title screen or not)
-if (starting) global.p_scale = 4
+if (room = rm_mainmenu) global.p_scale = 4
 else global.p_scale = 1;
 image_xscale = global.p_scale;
 image_yscale = global.p_scale;
