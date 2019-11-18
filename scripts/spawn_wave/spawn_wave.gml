@@ -221,6 +221,32 @@ switch (_biome)
 					}
 				}
 				break;
+			case 3:
+				// Necro
+				enemy_count += 1;
+				rand_load_enemy(obj_enemy_necromancer);
+				_min -= 1;
+				_max -= 1;
+				repeat (irandom_range(_min, _max))
+				{
+					enemy_count += 1;
+					switch(choose("s_grey", "s_red", "b_black", "b_red"))
+					{
+						case "s_grey":
+							rand_load_enemy(obj_elite_slime_grey);
+							break;
+						case "s_red":
+							rand_load_enemy(obj_elite_slime_red);
+							break;
+						case "b_black":
+							rand_load_enemy(obj_enemy_bat_black);
+							break;
+						case "b_red":
+							rand_load_enemy(obj_enemy_bat_red);
+							break;
+					}
+				}
+				break;
 		}
 		break;
 }

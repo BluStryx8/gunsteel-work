@@ -17,12 +17,25 @@ spd = 0;	// Remember speed
 hspd = 0;	// Used in collision
 vspd = 0;	// Used in collision
 
-attack_1_rate_min = 150;	// Homing Bullets min tba
-attack_1_rate_max = 180;	// Homing Bullets max tba
-attack_2_rate_min = 90;		// Spread Bullets min tba
-attack_2_rate_max = 120;	// Spread Bullets max tba
-attack_3_rate_min = 30;		// Trail Bullets min tba
-attack_3_rate_max = 45;		// Trail Bullets max tba
+var _rate = 150;
+attack_1_rate_min = max(floor(_rate / 1.5), ceil(_rate / ((global.difficulty + 300) / 400)));
+							// Homing Bullets min tba
+var _rate = 180;
+attack_1_rate_max = max(floor(_rate / 1.5), ceil(_rate / ((global.difficulty + 300) / 400)));
+							// Homing Bullets max tba
+var _rate = 90;
+attack_2_rate_min = max(floor(_rate / 1.5), ceil(_rate / ((global.difficulty + 300) / 400)));
+							// Spread Bullets min tba
+var _rate = 120;
+attack_2_rate_max = max(floor(_rate / 1.5), ceil(_rate / ((global.difficulty + 300) / 400)));
+							// Spread Bullets max tba
+var _rate = 30;
+attack_3_rate_min = max(floor(_rate / 1.5), ceil(_rate / ((global.difficulty + 300) / 400)));
+							// Trail Bullets min tba
+var _rate = 45;
+attack_3_rate_max = max(floor(_rate / 1.5), ceil(_rate / ((global.difficulty + 300) / 400)));
+							// Trail Bullets max tba
+
 attack_timer_1 = irandom_range(attack_1_rate_min, attack_1_rate_max);
 attack_timer_2 = irandom_range(attack_2_rate_min, attack_2_rate_max);
 attack_timer_3 = 0;
@@ -37,5 +50,5 @@ max_move_cd = 60;
 move_timer = -irandom_range(min_move_cd, max_move_cd);
 
 color = c_white;
-scale = 1;
-hp = 100;
+scale = irandom_range(0.9, 1.1);
+hp = floor(100 * (global.difficulty / 100));

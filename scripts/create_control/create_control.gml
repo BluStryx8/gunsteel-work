@@ -5,7 +5,7 @@
 var _x = argument0;
 var _y = argument1;
 
-var _control = instance_create_layer((_x * section_width), (_y * section_height), "control", obj_room_control);
+var _control = instance_create_layer((_x * section_width), (_y * section_height), "HUD", obj_room_control);
 // Define Section
 _control.section_x = _x;
 _control.section_y = _y;

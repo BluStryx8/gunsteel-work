@@ -1047,14 +1047,6 @@
             }
         },
         {
-            "Key": "52e1c11e-6fe2-45c9-90db-fd5d6cf56294",
-            "Value": {
-                "id": "c86a99a7-5bbd-4adb-967d-ffd13c913ca7",
-                "resourcePath": "scripts\\load_LRTB_2\\load_LRTB_2.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "530c9ba0-5bb1-4536-9661-f796a498b8c0",
             "Value": {
                 "id": "57c0d12e-fa3d-470c-9df6-e419126d0055",
@@ -3349,7 +3341,6 @@
         "a703b69c-6874-4a5f-8a3f-125fd99dd418",
         "307e0405-e9a9-427e-9d52-1e1b3a03f381",
         "72046491-7640-4b01-8078-0416e53199d7",
-        "52e1c11e-6fe2-45c9-90db-fd5d6cf56294",
         "7dc252ca-98cc-460a-9ecd-4667ce77b8cc",
         "0457ab24-77bf-459e-806a-982c5ba42b84",
         "c5c5a8fe-c056-4371-b439-33b4ef120cf6",

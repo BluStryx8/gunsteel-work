@@ -32,16 +32,13 @@ switch (section_id)
 	case "LRTB_1":
 		load_LRTB_1(special_id, biome);
 		break;
-	case "LRTB_2":
-		load_LRTB_2(special_id, biome);
-		break;
 	case "L_0":
 		load_L_0(special_id, biome);
 		break;
-	case "L_2":
+	case "L_1":
 		load_L_1(special_id, biome);
 		break;
-	case "L_1":
+	case "L_2":
 		load_L_2(special_id, biome);
 		break;
 	case "R_0":

@@ -16,9 +16,6 @@ switch (_id)
 				load_door(53, 16, "right");
 				load_door(26, 5, "up");
 				spawn_wave(_biome, 6, 10);
-				// Scatter outliner crates
-				spawn_tile_rect(6, 22, 7, 7, 4, 2, 3, obj_crate);
-				spawn_tile_rect(36, 52, 7, 7, 4, 2, 3, obj_crate);
 				break;
 			case "elite":
 				// Loads enemy doors
@@ -28,28 +25,15 @@ switch (_id)
 				spawn_wave(_biome, 7, 11);
 				break;
 			case "crate":
-				switch (choose("box", "outline"))
-				{
-					case "box":
-						// Draws a big box in centre and some outliner crates
-						spawn_tile_rect(26, 32, 30, 26, 2, 2, 0, obj_crate);
-						spawn_tile_rect(6, 22, 7, 7, 4, 2, 3, obj_crate);
-						spawn_tile_rect(36, 52, 7, 7, 4, 2, 3, obj_crate);
-						break;
-					case "outline":
-						// Draws only outliner crates	
-						spawn_tile_rect(16, 42, 36, 36, 4, 2, 1, obj_crate);
-						spawn_tile_rect(6, 22, 7, 7, 4, 2, 2, obj_crate);
-						spawn_tile_rect(36, 52, 7, 7, 4, 2, 2, obj_crate);
-						break;
-				}
+				// Draws a big box in centre and some outliner crates
+				spawn_tile_rect(26, 32, 30, 26, 2, 2, 0, obj_crate);
 				break;
 			case "chest":
-				load_tile(30, 30, obj_chest);
+				load_tile(30, 15, obj_chest);
 				break;
 		}
 		break;
 	case "end":
-		load_tile(30, 30, obj_next_floor);
+		load_tile(30, 15, obj_next_floor);
 		break;
 }
