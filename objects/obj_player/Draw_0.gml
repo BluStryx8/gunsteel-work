@@ -164,3 +164,4 @@ else
 	if (sneak) draw_sprite_ext(spr_player_hitbox, 1, x, y,
 								-global.p_scale, global.p_scale, 0, c_white, 0.2);
 }
+

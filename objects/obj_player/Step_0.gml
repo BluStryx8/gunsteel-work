@@ -359,3 +359,7 @@ if camera_pan < 1024 // 1024 or over makes the camera lock on player without sco
 	((camera_pan - 1) * x / camera_pan + mouse_x / camera_pan) - camera_width / 2 + shake_x,
 	((camera_pan - 1) * y / camera_pan + mouse_y / camera_pan) - camera_height / 2 + shake_y);
 }
+
+
+
+	

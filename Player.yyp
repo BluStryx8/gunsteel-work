@@ -847,6 +847,14 @@
             }
         },
         {
+            "Key": "44eb35d4-99d4-403f-8470-92017c1849c8",
+            "Value": {
+                "id": "4386b567-7978-416f-9f2f-f27940f294eb",
+                "resourcePath": "views\\44eb35d4-99d4-403f-8470-92017c1849c8.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "45147dcf-4ff6-40bd-8824-62700cd89d06",
             "Value": {
                 "id": "e3410115-698f-4334-80a1-11f6d6ebb1bb",
@@ -1972,6 +1980,14 @@
                 "id": "a3c36952-faee-4096-8225-d6f1daed2c8f",
                 "resourcePath": "views\\a42cab8e-2f1e-484c-b0cc-b017a83a36aa.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a4dee5e7-bba7-4e1f-ad8e-eeda43e51163",
+            "Value": {
+                "id": "8398e17e-3f6f-4edb-8b50-842e8d2882f4",
+                "resourcePath": "sounds\\msc_dungeon\\msc_dungeon.yy",
+                "resourceType": "GMSound"
             }
         },
         {
