@@ -1,4 +1,6 @@
 /// @description Check for key input
+
+audio_group_set_gain(music,global.music_value,0)
 if !audio_is_playing(msc_dungeon)
 {
 	audio_play_sound(msc_dungeon,1,true)
