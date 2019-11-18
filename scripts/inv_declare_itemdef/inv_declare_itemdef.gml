@@ -64,7 +64,7 @@ Left Click: Fire",
 				2);
 inv_add_itemdef(item_type.potion, spr_gui_potion, spr_gui_empty, "Potion", 0, "Consumable", set_empty, use_potion, use_potion,
 @"A standard health potion.
-Use it to restore 3 HP.",
+Use it to restore 1 HP.",
 				2);
 inv_add_itemdef(item_type.ammo_crate, spr_gui_ammo_crate, spr_gui_empty, "Ammo Crate", 0, "Consumable", set_empty, use_ammo_crate, use_ammo_crate,
 @"An ammo crate with a variety of ammunition.
