@@ -61,8 +61,19 @@ with (obj_inventory_manager)
 	ini_write_real("upgrades", "minigun", ds_map_find_value(global.weapons[41], "upgrades"))
 
 	//magazine
+	ini_write_real("mag", "1911", ds_map_find_value(global.weapons[1], "ammo"))
+	ini_write_real("mag", "glock 17", ds_map_find_value(global.weapons[2], "ammo"))
+	ini_write_real("mag", "uzi", ds_map_find_value(global.weapons[3], "ammo"))
+	ini_write_real("mag", "mad taurus", ds_map_find_value(global.weapons[4], "ammo"))
+	ini_write_real("mag", "ak47", ds_map_find_value(global.weapons[11], "ammo"))
+	ini_write_real("mag", "m4", ds_map_find_value(global.weapons[12], "ammo"))
 	ini_write_real("mag", "p90", ds_map_find_value(global.weapons[13], "ammo"))
-	rand = ds_map_find_value(global.weapons[13], "ammo")
+	ini_write_real("mag", "remington 870", ds_map_find_value(global.weapons[21], "ammo"))
+	ini_write_real("mag", "mossberg 500", ds_map_find_value(global.weapons[22], "ammo"))
+	ini_write_real("mag", "omark", ds_map_find_value(global.weapons[31], "ammo"))
+	ini_write_real("mag", "tesro", ds_map_find_value(global.weapons[32], "ammo"))
+	ini_write_real("mag", "minigun", ds_map_find_value(global.weapons[41], "ammo"))
+	
 
 	//ammo
 	ini_write_real("ammo", "rifle", global.ammo_rifle)

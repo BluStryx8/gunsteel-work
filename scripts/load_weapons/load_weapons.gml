@@ -17,7 +17,22 @@ ds_map_replace(global.weapons[32],"upgrades", ini_read_real("upgrades", "tesro",
 //speical
 ds_map_replace(global.weapons[41],"upgrades", ini_read_real("upgrades", "minigun",0))
 //mag
-ds_map_replace(global.weapons[13], "ammo", ini_read_real("mag" , "p90" , 9))
+ds_map_replace(global.weapons[1], "ammo", ini_read_real("mag" , "1911" , 7));
+ds_map_replace(global.weapons[2], "ammo", ini_read_real("mag" , "glock 17" , 17));
+ds_map_replace(global.weapons[3], "ammo", ini_read_real("mag" , "uzi" , 32));
+ds_map_replace(global.weapons[4], "ammo", ini_read_real("mag" , "mad taurus" , 6));
+
+ds_map_replace(global.weapons[11], "ammo", ini_read_real("mag" , "ak47" , 30));
+ds_map_replace(global.weapons[12], "ammo", ini_read_real("mag" , "m4" , 30));
+ds_map_replace(global.weapons[13], "ammo", ini_read_real("mag" , "p90" , 50));
+
+ds_map_replace(global.weapons[21], "ammo", ini_read_real("mag" , "remington 870" , 7));
+ds_map_replace(global.weapons[22], "ammo", ini_read_real("mag" , "mossberg 500" , 6));
+
+ds_map_replace(global.weapons[31], "ammo", ini_read_real("mag" , "omark" , 1));
+ds_map_replace(global.weapons[32], "ammo", ini_read_real("mag" , "tesro" , 1));
+
+ds_map_replace(global.weapons[41], "ammo", ini_read_real("mag" , "minigun" , 1000));
 //ammo
 global.ammo_rifle = ini_read_real("ammo","rifle",300)
 global.ammo_sniper = ini_read_real("ammo","sniper",30)
