@@ -68,8 +68,11 @@ lhand.hand = 0;
 rhand = instance_create_layer(x, y, "player_hand", obj_player_held);	// Right hand
 rhand.hand = 1;
 
+
 // Item Management
 instance_create_layer(0, 0, "HUD", obj_inventory_manager);				// Manages inventory
 
 // Health Bars
 instance_create_layer(0, 0, "HUD", obj_healthbar);
+
+audio_play_sound(msc_dungeon,1,true)
