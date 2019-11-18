@@ -74,5 +74,3 @@ instance_create_layer(0, 0, "HUD", obj_inventory_manager);				// Manages invento
 
 // Health Bars
 instance_create_layer(0, 0, "HUD", obj_healthbar);
-
-audio_play_sound(msc_dungeon,1,true)

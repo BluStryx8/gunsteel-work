@@ -98,7 +98,7 @@ if (dir <= 90 or dir >= 270)
 		shader_reset();
 	}
 	// Hitbox
-	if (sneak) draw_sprite_ext(spr_player_hitbox, 1, x, y, global.p_scale, global.p_scale, 0, c_white, 0.2);
+	if (sneak and !global.in_inv) draw_sprite_ext(spr_player_hitbox, 1, x, y, global.p_scale, global.p_scale, 0, c_white, 0.2);
 }
 else
 {
@@ -161,7 +161,7 @@ else
 		shader_reset();
 	}
 	// Hitbox
-	if (sneak) draw_sprite_ext(spr_player_hitbox, 1, x, y,
+	if (sneak and !global.in_inv) draw_sprite_ext(spr_player_hitbox, 1, x, y,
 								-global.p_scale, global.p_scale, 0, c_white, 0.2);
 }
 

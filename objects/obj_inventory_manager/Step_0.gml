@@ -1,4 +1,11 @@
 /// @description Check for key input
+if !audio_is_playing(msc_dungeon)
+{
+	audio_play_sound(msc_dungeon,1,true)
+}
+
+
+
 if (global.paused or global.death) exit;	// Exits if paused
 
 // Active Item
