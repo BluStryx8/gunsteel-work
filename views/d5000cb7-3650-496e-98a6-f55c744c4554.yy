@@ -11,8 +11,7 @@
         "815d0ed2-13f8-4a0c-aa04-c043f4b08264",
         "a606da20-62a6-4596-a3e5-8e35f4174294",
         "e6d0c4f7-33e1-4d09-a9ce-06bdf2cbb476",
-        "82c5d697-dd71-4e91-b87c-cec546c6d1b5",
-        "657273bd-5961-43ef-9d98-25f029f9544d"
+        "82c5d697-dd71-4e91-b87c-cec546c6d1b5"
     ],
     "filterType": "GMObject",
     "folderName": "Main Menu",

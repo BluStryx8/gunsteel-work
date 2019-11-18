@@ -5,6 +5,7 @@ var _classhp   = 0;
 var _classdef  = 0;
 var _classdesc = "";
 var _classbuff = "";
+
 // Draw Class Info
 switch(p_class)
 {
@@ -43,12 +44,12 @@ Good for those who like weapons."
 draw_set_font(fnt_room);
 draw_set_halign(fa_center);
 var _x = floor(view_get_wport(0) * 3.5);
-var _y = floor(view_get_hport(0) * 0.2);
-draw_text(_x, _y, p_class);
+var _y = floor(view_get_hport(0) * 0.05);
+draw_text_transformed(_x, _y, p_class, 2, 2, 0);
 
 draw_set_halign(fa_left);
 _x = floor(view_get_wport(0) * 3.4);
-_y = floor(view_get_hport(0) * 0.25);
+_y = floor(view_get_hport(0) * 0.15);
 draw_text(_x, _y, string(_classhp) + " HP");
 _x = floor(view_get_wport(0) * 3.6);
 draw_text(_x, _y, string(_classdef) + " DEF");
@@ -56,8 +57,58 @@ draw_set_font(fnt_class_info);
 _x = floor(view_get_wport(0) * 3.3);
 draw_text(_x, _y, _classdesc);
 draw_set_font(fnt_class_stat);
-_y = floor(view_get_hport(0) * 0.35);
+_y = floor(view_get_hport(0) * 0.25);
 draw_text(_x, _y, _classbuff);
+
+var _w_desc = "";
+var _w_stat = "";
+switch(p_weapon)
+{
+	case item_type.pistol_1911:
+		_w_desc = @"
+A standardized pistol for soldiers.
+High damage, but a small clip."
+		_w_stat = @"
++ 7 Bullet Mag
++ High Damage
++ Semi-automatic (Fast)"
+		break;
+	case item_type.glock:
+		_w_desc = @"
+A well rounded pistol.
+Has a very impractical auto mode."
+		_w_stat = @"
++ 17 Bullet Mag
++ Decent Damage
++ Semi-automatic / Auto (Very Fast)"
+		break;
+	case item_type.uzi:
+		_w_desc = @"
+A fully automatic machine pistol.
+More bullets, but less damage."
+		_w_stat = @"
++ 32 Bullet Mag
++ Low Damage
++ Automatic (Fast)"
+		break;
+	case item_type.mad_taurus:
+		_w_desc = @"
+A very powerful revolver.
+Sacrifices fire rate for power."
+		_w_stat = @"
++ 6 Bullet Mag
++ Very High Damage
++ Semi-automatic (Slow)"
+		break;
+}
+
+_x = floor(view_get_wport(0) * 3.6);
+_y = floor(view_get_hport(0) * 0.55);
+draw_set_font(fnt_class_info);
+draw_text(_x, _y, _w_desc);
+draw_set_font(fnt_class_stat);
+_y = floor(view_get_hport(0) * 0.65);
+draw_text(_x, _y, _w_stat);
 
 
 // Draw Player

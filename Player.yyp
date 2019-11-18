@@ -1039,6 +1039,14 @@
             }
         },
         {
+            "Key": "522e7289-112c-424c-aa7b-ad5d233e49f7",
+            "Value": {
+                "id": "b3cf0283-2963-4f79-9c42-6c34fdb78842",
+                "resourcePath": "objects\\obj_weapon_select\\obj_weapon_select.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "52db8a91-adc4-4d1e-9fe0-a0e3405324bc",
             "Value": {
                 "id": "97dc33f2-a18b-4678-8476-6204c7d52d61",
@@ -2339,6 +2347,14 @@
             "Value": {
                 "id": "a0fe390d-2576-456f-a9ba-a8871b1eff79",
                 "resourcePath": "objects\\obj_creator_manager\\obj_creator_manager.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c46574c7-7204-4a59-8465-100b94111a80",
+            "Value": {
+                "id": "6f7191b5-e5d5-4bf4-b41a-fb5b82a7caf4",
+                "resourcePath": "objects\\obj_new_char_start\\obj_new_char_start.yy",
                 "resourceType": "GMObject"
             }
         },
