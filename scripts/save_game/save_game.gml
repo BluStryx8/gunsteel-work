@@ -20,21 +20,10 @@ with (obj_inventory_manager)
 	ini_write_string("item", "item15", inventory[14])
 
 	//writes amount
-	ini_write_real("amount", "item1", item_definitions[inventory[0], item_properties.amount])
-	ini_write_real("amount", "item2", item_definitions[inventory[1], item_properties.amount])
-	ini_write_real("amount", "item3", item_definitions[inventory[2], item_properties.amount])
-	ini_write_real("amount", "item4", item_definitions[inventory[3], item_properties.amount])
-	ini_write_real("amount", "item5", item_definitions[inventory[4], item_properties.amount])
-	ini_write_real("amount", "item6", item_definitions[inventory[5], item_properties.amount])
-	ini_write_real("amount", "item7", item_definitions[inventory[6], item_properties.amount])
-	ini_write_real("amount", "item8", item_definitions[inventory[7], item_properties.amount])
-	ini_write_real("amount", "item9", item_definitions[inventory[8], item_properties.amount])
-	ini_write_real("amount", "item10", item_definitions[inventory[9], item_properties.amount])
-	ini_write_real("amount", "item11", item_definitions[inventory[10], item_properties.amount])
-	ini_write_real("amount", "item12", item_definitions[inventory[11], item_properties.amount])
-	ini_write_real("amount", "item13", item_definitions[inventory[12], item_properties.amount])
-	ini_write_real("amount", "item14", item_definitions[inventory[13], item_properties.amount])
-	ini_write_real("amount", "item15", item_definitions[inventory[14], item_properties.amount])
+	for (var _n = 0; _n < item_type.length; _n++)
+	{
+		ini_write_real("amount", "item" + string(_n), item_definitions[_n, item_properties.amount])
+	}
 
 
 	//save upgrades
