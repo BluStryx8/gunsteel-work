@@ -40,7 +40,7 @@ attack_timer_1 = irandom_range(attack_1_rate_min, attack_1_rate_max);
 attack_timer_2 = irandom_range(attack_2_rate_min, attack_2_rate_max);
 attack_timer_3 = 0;
 
-close_distance = 128;	// Distance before escaping
+close_distance = 96;	// Distance before escaping
 far_distance = 320;		// Distance to stand out of range at
 
 min_move = 60;
@@ -52,3 +52,4 @@ move_timer = -irandom_range(min_move_cd, max_move_cd);
 color = c_white;
 scale = irandom_range(0.9, 1.1);
 hp = floor(100 * (global.difficulty / 100));
+max_hp = hp;

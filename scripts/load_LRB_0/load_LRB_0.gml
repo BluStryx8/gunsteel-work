@@ -18,7 +18,7 @@ switch (_id)
 				spawn_wave(_biome, 7, 11);
 				// Scatter outliner crates
 				spawn_tile_rect(6, 22, 32, 32, 4, 2, 3, obj_crate);
-				spawn_tile_rect(36, 52, 32, 7, 4, 25, 3, obj_crate);
+				spawn_tile_rect(36, 52, 32, 32, 4, 2, 3, obj_crate);
 				break;
 			case "elite":
 				// Loads enemy doors

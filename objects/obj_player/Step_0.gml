@@ -8,11 +8,13 @@ if (global.truepause)
 if (global.death) exit;
 
 /// Pause Game
-if (keyboard_check_pressed(vk_escape) and room != rm_mainmenu )
+if (keyboard_check_pressed(vk_escape) and room != rm_mainmenu)
 {
 	global.paused = !global.paused;	// Toggle paused
 }
 if (global.paused) exit;	// Exits if paused
+
+if (keyboard_check_pressed(ord("Q")) and debug_mode) debug_cam = !debug_cam;
 
 /// Update variables
 sprite = spr_gui_empty;	// Resets weapon sprite
@@ -332,34 +334,49 @@ else
 	shake_y = 0;
 }
 
-// Centre camera on player
-camera_set_view_pos(view_camera[0], x - h_move - camera_width / 2 + shake_x,
-									y - v_move - camera_height / 2 + shake_y);
-// Scoping
-if (focus == 1)
+if (!debug_cam)
 {
-	// True Scope
-	if (camera_pan > 1.3) camera_pan -= camera_pan / 4;
-}
-else if (focus == 0)
-{
-	// Standard scoping effect
-	if (camera_pan > 6) camera_pan -= camera_pan / 4;
-	if (camera_pan < 6) camera_pan += camera_pan / 3;
+	// Centre camera on player
+	camera_set_view_pos(view_camera[0], x - h_move - camera_width / 2 + shake_x,
+										y - v_move - camera_height / 2 + shake_y);
+	// Scoping
+	if (focus == 1)
+	{
+		// True Scope
+		if (camera_pan > 1.3) camera_pan -= camera_pan / 4;
+	}
+	else if (focus == 0)
+	{
+		// Standard scoping effect
+		if (camera_pan > 6) camera_pan -= camera_pan / 4;
+		if (camera_pan < 6) camera_pan += camera_pan / 3;
+	}
+	else
+	{
+		// Still camera
+		if camera_pan < 1024 camera_pan += camera_pan / 3;
+	}
+
+	if camera_pan < 1024 // 1024 or over makes the camera lock on player without scoping effect
+	{
+		camera_set_view_pos(view_camera[0],
+		((camera_pan - 1) * x / camera_pan + mouse_x / camera_pan) - camera_width / 2 + shake_x,
+		((camera_pan - 1) * y / camera_pan + mouse_y / camera_pan) - camera_height / 2 + shake_y);
+	}
+	debug_x = x;
+	debug_y = y;
 }
 else
-{
-	// Still camera
-	if camera_pan < 1024 camera_pan += camera_pan / 3;
+{	
+	// Check keyboard
+	var _cam_move = round(5 * debug_zoom);
+	if (keyboard_check(vk_left))	debug_x -= _cam_move;	// Move left
+	if (keyboard_check(vk_right))	debug_x += _cam_move;	// Move right
+	if (keyboard_check(vk_up))		debug_y -= _cam_move;	// Move up
+	if (keyboard_check(vk_down))	debug_y += _cam_move;	// Move down
+	if (keyboard_check(vk_pagedown))	debug_zoom -= 0.02;	// Decrease zoom
+	if (keyboard_check(vk_pageup))		debug_zoom += 0.02;	// Increase zoom
+	camera_set_view_size(view_camera[0], camera_width * debug_zoom, camera_height * debug_zoom);
+	camera_set_view_pos(view_camera[0], debug_x - (camera_width * debug_zoom / 2),
+										debug_y - (camera_height * debug_zoom / 2));
 }
-
-if camera_pan < 1024 // 1024 or over makes the camera lock on player without scoping effect
-{
-	camera_set_view_pos(view_camera[0],
-	((camera_pan - 1) * x / camera_pan + mouse_x / camera_pan) - camera_width / 2 + shake_x,
-	((camera_pan - 1) * y / camera_pan + mouse_y / camera_pan) - camera_height / 2 + shake_y);
-}
-
-
-
-	

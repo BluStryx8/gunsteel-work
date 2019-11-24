@@ -6,7 +6,8 @@
     "children": [
         "b068970b-7e10-4956-915a-9cf71c3cbb58",
         "20fc64c4-a9a0-4969-9e98-493a19941d27",
-        "61638a94-f7ff-4e2e-a6ad-9f07402264b3"
+        "61638a94-f7ff-4e2e-a6ad-9f07402264b3",
+        "8d53b736-2116-48ff-894f-e3c8e594bb35"
     ],
     "filterType": "GMScript",
     "folderName": "[6] R",

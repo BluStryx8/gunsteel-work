@@ -156,7 +156,7 @@ switch (_biome)
 		}
 		break;
 	case "elite":
-		switch (irandom_range(0, 2))
+		switch (irandom_range(0, 3))
 		{
 			case 0:
 				// Bullets

@@ -19,6 +19,12 @@ if (global.class == "Scout")
 else dodge_cooldown = 20;	// Frames before dodge can be used again
 immune = 0;					// If taken damage recently
 
+// Debug
+debug_cam	= false;		// If debug camera is active
+debug_x		= 0;			// x Position of debug
+debug_y		= 0;			// y Position of debug
+debug_zoom	= 1;			// Zoom of debug camera
+
 // Records previous 3 positions
 xprev[2] = 0;
 yprev[2] = 0;

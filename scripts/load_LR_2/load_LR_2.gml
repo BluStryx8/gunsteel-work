@@ -1,4 +1,4 @@
-/// @desc Loads an LR 2 room
+/// @desc Loads an LR_2 room
 /// @param special Determines special ID to be taken into consideration
 
 var _id    = argument0;
@@ -14,16 +14,31 @@ switch (_id)
 				// Loads enemy doors
 				load_door(5, 16, "left");
 				load_door(53, 16, "right");
-				spawn_wave(_biome, 6, 10);
+				spawn_wave(_biome, 5, 9);
+				// Scatter outliner crates
+				spawn_tile_rect(18, 40, 32, 7, 8, 25, 3, obj_crate);
 				break;
 			case "elite":
 				// Loads enemy doors
 				load_door(5, 16, "left");
 				load_door(53, 16, "right");
-				spawn_wave(_biome, 7, 11);
+				spawn_wave(_biome, 6, 10);
 				break;
 			case "crate":
-				break;
+				switch (choose("box", "outline"))
+				{
+					case "box":
+						// Draws a big box and some outline crates
+						spawn_tile_rect(24, 34, 23, 17, 2, 2, 0, obj_crate);
+						spawn_tile_rect(18, 40, 32, 7, 8, 25, 3, obj_crate);
+						break;
+					case "outline":
+						// Draws only outline crates
+						spawn_tile_rect(18, 40, 32, 8, 4, 24, 1, obj_crate);
+						spawn_tile_rect(20, 38, 30, 11, 6, 19, 2, obj_crate);
+						spawn_tile_rect(20, 38, 28, 28, 8, 2, 3, obj_crate);
+						break;
+				}
 			case "chest":
 				load_tile(30, 20, obj_chest);
 				break;

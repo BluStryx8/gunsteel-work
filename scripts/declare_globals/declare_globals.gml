@@ -26,5 +26,6 @@ p_max_health	 = 0;
 p_max_defense	 = 0;
 p_health		 = 0;
 p_defense		 = 0;
+
 // Weapons
 declare_weapons();
