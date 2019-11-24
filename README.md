@@ -1,7 +1,7 @@
 # Gunsteel
-===
-*"You're placed inside a dungeon, infinitely spiralling downwards owaards your demise, but the question is... how long will you survive?"*
 ---
+*"You're placed inside a dungeon, infinitely spiralling downwards towards your demise, but the question is... how long will you survive?"*
+
 Gunsteel is arcade, fantasy, rougelite game about adventuring through an infinitely generating dungeon, with the goal of getting as far as possible.
 You play as one of three classes:
 - The Soldier: The defender of the realm.
@@ -18,15 +18,23 @@ You play as one of three classes:
 ---
 ## Controls:
 
-**Movement**
-  W  - Move Up		|  S  - Move Down	|  A  - Move Left	|  D  - Move Down
- Space / Middle Mouse - Dodge	| Shift - Focus Fire
+**Movement:**
++ W - Move Up
++ S - Move Down
++ A - Move Left
++ D - Move Down
++ Space / Middle Mouse - Dodge
++ Shift - Focus Fire
 
-**Firing**
- Left Mouse - Fire Weapon	| Right Mouse - Alternate Mode / Scope / Pump
+**Firing:**
++ Left Mouse - Fire Weapon
++ Right Mouse - Alternate Mode / Scope / Pump
 
-**Interaction**
-  E  - Interact/Pick Up	|  I  - Inventory	| Esc - Start Menu
+**Interaction:**
++ E - Interact/Pick Up
++ I - Inventory
++ Esc - Start Menu
 
-**Inventory**
- Left Mouse - Select Item	| Right Mouse - Place Selected Item in Slot
+**Inventory:**
++ Left Mouse - Select Item
++ Right Mouse - Place Selected Item in Slot
