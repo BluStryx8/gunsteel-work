@@ -439,6 +439,14 @@
             }
         },
         {
+            "Key": "20b9d1b1-39d5-4712-8d2d-56bcd321d66d",
+            "Value": {
+                "id": "5640446e-a4c1-4198-95ee-92ab2eca5d9c",
+                "resourcePath": "sprites\\spr_gui_desert_eagle\\spr_gui_desert_eagle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "20fc64c4-a9a0-4969-9e98-493a19941d27",
             "Value": {
                 "id": "cea833eb-d24b-455b-9cc3-37b7e78a426c",
@@ -847,6 +855,14 @@
             }
         },
         {
+            "Key": "43cb56df-b2d8-484c-965f-feb96e8584f5",
+            "Value": {
+                "id": "977a4a51-5afb-44d3-96a5-8676ac49e6ee",
+                "resourcePath": "objects\\obj_item_pickup_desert_eagle\\obj_item_pickup_desert_eagle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "44a9b71e-4a9a-4b49-96a6-42a23b3b54c6",
             "Value": {
                 "id": "7823c068-a193-4fa8-83a8-ce3fb7e05035",
@@ -916,6 +932,14 @@
                 "id": "90561a8a-efcc-43b4-9720-85293bde5245",
                 "resourcePath": "views\\4854b8c9-9657-4c26-9557-3df3db16f64f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "48bd8138-dd6f-4e7c-9557-b6278a4203e2",
+            "Value": {
+                "id": "05220413-12dd-4014-90cf-7c039af48e0b",
+                "resourcePath": "sprites\\spr_held_desert_eagle\\spr_held_desert_eagle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

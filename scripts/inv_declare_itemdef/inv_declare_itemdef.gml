@@ -26,6 +26,11 @@ inv_add_itemdef(item_type.mad_taurus, spr_gui_mad_taurus, spr_held_mad_taurus, o
 @"'Well, we had to get past copyright somehow.'
 Left Click: Fire", 
 				2);
+inv_add_itemdef(item_type.desert_eagle, spr_gui_desert_eagle, spr_held_desert_eagle, obj_item_pickup_desert_eagle,
+				"Desert Eagle", 0, "firearm", set_weapon, weapon_shoot, use_empty,
+@"'The most powerful pistol out there.'
+Left Click: Fire", 
+				2);
 inv_add_itemdef(item_type.ak47, spr_gui_ak47, spr_held_ak47, obj_item_pickup_ak47,
 				"AK-47", 0, "firearm", set_weapon, weapon_shoot, fire_mode,
 @"'Ah, yes, that one go-to generic rifle.'

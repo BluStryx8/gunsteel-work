@@ -4,6 +4,7 @@ ds_map_replace(global.weapons[1],"upgrades", ini_read_real("upgrades", "1911",0)
 ds_map_replace(global.weapons[2],"upgrades", ini_read_real("upgrades", "glock 17",0))
 ds_map_replace(global.weapons[3],"upgrades", ini_read_real("upgrades", "uzi",0))
 ds_map_replace(global.weapons[4],"upgrades", ini_read_real("upgrades", "mad taurus",0))
+ds_map_replace(global.weapons[5],"upgrades", ini_read_real("upgrades", "desert eagle",0))
 //rifles
 ds_map_replace(global.weapons[11],"upgrades", ini_read_real("upgrades", "ak47",0))
 ds_map_replace(global.weapons[12],"upgrades", ini_read_real("upgrades", "m4",0))
@@ -21,6 +22,7 @@ ds_map_replace(global.weapons[1], "ammo", ini_read_real("mag" , "1911" , 7));
 ds_map_replace(global.weapons[2], "ammo", ini_read_real("mag" , "glock 17" , 17));
 ds_map_replace(global.weapons[3], "ammo", ini_read_real("mag" , "uzi" , 32));
 ds_map_replace(global.weapons[4], "ammo", ini_read_real("mag" , "mad taurus" , 6));
+ds_map_replace(global.weapons[5], "ammo", ini_read_real("mag" , "desert eagle" , 6));
 
 ds_map_replace(global.weapons[11], "ammo", ini_read_real("mag" , "ak47" , 30));
 ds_map_replace(global.weapons[12], "ammo", ini_read_real("mag" , "m4" , 30));

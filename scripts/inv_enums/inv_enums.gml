@@ -10,6 +10,7 @@ enum item_type
 	glock,
 	uzi,
 	mad_taurus,
+	desert_eagle,
 	ak47,
 	m4,
 	p90,
