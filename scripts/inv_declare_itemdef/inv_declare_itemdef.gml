@@ -49,6 +49,12 @@ inv_add_itemdef(item_type.p90, spr_gui_p90, spr_held_p90, obj_item_pickup_p90,
 Left Click: Fire
 Right Click: Switch Fire Mode", 
 				3);
+inv_add_itemdef(item_type.famas, spr_gui_famas, spr_held_famas, obj_item_pickup_famas,
+				"FAMAS", 0, "firearm", set_weapon, weapon_shoot, fire_mode_burst,
+@"'A powerful rifle with a burst fire.'
+Left Click: Fire
+Right Click: Switch Fire Mode", 
+				3);
 inv_add_itemdef(item_type.remington_870, spr_gui_remington_870, spr_held_remington_870, obj_item_pickup_remington_870,
 				"Remington 870", 0, "firearm", set_weapon, weapon_shoot, weapon_pump,
 @"'A shotgun that can fire rapidly.

@@ -14,6 +14,7 @@ enum item_type
 	ak47,
 	m4,
 	p90,
+	famas,
 	remington_870,
 	mossberg_500,
 	omark_44,

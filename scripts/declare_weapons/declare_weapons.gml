@@ -308,6 +308,40 @@ ds_map_add(global.weapons[13], "weight", 0);
 ds_map_add(global.weapons[13], "pump", 0);
 ds_map_add(global.weapons[13], "pump_time", 0);
 
+//FAMAS
+global.weapons[14] = ds_map_create();
+ds_map_add(global.weapons[14], "weapon", "FAMAS");
+ds_map_add(global.weapons[14], "type", "Assault Rifle");
+ds_map_add(global.weapons[14], "atk_type", "Semi-automatic");
+ds_map_add(global.weapons[14], "upgrades", 0);
+ds_map_add(global.weapons[14], "hands", 2);
+ds_map_add(global.weapons[14], "hand_one", [-1, 4]);
+ds_map_add(global.weapons[14], "hand_two", [12, 3]);
+ds_map_add(global.weapons[14], "offset", [6, 3, 0]);
+ds_map_add(global.weapons[14], "min_damage", 25);
+ds_map_add(global.weapons[14], "max_damage", 29);
+ds_map_add(global.weapons[14], "bullet_speed", 26);
+ds_map_add(global.weapons[14], "bullet_speed_var", 1);
+ds_map_add(global.weapons[14], "decay", 150);
+ds_map_add(global.weapons[14], "reload", 4);
+ds_map_add(global.weapons[14], "burst", 1);
+ds_map_add(global.weapons[14], "bullets", 1);
+ds_map_add(global.weapons[14], "pierce", -1);
+ds_map_add(global.weapons[14], "bullet_dd", 0);
+ds_map_add(global.weapons[14], "base_accuracy", 2);
+ds_map_add(global.weapons[14], "recoil", 0.7);
+ds_map_add(global.weapons[14], "max_recoil", 6);
+ds_map_add(global.weapons[14], "recoil_mult", 0.75);
+ds_map_add(global.weapons[14], "shake_dur", 5);
+ds_map_add(global.weapons[14], "max_ammo", 30);
+ds_map_add(global.weapons[14], "ammo", 30);
+ds_map_add(global.weapons[14], "draw_time", 30);
+ds_map_add(global.weapons[14], "reload_time", 120);
+ds_map_add(global.weapons[14], "windup_time", 0);
+ds_map_add(global.weapons[14], "weight", 0);
+ds_map_add(global.weapons[14], "pump", 0);
+ds_map_add(global.weapons[14], "pump_time", 0);
+
 /// Shotguns
 //Remington 870
 global.weapons[21] = ds_map_create();

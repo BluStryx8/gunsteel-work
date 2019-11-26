@@ -36,6 +36,7 @@ with (obj_inventory_manager)
 	ini_write_real("upgrades", "ak47", ds_map_find_value(global.weapons[11], "upgrades"));
 	ini_write_real("upgrades", "m4", ds_map_find_value(global.weapons[12], "upgrades"));
 	ini_write_real("upgrades", "p90", ds_map_find_value(global.weapons[13], "upgrades"));
+	ini_write_real("upgrades", "famas", ds_map_find_value(global.weapons[14], "upgrades"));
 	// Shotguns
 	ini_write_real("upgrades", "remington 870", ds_map_find_value(global.weapons[21], "upgrades"));
 	ini_write_real("upgrades", "mossberg 500", ds_map_find_value(global.weapons[22], "upgrades"));
@@ -56,6 +57,7 @@ with (obj_inventory_manager)
 	ini_write_real("mag", "ak47", ds_map_find_value(global.weapons[11], "ammo"));
 	ini_write_real("mag", "m4", ds_map_find_value(global.weapons[12], "ammo"));
 	ini_write_real("mag", "p90", ds_map_find_value(global.weapons[13], "ammo"));
+	ini_write_real("mag", "famas", ds_map_find_value(global.weapons[14], "ammo"));
 	// Shotguns
 	ini_write_real("mag", "remington 870", ds_map_find_value(global.weapons[21], "ammo"));
 	ini_write_real("mag", "mossberg 500", ds_map_find_value(global.weapons[22], "ammo"));

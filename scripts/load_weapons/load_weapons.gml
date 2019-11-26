@@ -9,6 +9,7 @@ ds_map_replace(global.weapons[5],"upgrades", ini_read_real("upgrades", "desert e
 ds_map_replace(global.weapons[11],"upgrades", ini_read_real("upgrades", "ak47",0))
 ds_map_replace(global.weapons[12],"upgrades", ini_read_real("upgrades", "m4",0))
 ds_map_replace(global.weapons[13],"upgrades", ini_read_real("upgrades", "p90",0))
+ds_map_replace(global.weapons[14],"upgrades", ini_read_real("upgrades", "famas",0))
 //shotguns
 ds_map_replace(global.weapons[21],"upgrades", ini_read_real("upgrades", "remington 870",0))
 ds_map_replace(global.weapons[22],"upgrades", ini_read_real("upgrades", "mossberg 500",0))
@@ -27,6 +28,7 @@ ds_map_replace(global.weapons[5], "ammo", ini_read_real("mag" , "desert eagle" ,
 ds_map_replace(global.weapons[11], "ammo", ini_read_real("mag" , "ak47" , 30));
 ds_map_replace(global.weapons[12], "ammo", ini_read_real("mag" , "m4" , 30));
 ds_map_replace(global.weapons[13], "ammo", ini_read_real("mag" , "p90" , 50));
+ds_map_replace(global.weapons[14], "ammo", ini_read_real("mag" , "famas" , 30));
 
 ds_map_replace(global.weapons[21], "ammo", ini_read_real("mag" , "remington 870" , 7));
 ds_map_replace(global.weapons[22], "ammo", ini_read_real("mag" , "mossberg 500" , 6));

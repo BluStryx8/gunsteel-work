@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "1a7e649e-dde8-4ab2-9fd0-fe82bb54ab23",
+            "Value": {
+                "id": "032aa165-bde5-4ea7-ac96-a63e7b419c43",
+                "resourcePath": "scripts\\fire_mode_burst\\fire_mode_burst.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1a801b90-ca58-4d9a-b417-a36888a0b1cc",
             "Value": {
                 "id": "827ac22c-e372-4786-812b-0975f245f198",
@@ -579,6 +587,14 @@
             "Value": {
                 "id": "f4bb7317-adcd-43fa-98d9-4d6e1f56f1d9",
                 "resourcePath": "objects\\obj_crate\\obj_crate.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2923653c-37ff-43c0-a72d-acdf40772043",
+            "Value": {
+                "id": "d7988c75-fe03-4754-a9db-70478e585ecf",
+                "resourcePath": "objects\\obj_item_pickup_famas\\obj_item_pickup_famas.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1479,6 +1495,14 @@
             }
         },
         {
+            "Key": "6fc95947-5d13-41a4-bc5e-25b7faccb309",
+            "Value": {
+                "id": "aec779ee-c063-48e4-9750-a6ed9881cb75",
+                "resourcePath": "sprites\\spr_gui_famas\\spr_gui_famas.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "72046491-7640-4b01-8078-0416e53199d7",
             "Value": {
                 "id": "dfba7f99-1a17-4b88-89e6-ed24a6b0290f",
@@ -2236,6 +2260,14 @@
                 "id": "0c01cb3a-c705-4b1b-bee5-84bfa0b4373a",
                 "resourcePath": "scripts\\load_LRB_2_3\\load_LRB_2_3.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b6f77bed-7b15-48b4-9996-ae76fad293af",
+            "Value": {
+                "id": "3d451129-f610-431d-8c73-8b6f02d7c8c6",
+                "resourcePath": "sprites\\spr_held_famas\\spr_held_famas.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3350,6 +3382,7 @@
         "3bdcdc73-eeec-4df4-a2da-f5c29091b9ed",
         "336c5481-1a5b-4741-93a0-4d745b393b63",
         "baadaa62-8623-4201-9167-d51d33b42758",
+        "1a7e649e-dde8-4ab2-9fd0-fe82bb54ab23",
         "f5f39a98-91a8-4c74-bbb6-af8b9a6dabe0",
         "263fee8e-34f6-48f5-b9db-a01962149630",
         "def0a8a1-f0e1-4764-9596-0817e036160c",
