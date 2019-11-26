@@ -24,7 +24,6 @@ if (combat and enemy_count == 0)
 		global.ammo_rifle   += irandom_range(3, 6) * 10 * _mult;
 		global.ammo_sniper  += irandom_range(1, 2) * 3 * _mult;
 		global.ammo_shotgun += irandom_range(1, 3) * 4 * _mult;
-		global.ammo_minigun += irandom_range(1, 2) * 50 * _mult;
 
 	}
 	if biome == "elite"

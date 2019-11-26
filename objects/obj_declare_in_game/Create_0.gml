@@ -33,6 +33,6 @@ if global.load_settings_once = false
 	global.ammo_rifle = ini_read_real("ammo","rifle",300)
 	global.ammo_sniper = ini_read_real("ammo","sniper",30)
 	global.ammo_shotgun = ini_read_real("ammo","shotgun",180)
-	global.ammo_minigun = ini_read_real("ammo","minigun",1000)
+	global.ammo_minigun = ini_read_real("ammo","minigun",1)
 	ini_close()
 }

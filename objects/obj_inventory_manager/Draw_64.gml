@@ -308,7 +308,7 @@ if global.paused and !global.settings
 
 // pause menu
 
-if global.settings = true and (!room = rm_mainmenu)
+if (global.settings) and (room != rm_mainmenu)
 {
 	//declaratiion of position
 	xx_vslider = (camera_get_view_x(view_camera[0])) + 5;

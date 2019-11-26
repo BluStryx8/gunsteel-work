@@ -3,7 +3,7 @@ if mouse_check_button_pressed(mb_left) or mouse_check_button_pressed(mb_right)
 	var _ammo_rifle   = irandom_range(5, 10) * 20;
 	var _ammo_sniper  = irandom_range(2, 4) * 5;
 	var _ammo_shotgun = irandom_range(6, 12) * 10;
-	var _ammo_minigun = irandom_range(3, 5) * 250;
+	var _ammo_minigun = 1;
 	global.ammo_rifle	+= _ammo_rifle;
 	global.ammo_sniper	+= _ammo_sniper;
 	global.ammo_shotgun	+= _ammo_shotgun;

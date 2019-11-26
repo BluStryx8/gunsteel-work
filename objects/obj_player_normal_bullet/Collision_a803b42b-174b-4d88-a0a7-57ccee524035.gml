@@ -13,7 +13,10 @@ with (other)
 		if (irandom_range(1, 25) == 1)
 		{
 			var _x_offset = 16;
-			var _y_offset = 32;
+			if (image_index == 0)
+				var _y_offset = 32;
+			else
+				var _y_offset = 16;
 			if (choose(true, false))
 				var _to_create = obj_item_pickup_potion;
 			else

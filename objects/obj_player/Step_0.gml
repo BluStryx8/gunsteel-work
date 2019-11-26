@@ -11,6 +11,7 @@ if (global.death) exit;
 if (keyboard_check_pressed(vk_escape) and room != rm_mainmenu)
 {
 	global.paused = !global.paused;	// Toggle paused
+	if (global.paused) global.in_inv = false;
 }
 if (global.paused) exit;	// Exits if paused
 
@@ -209,8 +210,12 @@ if (fire > 0 and fire_cooldown == 0)
 	}
 	else
 	{
-		if ammo <= 0 audio_play_sound(snd_dry_fire, 1, false)	// Dry fire sound
-			else audio_play_sound(snd_reload_clip, 1, false);	// Not pumped sound
+		if (ammo <= 0) audio_play_sound(snd_dry_fire, 1, false)	// Dry fire sound
+		else
+		{
+			fire_cooldown = 0;
+			audio_play_sound(snd_reload_clip, 1, false);	// Not pumped sound
+		}
 	}
 }
 // If not firing
@@ -263,11 +268,8 @@ if (reloading == 30)
 			global.ammo_sniper -= ammo;
 			break;
 		case "Minigun":
-			if (max_ammo > global.ammo_minigun)
-				ammo = global.ammo_minigun;
-			else
-				ammo = max_ammo;
-			global.ammo_minigun -= ammo;
+			ammo = max_ammo;
+			global.ammo_minigun -= 1;
 			break;
 		case "Shotgun":
 			if (ammo < max_ammo) and (global.ammo_shotgun > 0)
