@@ -30,7 +30,7 @@
             "mvc": "1.0",
             "objectId": "d7b6d7e5-3b2d-4c9f-930d-052c29c6510d",
             "propertyId": "be112154-188e-4c92-aeda-eff9c1cf3db0",
-            "value": "irandom_range(130, 150) \/ 100"
+            "value": "irandom_range(120, 140) \/ 100"
         },
         {
             "id": "1cf082c1-489a-4a33-a1ed-8f4a9dea943a",
