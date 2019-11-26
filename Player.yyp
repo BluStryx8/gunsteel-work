@@ -2503,14 +2503,6 @@
             }
         },
         {
-            "Key": "c68f96d5-30b9-4c05-9985-01caef7c03e4",
-            "Value": {
-                "id": "e863a966-177b-4522-9921-7ed0af03017b",
-                "resourcePath": "objects\\obj_game_timer\\obj_game_timer.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "c6afbe23-f30c-4b96-be2c-cc98ef4899bf",
             "Value": {
                 "id": "e3805377-184f-4dfb-8235-2cbbf14eed19",
