@@ -36,5 +36,22 @@ You play as one of three classes:
 + Esc - Start Menu
 
 **Inventory:**
-+ Left Mouse - Select Item
-+ Right Mouse - Place Selected Item in Slot
++ Left Mouse - Select Item / Change Position in Inventory
++ Right Mouse - Drop Item / Use Consumable
+
+------------
+## Updates:
+Version 0.9.2-alpha
+- The Desert Eagle has been added to the dungeon
+- Inventory controls should be better, and the ability to drop items is now added
+- Version number is now shown, important for patching possible bugs
+- Various bug fixes, and buffs and nerfs to enemies and items
+
+Version 0.9.0-alpha
+- Necromancer enemy added to the dungeon
+- More rooms to the dungeon
+- Crates can drop items on occasion
+- Major bug fixes to saving and spawning
+
+Version 0.8.0-alpha
+- First shared build of game for assignment
