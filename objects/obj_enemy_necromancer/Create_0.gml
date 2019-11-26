@@ -51,5 +51,5 @@ move_timer = -irandom_range(min_move_cd, max_move_cd);
 
 color = c_white;
 scale = 1;
-hp = floor(100 * (global.difficulty / 100));
+hp = floor(250 * (global.difficulty / 100));
 max_hp = hp;

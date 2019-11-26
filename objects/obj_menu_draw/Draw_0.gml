@@ -1,13 +1,23 @@
 /// @description Draws logo and text
 var _x = floor(view_get_wport(0) * 1.5);
 var _y = floor(view_get_hport(0) * 0.2);
-draw_sprite_ext(spr_main_icon, -1, _x, _y, 1, 1, 0, c_white, 1)
+draw_sprite_ext(spr_main_icon, -1, _x, _y, 1, 1, 0, c_white, 1);
 
-//draws settings text on left panel
+// Draws settings text on left panel
 _x = floor(view_get_wport(0) * 0.5);
 _y = floor(view_get_hport(0) * 0.2);
 draw_sprite(spr_main_menu_buttons,1, _x, _y)
 
+// Draws version number
+var _x = floor(view_get_wport(0) * 1.95);
+var _y = floor(view_get_hport(0) * 0.95);
+draw_set_halign(fa_right);
+draw_set_color(c_white);
+draw_set_font(fnt_stat);
+draw_text(_x, _y, string(game_display_name) + " - Version " + string(GM_version));
+
+/// Draw Run Data
+// Current Run
 draw_set_halign(fa_center);
 draw_set_color(c_white);
 draw_set_font(fnt_room);
@@ -37,7 +47,7 @@ _x = floor(view_get_wport(0) * 2.6);
 draw_sprite_ext(_starter, -1, _x, _y, 2, 2, 0, c_white, 1);
 
 draw_set_halign(fa_left);
-draw_set_font(fnt_class_stat)
+draw_set_font(fnt_class_stat);
 _x = floor(view_get_wport(0) * 2.4);
 _y = floor(view_get_hport(0) * 0.6);
 draw_text(_x, _y, "Level " + string(draw_level));

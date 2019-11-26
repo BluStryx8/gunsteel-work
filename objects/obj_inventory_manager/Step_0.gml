@@ -166,7 +166,11 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 	}
 	if (mouse_check_button_pressed(mb_right))
 	{
-		if (_constraint) inv_dropitem(inventory[selected_cell]);
+		if (_constraint)
+		{
+			inv_dropitem(inventory[selected_cell]);
+			if (pickup_item == selected_cell) pickup_item = -1;
+		}
 		else if (item_in_hand)
 		{
 			inv_dropitem(inventory[pickup_item]);

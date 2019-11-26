@@ -1,6 +1,5 @@
 /// @description Loading
 if (loading_fade <= -1) exit;
-
 if (start) loading_fade -= 1 / room_speed;
 
 if (loading_fade > 0)
