@@ -139,11 +139,13 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 				// Swap the item with the slot selected
 				if (inventory[selected_cell] = item_type.none)
 				{
+					// If no item in the drop cell, replace
 					inventory[selected_cell] = inventory[pickup_item];
 					inventory[pickup_item] = item_type.none;
 				}
 				else
 				{
+					// If item in the drop cell, swap
 					old_item = inventory[selected_cell];
 					inventory[selected_cell] = inventory[pickup_item];
 					inventory[pickup_item] = old_item;
@@ -162,8 +164,17 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 			selected_cell = -1;
 		}
 	}
-	/// if you have an item in your gand, check if the slot you click if empty
-	/// if so set your hand to 0, clicked slot to the old slot, old slot to empty then reset variables
+	if (mouse_check_button_pressed(mb_right))
+	{
+		if (_constraint) inv_dropitem(inventory[selected_cell]);
+		else if (item_in_hand)
+		{
+			inv_dropitem(inventory[pickup_item]);
+			item_in_hand = false;
+			pickup_item = -1;
+			selected_cell = -1;
+		}
+	}
 }
 
 /// Backup if item_in_hand was not reset

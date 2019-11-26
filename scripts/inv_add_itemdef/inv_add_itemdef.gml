@@ -2,6 +2,7 @@
 /// @param type Type of Item Enum
 /// @param sprite_gui Index of sprite to show in GUI
 /// @param sprite_held Index of sprite to show in hand
+/// @param drop_item The corresponding dropped item
 /// @param name Name of item
 /// @param amount Amount of item
 /// @param type Type of item
@@ -15,18 +16,20 @@
 var _type_of_item = argument0;
 var _sprite_gui   = argument1;
 var _sprite_held  = argument2;
-var _name         = argument3;
-var _amount       = argument4;
-var _type         = argument5;
-var _set          = argument6;
-var _use_left     = argument7;
-var _use_right    = argument8;
-var _tooltip	  = argument9;
-var _tip_lines	  = argument10;
+var _drop_item	  = argument3;
+var _name         = argument4;
+var _amount       = argument5;
+var _type         = argument6;
+var _set          = argument7;
+var _use_left     = argument8;
+var _use_right    = argument9;
+var _tooltip	  = argument10;
+var _tip_lines	  = argument11;
 
 // Set item properties
 item_definitions[_type_of_item, item_properties.sprite_gui]  = _sprite_gui;
 item_definitions[_type_of_item, item_properties.sprite_held] = _sprite_held;
+item_definitions[_type_of_item, item_properties.drop_item]	 = _drop_item;
 item_definitions[_type_of_item, item_properties.name]        = _name;
 item_definitions[_type_of_item, item_properties.amount]      = _amount;
 item_definitions[_type_of_item, item_properties.type]        = _type;

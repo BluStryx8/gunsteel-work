@@ -112,7 +112,7 @@ if (global.in_inv) and (!global.settings)
 	draw_text(_x, _y + 8, string(global.ammo_shotgun));
 	_y += 32;
 	draw_sprite_ext(spr_gui_ammo_crate, -1, _x + 16, _y + 16, 0.5, 0.5, 0, _col, 1);
-	draw_text(_x, _y + 8, string(global.ammo_minigun));
+	draw_text(_x, _y + 8, string(global.ammo_special));
 	draw_set_halign(fa_right);
 }
 
@@ -175,7 +175,7 @@ switch (obj_player.type)
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 2, 2, 0, _col, _alpha);
 		_weapon = true;
-		_total_ammo = global.ammo_minigun;
+		_total_ammo = global.ammo_special;
 		break;
 }
 if (_weapon)

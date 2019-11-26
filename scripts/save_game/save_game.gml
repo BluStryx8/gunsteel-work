@@ -67,7 +67,7 @@ with (obj_inventory_manager)
 	ini_write_real("ammo", "rifle", global.ammo_rifle);
 	ini_write_real("ammo", "shotgun", global.ammo_shotgun);
 	ini_write_real("ammo", "sniper", global.ammo_sniper);
-	ini_write_real("ammo", "minigun", global.ammo_minigun);
+	ini_write_real("ammo", "special", global.ammo_special);
 	ini_close();
 }
 

@@ -39,6 +39,7 @@ enum item_properties
 {
 	sprite_gui,
 	sprite_held,
+	drop_item,
 	name,
 	amount,
 	type,

@@ -20,6 +20,7 @@ if (distance_to_point(_player_x, _player_y) < 45)
 		text_alpha = 0;
 		image_index += 1;
 		create_loot("standard");
+		score += global.difficulty * 10;
 		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 		audio_play_sound(snd_chest_open, 1, false);
 	}

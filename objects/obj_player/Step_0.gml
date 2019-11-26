@@ -269,7 +269,7 @@ if (reloading == 30)
 			break;
 		case "Minigun":
 			ammo = max_ammo;
-			global.ammo_minigun -= 1;
+			global.ammo_special -= 1;
 			break;
 		case "Shotgun":
 			if (ammo < max_ammo) and (global.ammo_shotgun > 0)
