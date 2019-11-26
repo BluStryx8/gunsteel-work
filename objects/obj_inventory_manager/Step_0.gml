@@ -1,13 +1,22 @@
 /// @description Check for key input
 
-audio_group_set_gain(music,global.music_value,0)
+audio_group_set_gain(music, global.music_value, 0)
 if !audio_is_playing(msc_dungeon)
 {
 	audio_play_sound(msc_dungeon,1,true)
 }
 
-
-
+if (room == rm_mainmenu and change_check != -1)
+{
+	global.p_active = item_type.none;
+	inv_update_active(-1);
+}
+else if (room == rm_game and change_check == -1)
+{
+	active_item = 0;
+	global.p_active = inventory[active_item];
+	inv_update_active(active_item);
+}
 if (global.paused or global.death) exit;	// Exits if paused
 
 // Active Item
@@ -30,31 +39,18 @@ else global.p_active = item_type.none;
 obj_player.sprite = inv_get_sprite(global.p_active);
 
 // Update current item
-if (!global.holstered or global.invupdate)
+if (!global.holstered)
 {
 	// Check for Change
-	if (active_item != change_check or global.invupdate)
+	if (active_item != change_check)
 	{
-		change_check = active_item;
-		obj_player.fire = 0;
-		obj_player.focus = 0;
-		obj_player.reloading = 0;
-		obj_player.wind = 0;
-		obj_cursor_bracket.rotate = 0;
-		global.invupdate = false;
-		inv_use_script(global.p_active, "change");
+		inv_update_active(active_item);
 	}
 }
 // Disable held when holstered
 else if (change_check != -1)
 {
-	change_check = -1;
-	obj_player.fire = 0;
-	obj_player.focus = 0;
-	obj_player.reloading = 0;
-	obj_player.wind = 0;
-	obj_cursor_bracket.rotate = 0;
-	inv_use_script(global.p_active, "change");
+	inv_update_active(-1);
 }
 
 // Click
@@ -80,161 +76,100 @@ if keyboard_check_pressed(ord("I"))
 /// Drag and Drop
 if (global.in_inv)    ///This part find which row or column your mouse is hovering over
 {
-	
-	mousex = device_mouse_x_to_gui(0)
-	mousey = device_mouse_y_to_gui(0)
-	
-	
-	
-		if mousey >= camera_get_view_height(0) - spr_hotbar_height and mousex > gui_holder_pos_x and mousex < gui_holder_pos_x + sprite_get_width(spr_hotbar)
-		{
-			inv_row = 3
-		}
-		
-		if mousey >= camera_get_view_height(0) - spr_hotbar_height*2 and mousey < camera_get_view_height(0) - spr_hotbar_height and mousex > gui_holder_pos_x and mousex < gui_holder_pos_x + sprite_get_width(spr_hotbar)
-		{
-			inv_row = 2
-		}
-		
-		if mousey >= camera_get_view_height(0) - spr_hotbar_height*3 and mousey < camera_get_view_height(0) - spr_hotbar_height*2 and mousex > gui_holder_pos_x and mousex < gui_holder_pos_x + sprite_get_width(spr_hotbar)
-		{
-			inv_row = 1
-		}
-		
-		if mousex >= (gui_holder_pos_x + divider_width) and mousex < (gui_holder_pos_x + divider_width + cell_width) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
-		{
-			inv_column = 1
-		}
-		
-		if mousex >= (gui_holder_pos_x + divider_width*2 + cell_width) and mousex < (gui_holder_pos_x + divider_width*2 + cell_width*2) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
-		{
-			inv_column = 2 
-		}
-		
-		if mousex >= (gui_holder_pos_x + divider_width*3 + cell_width*2) and mousex < gui_holder_pos_x + (divider_width*3 + cell_width*3) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
-		{
-			inv_column = 3
-		}
-
-		if mousex >= (gui_holder_pos_x + divider_width*4 + cell_width*3) and mousex < gui_holder_pos_x + (divider_width*4 + cell_width*4) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
-		{
-			inv_column = 4
-		}
-		
-		if mousex >= (gui_holder_pos_x + divider_width*5) + cell_width*4 and mousex < (gui_holder_pos_x + divider_width*5 + cell_width*5) and mousey > camera_get_view_height(0) - spr_hotbar_height*3
-		{
-			inv_column = 5
-		}
-	
-	/// Uses row and column to determine which cell your mouse is hovering over
-	
-		switch(inv_row)
-		{
-			case 1:
-				selected_cell = inv_column -1
-			break;
-			
-			case 2:
-				selected_cell = inv_column + 4
-			break;
-			
-			case 3:
-				selected_cell = inv_column + 9
-			break;
-		}
-		
-
-/// this part sets your pickup item to the cell's inventory reference if there is an item in that cell
-/// this subsequently draws it in the draw event
-if(mouse_check_button_pressed(mb_left))
+	mousex = device_mouse_x_to_gui(0);
+	mousey = device_mouse_y_to_gui(0);
+	var _constraint = true;
+	inv_row = 0;
+	inv_column = 0;
+	// Rows
+	for (var _n = 0; _n < gui_hotbar_rows; _n++)
 	{
-		if inventory[selected_cell] != item_type.none and mousey > camera_get_view_height(0) - spr_hotbar_height*3 and mousex >= gui_holder_width and mousex <= gui_holder_width + spr_hotbar_height * 5
+		if (mousey >= camera_get_view_height(0) - gui_holder_height * (_n + 1))
+			and (mousey < camera_get_view_height(0) - gui_holder_height * _n)
 		{
-			pickup_item = selected_cell
-			item_in_hand = true
-		}
-		
-		else
-		{
-			item_in_hand = false
+			inv_row = gui_hotbar_rows - _n;
+			break;
 		}
 	}
-	
-	
-	
-	if item_in_hand = true and global.in_furnace = true
+	// Columns
+	for (var _n = 0; _n < gui_hotbar_columns; _n++)
 	{
-		furnace_slot = pickup_item
+		if (mousex >= gui_holder_pos_x + (gui_holder_pad + gui_holder_slot_offset_x) * _n)
+			and (mousex < gui_holder_pos_x + (gui_holder_pad + gui_holder_slot_offset_x) * (_n + 1))
+		{
+			inv_column = _n + 1;
+			break;
+		}
 	}
-
-	if global.in_furnace = true
+	// Uses row and column to determine which cell your mouse is hovering over
+	if (inv_column == 0) inv_row = 0;
+	switch(inv_row)
 	{
-		if mousex > gui_holder_pos_x and mousex < gui_holder_pos_x +cell_width and mousey > display_get_gui_height()/3 and mousey < display_get_gui_height()/3 + cell_width 
+		case 0:
+			selected_cell = -1;
+			break;
+		case 1:
+			selected_cell = inv_column - 1;
+			break;
+		case 2:
+			selected_cell = inv_column + 4;
+			break;
+		case 3:
+			selected_cell = inv_column + 9;
+			break;
+	}
+	if (selected_cell == -1) _constraint = false;
+	// Sets your pickup item to the cell's inventory reference if there is an item in that cell
+	// Subsequently draws it in the draw event
+	if(mouse_check_button_pressed(mb_left))
+	{
+		if (_constraint)
+		{
+			if (!item_in_hand)
 			{
-				if mouse_check_button_pressed(mb_right)
+				// Select the item if the current slot is not empty
+				if (inventory[selected_cell] != item_type.none)
 				{
-					item_in_slot = true
+					pickup_item = selected_cell;
+					item_in_hand = true;
 				}
-				
-				if mouse_check_button_pressed(mb_left)
-				{
-					item_in_slot = false
-				}
-			}
-	}
-	else
-	{
-		item_in_slot = false
-		furnace_slot = -1
-		
-	}
-	
-
-	
-	/// if you have an item in your gand, check if the slot you click if empty
-	/// if so set your hand to 0, clicked slot to the old slot, old slot to empty then reset variables
-	
-	if item_in_hand = true
-	{
-		if (mouse_check_button_pressed(mb_right))
-		{
-			if inventory[selected_cell] = item_type.none
-			{
-				inventory[selected_cell] = inventory[pickup_item]
-				inventory[pickup_item] = item_type.none
 			}
 			else
 			{
-				old_item = inventory[selected_cell];
-				inventory[selected_cell] = inventory[pickup_item]
-				inventory[pickup_item] = old_item
+				// Swap the item with the slot selected
+				if (inventory[selected_cell] = item_type.none)
+				{
+					inventory[selected_cell] = inventory[pickup_item];
+					inventory[pickup_item] = item_type.none;
+				}
+				else
+				{
+					old_item = inventory[selected_cell];
+					inventory[selected_cell] = inventory[pickup_item];
+					inventory[pickup_item] = old_item;
+				}
+				global.p_active = inventory[active_item];	
+				inv_update_active(active_item);
+				item_in_hand = false;
+				pickup_item = -1;
+				selected_cell = -1;
 			}
-			global.p_active = inventory[active_item];	
-			change_check = active_item;
-			obj_player.fire = 0;
-			obj_player.focus = 0;
-			obj_player.reloading = 0;
-			obj_cursor_bracket.rotate = 0;
-			inv_use_script(global.p_active, "change");
-			item_in_hand = false
-			pickup_item = -1
-			selected_cell = -1
 		}
-		
+		else if (item_in_hand)
+		{
+			item_in_hand = false;
+			pickup_item = -1;
+			selected_cell = -1;
+		}
 	}
+	/// if you have an item in your gand, check if the slot you click if empty
+	/// if so set your hand to 0, clicked slot to the old slot, old slot to empty then reset variables
 }
 
-/// backup if item_in_hand was not reset
+/// Backup if item_in_hand was not reset
 if (!global.in_inv)
 {
-	item_in_hand = false
-	selected_cell = -1
-	pickup_item = -1
+	item_in_hand = false;
+	selected_cell = -1;
+	pickup_item = -1;
 }
-	
-if (!global.in_furnace)
-{
-	furnace_slot = -1
-	item_in_slot = false
-}
-

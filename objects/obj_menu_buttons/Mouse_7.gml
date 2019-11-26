@@ -51,5 +51,5 @@ if (room == rm_mainmenu)
 }
 else
 {
-	global.settings = false
+	global.settings = false;
 }

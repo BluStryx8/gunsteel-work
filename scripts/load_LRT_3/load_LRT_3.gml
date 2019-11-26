@@ -30,11 +30,11 @@ switch (_id)
 				spawn_tile_rect(40, 48, 28, 20, 2, 2, 0, obj_crate);
 				break;
 			case "chest":
-				load_tile(30, 15, obj_chest);
+				load_tile(30, 12, obj_chest);
 				break;
 		}
 		break;
 	case "end":
-		load_tile(30, 15, obj_next_floor);
+		load_tile(30, 18, obj_next_floor);
 		break;
 }

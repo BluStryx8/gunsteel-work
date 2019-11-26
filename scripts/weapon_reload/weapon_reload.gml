@@ -18,8 +18,12 @@ switch (type)
 		ammo = 0;
 		break;
 	case "Minigun":
-		if (global.ammo_minigun > 0) _success = true;
-		ammo = 0;
+		if (ammo == max_ammo) global.ammo_minigun += 1;
+		if (global.ammo_minigun > 0)
+		{
+			_success = true;
+			ammo = 0;
+		}
 		break;
 	case "Shotgun":
 		if (global.ammo_shotgun > 0 or ammo > 0) _success = true;

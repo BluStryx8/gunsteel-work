@@ -39,6 +39,7 @@ switch (_id)
 						spawn_tile_rect(20, 38, 28, 28, 8, 2, 3, obj_crate);
 						break;
 				}
+				break;
 			case "chest":
 				load_tile(30, 20, obj_chest);
 				break;

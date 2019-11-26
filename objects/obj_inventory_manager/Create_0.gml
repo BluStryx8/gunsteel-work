@@ -3,22 +3,24 @@ inv_init();
 
 active_item = 0;
 change_check = -1;
-global.in_inv = false
+global.in_inv = false;
 
-inv_row = 1
-inv_column = 1
-spr_hotbar_height = 76
+inv_row = 0;
+inv_column = 0;
 
-cell_width = 64
-divider_width = 6
+gui_holder_width		 = sprite_get_width(spr_hotbar);
+gui_holder_height		 = sprite_get_height(spr_hotbar);
+gui_holder_pos_x		 = (camera_get_view_width(0) / 2) - (gui_holder_width / 2);
+gui_holder_pad			 = 6;
+gui_holder_slot_offset_x = 64 + gui_holder_pad;
+gui_hotbar_rows			 = 3;
+gui_hotbar_columns		 = 5;
 
-selected_cell = -1
-pickup_item = -1
-item_in_hand = false
-item_in_slot = false
-old_item = -1
+selected_cell = -1;
+pickup_item = -1;
+item_in_hand = false;
+old_item = -1;
 
-logo_alpha = 0
+logo_alpha = 0;
 
-global.settings = false
-global.in_furnace = false;
+global.settings = false;

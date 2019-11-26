@@ -4,11 +4,13 @@ var _alpha = 1;
 if (global.death and instance_exists(obj_game_over)) _alpha -= obj_game_over.alpha;
 
 // Set Variables
-gui_holder_width = sprite_get_width(spr_hotbar);
-gui_holder_height = sprite_get_height(spr_hotbar);
-gui_holder_pos_x = (camera_get_view_width(0) / 2) - (gui_holder_width / 2);
-gui_holder_pad   = 6;
+gui_holder_width		 = sprite_get_width(spr_hotbar);
+gui_holder_height		 = sprite_get_height(spr_hotbar);
+gui_holder_pos_x		 = (camera_get_view_width(0) / 2) - (gui_holder_width / 2);
+gui_holder_pad			 = 6;
 gui_holder_slot_offset_x = 64 + gui_holder_pad;
+gui_hotbar_rows			 = 3;
+gui_hotbar_columns		 = 5;
 display_set_gui_size(camera_get_view_width(0), camera_get_view_height(0));
 if (global.in_inv) hotbar_height = view_get_hport(0) - gui_holder_height * 3
 	else hotbar_height = view_get_hport(0) - gui_holder_height;
@@ -115,7 +117,7 @@ if (global.in_inv) and (!global.settings)
 }
 
 if selected_cell > -1
-	if (inventory[selected_cell] != item_type.none and mousey > camera_get_view_height(0) - spr_hotbar_height*3)
+	if (inventory[selected_cell] != item_type.none and mousey > camera_get_view_height(0) - gui_holder_height * gui_hotbar_rows)
 	{
 		var _inv    = inventory[selected_cell];
 		draw_stats(_inv, gui_holder_pos_x + gui_holder_width + 16, hotbar_height - 16);
@@ -123,19 +125,13 @@ if selected_cell > -1
 	}
 	
 /// if you are holding something draw it
-if (item_in_hand)
+if (item_in_hand and global.in_inv)
 {
 	if (pickup_item != -1)
 	{
 		var draw_item = inventory[pickup_item]
 		draw_sprite_ext(item_definitions[draw_item, item_properties.sprite_gui], -1, mousex,mousey, 1, 1, 0, _col, 1);
 	}
-}
-
-if (global.in_furnace and  item_in_slot and furnace_slot != -1)
-{
-	var draw_furnace = inventory[furnace_slot]
-	draw_sprite_ext(item_definitions[draw_furnace, item_properties.sprite_gui], -1, gui_holder_pos_x +40 ,display_get_gui_height()/3 +37, 1, 1, 0, _col, 1);
 }
 
 if (global.in_inv) exit;
@@ -328,7 +324,6 @@ if (global.settings) and (room != rm_mainmenu)
 	//create back button
 	back = instance_create_layer(xx_center + 200 ,yy_vslider + 160, "control",obj_menu_buttons)
 	back.image_index = 4
-
 }
 
 

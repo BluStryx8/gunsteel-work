@@ -35,12 +35,12 @@ switch (_id)
 				spawn_tile_rect(36, 52, 30, 30, 8, 2, 2, obj_crate);
 				break;
 			case "chest":
-				load_tile(29, 27, obj_chest);
+				load_tile(30, 27, obj_chest);
 				break;
 			}
 			break;
 	case "start":
 		// Sets Spawn
-		set_spawn(29, 27);
+		set_spawn(30, 27);
 		break;
 }
