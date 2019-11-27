@@ -23,12 +23,12 @@ switch (_id)
 			case "crate":
 				break;
 			case "chest":
-				load_tile(46, 21, obj_chest);
+				load_tile(48, 21, obj_chest);
 				break;
 		}
 		break;
 	case "end":
 		// Sets Exit
-		load_tile(46, 20, obj_next_floor);
+		load_tile(48, 20, obj_next_floor);
 		break;
 }

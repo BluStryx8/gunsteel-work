@@ -28,3 +28,5 @@ _control.waves = 0;
 _control.biome = biome[_x, _y];
 _control.combat = false;
 _control.alpha = 0;
+_control.chest_weapon = irandom_range(1, item_type.w_length - 1);
+_control.chest_consume = irandom_range(item_type.w_length + 1, item_type.c_length - 1);

@@ -339,6 +339,7 @@ else
 if (!debug_cam)
 {
 	// Centre camera on player
+	camera_set_view_size(view_camera[0], camera_width, camera_height);
 	camera_set_view_pos(view_camera[0], x - h_move - camera_width / 2 + shake_x,
 										y - v_move - camera_height / 2 + shake_y);
 	// Scoping
@@ -365,6 +366,7 @@ if (!debug_cam)
 		((camera_pan - 1) * x / camera_pan + mouse_x / camera_pan) - camera_width / 2 + shake_x,
 		((camera_pan - 1) * y / camera_pan + mouse_y / camera_pan) - camera_height / 2 + shake_y);
 	}
+	debug_zoom = 1;
 	debug_x = x;
 	debug_y = y;
 }

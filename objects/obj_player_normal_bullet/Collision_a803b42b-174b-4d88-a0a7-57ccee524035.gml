@@ -9,22 +9,20 @@ with (other)
 	hp -= other.damage;
 	if (hp <= 0)
 	{
-		instance_destroy();
-		if (irandom_range(1, 25) == 1)
+		if (stored != -1)
 		{
 			var _x_offset = 16;
 			if (image_index == 0)
 				var _y_offset = 32;
 			else
 				var _y_offset = 16;
-			if (choose(true, false))
-				var _to_create = obj_item_pickup_potion;
-			else
-				var _to_create = obj_item_pickup_ammo_crate;
-			instance_create_layer(x + _x_offset, y + _y_offset, "items", _to_create);
+			instance_create_layer(x + _x_offset, y + _y_offset, "items", stored);
 		}
 		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 		audio_play_sound(snd_crate_break, 1, false);
+		instance_destroy();
+		var _multiplier = 0.1;
+		score += floor(max_hp) * _multiplier;
 	}
 	// Draw damage
 	dmg = instance_create_layer(x, y, "HUD", obj_dmg_number);
