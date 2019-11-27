@@ -38,7 +38,7 @@ ds_map_add(global.weapons[0], "pump_time", 0);			// (For pump-action) Time to pu
 // 1911
 global.weapons[1] = ds_map_create();
 ds_map_add(global.weapons[1], "weapon", "1911");
-ds_map_add(global.weapons[1], "type", "Pistol");
+ds_map_add(global.weapons[1], "type", "Handgun");
 ds_map_add(global.weapons[1], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[1], "upgrades", 0);
 ds_map_add(global.weapons[1], "hands", 1);
@@ -72,7 +72,7 @@ ds_map_add(global.weapons[1], "pump_time", 0);
 // Glock 17
 global.weapons[2] = ds_map_create();
 ds_map_add(global.weapons[2], "weapon", "Glock 17");
-ds_map_add(global.weapons[2], "type", "Pistol");
+ds_map_add(global.weapons[2], "type", "Handgun");
 ds_map_add(global.weapons[2], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[2], "upgrades", 0);
 ds_map_add(global.weapons[2], "hands", 1);
@@ -106,7 +106,7 @@ ds_map_add(global.weapons[2], "pump_time", 0);
 // Uzi
 global.weapons[3] = ds_map_create();
 ds_map_add(global.weapons[3], "weapon", "Uzi");
-ds_map_add(global.weapons[3], "type", "Pistol");
+ds_map_add(global.weapons[3], "type", "Handgun");
 ds_map_add(global.weapons[3], "atk_type", "Automatic");
 ds_map_add(global.weapons[3], "upgrades", 0);
 ds_map_add(global.weapons[3], "hands", 1);
@@ -140,7 +140,7 @@ ds_map_add(global.weapons[3], "pump_time", 0);
 // Mad Taurus
 global.weapons[4] = ds_map_create();
 ds_map_add(global.weapons[4], "weapon", "Mad Taurus");
-ds_map_add(global.weapons[4], "type", "Pistol");
+ds_map_add(global.weapons[4], "type", "Handgun");
 ds_map_add(global.weapons[4], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[4], "upgrades", 0);
 ds_map_add(global.weapons[4], "hands", 1);
@@ -174,7 +174,7 @@ ds_map_add(global.weapons[4], "pump_time", 0);
 // Desert Eagle
 global.weapons[5] = ds_map_create();
 ds_map_add(global.weapons[5], "weapon", "Desert Eagle");
-ds_map_add(global.weapons[5], "type", "Pistol");
+ds_map_add(global.weapons[5], "type", "Handgun");
 ds_map_add(global.weapons[5], "atk_type", "Semi-automatic");
 ds_map_add(global.weapons[5], "upgrades", 0);
 ds_map_add(global.weapons[5], "hands", 1);

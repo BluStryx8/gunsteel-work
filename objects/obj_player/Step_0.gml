@@ -182,7 +182,7 @@ if (fire > 0 and fire_cooldown == 0)
 		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
 		switch (type)
 		{
-			case "Pistol":
+			case "Handgun":
 			case "Assault Rifle":
 				var _bullet = obj_player_normal_bullet;
 				audio_play_sound(snd_fire_rifle, 1, false);
@@ -250,7 +250,7 @@ if (reloading == 30)
 	accuracy = max_recoil;
 	switch (type)
 	{
-		case "Pistol":
+		case "Handgun":
 			ammo = max_ammo;
 			break;
 		case "Assault Rifle":

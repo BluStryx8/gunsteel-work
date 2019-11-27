@@ -16,7 +16,6 @@ if (global.in_inv) hotbar_height = view_get_hport(0) - gui_holder_height * 3
 	else hotbar_height = view_get_hport(0) - gui_holder_height;
 gui_holder_pos_y = 32 + hotbar_height;
 
-
 // Declare Draw Constants
 draw_set_halign(fa_right);
 draw_set_font(fnt_inventory);
@@ -116,7 +115,7 @@ if (global.in_inv) and (!global.settings)
 	draw_set_halign(fa_right);
 }
 
-if selected_cell > -1
+if (selected_cell > -1 and global.in_inv)
 	if (inventory[selected_cell] != item_type.none and mousey > camera_get_view_height(0) - gui_holder_height * gui_hotbar_rows)
 	{
 		var _inv    = inventory[selected_cell];
@@ -147,7 +146,7 @@ var _weapon = false;
 var _total_ammo = 0;
 switch (obj_player.type)
 {
-	case "Pistol":
+	case "Handgun":
 		draw_sprite_ext(_sprite, -1, view_get_wport(0) + _weap_offset_x - 16,
 						view_get_hport(0) + _weap_offset_y - 16, 1, 1, 0, _col, _alpha);
 		_weapon = true;
@@ -201,7 +200,7 @@ var _top_pad = 80;				// Height from top when to move to next row
 var _draw = spr_gui_empty;
 switch (obj_player.type)
 {
-	case "Pistol":
+	case "Handgun":
 		_draw = spr_ammo_pistolbullet;
 		break;
 	case "Assault Rifle":
@@ -251,59 +250,64 @@ if obj_player.type = "Minigun"
 					view_get_hport(0) + _mode_y_offset, 0.5, 0.5, 0, _col, _alpha);
 }
 
-if global.paused = true and (!global.settings) 
+if global.paused and (!global.settings) 
 {
-	if logo_alpha < 1
+	if (logo_alpha < 1)
 	{
-		logo_alpha = logo_alpha + 0.015
+		logo_alpha = logo_alpha + 0.015;
 	}
-	
-	draw_sprite_ext(spr_main_icon,0,display_get_gui_width()/2 ,display_get_gui_height()/2-190,0.8,0.8,0,c_white,logo_alpha)
-	draw_sprite_ext(spr_main_menu_buttons,3,display_get_gui_width()/2, display_get_gui_height()/2-75,0.8,0.8,0,c_ltgray,1)
-	draw_sprite_ext(spr_main_menu_buttons,1,display_get_gui_width()/2, display_get_gui_height()/2-10,0.8,0.8,0,c_ltgray,1)
-	draw_sprite_ext(spr_main_menu_buttons,2,display_get_gui_width()/2, display_get_gui_height()/2+55,0.8,0.8,0,c_ltgray,1)
-}
-else
-{
-	logo_alpha = 0
-}
-
-
-//Pause menu code
-if global.paused and !global.settings
-{
-	pmousex = device_mouse_x_to_gui(0)
-	pmousey = device_mouse_y_to_gui(0)
-	if pmousex >= camera_get_view_width(0)/2 - 120 and pmousex <= camera_get_view_width(0)/2 + 120
+	var _width = display_get_gui_width();
+	var _height = display_get_gui_height();
+	var _scale = 1;
+	var _logo_height = _height * 2 / 10;
+	draw_sprite_ext(spr_main_icon, 0, _width / 2, _logo_height,
+					_scale, _scale, 0, c_white, logo_alpha);
+	var _button_height_1 = _height * 6 / 10;
+	var _button_height_2 = _height * 7 / 10;
+	var _button_height_3 = _height * 8 / 10;
+	draw_sprite_ext(spr_main_menu_buttons, 3, _width / 2, _button_height_1,
+					_scale, _scale, 0, c_white, 1);
+	draw_sprite_ext(spr_main_menu_buttons, 1, _width / 2, _button_height_2,
+					_scale, _scale, 0, c_white, 1);
+	draw_sprite_ext(spr_main_menu_buttons, 2, _width / 2, _button_height_3,
+					_scale, _scale, 0, c_white, 1);
+	// Pause Menu Code
+	var _top	= sprite_get_bbox_top(spr_main_menu_buttons) - sprite_get_yoffset(spr_main_menu_buttons);
+	var _bottom = sprite_get_bbox_bottom(spr_main_menu_buttons) - sprite_get_yoffset(spr_main_menu_buttons);
+	var _left	= sprite_get_bbox_left(spr_main_menu_buttons) - sprite_get_xoffset(spr_main_menu_buttons);
+	var _right	= sprite_get_bbox_right(spr_main_menu_buttons) - sprite_get_xoffset(spr_main_menu_buttons);
+	pmousex = device_mouse_x_to_gui(0);
+	pmousey = device_mouse_y_to_gui(0);
+	if (pmousex >= _width / 2 + _left and pmousex <= _width / 2 + _right)
 	{
-		if pmousey >= camera_get_view_height(0)/2-100 and pmousey < camera_get_view_height(0)/2- 60 and mouse_check_button_pressed(mb_left)
+		if (pmousey >= _button_height_1 + _top) and (pmousey < _button_height_1 + _bottom)
+			and mouse_check_button_pressed(mb_left)
 		{
-			global.paused = false
-			global.settings = false
+			global.paused = false;
+			global.settings = false;
 		}
-		
-		if pmousey >= camera_get_view_height(0)/2-35 and pmousey < camera_get_view_height(0)/2 + 5 and mouse_check_button_pressed(mb_left)
+		if (pmousey >= _button_height_2 + _top) and (pmousey < _button_height_2 + _bottom)
+			and mouse_check_button_pressed(mb_left)
 		{
-			global.settings = true
-			
+			global.settings = true;
 		}
-		
-		if pmousey >= camera_get_view_height(0)/2+ 30 and pmousey < camera_get_view_height(0)/2 + 60 and mouse_check_button_pressed(mb_left)
+		if (pmousey >= _button_height_3 + _top) and (pmousey < _button_height_3 + _bottom)
+			and mouse_check_button_pressed(mb_left)
 		{
 			// Quit
 			global.truepause = true;
-			instance_create_layer(x,y,"fade",obj_fade_out_to_menu)
-			global.settings = false
-			global.holstered = true
-			
+			instance_create_layer(x, y, "fade", obj_fade_out_to_menu);
+			global.settings = false;
+			global.holstered = true;
 		}
-		
-		
 	}
 }
+else
+{
+	logo_alpha = 0;
+}
 
-// pause menu
-
+// Pause Menu
 if (global.settings) and (room != rm_mainmenu)
 {
 	//declaratiion of position
@@ -312,21 +316,16 @@ if (global.settings) and (room != rm_mainmenu)
 	xx_center = (camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])/2));
 	
 	//creating settings text and slider
-	instance_create_layer(xx_vslider,yy_vslider - 50,"control",obj_slider_sounds_volume)
-	instance_create_layer(xx_vslider,yy_vslider + 75 ,"control",obj_slider_music_volume)
-	settings = instance_create_layer(xx_center,yy_vslider - 150, "control",obj_menu_buttons)
-	settings.image_index = 1
+	instance_create_layer(xx_vslider, yy_vslider - 50, "control", obj_slider_sounds_volume)
+	instance_create_layer(xx_vslider, yy_vslider + 75, "control", obj_slider_music_volume)
+	settings = instance_create_layer(xx_center, yy_vslider - 150, "control", obj_menu_buttons)
+	settings.image_index = 1;
 	
 	//creating sound text
-	sound = instance_create_layer(xx_center,yy_vslider - 75, "control",obj_menu_buttons)
-	sound.image_index = 5
+	sound = instance_create_layer(xx_center,yy_vslider - 75, "control", obj_menu_buttons)
+	sound.image_index = 5;
 	
 	//create back button
-	back = instance_create_layer(xx_center + 200 ,yy_vslider + 160, "control",obj_menu_buttons)
-	back.image_index = 4
+	back = instance_create_layer(xx_center + 200, yy_vslider + 160, "control", obj_menu_buttons)
+	back.image_index = 4;
 }
-
-
-
-
-	

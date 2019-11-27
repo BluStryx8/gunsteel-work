@@ -1,6 +1,6 @@
 /// @description Check Click
 if (room == rm_mainmenu)
-	{
+{
 	switch (image_index)
 	{
 		case 0:
@@ -51,5 +51,5 @@ if (room == rm_mainmenu)
 }
 else
 {
-	global.settings = false;
+	if (image_index == 4) global.settings = false;
 }

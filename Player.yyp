@@ -55,14 +55,6 @@
             }
         },
         {
-            "Key": "01a74c67-8dae-43e0-a756-b860990ba84e",
-            "Value": {
-                "id": "1396046c-20fd-4d43-9823-2cd10f6f2dce",
-                "resourcePath": "objects\\obj_fade_rectangle\\obj_fade_rectangle.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "0212acc2-9bd6-4367-99ba-b2beb1339bba",
             "Value": {
                 "id": "c8a341aa-e12b-472b-b1fd-30ad7f9ec60c",

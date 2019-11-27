@@ -3,7 +3,7 @@
 var _success = false;
 switch (type)
 {
-	case "Pistol":
+	case "Handgun":
 		_success = true;
 		ammo = 0;
 		break;
