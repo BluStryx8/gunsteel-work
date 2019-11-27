@@ -22,6 +22,8 @@ else
 }
 if (room == rm_game)
 {
+	h_move = 0;
+	v_move = 0;
 	global.holstered = false;
 	if (room_last = rm_game)
 	{
