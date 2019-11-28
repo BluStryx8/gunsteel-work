@@ -1247,14 +1247,6 @@
             }
         },
         {
-            "Key": "5e5fc41b-4e9b-465d-807e-a0c9fb815f40",
-            "Value": {
-                "id": "2640d528-95ce-4ec0-b075-feb30f3d3847",
-                "resourcePath": "objects\\obj_slider_sounds_music_pause\\obj_slider_sounds_music_pause.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "5e95334e-ecf7-4c31-b11e-9ae4c8eec8a7",
             "Value": {
                 "id": "7e3a044d-c0c7-4006-a308-4e85e3d9766b",
@@ -3084,14 +3076,6 @@
                 "id": "7f2f129c-5edb-45c1-b38a-0884b3a89756",
                 "resourcePath": "views\\e6f7b8d1-981d-40d3-ac42-c5b68066a60f.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "e777fe5a-e5ad-4868-85ac-ca29c9613977",
-            "Value": {
-                "id": "ab396dc0-ebc6-477c-ab85-b3c51db5349e",
-                "resourcePath": "objects\\obj_slider_sounds_volume_pause\\obj_slider_sounds_volume_pause.yy",
-                "resourceType": "GMObject"
             }
         },
         {

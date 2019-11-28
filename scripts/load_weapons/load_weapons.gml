@@ -36,7 +36,7 @@ ds_map_replace(global.weapons[22], "ammo", ini_read_real("mag" , "mossberg 500" 
 ds_map_replace(global.weapons[31], "ammo", ini_read_real("mag" , "omark" , 1));
 ds_map_replace(global.weapons[32], "ammo", ini_read_real("mag" , "tesro" , 1));
 
-ds_map_replace(global.weapons[41], "ammo", ini_read_real("mag" , "minigun" , 1000));
+ds_map_replace(global.weapons[41], "ammo", ini_read_real("mag" , "minigun" , 300));
 //ammo
 global.ammo_rifle = ini_read_real("ammo","rifle",300)
 global.ammo_sniper = ini_read_real("ammo","sniper",30)

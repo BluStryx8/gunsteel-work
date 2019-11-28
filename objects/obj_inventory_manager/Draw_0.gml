@@ -1,8 +1,8 @@
 /// @description Draws Faded Rectangle
-var _x1 = view_get_xport(0);
-var _y1 = view_get_yport(0);
-var _x2 = _x1 + view_get_wport(0);
-var _y2 = _y1 + view_get_hport(0);
+var _x1 = camera_get_view_x(view_camera[0]);
+var _y1 = camera_get_view_y(view_camera[0]);
+var _x2 = _x1 + camera_get_view_width(view_camera[0]);
+var _y2 = _y1 + camera_get_view_height(view_camera[0]);
 
 // Paused
 if (!room = rm_mainmenu)

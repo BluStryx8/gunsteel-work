@@ -94,8 +94,8 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 	// Columns
 	for (var _n = 0; _n < gui_hotbar_columns; _n++)
 	{
-		if (mousex >= gui_holder_pos_x + (gui_holder_pad + gui_holder_slot_offset_x) * _n)
-			and (mousex < gui_holder_pos_x + (gui_holder_pad + gui_holder_slot_offset_x) * (_n + 1))
+		if (mousex >= gui_holder_pos_x + (gui_holder_slot_offset_x) * _n)
+			and (mousex < gui_holder_pos_x + (gui_holder_slot_offset_x) * (_n + 1))
 		{
 			inv_column = _n + 1;
 			break;
