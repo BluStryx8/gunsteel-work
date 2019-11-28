@@ -10,7 +10,7 @@ with (other)
 	if (hp <= 0)
 	{
 		instance_destroy();
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 		audio_play_sound(snd_crate_break, 1, false);
 	}
 	// Draw damage

@@ -179,7 +179,7 @@ if (fire > 0 and fire_cooldown == 0)
 	if (ammo > 0 and pump == 0)
 	{
 		// Set bullet type, and do sound
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 		switch (type)
 		{
 			case "Handgun":
@@ -231,7 +231,7 @@ if (wind > 0 and not mouse_check_button(mb_left))
 	wind -= 1;
 	if !audio_is_playing(snd_minigun_winddown)
 	{
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 		audio_stop_sound(snd_minigun_windup);
 		audio_play_sound(snd_minigun_winddown, 1, false);
 	}
@@ -245,7 +245,7 @@ if (reloading > 1) reloading -= 1;							// Decrease reloading count
 // Pre-emptive reload
 if (reloading == 30)
 {
-	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+	audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 	audio_play_sound(snd_reload_clip, 1, false);
 	accuracy = max_recoil;
 	switch (type)
@@ -301,7 +301,7 @@ if (reloading == 30)
 }
 if (reloading == 15)										
 {
-	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+	audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 	audio_play_sound(snd_reload_shotgun, 1, false);
 }
 // Reload

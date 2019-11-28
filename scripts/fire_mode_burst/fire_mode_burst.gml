@@ -25,7 +25,7 @@ if (mouse_check_button_pressed(mb_right))
 		}
 		burst = ds_map_find_value(global.weapons[_w], "burst");
 		atk_type = ds_map_find_value(global.weapons[_w], "atk_type");
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 		audio_play_sound(snd_reload_clip, 1, false);
 	}
 }

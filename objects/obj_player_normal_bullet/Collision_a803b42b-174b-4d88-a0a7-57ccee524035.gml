@@ -18,7 +18,7 @@ with (other)
 				var _y_offset = 16;
 			instance_create_layer(x + _x_offset, y + _y_offset, "items", stored);
 		}
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 		audio_play_sound(snd_crate_break, 1, false);
 		instance_destroy();
 		var _multiplier = 0.1;

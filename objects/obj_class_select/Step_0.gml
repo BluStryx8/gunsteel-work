@@ -19,7 +19,7 @@ if (position_meeting(mouse_x, mouse_y, id))
 {
 	if (!highlight)
 	{
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 		audio_stop_sound(snd_reload_eject_clip);
 		audio_play_sound(snd_reload_eject_clip, 1, false);
 	}
@@ -27,7 +27,7 @@ if (position_meeting(mouse_x, mouse_y, id))
 	if (mouse_check_button_released(mb_left))
 	{
 		master_id.p_class = class;
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 		audio_stop_sound(snd_reload_eject_clip);
 		audio_play_sound(snd_reload_clip, 1, false);
 	}

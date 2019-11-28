@@ -48,7 +48,7 @@ if (room == rm_dungeon)
 			var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_starter, item_properties.name]);
 			var _upgrades = ds_map_find_value(global.weapons[_w], "upgrades");
 			ds_map_replace(global.weapons[_w], "upgrades", _upgrades + 1);
-			audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+			audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 			audio_play_sound(snd_upgrade, 1, false);
 		}
 	}
@@ -60,14 +60,14 @@ if (room == rm_dungeon)
 			var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_starter, item_properties.name]);
 			var _upgrades = ds_map_find_value(global.weapons[_w], "upgrades");
 			ds_map_replace(global.weapons[_w], "upgrades", _upgrades + 1);
-			audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+			audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 			audio_play_sound(snd_upgrade, 1, false);
 		}
 		if (global.class == "Soldier")
 			if (p_health < p_max_health) and ((global.level + 1) mod 5 == 0)
 			{
 				p_health += 1;
-				audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+				audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 				audio_play_sound(snd_potion, 1, false);
 			}
 	}

@@ -18,7 +18,7 @@ if (_index_added_at != -1)
 			if obj_inventory_manager.item_definitions[_type, item_properties.amount] < 1
 			{
 				obj_inventory_manager.item_definitions[_type, item_properties.amount] += 1;
-				audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+				audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 				audio_play_sound(snd_reload_eject_clip, 1, false);
 			}
 			else
@@ -27,7 +27,7 @@ if (_index_added_at != -1)
 				var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_type, item_properties.name]);
 				var _upgrades = ds_map_find_value(global.weapons[_w], "upgrades");
 				ds_map_replace(global.weapons[_w], "upgrades", _upgrades + 1);
-				audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+				audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 				audio_stop_sound(snd_upgrade);
 				audio_play_sound(snd_upgrade, 1, false);
 			}
@@ -36,7 +36,7 @@ if (_index_added_at != -1)
 			if obj_inventory_manager.item_definitions[_type, item_properties.amount] < STACK
 			{
 				obj_inventory_manager.item_definitions[_type, item_properties.amount] += 1;
-				audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+				audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 				audio_play_sound(snd_reload_eject_clip, 1, false);
 			}
 			else _index_added_at = -1;

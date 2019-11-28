@@ -10,7 +10,7 @@ if mouse_check_button_pressed(mb_left) or mouse_check_button_pressed(mb_right)
 	global.ammo_special += _ammo_special;
 	
 	// Reload Sound
-	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+	audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 	audio_play_sound(snd_reload_shotgun, 1, false);
 	inv_removeitem(item_type.ammo_crate);
 }

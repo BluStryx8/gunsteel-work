@@ -19,7 +19,7 @@ if (combat and enemy_count == 0)
 			var _mult = 3;
 		}
 		else var _mult = 1;
-		audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 		audio_play_sound(snd_reload_clip, 1, false);
 		global.ammo_rifle   += irandom_range(3, 6) * 10 * _mult;
 		global.ammo_sniper  += irandom_range(1, 2) * 3 * _mult;

@@ -31,7 +31,7 @@ switch (type)
 }
 if (_success)
 {
-	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+	audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 	audio_play_sound(snd_reload_eject_clip, 1, false);
 	reloading = reload_time;
 	if (global.class == "Scout")
@@ -44,6 +44,6 @@ if (_success)
 }
 else
 {
-	audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+	audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 	audio_play_sound(snd_dry_fire, 1, false);
 }

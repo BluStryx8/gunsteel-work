@@ -15,7 +15,7 @@ with (obj_player)
 				wind += 1;
 				if !audio_is_playing(snd_minigun_windup)
 				{
-					audio_group_set_gain(audiogrp_sounds, global.settings_sound_volume, 0);
+					audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 					audio_stop_sound(snd_minigun_winddown);
 					audio_play_sound(snd_minigun_windup, 1, false);
 				}
