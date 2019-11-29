@@ -32,7 +32,8 @@ switch (_id)
 				{
 					case "box":
 						// Draws a big box in centre and some outliner crates
-						spawn_tile_rect(26, 32, 30, 26, 2, 2, 0, obj_crate);
+						var _spawn = irandom_range(0, 1);
+						spawn_tile_rect(26, 32, 30, 26, 2, 2, _spawn, obj_crate);
 						spawn_tile_rect(6, 22, 7, 7, 4, 2, 3, obj_crate);
 						spawn_tile_rect(36, 52, 7, 7, 4, 2, 3, obj_crate);
 						break;

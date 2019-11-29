@@ -21,6 +21,23 @@ switch (_id)
 				spawn_wave(_biome, 7, 11);
 				break;
 			case "crate":
+				// Spawns a random amount of crates in each section
+				var _y1 = 29;
+				var _y2 = 25;
+				for (var _m = 0; _m < 2; _m++)
+				{
+					var _x1 = 18;
+					var _x2 = 22;
+					for (var _n = 0; _n < 3; _n++)
+					{
+						var _spawn = irandom_range(0, 3);
+						spawn_tile_rect(_x1, _x2, _y1, _y2, 2, 2, _spawn, obj_crate);
+						_x1 += 14;
+						_x2 += 14;
+					}
+					_y1 -= 16;
+					_y2 -= 16;
+				}
 				break;
 			case "chest":
 				load_tile(12, 21, obj_chest);

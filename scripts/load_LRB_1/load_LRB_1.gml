@@ -28,8 +28,9 @@ switch (_id)
 				break;
 			case "crate":
 				// Draws some boxes on top and in mid
-				spawn_tile_rect(6, 52, 7, 7, 4, 2, 1, obj_crate);
-				spawn_tile_rect(27, 31, 24, 14, 2, 10, 1, obj_crate);	
+				var _spawn = irandom_range(1, 2);
+				spawn_tile_rect(6, 52, 7, 7, 4, 2, _spawn, obj_crate);
+				spawn_tile_rect(27, 31, 24, 14, 2, 10, _spawn, obj_crate);	
 				break;
 			case "chest":
 				load_tile(30, 26, obj_chest);

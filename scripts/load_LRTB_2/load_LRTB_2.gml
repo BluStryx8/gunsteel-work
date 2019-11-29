@@ -28,7 +28,8 @@ switch (_id)
 				break;
 			case "crate":
 				// Spawns a big box in the centre
-				spawn_tile_rect(24, 34, 23, 17, 2, 2, 0, obj_crate);
+				var _spawn = irandom_range(0, 1);
+				spawn_tile_rect(24, 34, 23, 17, 2, 2, _spawn, obj_crate);
 				break;
 			case "chest":
 				load_tile(30, 20, obj_chest);

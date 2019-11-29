@@ -32,7 +32,8 @@ switch (_id)
 				{
 					case "box":
 						// Draws a big box and some small boxes
-						spawn_tile_rect(24, 34, 22, 18, 2, 2, 0, obj_crate);
+						var _spawn = irandom_range(0, 1);
+						spawn_tile_rect(24, 34, 22, 18, 2, 2, _spawn, obj_crate);
 						spawn_tile_rect(10, 16, 14, 10, 2, 2, 3, obj_crate);
 						spawn_tile_rect(10, 16, 30, 26, 2, 2, 3, obj_crate);
 						spawn_tile_rect(42, 48, 14, 10, 2, 2, 3, obj_crate);
@@ -40,10 +41,11 @@ switch (_id)
 						break;
 					case "filled":
 						// Filled small boxes
-						spawn_tile_rect(10, 16, 14, 10, 2, 2, 0, obj_crate);
-						spawn_tile_rect(10, 16, 30, 26, 2, 2, 0, obj_crate);
-						spawn_tile_rect(42, 48, 14, 10, 2, 2, 0, obj_crate);
-						spawn_tile_rect(42, 48, 30, 26, 2, 2, 0, obj_crate);
+						var _spawn = irandom_range(0, 1);
+						spawn_tile_rect(10, 16, 14, 10, 2, 2, _spawn, obj_crate);
+						spawn_tile_rect(10, 16, 30, 26, 2, 2, _spawn, obj_crate);
+						spawn_tile_rect(42, 48, 14, 10, 2, 2, _spawn, obj_crate);
+						spawn_tile_rect(42, 48, 30, 26, 2, 2, _spawn, obj_crate);
 						break;
 					case "sides":
 						// Partly made small boxes

@@ -21,6 +21,9 @@ switch (_id)
 				spawn_wave(_biome, 8, 12);
 				break;
 			case "crate":
+				// Spawns a big crate at the centre
+				var _spawn = irandom_range(0, 1);
+				spawn_tile_rect(24, 34, 23, 17, 2, 2, _spawn, obj_crate);
 				break;
 			case "chest":
 				load_tile(30, 21, obj_chest);
