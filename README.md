@@ -41,6 +41,14 @@ You play as one of three classes:
 
 ------------
 ## Updates:
+Version 0.9.3-alpha
+- The FAMAS has been added to the dungeon
+- Loot from chests and crates are now seed-stored
+- The minigun has been nerfed (Ammo capacity: 1000 > 300), but has a minor damage increase as compensation
+- Nerfed weapon ranges so some weapons cannot hit enemies on the opposite side of the screen as easily
+- Most rooms should now spawn crates, crate drop rates have been reduced to 1%
+- Bug fixes
+
 Version 0.9.2-alpha
 - The Desert Eagle has been added to the dungeon
 - Inventory controls should be better, and the ability to drop items is now added
