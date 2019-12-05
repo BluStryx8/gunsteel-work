@@ -15,8 +15,8 @@ dodge = 0;					// Dodge distance
 h_dodge = 0;				// Horizontal speed of player when init dodge
 v_dodge = 0;				// Vertical speed of player when init dodge
 if (global.class == "Scout")
-	dodge_cooldown = 10;
-else dodge_cooldown = 20;	// Frames before dodge can be used again
+	dodge_cooldown = 20;
+else dodge_cooldown = 30;	// Frames before dodge can be used again
 immune = 0;					// If taken damage recently
 
 // Debug

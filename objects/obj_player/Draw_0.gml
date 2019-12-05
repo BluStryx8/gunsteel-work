@@ -11,7 +11,7 @@ var _times = 1;
 var _flash = 0;
 if (dodge > 0) or (immune > 0 and round(immune / 5) mod 2 == 0)
 {
-	if (dodge > 0) _flash += (dodge / move_speed) / 2;
+	if (dodge > 0) _flash += ((dodge / move_speed) / 2) + 0.05;
 	if (immune > 0 and round(immune / 5) mod 2 == 0) _flash += 0.1;
 	_times = 2;
 }

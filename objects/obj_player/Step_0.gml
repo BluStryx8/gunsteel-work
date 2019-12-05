@@ -76,7 +76,7 @@ else if (dodge > 0)	// If dodging
 	dodge -= 0.25;	// Decrements speed and duration of dodge
 	h_move = clamp(round(h_dodge * dodge), -move_speed * 2, move_speed * 2);
 	v_move = clamp(round(v_dodge * dodge), -move_speed * 2, move_speed * 2);
-	if (dodge <= 0) dodge = -dodge_cooldown;
+	if (dodge <= 0) dodge = -(dodge_cooldown + (weight * 5));
 }
 if (dodge < 0) dodge += 1;
 if (immune > 0) immune -= 1;
