@@ -14,6 +14,7 @@ var _y = floor(view_get_hport(0) * 0.95);
 draw_set_halign(fa_right);
 draw_set_color(c_white);
 draw_set_font(fnt_stat);
+draw_set_alpha(1);
 draw_text(_x, _y, string(game_display_name) + " - Version " + string(GM_version));
 
 /// Draw Run Data

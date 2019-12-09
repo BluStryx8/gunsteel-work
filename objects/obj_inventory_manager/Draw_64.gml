@@ -124,13 +124,31 @@ if (selected_cell > -1 and global.in_inv)
 	}
 	
 /// if you are holding something draw it
-if (item_in_hand and global.in_inv)
+if (global.in_inv)
 {
-	if (pickup_item != -1)
+	var _x = gui_holder_pos_x - 32;
+	var _y = camera_get_view_height(0) - 32;
+	var _l_click = "Select Item";
+	var _r_click = "Drop Item";
+	draw_set_halign(fa_right);
+	draw_set_font(fnt_item_tip);
+	if (item_in_hand)
 	{
-		var draw_item = inventory[pickup_item]
-		draw_sprite_ext(item_definitions[draw_item, item_properties.sprite_gui], -1, mousex,mousey, 1, 1, 0, _col, 1);
+		if (pickup_item != -1)
+		{
+			var draw_item = inventory[pickup_item];
+			draw_sprite_ext(item_definitions[draw_item, item_properties.sprite_gui], -1,
+							mousex, mousey, 1, 1, 0, _col, 1);
+			_l_click = "Swap Selected";
+			if (selected_cell == -1 or selected_cell == pickup_item)
+			{
+				_l_click = "Deselect";
+				_r_click = "Drop Selected";
+			}
+		}
 	}
+	draw_text(_x, _y, "[Left Click] - " + _l_click);
+	draw_text(_x, _y + 16, "[Right Click] - "  + _r_click);
 }
 
 if (global.in_inv) exit;
@@ -243,7 +261,7 @@ if (_draw != spr_gui_empty)
 	if (_bullets >= 3) draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 3,
 									view_get_hport(0) + _mode_y_offset, 1, 1, 270, _col, _alpha);
 }
-if obj_player.type = "Minigun"
+if (obj_player.type == "Minigun")
 {
 	_draw = spr_gui_ammo_crate;
 	draw_sprite_ext(_draw, -1, view_get_wport(0) + _mode_x_offset * 2,

@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "06ee71ea-8d7c-4708-8e78-03819a5c45df",
+            "Value": {
+                "id": "a9719a34-548e-4b52-88e9-3e95fa40b357",
+                "resourcePath": "fonts\\fnt_item_tip\\fnt_item_tip.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "072aadcb-1723-44bf-80c0-72e86574261b",
             "Value": {
                 "id": "80b445c9-9221-488b-9cfd-48278f04936b",
@@ -588,6 +596,14 @@
                 "id": "d7988c75-fe03-4754-a9db-70478e585ecf",
                 "resourcePath": "objects\\obj_item_pickup_famas\\obj_item_pickup_famas.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "297b80fa-3c5a-42bc-89db-0230f73a0c17",
+            "Value": {
+                "id": "b1b05332-1926-4739-87ca-20f8d7ddb1e0",
+                "resourcePath": "sprites\\spr_keyboard_help\\spr_keyboard_help.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2668,6 +2684,14 @@
                 "id": "c1b8f0aa-0457-4605-88f6-a71d2c1b79a5",
                 "resourcePath": "scripts\\rand_load_tile\\rand_load_tile.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d1a22d53-e9fe-4e9a-b373-2c21d3dade27",
+            "Value": {
+                "id": "db123380-af59-452b-bd6f-9b61410de411",
+                "resourcePath": "objects\\obj_keyboard_help\\obj_keyboard_help.yy",
+                "resourceType": "GMObject"
             }
         },
         {

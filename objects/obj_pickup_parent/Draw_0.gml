@@ -10,8 +10,11 @@ if (text_alpha > 0)
 	draw_set_halign(fa_center);
 	draw_set_color(c_white);
 	draw_set_alpha(text_alpha);
+	draw_set_font(fnt_item_tip);
+	draw_text(x, y + sin(anim_y) - created - 48, "[E] to pick up");
 	draw_set_font(fnt_stat);
-	draw_text(x, y + sin(anim_y) - created - 32, obj_inventory_manager.item_definitions[p_item_type, item_properties.name]);
+	draw_text(x, y + sin(anim_y) - created - 32,
+			obj_inventory_manager.item_definitions[p_item_type, item_properties.name]);
 	draw_sprite(spr_item_arrow, -1, x, y + sin(anim_y) - created - 16);
 }
 if (global.paused) exit;

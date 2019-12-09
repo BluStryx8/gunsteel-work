@@ -61,7 +61,7 @@ if (!global.in_inv)
 }
 
 // Opens full inventory
-if keyboard_check_pressed(ord("I"))
+if keyboard_check_pressed(ord("I")) or keyboard_check_pressed(vk_tab)
 {
 	if (!global.in_inv)
 	{
@@ -150,7 +150,7 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 					inventory[selected_cell] = inventory[pickup_item];
 					inventory[pickup_item] = old_item;
 				}
-				global.p_active = inventory[active_item];	
+				global.p_active = inventory[active_item];
 				inv_update_active(active_item);
 				item_in_hand = false;
 				pickup_item = -1;
@@ -169,6 +169,8 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 		if (_constraint)
 		{
 			inv_dropitem(inventory[selected_cell]);
+			global.p_active = inventory[active_item];
+			inv_update_active(active_item);
 			if (pickup_item == selected_cell)
 			{
 				item_in_hand = false;
@@ -179,6 +181,8 @@ if (global.in_inv)    ///This part find which row or column your mouse is hoveri
 		else if (item_in_hand)
 		{
 			inv_dropitem(inventory[pickup_item]);
+			global.p_active = inventory[active_item];
+			inv_update_active(active_item);
 			item_in_hand = false;
 			pickup_item = -1;
 			selected_cell = -1;

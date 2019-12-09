@@ -7,6 +7,8 @@ if (text_alpha > 0)
 	draw_set_halign(fa_center);
 	draw_set_color(c_white);
 	draw_set_alpha(text_alpha);
+	draw_set_font(fnt_item_tip);
+	draw_text(x, y - 48, "[E] to open");
 	draw_set_font(fnt_stat);
 	draw_text(x, y - 32, "Chest");
 	draw_sprite(spr_item_arrow, -1, x, y - 16);

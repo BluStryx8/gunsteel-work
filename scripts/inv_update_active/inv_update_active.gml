@@ -3,6 +3,7 @@
 var _active = argument0;
 
 change_check				= _active;
+obj_player.hand				= 0;
 obj_player.fire				= 0;
 obj_player.focus			= 0;
 obj_player.reloading		= 0;
