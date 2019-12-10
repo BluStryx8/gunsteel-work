@@ -29,7 +29,7 @@ yprev[0] = yprevious;
 move_speed = base_speed - weight;	// Weighs down player if using heavy weapons
 
 /// Keyboard Movements
-if (immune <= 45)	// Checks if player can move
+if (immune <= 45 and global.moveable)	// Checks if player can move
 {
 	if (keyboard_check(vk_shift) or global.in_inv) sneak = true;	// Sneaking
 	// Check dodge

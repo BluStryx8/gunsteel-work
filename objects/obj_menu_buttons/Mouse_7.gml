@@ -7,11 +7,11 @@ if (room == rm_mainmenu and variable_instance_exists(id, "master"))
 		{
 			case 0:
 				// Start: Go to Continue Screen
-				global.menu_follow = 3;
+				master.menu_follow = 3;
 				break;
 			case 1:
 				// Options: Go to Options Screen
-				global.menu_follow = 1;
+				master.menu_follow = 1;
 				break;
 			case 2:
 				// Quit: Exit the game
@@ -25,15 +25,15 @@ if (room == rm_mainmenu and variable_instance_exists(id, "master"))
 				break;
 			case 4:
 				// (Continue) Back: Return to Mainscreen
-				global.menu_follow = 2;
+				master.menu_follow = 2;
 				break;
 			case 6:
 				// New Game: Go to Newgame Screen
-				global.menu_follow = 4;
+				master.menu_follow = 4;
 				break;
 			case 7:
 				// (New Game) Back: Return to Continue Screen
-				global.menu_follow = 3;
+				master.menu_follow = 3;
 				break;
 
 			case 8:

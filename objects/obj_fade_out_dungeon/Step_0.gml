@@ -4,4 +4,4 @@ if (fade >= 1)
 	room_goto(rm_to);
 	instance_destroy();
 }
-else fade += 0.05;
+else fade += 1 / room_speed;

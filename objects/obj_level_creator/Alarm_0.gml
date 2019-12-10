@@ -48,6 +48,7 @@ switch (load_step)
 		load_step += 1;
 		global.truepause = false;
 		global.paused = false;
+		global.moveable = true;
 		start = true;
 		loading = 0;
 		break;
