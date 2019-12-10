@@ -3,7 +3,7 @@ with (obj_player)
 	ini_open("player.ini");
 	score			  = ini_read_real("dungeon", "score", 0);
 	global.level	  = ini_read_real("dungeon", "level", 1);
-	global.difficulty = 98 + 2 * global.level;
+	global.difficulty = 100;
 	global.seed		  = ini_read_real("dungeon", "seed", -1);
 
 	// Player

@@ -1,4 +1,7 @@
 /// @description Generate Room
+ammo_rifle_grant   = irandom_range(1, 4);
+ammo_sniper_grant  = irandom_range(1, 4);
+ammo_shotgun_grant = irandom_range(1, 4);
 switch (section_id)
 {
 	case "LR_0":

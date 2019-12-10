@@ -476,7 +476,7 @@ ds_map_add(global.weapons[32], "ammo", 1);
 ds_map_add(global.weapons[32], "draw_time", 30);
 ds_map_add(global.weapons[32], "reload_time", 45);
 ds_map_add(global.weapons[32], "windup_time", 0);
-ds_map_add(global.weapons[32], "weight", 1);
+ds_map_add(global.weapons[32], "weight", 0);
 ds_map_add(global.weapons[32], "pump", 0);
 ds_map_add(global.weapons[32], "pump_time", 0);
 

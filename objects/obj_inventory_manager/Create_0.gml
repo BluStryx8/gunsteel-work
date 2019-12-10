@@ -16,6 +16,7 @@ gui_holder_slot_offset_x = 64 + gui_holder_pad;
 gui_hotbar_rows			 = 3;
 gui_hotbar_columns		 = 5;
 
+clicked = false;
 selected_cell = -1;
 pickup_item = -1;
 item_in_hand = false;

@@ -88,6 +88,8 @@ var _new_char_start = instance_create_layer(_x, _y,"buttons",obj_menu_buttons)
 _new_char_start.image_index = 8;
 _new_char_start.master = id;
 
+instance_create_layer(x, y, "fade", obj_fade_in);
+
 // Draws Run Info
 if file_exists("player.ini")
 {

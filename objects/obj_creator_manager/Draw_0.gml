@@ -36,8 +36,8 @@ Good for skilled players."
 Tinkers with scraps to keep gear in high function.
 Good for those who like weapons."
 		_classbuff = @"
-+ Triple the ammo gained after clearing a room.
-+ Upgrade your starter weapon every 5 floors, rather than every 10."
++ Double the ammo gained after clearing a room.
++ Upgrade your starter weapon every 3 floors, rather than every 5."
 		break;
 }
 

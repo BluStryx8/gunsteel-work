@@ -129,26 +129,35 @@ if (global.in_inv)
 	var _x = gui_holder_pos_x - 32;
 	var _y = camera_get_view_height(0) - 32;
 	var _l_click = "Select Item";
-	var _r_click = "Drop Item";
+	var _r_click_1 = "Drop";
+	var _r_click_2 = "Item";
 	draw_set_halign(fa_right);
 	draw_set_font(fnt_item_tip);
 	if (item_in_hand)
 	{
 		if (pickup_item != -1)
 		{
-			var draw_item = inventory[pickup_item];
-			draw_sprite_ext(item_definitions[draw_item, item_properties.sprite_gui], -1,
+			var _item = inventory[pickup_item];
+			draw_sprite_ext(item_definitions[_item, item_properties.sprite_gui], -1,
 							mousex, mousey, 1, 1, 0, _col, 1);
 			_l_click = "Swap Selected";
 			if (selected_cell == -1 or selected_cell == pickup_item)
 			{
 				_l_click = "Deselect";
-				_r_click = "Drop Selected";
+				_r_click_2 = "Selected";
+				if (_item > item_type.w_length and _item < item_type.c_length)
+					_r_click_1 = "Use";
 			}
 		}
 	}
+	if (selected_cell != -1)
+	{
+		var _item = inventory[selected_cell];
+		if (_item > item_type.w_length and _item < item_type.c_length)
+			_r_click_1 = "Use";
+	}
 	draw_text(_x, _y, "[Left Click] - " + _l_click);
-	draw_text(_x, _y + 16, "[Right Click] - "  + _r_click);
+	draw_text(_x, _y + 16, "[Right Click] - "  + _r_click_1 + " " + _r_click_2);
 }
 
 if (global.in_inv) exit;
@@ -280,14 +289,17 @@ if global.paused and (!global.settings)
 	var _logo_height = _height * 2 / 10;
 	draw_sprite_ext(spr_main_icon, 0, _width / 2, _logo_height,
 					_scale, _scale, 0, c_white, logo_alpha);
-	var _button_height_1 = _height * 6 / 10;
-	var _button_height_2 = _height * 7 / 10;
-	var _button_height_3 = _height * 8 / 10;
+	var _button_height_1 = _height * 5 / 10;
+	var _button_height_2 = _height * 6 / 10;
+	var _button_height_3 = _height * 7 / 10;
+	var _button_height_4 = _height * 8 / 10;
 	draw_sprite_ext(spr_main_menu_buttons, 3, _width / 2, _button_height_1,
 					_scale, _scale, 0, c_white, 1);
 	draw_sprite_ext(spr_main_menu_buttons, 1, _width / 2, _button_height_2,
 					_scale, _scale, 0, c_white, 1);
-	draw_sprite_ext(spr_main_menu_buttons, 2, _width / 2, _button_height_3,
+	draw_sprite_ext(spr_main_menu_buttons, 9, _width / 2, _button_height_3,
+					_scale, _scale, 0, c_white, 1);
+	draw_sprite_ext(spr_main_menu_buttons, 2, _width / 2, _button_height_4,
 					_scale, _scale, 0, c_white, 1);
 	// Pause Menu Code
 	var _top	= sprite_get_bbox_top(spr_main_menu_buttons) - sprite_get_yoffset(spr_main_menu_buttons);
@@ -299,18 +311,28 @@ if global.paused and (!global.settings)
 	if (pmousex >= _width / 2 + _left and pmousex <= _width / 2 + _right)
 	{
 		if (pmousey >= _button_height_1 + _top) and (pmousey < _button_height_1 + _bottom)
-			and mouse_check_button_pressed(mb_left)
+			and mouse_check_button_pressed(mb_left) and !clicked
 		{
+			// Continue
 			global.paused = false;
 			global.settings = false;
 		}
 		if (pmousey >= _button_height_2 + _top) and (pmousey < _button_height_2 + _bottom)
-			and mouse_check_button_pressed(mb_left)
+			and mouse_check_button_pressed(mb_left) and !clicked
 		{
+			// Settings
 			global.settings = true;
 		}
 		if (pmousey >= _button_height_3 + _top) and (pmousey < _button_height_3 + _bottom)
-			and mouse_check_button_pressed(mb_left)
+			and mouse_check_button_pressed(mb_left) and !clicked
+		{
+			// Controls
+			var _control = instance_create_layer(0, 0, "control", obj_keyboard_help);
+			_control.master = id;
+			clicked = true;
+		}
+		if (pmousey >= _button_height_4 + _top) and (pmousey < _button_height_4 + _bottom)
+			and mouse_check_button_pressed(mb_left) and !clicked
 		{
 			// Quit
 			global.truepause = true;
@@ -323,6 +345,7 @@ if global.paused and (!global.settings)
 else
 {
 	logo_alpha = 0;
+	clicked = false;
 }
 
 // Pause Menu

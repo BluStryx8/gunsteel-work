@@ -42,7 +42,7 @@ if (room == rm_dungeon)
 	// Classes
 	if (global.class == "Tinkerer")
 	{
-		if ((global.level) mod 5 == 0 and global.seed == -1)
+		if ((global.level) mod 3 == 0 and global.seed == -1)
 		{
 			var _starter = global.starter;
 			var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_starter, item_properties.name]);
@@ -54,7 +54,7 @@ if (room == rm_dungeon)
 	}
 	else
 	{
-		if ((global.level) mod 10 == 0 and global.seed == -1)
+		if ((global.level) mod 5 == 0 and global.seed == -1)
 		{
 			var _starter = global.starter;
 			var _w = weapon_find(global.weapons, "weapon", obj_inventory_manager.item_definitions[_starter, item_properties.name]);

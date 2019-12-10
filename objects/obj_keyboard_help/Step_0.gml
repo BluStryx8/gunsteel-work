@@ -22,3 +22,5 @@ else
 		}
 	}
 }
+if (room != rm_mainmenu and !global.paused)
+	instance_destroy();

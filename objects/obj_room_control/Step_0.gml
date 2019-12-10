@@ -16,14 +16,14 @@ if (combat and enemy_count == 0)
 			if (p_defense < p_max_defense) p_defense += 1;
 		if (global.class == "Tinkerer")
 		{
-			var _mult = 3;
+			var _mult = 2;
 		}
 		else var _mult = 1;
 		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 		audio_play_sound(snd_reload_clip, 1, false);
-		global.ammo_rifle   += irandom_range(3, 6) * 10 * _mult;
-		global.ammo_sniper  += irandom_range(1, 2) * 3 * _mult;
-		global.ammo_shotgun += irandom_range(1, 3) * 4 * _mult;
+		global.ammo_rifle   += ammo_rifle_grant * 8 * _mult;
+		global.ammo_sniper  += ammo_sniper_grant * 1 * _mult;
+		global.ammo_shotgun += ammo_shotgun_grant * 2 * _mult;
 
 	}
 	if biome == "elite"
