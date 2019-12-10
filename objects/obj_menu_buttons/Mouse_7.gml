@@ -1,7 +1,7 @@
 /// @description Check Click
 if (room == rm_mainmenu and variable_instance_exists(id, "master"))
 {
-	if (!master.clicked)
+	if (!master.clicked and master.fade <= 0)
 	{
 		switch (image_index)
 		{

@@ -21,9 +21,9 @@ if (combat and enemy_count == 0)
 		else var _mult = 1;
 		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
 		audio_play_sound(snd_reload_clip, 1, false);
-		global.ammo_rifle   += ammo_rifle_grant * 8 * _mult;
-		global.ammo_sniper  += ammo_sniper_grant * 1 * _mult;
-		global.ammo_shotgun += ammo_shotgun_grant * 2 * _mult;
+		global.ammo_rifle   += other.ammo_rifle_grant * 8 * _mult;
+		global.ammo_sniper  += other.ammo_sniper_grant * 1 * _mult;
+		global.ammo_shotgun += other.ammo_shotgun_grant * 2 * _mult;
 
 	}
 	if biome == "elite"

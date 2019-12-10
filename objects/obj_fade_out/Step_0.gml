@@ -1,10 +1,8 @@
-/// @description changes opacity of rectangle
-if global.rectangle_opacity_out > 1.01  {
-	instance_destroy()
-	room_goto(rm_dungeon)
-	
+/// @description Change Opacity of Rectangle
+if fade >= 1 
+{
+	instance_destroy();
+	room_goto(rm_dungeon);
 }
 else
-{
-	global.rectangle_opacity_out = global.rectangle_opacity_out + 0.01
-}
+	fade += 0.04;

@@ -11,7 +11,7 @@ else
 }
 
 // Scaling
-global.difficulty = 95 + global.level * 5;
+global.difficulty = 96 + global.level * 4;
 
 grid_size = 16; // Size of blocks & objects in game
 

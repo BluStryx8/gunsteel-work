@@ -1,2 +1,2 @@
-/// @description declares opacity
-global.rectangle_opacity_out = 0
+/// @description Declare Opacity
+fade = 0;

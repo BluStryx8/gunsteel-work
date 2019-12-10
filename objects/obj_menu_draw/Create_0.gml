@@ -1,4 +1,5 @@
 /// @description Create Buttons
+fade = 2;
 global.menu_follow = 2;
 clicked = false;
 camera_width = view_get_wport(0);
@@ -7,45 +8,65 @@ var _x = floor(view_get_wport(0) * 1);
 var _y = 0;
 view_camera[0] = camera_create_view(_x, _y, camera_width, camera_height);
 
-/// Middle page (main menu)
+/// 1st Page (Settings)
+// Back Button
+_x = floor(view_get_wport(0) * 0.8);
+_y = floor(view_get_hport(0) * 0.9);
+var _back = instance_create_layer(_x, _y, "buttons", obj_menu_buttons);
+_back.image_index = 4;
+_back.master = id;
 
+/// Menu Sliders
+// Sounds Text
+_x = floor(view_get_wport(0) * 0.1);
+_y = floor(view_get_hport(0) * 0.4);
+var _sound = instance_create_layer(_x, _y, "buttons", obj_menu_buttons)
+_sound.image_index = 5;
+_sound.master = id;
+// Sounds
+_x = floor(view_get_wport(0) * 0.25);
+_y = floor(view_get_hport(0) * 0.4);
+instance_create_layer(_x, _y, "menu", obj_slider_sounds_volume);
+
+// Music Text
+_x = floor(view_get_wport(0) * 0.1);
+_y = floor(view_get_hport(0) * 0.6);
+var _music = instance_create_layer(_x, _y, "buttons", obj_menu_buttons)
+_music.image_index = 10;
+_music.master = id;
+// Music
+_x = floor(view_get_wport(0) * 0.25);
+_y = floor(view_get_hport(0) * 0.6);
+instance_create_layer(_x, _y, "menu", obj_slider_music_volume);
+
+/// 2nd Page (Main Menu)
+// Start Button
 _x = floor(view_get_wport(0) * 1.5);
 _y = floor(view_get_hport(0) * 0.6);
-
 var _start = instance_create_layer(_x, _y, "buttons", obj_menu_buttons);
 _start.image_index = 0;
 _start.master = id;
 
+// Settings Button
 _x = floor(view_get_wport(0) * 1.5);
 _y = floor(view_get_hport(0) * 0.7);
 var _options = instance_create_layer(_x, _y, "buttons", obj_menu_buttons);
 _options.image_index = 1;
 _options.master = id;
 
+// Controls Button
 _x = floor(view_get_wport(0) * 1.5);
 _y = floor(view_get_hport(0) * 0.8);
 var _help = instance_create_layer(_x, _y, "buttons", obj_menu_buttons);
 _help.image_index = 9;
 _help.master = id;
 
+// Quit Button
 _x = floor(view_get_wport(0) * 1.5);
 _y = floor(view_get_hport(0) * 0.9);
 var _quit = instance_create_layer(_x, _y, "buttons", obj_menu_buttons);
 _quit.image_index = 2;
 _quit.master = id;
-
-_x = floor(view_get_wport(0) * 0.8);
-_y = floor(view_get_hport(0) * 0.9);
-//Left page (settings page)
-var _back = instance_create_layer(_x, _y, "buttons", obj_menu_buttons);
-_back.image_index = 4;
-_back.master = id;
-
-_x = floor(view_get_wport(0) * 0.5);
-_y = floor(view_get_hport(0) * 0.3);
-var _sound = instance_create_layer(_x, _y, "buttons", obj_menu_buttons)
-_sound.image_index = 5;
-_sound.master = id;
 
 
 //Right page (continue game page)
@@ -87,8 +108,6 @@ _y = floor(view_get_hport(0) * 0.9);
 var _new_char_start = instance_create_layer(_x, _y,"buttons",obj_menu_buttons)
 _new_char_start.image_index = 8;
 _new_char_start.master = id;
-
-instance_create_layer(x, y, "fade", obj_fade_in);
 
 // Draws Run Info
 if file_exists("player.ini")

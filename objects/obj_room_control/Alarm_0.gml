@@ -1,7 +1,4 @@
 /// @description Generate Room
-ammo_rifle_grant   = irandom_range(1, 4);
-ammo_sniper_grant  = irandom_range(1, 4);
-ammo_shotgun_grant = irandom_range(1, 4);
 switch (section_id)
 {
 	case "LR_0":
@@ -69,6 +66,9 @@ switch (section_id)
 		load_R_3(special_id, biome);
 		break;
 }
+ammo_rifle_grant   = irandom_range(1, 4);
+ammo_sniper_grant  = irandom_range(1, 4);
+ammo_shotgun_grant = irandom_range(1, 4);
 
 // Enemy waves
 var _difficulty = min(3, floor(global.difficulty / 100) - 1);

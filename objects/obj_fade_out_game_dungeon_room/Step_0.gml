@@ -7,4 +7,4 @@ if (global.rectangle_opacity_out > 1.01)
 	global.moveable = true;
 
 }
-else global.rectangle_opacity_out = global.rectangle_opacity_out + 0.01;
+else global.rectangle_opacity_out = global.rectangle_opacity_out + 0.04;
