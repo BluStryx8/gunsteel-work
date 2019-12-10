@@ -2,7 +2,7 @@
     "id": "5872f950-8570-4f37-b406-54ccba62e424",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_fade_out_game",
+    "name": "obj_fade_out_dungeon",
     "eventList": [
         {
             "id": "12f6d844-96a7-4f61-b5f9-ca234bacbd7d",
@@ -62,7 +62,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "rm_game2",
+            "value": "rm_dungeon",
             "varName": "rm_to",
             "varType": 5
         }

@@ -1,2 +1,0 @@
-/// @description Draws a rectangle 
-

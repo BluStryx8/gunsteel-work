@@ -334,7 +334,7 @@ if (global.paused and !global.settings)
 		{
 			// Quit
 			global.truepause = true;
-			instance_create_layer(x, y, "fade", obj_fade_out_to_menu);
+			instance_create_layer(x, y, "fade", obj_fade_out_menu);
 			global.settings = false;
 			global.holstered = true;
 		}

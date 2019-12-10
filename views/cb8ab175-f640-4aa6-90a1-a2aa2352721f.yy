@@ -4,8 +4,8 @@
     "mvc": "1.1",
     "name": "cb8ab175-f640-4aa6-90a1-a2aa2352721f",
     "children": [
-        "b0b7d49e-ef3e-461b-a797-2491ad204d78",
-        "cec6d508-062e-4976-895f-b1c33376b2ec"
+        "5872f950-8570-4f37-b406-54ccba62e424",
+        "3e1f0405-5c2b-4da1-bb38-d402ccaa122c"
     ],
     "filterType": "GMObject",
     "folderName": "Room Changing",

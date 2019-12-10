@@ -3,7 +3,6 @@
 declare_globals();
 
 // Movement
-global.moveable = true;		// If player can move or not
 if (global.class == "Scout")
 	base_speed = 6;
 else base_speed = 5;		// Base speed of player

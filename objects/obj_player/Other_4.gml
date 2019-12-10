@@ -6,8 +6,12 @@ if (room == rm_mainmenu)
 	global.truepause = true;
 	global.holstered = true;
 	dir = 0;
-	x = 2272;	// Starting x position
-	y = 416;	// Starting y position
+	var _x = floor(view_get_wport(0) * 2.2);
+	var _y = floor(view_get_hport(0) * 0.3);
+	x = _x;
+	y = _y;
+	//x = 2272;	// Starting x position
+	//y = 416;	// Starting y position
 	
 }
 else
@@ -25,11 +29,6 @@ if (room == rm_game)
 	h_move = 0;
 	v_move = 0;
 	global.holstered = false;
-	if (room_last = rm_game)
-	{
-		global.player_setx = 270;	// Starting x position
-		global.player_sety = 200;	// Starting y position
-	}
 }
 if (room == rm_game2) global.holstered = true;
 

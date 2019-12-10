@@ -615,14 +615,6 @@
             }
         },
         {
-            "Key": "2b32ff79-c0eb-4dcc-8f7c-7d3cac9d5c47",
-            "Value": {
-                "id": "c937d970-29b4-454c-b269-879bee5e6a54",
-                "resourcePath": "views\\2b32ff79-c0eb-4dcc-8f7c-7d3cac9d5c47.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "2cb8096a-60df-4a5b-9322-237715b41737",
             "Value": {
                 "id": "5ff1a29d-e974-408d-becd-8f3169c44429",
@@ -826,7 +818,7 @@
             "Key": "3e1f0405-5c2b-4da1-bb38-d402ccaa122c",
             "Value": {
                 "id": "67cbeb19-276f-4211-b903-d951d9ed43b3",
-                "resourcePath": "objects\\obj_fade_out_to_menu\\obj_fade_out_to_menu.yy",
+                "resourcePath": "objects\\obj_fade_out_menu\\obj_fade_out_menu.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1039,14 +1031,6 @@
             }
         },
         {
-            "Key": "4ecc958a-d62a-42ad-87da-93d6da9f31e4",
-            "Value": {
-                "id": "6c7e8f70-725f-468d-86bd-a127b4985ebb",
-                "resourcePath": "views\\4ecc958a-d62a-42ad-87da-93d6da9f31e4.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "4ef8632e-50a5-458d-85d2-1b8e7191a4e6",
             "Value": {
                 "id": "6e720cdd-601a-413b-bcf6-98bbeba3bcab",
@@ -1170,7 +1154,7 @@
             "Key": "5872f950-8570-4f37-b406-54ccba62e424",
             "Value": {
                 "id": "4744b6d2-69db-4c96-80ad-455cbb0b1f5a",
-                "resourcePath": "objects\\obj_fade_out_game\\obj_fade_out_game.yy",
+                "resourcePath": "objects\\obj_fade_out_dungeon\\obj_fade_out_dungeon.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1196,14 +1180,6 @@
                 "id": "a18592b5-f1a1-437a-918a-6480c53b7737",
                 "resourcePath": "views\\593980e2-fbce-4750-9d71-6768fa71d91b.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "5a274bfb-497f-4431-a814-a5ce620337d1",
-            "Value": {
-                "id": "5448f382-7f70-4404-8b6d-deda12467882",
-                "resourcePath": "objects\\obj_next_room_parent\\obj_next_room_parent.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -1431,14 +1407,6 @@
             }
         },
         {
-            "Key": "6aee63dd-33cc-4779-a830-7b036f2cf6a1",
-            "Value": {
-                "id": "f0288924-2ae7-4e04-9df8-df93375a5ff8",
-                "resourcePath": "objects\\obj_next_room_rm_dungeon\\obj_next_room_rm_dungeon.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "6bbf6b11-8e7c-4e7e-9a49-e5eb9a762278",
             "Value": {
                 "id": "2ce0b9cb-ef0f-4787-b4af-5cd66fa2eca6",
@@ -1543,14 +1511,6 @@
             }
         },
         {
-            "Key": "751260fd-6f6c-47e9-aaeb-8199172b1b40",
-            "Value": {
-                "id": "cb6ed51b-969a-4e91-8520-2baedc4a19ab",
-                "resourcePath": "objects\\obj_movement_renable\\obj_movement_renable.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "75fe7d4e-f318-4375-9d79-7ca2e2645554",
             "Value": {
                 "id": "bc6d74ac-fe08-478c-bec8-aac12bff6c61",
@@ -1628,14 +1588,6 @@
                 "id": "a11eba7b-23b4-4663-b939-0f1d9011944f",
                 "resourcePath": "views\\7add4456-12b9-4686-a38b-681549a7b391.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "7ae4d939-f5f3-462e-bf5a-ba404ebc471a",
-            "Value": {
-                "id": "ec8539c7-991a-4c35-9502-56c7e2cc2e32",
-                "resourcePath": "objects\\obj_next_room_rmgame\\obj_next_room_rmgame.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -1759,14 +1711,6 @@
             }
         },
         {
-            "Key": "8c822d39-f29c-46f3-95aa-c501352900d6",
-            "Value": {
-                "id": "02e3db77-db80-4051-b656-c464502b4db5",
-                "resourcePath": "objects\\obj_room\\obj_room.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "8c9428c2-e405-477c-bc30-e8d3696fd235",
             "Value": {
                 "id": "c6544759-371f-4eda-bb8d-ea67816001e3",
@@ -1827,14 +1771,6 @@
             "Value": {
                 "id": "21788748-25d9-4bd1-baff-b021c26564d0",
                 "resourcePath": "views\\8f04e0c4-74ce-4515-9ea3-632a0af75aea.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "900ba14e-93fe-42a0-9f42-1c75fa174bb7",
-            "Value": {
-                "id": "b13fd7a9-a501-4713-a86a-30f0b838dbd4",
-                "resourcePath": "views\\900ba14e-93fe-42a0-9f42-1c75fa174bb7.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -2063,14 +1999,6 @@
             }
         },
         {
-            "Key": "a606da20-62a6-4596-a3e5-8e35f4174294",
-            "Value": {
-                "id": "482b965e-488f-4723-9d00-f6e5939c362e",
-                "resourcePath": "objects\\obj_fade_out\\obj_fade_out.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "a703b69c-6874-4a5f-8a3f-125fd99dd418",
             "Value": {
                 "id": "1239a74d-9f0f-48be-9e61-daa3f91d69f7",
@@ -2127,14 +2055,6 @@
             }
         },
         {
-            "Key": "aafe61a8-ed64-492d-afa4-e347cf55e7cb",
-            "Value": {
-                "id": "de6584e2-f149-4b5c-98e8-1393a5de13af",
-                "resourcePath": "objects\\obj_pause_buttons\\obj_pause_buttons.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "ad8a2797-57ac-467f-86a8-a5f40be26241",
             "Value": {
                 "id": "a351ce5e-7ad1-45c8-a6a1-e687eb4a84cd",
@@ -2164,14 +2084,6 @@
                 "id": "b5e792fa-b89e-4f57-8e56-47a06b1a548f",
                 "resourcePath": "scripts\\load_R_0\\load_R_0.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "b0b7d49e-ef3e-461b-a797-2491ad204d78",
-            "Value": {
-                "id": "4415736b-7648-4671-a9dd-f678d0b923d6",
-                "resourcePath": "views\\b0b7d49e-ef3e-461b-a797-2491ad204d78.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -2399,14 +2311,6 @@
             }
         },
         {
-            "Key": "c105ca4e-0cc6-4e09-a9c7-d9f233143fcc",
-            "Value": {
-                "id": "622088cc-7c10-4b9b-bcae-fc2e9def521c",
-                "resourcePath": "objects\\obj_fade_out_game_rm_game\\obj_fade_out_game_rm_game.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "c17dfed9-f98d-4e8a-8743-187fe02e3bbc",
             "Value": {
                 "id": "8cedf619-1566-469a-9d4e-062c194c8acc",
@@ -2535,14 +2439,6 @@
             }
         },
         {
-            "Key": "c6afbe23-f30c-4b96-be2c-cc98ef4899bf",
-            "Value": {
-                "id": "e3805377-184f-4dfb-8235-2cbbf14eed19",
-                "resourcePath": "objects\\obj_fade_out_game_dungeon_room\\obj_fade_out_game_dungeon_room.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "c74dfe83-9d6a-49cb-887c-1ec6f1e0a5f4",
             "Value": {
                 "id": "d8c16543-68e4-4351-876f-955ccbe801ec",
@@ -2636,14 +2532,6 @@
                 "id": "fd795ae7-004c-4879-a94f-d079272be94f",
                 "resourcePath": "objects\\obj_item_pickup_tesro\\obj_item_pickup_tesro.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "cec6d508-062e-4976-895f-b1c33376b2ec",
-            "Value": {
-                "id": "1f1c4f21-9129-4e64-a421-7c783f0a48eb",
-                "resourcePath": "views\\cec6d508-062e-4976-895f-b1c33376b2ec.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -2759,14 +2647,6 @@
             }
         },
         {
-            "Key": "d566a287-f291-4ee7-bff2-b78bd17708de",
-            "Value": {
-                "id": "bbbee263-6a40-423e-a2bc-402a5537da07",
-                "resourcePath": "objects\\obj_declare_transition\\obj_declare_transition.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "d6527cac-a074-4621-8c28-9c5f518ff49e",
             "Value": {
                 "id": "8580206a-fd39-4cb1-a3b3-211644106a76",
@@ -2804,14 +2684,6 @@
                 "id": "c2d818e8-620f-42af-b869-82e30d43b691",
                 "resourcePath": "scripts\\generate_border\\generate_border.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "d952fa83-40db-4c31-be32-dbe0ea6424ec",
-            "Value": {
-                "id": "31f94e4c-44dc-4fcc-821c-56adbb5b5e4e",
-                "resourcePath": "objects\\obj_pause_menu\\obj_pause_menu.yy",
-                "resourceType": "GMObject"
             }
         },
         {

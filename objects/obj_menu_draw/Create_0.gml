@@ -69,40 +69,42 @@ _quit.image_index = 2;
 _quit.master = id;
 
 
-//Right page (continue game page)
-//continue button
+/// 3rd Page (Continue / Last Run)
+// Continue Button
 {
 	if file_exists("player.ini")
 	{
 		_x = floor(view_get_wport(0) * 2.5);
-		_y = floor(view_get_hport(0) * 0.25);
+		_y = floor(view_get_hport(0) * 0.9);
 		var _continue = instance_create_layer(_x, _y, "buttons", obj_menu_buttons);
 		_continue.image_index = 3;
 		_continue.master = id;
 	}
 }
 
+// Back Button
 _x = floor(view_get_wport(0) * 2.2);
 _y = floor(view_get_hport(0) * 0.9);
 var _back_cont = instance_create_layer(_x, _y,"buttons", obj_menu_buttons);
 _back_cont.image_index = 4;
 _back_cont.master = id;
 
-//character
+// New Game Button
 _x = floor(view_get_wport(0) * 2.8);
 _y = floor(view_get_hport(0) * 0.9);
 var _character = instance_create_layer(_x, _y, "buttons", obj_menu_buttons);
 _character.image_index = 6;
 _character.master = id;
 
-
-//back in character
+/// 4th Page (New Game)
+// Back Button
 _x = floor(view_get_wport(0) * 3.2);
 _y = floor(view_get_hport(0) * 0.9);
 var _back_char = instance_create_layer(_x, _y,"buttons",obj_menu_buttons)
 _back_char.image_index = 7;
 _back_char.master = id;
 
+// Start New Game Button
 _x = floor(view_get_wport(0) * 3.8);
 _y = floor(view_get_hport(0) * 0.9);
 var _new_char_start = instance_create_layer(_x, _y,"buttons",obj_menu_buttons)
