@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "0d5683ab-0c1c-4adb-a2d7-83b52ab96e28",
+            "Value": {
+                "id": "e4a581b4-d9d2-4c10-a231-318354519e6f",
+                "resourcePath": "sprites\\spr_mouse_tip\\spr_mouse_tip.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0f299652-c379-46f3-8728-e9910e25d7a8",
             "Value": {
                 "id": "c1a6ac86-f311-4a32-bdb5-ed83d9b58115",

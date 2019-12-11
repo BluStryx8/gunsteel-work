@@ -316,7 +316,7 @@ if (keyboard_check_pressed(ord("R")) and fire_cooldown == 0 and reloading == 0 a
 	weapon_reload();
 }
 
-/// Camera (Temp)
+/// Camera
 // Shake
 if (shake > 0)
 {
@@ -349,14 +349,23 @@ if (!debug_cam)
 	}
 	else if (focus == 0)
 	{
-		// Standard scoping effect
-		if (camera_pan > 6) camera_pan -= camera_pan / 4;
-		if (camera_pan < 6) camera_pan += camera_pan / 3;
+		if (sneak)
+		{
+			// Sneak scoping effect
+			if (camera_pan > 4) camera_pan -= camera_pan / 4;
+			if (camera_pan < 4) camera_pan += camera_pan / 3;
+		}
+		else
+		{
+			// Standard scoping effect
+			if (camera_pan > 16) camera_pan -= camera_pan / 4;
+			if (camera_pan < 16) camera_pan += camera_pan / 3;
+		}
 	}
 	else
 	{
 		// Still camera
-		if camera_pan < 1024 camera_pan += camera_pan / 3;
+		if (camera_pan < 1024) camera_pan += camera_pan / 3;
 	}
 
 	if camera_pan < 1024 // 1024 or over makes the camera lock on player without scoping effect

@@ -153,6 +153,63 @@ if (global.in_inv)
 }
 if (global.in_inv) exit;
 
+// Draw Mouse Tip
+var _left_mouse = script_get_name(item_definitions[inventory[active_item], item_properties.use_left]);
+var _right_mouse = script_get_name(item_definitions[inventory[active_item], item_properties.use_right]);
+var _left_text = "null";
+var _right_text = "null";
+
+switch (_left_mouse)
+{
+	case "weapon_shoot":
+		_left_text = "Shoot";
+		break;
+	case "use_potion":
+		_left_text = "same";
+		_right_text = "Heal";
+		break;
+	case "use_ammo_crate":
+		_left_text = "same";
+		_right_text = "Gain Ammo";
+		break;
+}
+switch (_right_mouse)
+{
+	case "fire_mode":
+		if (obj_player.atk_type == "Semi-automatic")
+			var _extra = "Automatic";
+		else
+		{
+			if (obj_player.burst > 1)
+				var _extra = "Semi-automatic";
+			else
+				var _extra = "Burst";
+		}
+		_right_text = "Switch to " + _extra;
+		break;
+	case "fire_mode_burst":
+		if (obj_player.atk_type == "Semi-automatic")
+		{
+			if (obj_player.burst > 1)
+				var _extra = "Automatic";
+			else
+				var _extra = "Burst";
+		}
+		else
+			var _extra = "Semi-automatic";
+		_right_text = "Switch to " + _extra;
+		break;
+	case "weapon_pump":
+		_right_text = "Pump Weapon";
+		break;
+	case "scope":
+		if (focus != 1)
+			_right_text = "Scope";
+		else
+			_right_text = "Unscope";
+		break;
+}
+
 // Draw Weapon
 var _weap_offset_x = -48;	// x offset from the bottom right hand corner
 var _weap_offset_y = -48;	// y offset from the bottom right hand corner
@@ -161,7 +218,7 @@ if (!global.holstered)
 {
 	// Draw Current Weapon
 	draw_set_halign(fa_center);
-	var _sprite = obj_inventory_manager.item_definitions[inventory[active_item], item_properties.sprite_gui];
+	var _sprite = item_definitions[inventory[active_item], item_properties.sprite_gui];
 	var _weapon = false;
 	var _total_ammo = 0;
 	switch (obj_player.type)

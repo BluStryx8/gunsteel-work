@@ -8,7 +8,8 @@
         "dd25ba4e-b9bf-4a76-aa92-565453d97f6b",
         "9edcd39b-fd45-446e-b323-59f8579f5234",
         "e4d4ad11-fefb-406c-b9fc-028357d8c3d5",
-        "58c89449-4236-4c49-9fc4-addecc22781a"
+        "58c89449-4236-4c49-9fc4-addecc22781a",
+        "0d5683ab-0c1c-4adb-a2d7-83b52ab96e28"
     ],
     "filterType": "GMSprite",
     "folderName": "Display",

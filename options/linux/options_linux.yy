@@ -22,7 +22,7 @@
     "option_linux_sync": false,
     "option_linux_texture_page": "2048x2048",
     "option_linux_version": {
-        "build": 2,
+        "build": 4,
         "major": 0,
         "minor": 9,
         "revision": 0
