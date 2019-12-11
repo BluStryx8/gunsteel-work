@@ -3,7 +3,7 @@
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "msc_dungeon",
-    "audioGroupGuid": "380e5d56-87a9-4ada-b586-2311aef93d7d",
+    "audioGroupGuid": "910a592c-db29-4cf8-83cc-97c55c3eb213",
     "bitDepth": 1,
     "bitRate": 128,
     "kind": 0,

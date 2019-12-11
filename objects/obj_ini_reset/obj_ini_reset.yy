@@ -5,16 +5,6 @@
     "name": "obj_ini_reset",
     "eventList": [
         {
-            "id": "719393f2-94a4-4c9f-8a85-33679960a5e8",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "bb1c88d2-ea11-4187-a5d4-502a52aba259"
-        },
-        {
             "id": "233e3060-2021-4de5-9cb6-5c364f47fb87",
             "modelName": "GMEvent",
             "mvc": "1.0",

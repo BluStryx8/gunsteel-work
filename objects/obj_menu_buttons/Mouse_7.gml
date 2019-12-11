@@ -18,7 +18,7 @@ if (room == rm_mainmenu and variable_instance_exists(id, "master"))
 				game_end();
 				break;
 			case 3:
-				// Continue: Fades out them goes to rm_game
+				// Continue: Fades out them goes to game
 				load_save();
 				instance_create_layer(0, 0, "fade", obj_fade_out_dungeon);
 				master.clicked = true;
@@ -37,7 +37,7 @@ if (room == rm_mainmenu and variable_instance_exists(id, "master"))
 				break;
 
 			case 8:
-				// New Game: Fades out them goes to rm_game
+				// New Game: Fades out them goes to game
 				new_save();
 				instance_create_layer(0, 0, "fade", obj_fade_out_dungeon);
 				master.clicked = true;

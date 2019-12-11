@@ -1,21 +1,15 @@
 /// @description Check for key input
-
-audio_group_set_gain(music, global.music_value, 0)
+// Music
+audio_group_set_gain(audiogrp_music, global.music_value, 0)
 if !audio_is_playing(msc_dungeon)
 {
 	audio_play_sound(msc_dungeon,1,true)
 }
-
+// Remove weapon in menu
 if (room == rm_mainmenu and change_check != -1)
 {
 	global.p_active = item_type.none;
 	inv_update_active(-1);
-}
-else if (room == rm_game and change_check == -1)
-{
-	active_item = 0;
-	global.p_active = inventory[active_item];
-	inv_update_active(active_item);
 }
 if (global.paused or global.death) exit;	// Exits if paused
 
@@ -35,8 +29,6 @@ if (!global.holstered)
 	global.p_active = inventory[active_item];
 }
 else global.p_active = item_type.none;
-
-obj_player.sprite = inv_get_sprite(global.p_active);
 
 // Update current item
 if (!global.holstered)

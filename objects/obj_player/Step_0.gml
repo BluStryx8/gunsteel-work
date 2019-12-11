@@ -97,7 +97,6 @@ if (dodge > 0)
 }
 
 /// Check animating
-
 // Animation for x
 if (dir <= 90 or dir >= 270) anim += h_move else anim -= h_move;
 

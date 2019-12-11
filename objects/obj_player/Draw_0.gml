@@ -1,9 +1,10 @@
 /// @description Draw Player
 // Scale (if on title screen or not)
-if (room = rm_mainmenu) global.p_scale = 4
-else global.p_scale = 1;
+if (room == rm_mainmenu) global.p_scale = 4;
+	else global.p_scale = 1;
 image_xscale = global.p_scale;
 image_yscale = global.p_scale;
+sprite = inv_get_sprite(global.p_active);
 var _alpha = 1;
 
 // Decide Flash
@@ -92,8 +93,9 @@ if (dir <= 90 or dir >= 270)
 		draw_sprite_ext(spr_player_hat, 0, x, y - anim_y * global.p_scale,
 						global.p_scale, global.p_scale, 0, c_white, _alpha)
 		// Draw weapon
-		if (hands >= 1) draw_sprite_ext(sprite, 0, x + offset[0] * global.p_scale, y + offset[1] * global.p_scale,
-										global.p_scale, global.p_scale, dir, c_white, _alpha)
+		if (hands >= 1)
+			draw_sprite_ext(sprite, -1, x + offset[0] * global.p_scale, y + offset[1] * global.p_scale,
+							global.p_scale, global.p_scale, dir, c_white, _alpha)
 		// Reset Shader
 		shader_reset();
 	}
@@ -155,10 +157,12 @@ else
 		draw_sprite_ext(spr_player_hat, 0, x, y - anim_y * global.p_scale,
 						-global.p_scale, global.p_scale, 0, c_white, _alpha)
 		// Draw weapon (weapon positioned differently depending on number of hands)
-		if (hands == 2) draw_sprite_ext(sprite, 0, x - offset[0] * global.p_scale, y + offset[1] * global.p_scale,
-										global.p_scale, -global.p_scale, dir, c_white, _alpha)
-		else if (hands >= 1) draw_sprite_ext(sprite, 0, x + (offset[0] + offset[2]) * global.p_scale, y + offset[1] * global.p_scale,
-											global.p_scale, -global.p_scale, dir, c_white, _alpha)
+		if (hands == 2)
+			draw_sprite_ext(sprite, -1, x - offset[0] * global.p_scale, y + offset[1] * global.p_scale,
+							global.p_scale, -global.p_scale, dir, c_white, _alpha)
+		else if (hands >= 1)
+			draw_sprite_ext(sprite, -1, x + (offset[0] + offset[2]) * global.p_scale, y + offset[1] * global.p_scale,
+							global.p_scale, -global.p_scale, dir, c_white, _alpha)
 		// Reset Shader
 		shader_reset();
 	}

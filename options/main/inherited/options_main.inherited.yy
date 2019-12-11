@@ -21,40 +21,10 @@
             {
                 "Key": 2,
                 "Value": {
-                    "id": "d24060bb-d10a-4e88-9119-922cca54138b",
+                    "id": "910a592c-db29-4cf8-83cc-97c55c3eb213",
                     "modelName": "GMAudioGroup",
                     "mvc": "1.0",
-                    "groupName": "audiogroup1",
-                    "targets": 461609314234257646
-                }
-            },
-            {
-                "Key": 3,
-                "Value": {
-                    "id": "a5987a47-2f84-482c-b136-462fb25a304e",
-                    "modelName": "GMAudioGroup",
-                    "mvc": "1.0",
-                    "groupName": "audiogroup",
-                    "targets": 461609314234257646
-                }
-            },
-            {
-                "Key": 4,
-                "Value": {
-                    "id": "380e5d56-87a9-4ada-b586-2311aef93d7d",
-                    "modelName": "GMAudioGroup",
-                    "mvc": "1.0",
-                    "groupName": "music",
-                    "targets": 461609314234257646
-                }
-            },
-            {
-                "Key": 5,
-                "Value": {
-                    "id": "c8f45da6-0775-4c5b-8845-fa3bc77e1311",
-                    "modelName": "GMAudioGroup",
-                    "mvc": "1.0",
-                    "groupName": "audiogroup2",
+                    "groupName": "audiogrp_music",
                     "targets": 461609314234257646
                 }
             }

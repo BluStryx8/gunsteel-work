@@ -7,7 +7,7 @@
         "a4dee5e7-bba7-4e1f-ad8e-eeda43e51163"
     ],
     "filterType": "GMSound",
-    "folderName": "music",
+    "folderName": "Music",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

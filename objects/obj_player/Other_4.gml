@@ -6,13 +6,8 @@ if (room == rm_mainmenu)
 	global.truepause = true;
 	global.holstered = true;
 	dir = 0;
-	var _x = floor(view_get_wport(0) * 2.2);
-	var _y = floor(view_get_hport(0) * 0.3);
-	x = _x;
-	y = _y;
-	//x = 2272;	// Starting x position
-	//y = 416;	// Starting y position
-	
+	x = floor(view_get_wport(0) * 2.2);
+	y = floor(view_get_hport(0) * 0.3);
 }
 else
 {
@@ -24,13 +19,6 @@ else
 	camera_height = 384;
 	view_camera[0] = camera_create_view(0, 0, camera_width, camera_height);
 }
-if (room == rm_game)
-{
-	h_move = 0;
-	v_move = 0;
-	global.holstered = false;
-}
-if (room == rm_game2) global.holstered = true;
 
 if (room == rm_dungeon)
 {
