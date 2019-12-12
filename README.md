@@ -15,32 +15,15 @@ You play as one of three classes:
 + Saving System at the start of every floor.
 + A working Inventory System.
 + All Sprites made by hand.
----
-## Controls:
-
-**Movement:**
-+ W - Move Up
-+ S - Move Down
-+ A - Move Left
-+ D - Move Down
-+ Space / Middle Mouse - Dodge
-+ Shift - Focus Fire
-
-**Firing:**
-+ Left Mouse - Fire Weapon
-+ Right Mouse - Alternate Mode / Scope / Pump
-
-**Interaction:**
-+ E - Interact/Pick Up
-+ I - Inventory
-+ Esc - Start Menu
-
-**Inventory:**
-+ Left Mouse - Select Item / Change Position in Inventory
-+ Right Mouse - Drop Item / Use Consumable
-
 ------------
 ## Updates:
+Version 0.9.4-alpha
+- Dodge has been nerfed.
+- Much more QoL changes: Buttons now visually show, sliders have labels, controls are stated.
+- The dungeon now scales much faster than it used to, and also generates bigger.
+- Some code optimisations by removing unnecessary elements.
+- Version number has been *properly* updated this time.
+
 Version 0.9.3-alpha
 - The FAMAS has been added to the dungeon
 - Loot from chests and crates are now seed-stored
