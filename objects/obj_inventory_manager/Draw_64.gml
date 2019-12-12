@@ -153,12 +153,14 @@ if (global.in_inv)
 }
 if (global.in_inv) exit;
 
-// Draw Mouse Tip
+/// Mouse Tip
+// Define
 var _left_mouse = script_get_name(item_definitions[inventory[active_item], item_properties.use_left]);
 var _right_mouse = script_get_name(item_definitions[inventory[active_item], item_properties.use_right]);
 var _left_text = "null";
 var _right_text = "null";
 
+// Check Left Mouse
 switch (_left_mouse)
 {
 	case "weapon_shoot":
@@ -173,6 +175,7 @@ switch (_left_mouse)
 		_right_text = "Gain Ammo";
 		break;
 }
+// Check Right Mouse
 switch (_right_mouse)
 {
 	case "fire_mode":
@@ -181,11 +184,11 @@ switch (_right_mouse)
 		else
 		{
 			if (obj_player.burst > 1)
-				var _extra = "Semi-automatic";
-			else
 				var _extra = "Burst";
+			else
+				var _extra = "Semi-automatic";
 		}
-		_right_text = "Switch to " + _extra;
+		_right_text = "Switch to " + _extra; 
 		break;
 	case "fire_mode_burst":
 		if (obj_player.atk_type == "Semi-automatic")
@@ -203,13 +206,71 @@ switch (_right_mouse)
 		_right_text = "Pump Weapon";
 		break;
 	case "scope":
-		if (focus != 1)
+		if (obj_player.focus != 1)
 			_right_text = "Scope";
 		else
 			_right_text = "Unscope";
 		break;
 }
-
+// Draw Tooltip
+draw_set_halign(fa_left);
+draw_set_font(fnt_inventory);
+var _x_offset = 32;
+var _y = hotbar_height - 32;
+var _x_text_offset = 24;
+var _y_text_offset = -8;
+// If left text is same as right, use the both mouse display
+if (_left_text == "same")
+{
+	var _x = _x_offset + gui_holder_pos_x + (gui_holder_width / 4);
+	draw_sprite_ext(spr_mouse_tip, 2, _x, _y, 1, 1, 0, c_white, 1);
+	draw_text(_x + _x_text_offset, _y + _y_text_offset, _right_text);
+}
+else
+{
+	// Set x offset for left text
+	if (_right_text = "null")
+		var _x = _x_offset + gui_holder_pos_x + (gui_holder_width / 4);
+	else
+		var _x = _x_offset + gui_holder_pos_x;
+	// Handle left text
+	switch (_left_text)
+	{
+		case "Shoot":
+			// Changes the text to reload or disabled depending on weapon state
+			if (obj_player.pump != 0)
+				_left_text = "---";
+			if (obj_player.ammo <= 0)
+				_left_text = "Reload";
+			if (obj_player.reloading != 0)
+				_left_text = "---";
+			// Change mouse icon to blank if the mouse action is disabled
+			if (_left_text == "---")
+				var _index = 3;
+			else
+				var _index = 0;
+			// Draw
+			draw_sprite_ext(spr_mouse_tip, _index, _x, _y, 1, 1, 0, c_white, 1);
+			draw_text(_x + _x_text_offset, _y + _y_text_offset, _left_text);
+			break;
+	}
+	// Handle right text
+	if (_right_text != "null")
+	{
+		// Display disabled pump if reloading
+		if (_right_text == "Pump Weapon" and obj_player.reloading != 0)
+			_right_text = "---";
+		// Change mouse icon to blank if the mouse action is disabled
+		if (_right_text == "---")
+			var _index = 3;
+		else
+			var _index = 1;
+		// Draw
+		var _x = _x_offset + gui_holder_pos_x + (gui_holder_width / 2);
+		draw_sprite_ext(spr_mouse_tip, _index, _x, _y, 1, 1, 0, c_white, 1);
+		draw_text(_x + _x_text_offset, _y + _y_text_offset, _right_text);
+	}
+}
 // Draw Weapon
 var _weap_offset_x = -48;	// x offset from the bottom right hand corner
 var _weap_offset_y = -48;	// y offset from the bottom right hand corner
@@ -342,58 +403,113 @@ if (global.paused and !global.settings)
 	var _logo_height = _height * 2 / 10;
 	draw_sprite_ext(spr_main_icon, 0, _width / 2, _logo_height,
 					_scale, _scale, 0, c_white, logo_alpha);
-	// Draws Buttons
+	
+	// Define Button Heights
 	var _button_height_1 = _height * 5 / 10;
 	var _button_height_2 = _height * 6 / 10;
 	var _button_height_3 = _height * 7 / 10;
 	var _button_height_4 = _height * 8 / 10;
-	draw_sprite_ext(spr_main_menu_buttons, 3, _width / 2, _button_height_1,
-					_scale, _scale, 0, c_white, _alpha);
-	draw_sprite_ext(spr_main_menu_buttons, 1, _width / 2, _button_height_2,
-					_scale, _scale, 0, c_white, _alpha);
-	draw_sprite_ext(spr_main_menu_buttons, 9, _width / 2, _button_height_3,
-					_scale, _scale, 0, c_white, _alpha);
-	draw_sprite_ext(spr_main_menu_buttons, 2, _width / 2, _button_height_4,
-					_scale, _scale, 0, c_white, _alpha);
+	// Draw Continue Button
+	var _sprite = spr_main_menu_buttons;
+	if (hover == 1 and !clicked)
+		var _sprite = spr_main_menu_buttons_select;
+	draw_sprite_ext(_sprite, 3, _width / 2, _button_height_1, _scale, _scale, 0, c_white, _alpha);
+
+	// Draw Options Button
+	var _sprite = spr_main_menu_buttons;
+	if (hover == 2 and !clicked)
+		var _sprite = spr_main_menu_buttons_select;
+	draw_sprite_ext(_sprite, 1, _width / 2, _button_height_2, _scale, _scale, 0, c_white, _alpha);
+
+	// Draw Controls Button
+	var _sprite = spr_main_menu_buttons;
+	if (hover == 3 and !clicked)
+		var _sprite = spr_main_menu_buttons_select;
+	draw_sprite_ext(_sprite, 9, _width / 2, _button_height_3, _scale, _scale, 0, c_white, _alpha);
+
+	// Draw Quit Button
+	var _sprite = spr_main_menu_buttons;
+	if (hover == 4 and !clicked)
+		var _sprite = spr_main_menu_buttons_select;
+	draw_sprite_ext(_sprite, 2, _width / 2, _button_height_4, _scale, _scale, 0, c_white, _alpha);
+	
 	// Pause Menu Code
 	var _top	= sprite_get_bbox_top(spr_main_menu_buttons) - sprite_get_yoffset(spr_main_menu_buttons);
 	var _bottom = sprite_get_bbox_bottom(spr_main_menu_buttons) - sprite_get_yoffset(spr_main_menu_buttons);
 	var _left	= sprite_get_bbox_left(spr_main_menu_buttons) - sprite_get_xoffset(spr_main_menu_buttons);
 	var _right	= sprite_get_bbox_right(spr_main_menu_buttons) - sprite_get_xoffset(spr_main_menu_buttons);
+	var _sound = false;
 	pmousex = device_mouse_x_to_gui(0);
 	pmousey = device_mouse_y_to_gui(0);
+	
+	// Check if hovering over button
 	if (pmousex >= _width / 2 + _left and pmousex <= _width / 2 + _right)
 	{
 		if (pmousey >= _button_height_1 + _top) and (pmousey < _button_height_1 + _bottom)
-			and (mouse_check_button_pressed(mb_left) and !clicked)
 		{
-			// Continue
-			global.paused = false;
-			global.settings = false;
+			if (hover != 1 and !clicked)
+				var _sound = true;
+			hover = 1;
 		}
-		if (pmousey >= _button_height_2 + _top) and (pmousey < _button_height_2 + _bottom)
-			and (mouse_check_button_pressed(mb_left) and !clicked)
+		else if (pmousey >= _button_height_2 + _top) and (pmousey < _button_height_2 + _bottom)
 		{
-			// Settings
-			global.settings = true;
-			scr_settings_buttons_pause_menu();
+			if (hover != 2 and !clicked)
+				var _sound = true;
+			hover = 2;
 		}
-		if (pmousey >= _button_height_3 + _top) and (pmousey < _button_height_3 + _bottom)
-			and (mouse_check_button_pressed(mb_left) and !clicked)
+		else if (pmousey >= _button_height_3 + _top) and (pmousey < _button_height_3 + _bottom)
 		{
-			// Controls
-			var _control = instance_create_layer(0, 0, "control", obj_keyboard_help);
-			_control.master = id;
-			clicked = true;
+			if (hover != 3 and !clicked)
+				var _sound = true;
+			hover = 3;
 		}
-		if (pmousey >= _button_height_4 + _top) and (pmousey < _button_height_4 + _bottom)
-			and (mouse_check_button_pressed(mb_left) and !clicked)
+		else if (pmousey >= _button_height_4 + _top) and (pmousey < _button_height_4 + _bottom)
 		{
-			// Quit
-			global.truepause = true;
-			instance_create_layer(x, y, "fade", obj_fade_out_menu);
-			global.settings = false;
-			global.holstered = true;
+			if (hover != 4 and !clicked)
+				var _sound = true;
+			hover = 4;
+		}
+		else hover = 0;
+	}
+	else hover = 0;
+	if (clicked) hover = 0;
+	
+	// Sound
+	if (_sound)
+	{
+		audio_group_set_gain(audiogrp_sounds, global.sound_value, 0);
+		audio_stop_sound(snd_reload_eject_clip);
+		audio_play_sound(snd_reload_eject_clip, 1, false);
+	}
+	
+	// Click Handling
+	if (hover != 0 and mouse_check_button_pressed(mb_left))
+	{
+		switch (hover)
+		{
+			case 1:
+				// Continue
+				global.paused = false;
+				global.settings = false;
+				break;
+			case 2:
+				// Settings
+				global.settings = true;
+				scr_settings_buttons_pause_menu();
+				break;
+			case 3:
+				// Controls
+				var _control = instance_create_layer(0, 0, "control", obj_keyboard_help);
+				_control.master = id;
+				clicked = true;
+				break;
+			case 4:
+				// Quit
+				global.truepause = true;
+				instance_create_layer(x, y, "fade", obj_fade_out_menu);
+				global.settings = false;
+				global.holstered = true;
+				break;
 		}
 	}
 }

@@ -34,11 +34,22 @@ instance_create_layer(_x, _y, "control", obj_slider_sounds_volume);
 
 // Music Text
 _x = floor(_x_top + _width * 0.1);
-_y = floor(_y_top + _height * 0.6);
+_y = floor(_y_top + _height * 0.55);
 var _music = instance_create_layer(_x, _y, "control", obj_menu_buttons)
 _music.image_index = 10;
 _music.master = id;
 // Music
 _x = floor(_x_top + _width * 0.25);
-_y = floor(_y_top + _height * 0.6);
+_y = floor(_y_top + _height * 0.55);
 instance_create_layer(_x, _y, "control", obj_slider_music_volume);
+
+// Shake Text
+_x = floor(_x_top + _width * 0.1);
+_y = floor(_y_top + _height * 0.7);
+var _shake = instance_create_layer(_x, _y, "control", obj_menu_buttons)
+_shake.image_index = 11;
+_shake.master = id;
+// Shake
+_x = floor(_x_top + _width * 0.25);
+_y = floor(_y_top + _height * 0.7);
+instance_create_layer(_x, _y, "control", obj_slider_settings_shake);

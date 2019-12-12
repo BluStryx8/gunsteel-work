@@ -10,9 +10,6 @@ global.p_pants_colour = make_colour_hsv(0, 0, 50);
 global.p_dash_colour = make_colour_hsv(0, 0, 255);
 global.p_scale = 1;		// Size of the player
 
-// Shake (Temporary)
-global.settings_shake = 0.5;
-
 // Character Restriction
 global.death	 = false;
 global.paused    = false;

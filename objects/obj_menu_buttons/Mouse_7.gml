@@ -35,7 +35,6 @@ if (room == rm_mainmenu and variable_instance_exists(id, "master"))
 				// (New Game) Back: Return to Continue Screen
 				master.menu_follow = 3;
 				break;
-
 			case 8:
 				// New Game: Fades out them goes to game
 				new_save();
